@@ -1,0 +1,40 @@
+.parsons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 3-column grid container */
+    gap: 10px;
+}
+
+.parsons-column-ps, .parsons-row-ss {
+    display: grid;  /* Sub-grid for rows within a column */
+    row-gap: 5px;
+}
+
+.parsons-row-ss {
+    grid-template-columns: 1fr 1fr 2fr; /*  slots for indented blocks */
+}
+.parsons-block, .parsons-ps, .parsons-ss {
+    height: 50px;  /* Fixed height for element */
+}
+.parsons-ps, .parsons-ss {
+    border: 1px solid black;
+}
+.parsons-block {
+    background-color: lightblue;
+    /*width: 300px;*/
+    /*overflow: hidden;*/
+}
+
+.parsons-output {
+    border: 1px;
+    background-color: lightgray;
+    width: 30%;
+    height: 300px;
+}
+
+.parsons-output-line {
+    display: block;
+}
+
+.parsons-error {
+    background-color: lightcoral;
+}

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script src="../js/parsons-test.js"></script>
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js"></script>
+        <link rel="stylesheet" href="../css/parsons-test.css">
+    </head>
+
+    <body>
+        <!-- class names ending in "ps" correspond to the problem space, "ss" to the solution space -->
+        <div class="parsons-container">
+            <div class="parsons-column-ps">
+                <div class="parsons-ps">
+                    <div class="parsons-block" id="pb-1" draggable="true">
+                        for i in [1, 2, 3, 4]:
+                    </div>
+                </div>
+                <div class="parsons-ps">
+                    <div class="parsons-block" id="pb-2" draggable="true">
+                        print(i)
+                    </div>
+                </div>
+            </div>
+            <!-- Use separate divs for each row of the target area, since we need to provide multiple columns in each row (for code indentation) and want to be able to control the columns independently between rows -->
+            <div class="parsons-column-ss">
+                <div class="parsons-row-ss" id="ss-row-1">
+                    <div class="parsons-ss" id="ss-1-1"></div>
+                    <div class="parsons-ss" id="ss-1-2"></div>
+                    <div class="parsons-ss" id="ss-1-3"></div>
+                </div>
+                <div class="parsons-row-ss" id="ss-row-2">
+                    <div class="parsons-ss" id="ss-2-1"></div>
+                    <div class="parsons-ss" id="ss-2-2"></div>
+                    <div class="parsons-ss" id="ss-2-3"></div>
+                </div>
+            </div>
+        </div>   
+        <div class="parsons-controller">
+            <button class="parsons-submit" type="button">
+                Run code
+            </button>
+        </div>  
+        <div class="parsons-output">
+                <span class="parsons-output-line">
+                    >>Python output here...
+                </span>
+        </div>
+    </body>
+</html>
