@@ -31,14 +31,17 @@ function disAllowDrop(ev) {
 
 function drop_handler(ev) {
     ev.preventDefault();
-    // TO DO:  implement check to allow each row to have at most 1 block
-    // If there is already a block in this row, no drop is allowed (unless it's the block being moved)
     // Get the id of the block to move to the current element
     const data = ev.dataTransfer.getData("text/plain");
     let block = document.getElementById(data);
+    // TO DO:  implement check to allow each row to have at most 1 block
+    // If there is already a block in this row (other than the currently selected block), no drop is allowed
+    let otherBlock = ev.target.parentElement.querySelector(".parsons-block");
+    if ((otherBlock) && (block != otherBlock)) {
+        return;
+    }
     // remove the error class in case this is a move from a solution slot with an error applied
     block.classList.remove("parsons-error");
-
     // If the target is a solution cell and has a next sibling element, we remove it and set the grid-column property so that this element spans its own place and that vacated by its former sibling
     if ((ev.target.className == "parsons-ss") && ev.target.nextElementSibling) {
         ev.target.nextElementSibling.remove();
@@ -150,7 +153,11 @@ function displayPyOutput(output) {
     outputDiv.appendChild(outputSpan);
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", async () => {
+   
+    // Block while Pyodide loads
+    let pyodidePromise = await loadPy();
+
     // Get the draggable elements by class 
     // These will contain the lines of code
     const blocks = document.querySelectorAll(".parsons-block");
@@ -170,9 +177,6 @@ window.addEventListener("DOMContentLoaded", () => {
       // button to trigger code execution
     const button = document.querySelector(".parsons-submit");
 
-    // TO DO: delay listening for drag events until Pyodide is loaded
-    let pyodidePromise = loadPy();
-
     button.addEventListener("click", (event) => {
         // clear output area before running new code
         let outputDiv = document.querySelector(".parsons-output");
@@ -184,7 +188,7 @@ window.addEventListener("DOMContentLoaded", () => {
         let codeToRun = parseParsonsCode();
         runPyodide(codeToRun, pyodidePromise);
     });
-
+    console.log('Drag-and-drop initialized.')
 
 });
 
