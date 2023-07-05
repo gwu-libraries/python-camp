@@ -1,0 +1,1214 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Modeling the World &#8212; Python Camp: Programming for Beginners</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/lessons/4_1_modeling_the_world';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Graded Homework: Day 4" href="../homework/HW_4_GR.html" />
+    <link rel="prev" title="Graded Homework: Day 3" href="../homework/HW_3_GR.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Python Camp: Programming for Beginners
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_1_choreographing_code.html">Choreographing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_2_from_data_to_code.html">From Data to Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_1_from_code_to_data.html">From Code to Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2_1_describing_the_team.html">Describing the Team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_2_querying_data.html">Querying Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_2_programming_techniques.html">Programming Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_2_GR.html">Graded Execise Day 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3_1_from_story_to_code.html">From Story to Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_3_error_stories.html">Error Stories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_3_GR.html">Graded Execise Day 3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modeling the World</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_4_GR.html">Graded Exercise Day 4</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/gwu-libraries/python-camp" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/gwu-libraries/python-camp/issues/new?title=Issue%20on%20page%20%2Fnotebooks/lessons/4_1_modeling_the_world.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/lessons/4_1_modeling_the_world.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Modeling the World</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-creating-a-model">I. Creating a Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-modeling-with-classes">II. Modeling with Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-defining-a-class">II.1 Defining a Class</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Try it out!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-as-templates">Classes as templates</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-vs-instances">Classes vs. instances</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-notation">Dot notation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-defining-relationships">II.2 Defining relationships</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Try it out!</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-adding-methods">II.3 Adding methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Try it out!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Try it out!</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-4-completing-the-model">II.4 Completing the model</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Try it out!</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-5-classes-why-bother">II.5 Classes: Why bother?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-6-a-final-example">II.6 A final example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-7-saving-our-work">II.7 Saving our work</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up">Wrapping Up</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="modeling-the-world">
+<h1>Modeling the World<a class="headerlink" href="#modeling-the-world" title="Permalink to this heading">#</a></h1>
+<section id="objectives">
+<h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>To explore how Python classes &amp; objects can make code more expressive</p></li>
+<li><p>To model the bookstore dataset using Python classes</p></li>
+<li><p>To use methods to add behaviors to Python classes</p></li>
+<li><p>To practice writing tests for complex Python objects</p></li>
+</ul>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>With Python and the <strong>JSON format</strong>, we’ve used code to reveal structures and express relationships within a dataset.</p></li>
+<li><p>We’ve also created <strong>user stories</strong> to guide our design of programming functionality.</p></li>
+<li><p>Both of these approaches – code as data, code as story – show how a programming language like Python can help us solve problems in the “real” world.</p></li>
+<li><p>Our last lesson will build on both of these previous approaches, introducing a new and powerful feature of Python (which it shares with many, but not all, other programming languages): a feature that lets us more explicitly <strong>model</strong> problems that we want to solve.</p></li>
+<li><p>This feature of Python supports what is sometimes referred to as <strong>object-oriented programming</strong>. But it might be simpler just to keep in mind that today we’ll be using a special Python data type called a <strong>class</strong>.</p></li>
+</ul>
+</section>
+<section id="i-creating-a-model">
+<h2>I. Creating a Model<a class="headerlink" href="#i-creating-a-model" title="Permalink to this heading">#</a></h2>
+<p>On the first day of Python Camp, each team created a schema to describe the structure of our bookstore dataset.</p>
+<p>Today we’re going to revisit that work, but instead of starting from a dataset, we’re going to start from what we know about that aspect of the world that the dataset itself describes: GW courses and textbooks.</p>
+<section id="try-it-out">
+<h3>Try it out!<a class="headerlink" href="#try-it-out" title="Permalink to this heading">#</a></h3>
+<p>In your teams, create a model of GW courses and textbooks.</p>
+<ul class="simple">
+<li><p>Modeling describes kinds of <strong>objects</strong> – kinds of things – and their relationships. What kinds of objects are involved in talking about textbooks? How are these objects related?</p></li>
+<li><p>We can also include details about objects as <strong>attributes</strong>. These are like tags that help distinguish one particular object from others of its kind.</p></li>
+<li><p>In modeling, we have to make choices about the level of detail we want to represent. In this case, we’re limited by the GW bookstore dataset, so we can restrict our model to those pieces of information already captured in the dataset.</p></li>
+<li><p>But try not to think about Python syntax or data structures at this point. Think in terms of the “real” world of courses and textbooks.</p></li>
+</ul>
+<p>The image in the cell below shows an example of a model of Python Camp. This model is very simple: it includes only three kinds of object (Python Camp itself, instructors, and learners) and two relationships. We’ve left out other important aspects of Python Camp, like lessons, homework exercises, etc.</p>
+<p>Since there can be multiple instances of Python Camp, each of which can have multiple instructors and learners, we list some attributes that could help us identify one particular <strong>instance</strong> of Python Camp, or one particular instructor or learner, from the others.</p>
+<p><img alt="sample-object-model-python-camp-4.png" src="notebooks/lessons/attachment:sample-object-model-python-camp-4.png" /></p>
+<p>(for instructors)</p>
+<p>Have each team share their model. (Or have one team share, and ask who came up with something different, etc.)</p>
+<p>The following points might be useful to emphasize.</p>
+<ul class="simple">
+<li><p>In defining kinds of objects, we usually start with singular terms: <em>a course</em>, <em>a textbook</em>.</p></li>
+<li><p>Between objects, we define relationships of one-to-one, one-to-many, or many-to-many.</p></li>
+<li><p>It’s up to us to decide whether something is an attribute or a separate kind of object.</p>
+<ul>
+<li><p>In the Python-Camp model, for instance, we could have modeled each team as a separate object.</p></li>
+</ul>
+</li>
+<li><p>But if something doesn’t itself have many (or any) relevant attributes, we often won’t bother doing so.</p>
+<ul>
+<li><p>For instance, we could model the textbook publisher as its own kind (of object), if we wanted to represent details specific to each publisher.</p></li>
+<li><p>But in this case, given our dataset, we don’t really have such details, so it probably makes more sense to treat a publisher simply as an attribute of a textbook.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p>A useful model of our course/textbook domain might look like the following:</p>
+<ul class="simple">
+<li><p>A course (kind of object)</p>
+<ul>
+<li><p>Attributes:</p>
+<ul>
+<li><p>Department</p></li>
+<li><p>Course Number</p></li>
+<li><p>Section</p></li>
+<li><p>Term</p></li>
+</ul>
+</li>
+<li><p>Relationships:</p>
+<ul>
+<li><p>Has zero or more textbooks</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>A textbook (kind of object)</p>
+<ul>
+<li><p>Attributes:</p>
+<ul>
+<li><p>Title</p></li>
+<li><p>Author</p></li>
+<li><p>Publisher</p></li>
+<li><p>ISBN</p></li>
+<li><p>Copyright Date</p></li>
+<li><p>Requirement Type</p></li>
+<li><p>Material Type</p></li>
+<li><p>Edition</p></li>
+<li><p>Price</p></li>
+<li><p>Format (print/digital)</p></li>
+<li><p>Condition (new/used)</p></li>
+<li><p>Mode of Purchase</p>
+<ul>
+<li><p>Buy</p></li>
+<li><p>Rent</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="ii-modeling-with-classes">
+<h2>II. Modeling with Classes<a class="headerlink" href="#ii-modeling-with-classes" title="Permalink to this heading">#</a></h2>
+<p>To represent our objects and relationships explicitly in Python, we use Python <strong>classes</strong>.</p>
+<p>Working with classes can seem intimidating at first. But keep in mind: the primary reason for using classes is <em>to make our code more readable for ourselves</em> (and for other people who might reuse our code).</p>
+<p>We’ve already modeled the relationship between GW courses and textbooks using Python <strong>lists</strong> and <strong>dictionaries</strong>, and our code won’t work better if we add classes to the mix.</p>
+<p>But once you get the hang of them, you may find that using classes makes your code easier to read and reason about.</p>
+<section id="ii-1-defining-a-class">
+<h3>II.1 Defining a Class<a class="headerlink" href="#ii-1-defining-a-class" title="Permalink to this heading">#</a></h3>
+<p>A class is sort of like a Python <strong>function</strong> in that it must be defined before it can be used. The class definition is where we specify the attributes each object in the class will have, as well as its relationships to other classes/kinds of objects.</p>
+<p>A class defines a <em>kind</em> of object: like a species in biology, or a type of particle in physics. Hence we don’t put details about <em>particular objects</em> in the class definition. (In defining the species “dog,” we wouldn’t include the names of any particular dogs, for instance.)</p>
+<p>There’s one more important thing about Python classes: in addition to attributes and relationships, they also define <strong>behaviors</strong>. These behaviors are defined as functions, which we call <strong>methods</strong>, to distinguish them from functions that are not associated with particular classes.</p>
+<p>We’ll cover creating methods later, but in the code below, note that <code class="docutils literal notranslate"><span class="pre">__init__</span></code> is a special method that is used to add attributes to the objects in a class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Course</span><span class="p">:</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dept</span><span class="p">,</span> <span class="n">course_number</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">instructor</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Creates an instance of a course.</span>
+<span class="sd">        dept, course_number, section, instructor, term: should be of type str</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dept</span> <span class="o">=</span> <span class="n">dept</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">course_number</span> <span class="o">=</span> <span class="n">course_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">section</span> <span class="o">=</span> <span class="n">section</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instructor</span> <span class="o">=</span> <span class="n">instructor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">term</span> <span class="o">=</span> <span class="n">term</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s unpack the code above.</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">class</span></code> keyword (like the <code class="docutils literal notranslate"><span class="pre">def</span></code> keyword for functions) indicates the definition of a class.</p></li>
+<li><p>Like a function, a class needs a name. It’s Python convention to name classes with capitalized names, to differentiate them from other variables.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">class</span></code> statement ends with a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>), and the body of the class is indented underneath it.</p></li>
+<li><p>Typically, a class definition will include one or more <strong>method</strong> definitions.</p></li>
+<li><p>Methods are defined like functions, with these two differences:</p>
+<ul>
+<li><p>Methods are defined as part of the body of a class.</p></li>
+<li><p>Methods take a special first argument named <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></li>
+</ul>
+</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method here accepts five arguments in addition to <code class="docutils literal notranslate"><span class="pre">self</span></code>: <code class="docutils literal notranslate"><span class="pre">dept</span></code>, <code class="docutils literal notranslate"><span class="pre">course_number</span></code>, <code class="docutils literal notranslate"><span class="pre">section</span></code>, <code class="docutils literal notranslate"><span class="pre">instructor</span></code> and <code class="docutils literal notranslate"><span class="pre">term</span></code>.</p></li>
+<li><p>The triple quotation marks underneath the <code class="docutils literal notranslate"><span class="pre">def</span></code> line are called a <strong>docstring</strong>. Like a comment (beginning with <code class="docutils literal notranslate"><span class="pre">#</span></code>), a docstring at the beginning of a function or method definition allows us to document the behavior of the function or method.</p></li>
+<li><p>The body of the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method here reassigns each of those arguments to new variables beginning with <code class="docutils literal notranslate"><span class="pre">self</span></code>, followed by a dot <code class="docutils literal notranslate"><span class="pre">.</span></code> and a name. The latter are the class <strong>attributes</strong>.</p></li>
+<li><p>We could use different names for the attributes and the method arguments, but it usually makes more sense to keep them the same.</p></li>
+</ul>
+<p>The purpose of all of this will become clearer below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="s1">&#39;AMST&#39;</span><span class="p">,</span> <span class="s1">&#39;6190&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Elisabeth Anker&#39;</span><span class="p">,</span> <span class="s1">&#39;Summer 2023&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the line above, we create a single <strong>instance</strong> of our <code class="docutils literal notranslate"><span class="pre">Course</span></code> class.</p>
+<p>Note that when creating the instance, we use syntax that looks very much like calling a Python function, passing the arguments that will become the attributes of this course in parentheses.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Department:&#39;</span><span class="p">,</span> <span class="n">my_course</span><span class="o">.</span><span class="n">dept</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Course Number:&#39;</span><span class="p">,</span> <span class="n">my_course</span><span class="o">.</span><span class="n">course_number</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Section:&#39;</span><span class="p">,</span> <span class="n">my_course</span><span class="o">.</span><span class="n">section</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Department: AMST
+Course Number: 6190
+Section: 10
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can retrieve the attributes from the instance by using the dot notation: <code class="docutils literal notranslate"><span class="pre">my_course.dept</span></code>, etc.</p>
+<p>This works because our <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method assigns these arguments to instances of the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class via the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument.</p>
+<p>We’ve used classes and methods before. Recall the <code class="docutils literal notranslate"><span class="pre">split</span></code> method available on strings. We can write <code class="docutils literal notranslate"><span class="pre">'AMST</span> <span class="pre">6190</span> <span class="pre">10'.split()</span></code> because in Python, the quotation marks <em>automatically</em> create a new instance of the special <code class="docutils literal notranslate"><span class="pre">str</span></code> class, and every instance of the <code class="docutils literal notranslate"><span class="pre">str</span></code> class gets access to the string methods.</p>
+<section id="id1">
+<h4>Try it out!<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<p>Create another instance of the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class below, using a different variable name from <code class="docutils literal notranslate"><span class="pre">my_course</span></code> and different arguments. See if you can print the department, course number, and section from your new instance.</p>
+<p>(for instructors)</p>
+<p>Now would be a good moment to take questions and work to clarify the purpose and mechanics of classes.</p>
+<p>Some helpful pointers:</p>
+</section>
+<section id="classes-as-templates">
+<h4>Classes as templates<a class="headerlink" href="#classes-as-templates" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>A class definition provides a <em>template</em> for data. We’ve seen how to describe courses using Python dictionaries. The dictionary <strong>keys</strong> are functionally similar to the class <strong>attributes</strong>.</p></li>
+<li><p>But when creating a list of dictionaries, there’s no good way to <em>require</em> that all dictionaries in the list have the same keys.</p>
+<ul>
+<li><p>We could, for instance, have added any random key to any one of the dictionaries in our <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> list, thereby creating an inconsistent data structure.</p></li>
+<li><p>And as we saw in the “Error Stories” homework, inconsistencies in data are liable to break your code!</p></li>
+</ul>
+</li>
+<li><p>By using a class, on the other hand, we make it clearer to the user (including ourselves) that a course should have only certain attributes and no others.</p></li>
+</ul>
+</section>
+<section id="classes-vs-instances">
+<h4>Classes vs. instances<a class="headerlink" href="#classes-vs-instances" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>A class defines a <em>kind</em> of thing. In English, this is analogous to talking about <em>a thing</em> (with the indefinite article): e.g., “I plan to take a course in engineering this semester.” (I haven’t said which one. There could be any number of engineering courses that might satisfy my description.)</p></li>
+<li><p>An instance of a class refers to one specific thing. In English, this is analogous to talking about <em>this thing</em> (or <em>the thing</em>): “This book on Python is really interesting.” (It’s clear that I’m talking about one book, in distinction from all the other books on Python out there.)</p></li>
+<li><p>Each class can have multiple instances (just as in English, “a Python book” can refer to any number of books about Python).</p>
+<ul>
+<li><p>If you run the code <code class="docutils literal notranslate"><span class="pre">type(my_course)</span></code>, you can see that the variable <code class="docutils literal notranslate"><span class="pre">my_course</span></code> has for its data type <code class="docutils literal notranslate"><span class="pre">__main__.Course</span></code>. Ignoring the <code class="docutils literal notranslate"><span class="pre">__main__</span></code> part, we can see the name of our class. In other words, we’ve now created our very own Python data type!</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="dot-notation">
+<h4>Dot notation<a class="headerlink" href="#dot-notation" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Once we have created an instance of the class, we can refer to the attributes like so: <code class="docutils literal notranslate"><span class="pre">my_course.dept</span></code>, etc. Note that we do NOT write <code class="docutils literal notranslate"><span class="pre">Course.dept</span></code>. That will produce an error.</p></li>
+<li><p>Inside the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method – or any other method defined in our class – we can use the required <code class="docutils literal notranslate"><span class="pre">self</span></code> argument to refer to <em>instances</em> of the class.</p></li>
+<li><p>Python effectively translates <code class="docutils literal notranslate"><span class="pre">self.dept</span></code> into <code class="docutils literal notranslate"><span class="pre">my_course.dept</span></code> when we run this code:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="s1">&#39;AMST&#39;</span><span class="p">,</span> <span class="s1">&#39;6190&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Elisabeth Anker&#39;</span><span class="p">,</span> <span class="s1">&#39;Summer 2023&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="ii-2-defining-relationships">
+<h3>II.2 Defining relationships<a class="headerlink" href="#ii-2-defining-relationships" title="Permalink to this heading">#</a></h3>
+<p>So far, instances of our <code class="docutils literal notranslate"><span class="pre">Course</span></code> class have no way of capturing information about textbooks. Let’s fix that by rewriting our class definition as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Course</span><span class="p">:</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dept</span><span class="p">,</span> <span class="n">course_number</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">instructor</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Creates an instance of a course.</span>
+<span class="sd">        dept, course_number, section, instructor, term: should be of type str</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dept</span> <span class="o">=</span> <span class="n">dept</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">course_number</span> <span class="o">=</span> <span class="n">course_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">section</span> <span class="o">=</span> <span class="n">section</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instructor</span> <span class="o">=</span> <span class="n">instructor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">term</span> <span class="o">=</span> <span class="n">term</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">texts</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># Store a list of texts here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ve simply added a new attribute to our class called <code class="docutils literal notranslate"><span class="pre">texts</span></code>, which we have initialized as an empty list. This list will hold instances of the <code class="docutils literal notranslate"><span class="pre">Text</span></code> class, which we’ll create next.</p>
+<section id="id2">
+<h4>Try it out!<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<p>Following the example of our <code class="docutils literal notranslate"><span class="pre">Course</span></code> class, define a class called <code class="docutils literal notranslate"><span class="pre">Text</span></code> to hold the attributes we identified when modeling textbooks above. The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method should take arguments corresponding to those attributes and assign them to the class instance via the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument.</p>
+<p>To keep things simple, use only the attributes of the textbook we’ve used thus far:</p>
+<ul class="simple">
+<li><p>isbn</p></li>
+<li><p>price</p></li>
+<li><p>item_type (whether print or digital)</p></li>
+<li><p>type_condition (BUY_NEW, BUY_USED, RENTAL_NEW, RENTAL_USED)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(for instructors)</p>
+<p>A possible solution looks like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Text</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">isbn</span><span class="p">,</span> <span class="n">item_type</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="n">type_condition</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isbn</span> <span class="o">=</span> <span class="n">isbn</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">item_type</span> <span class="o">=</span> <span class="n">item_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">price</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type_condition</span> <span class="o">=</span> <span class="n">type_condition</span>
+
+</pre></div>
+</div>
+</section>
+</section>
+<section id="ii-3-adding-methods">
+<h3>II.3 Adding methods<a class="headerlink" href="#ii-3-adding-methods" title="Permalink to this heading">#</a></h3>
+<p>Our <code class="docutils literal notranslate"><span class="pre">Course</span></code> class has no methods other than <code class="docutils literal notranslate"><span class="pre">__init__</span></code>, because we just using it store some data about each course.</p>
+<p>But the real power and convenience of classes enters when we add custom methods that define behavior specific to instances of that class. Methods make classes and their instances more than just places to park data.</p>
+<p>For example, consider a spreadsheet application like Google Sheets or Excel. The application allows you to create multiple spreadsheets. The data on different spreadsheets can be very different, but all spreadsheets (within the same application) share certain features: like the ability to save the document, to format cells, to sort and filter, etc.</p>
+<p>If we wanted to model the spreadsheet application using classes and methods, we might imagine a <code class="docutils literal notranslate"><span class="pre">SpreadSheet</span></code> class. This class might have a <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute to store the data associated with a particular spreadsheet (available as <code class="docutils literal notranslate"><span class="pre">spreadsheet.data</span></code>, if <code class="docutils literal notranslate"><span class="pre">spreadsheet</span></code> is an instance of our <code class="docutils literal notranslate"><span class="pre">SpreadSheet</span></code> class). To save the spreadsheet, we could call <code class="docutils literal notranslate"><span class="pre">spreadsheet.save()</span></code>, which would (internally) use the <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute to access the data and write it to disk.</p>
+<p>In the code below, we’ll add a method to our <code class="docutils literal notranslate"><span class="pre">Text</span></code> class. The functionality is familiar: converting a string representation of a price to a float.</p>
+<p>Expand the collapsed cell to see and run the code.</p>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Text</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">isbn</span><span class="p">,</span> <span class="n">item_type</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="n">type_condition</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        All arguments should be of type str.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isbn</span> <span class="o">=</span> <span class="n">isbn</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">item_type</span> <span class="o">=</span> <span class="n">item_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">price</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type_condition</span> <span class="o">=</span> <span class="n">type_condition</span>
+    
+    <span class="k">def</span> <span class="nf">convert_price</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Convert the str representation of a price (with dollar sign) to a float</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">price</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Note that our <code class="docutils literal notranslate"><span class="pre">covert_price</span></code> method takes a single argument: <code class="docutils literal notranslate"><span class="pre">self</span></code>. When we <em>call</em> this method, we won’t actually provide any arguments to this method. We’ll simply write <code class="docutils literal notranslate"><span class="pre">my_text.convert_price()</span></code> (assuming <code class="docutils literal notranslate"><span class="pre">my_text</span></code> is an instance of the <code class="docutils literal notranslate"><span class="pre">Text</span></code> class).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">self</span></code> argument is a reference to the instance (<code class="docutils literal notranslate"><span class="pre">my_text</span></code>) <em>itself</em> – hence the name <code class="docutils literal notranslate"><span class="pre">self</span></code>. The Python interpreter automatically handles the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument when calling the method (if we call it using dot notation).</p>
+<p>Inside the method, the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument allows us access to the attributes of <code class="docutils literal notranslate"><span class="pre">my_text</span></code> (as initialized when we create our <code class="docutils literal notranslate"><span class="pre">my_text</span></code> instance).</p>
+<section id="id3">
+<h4>Try it out!<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<p>Create an instance of the <code class="docutils literal notranslate"><span class="pre">Text</span></code> class called <code class="docutils literal notranslate"><span class="pre">my_text</span></code>, assigning it attributes the way we did in creating <code class="docutils literal notranslate"><span class="pre">my_course</span></code> from the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class.</p>
+<p>Then call <code class="docutils literal notranslate"><span class="pre">my_text.convert_price()</span></code> to confirm that the method works.</p>
+<p>Remember that <code class="docutils literal notranslate"><span class="pre">convert_price()</span></code> assumes that <code class="docutils literal notranslate"><span class="pre">self.price</span></code> is a string beginning with the dollar sign (<code class="docutils literal notranslate"><span class="pre">$</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h4>Try it out!<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<p>Now can you use the <code class="docutils literal notranslate"><span class="pre">assert</span></code> keyword to write a test for the <code class="docutils literal notranslate"><span class="pre">convert_price()</span></code> method?</p>
+<p>Tests are especially useful when working with functions and classes. Since both functions and classes allow us to encapsulate (hide the details of) our logic, tests help us ensure the behavor continues to work as expected as we make changes (to add new features, etc.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assumes that my_text.price == &#39;$44.50&#39;</span>
+<span class="k">assert</span> <span class="n">my_text</span><span class="o">.</span><span class="n">convert_price</span><span class="p">()</span> <span class="o">==</span> <span class="mf">44.5</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="ii-4-completing-the-model">
+<h3>II.4 Completing the model<a class="headerlink" href="#ii-4-completing-the-model" title="Permalink to this heading">#</a></h3>
+<p>We now have a <code class="docutils literal notranslate"><span class="pre">Course</span></code> class for representing intances of courses, and a <code class="docutils literal notranslate"><span class="pre">Text</span></code> class for representing textbooks assigned to courses.</p>
+<p>The next step is to use these classes to represent our actual dataset.</p>
+<p>In the code below, we’re using a familiar pattern:</p>
+<ul class="simple">
+<li><p>creating an empty list to hold our <code class="docutils literal notranslate"><span class="pre">Course</span></code> instances;</p></li>
+<li><p>looping through the list of courses (<code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>);</p></li>
+<li><p>looping through the list of texts associated with each course;</p></li>
+<li><p>transforming the data within the loops and adding the transformed elements to our new list.</p></li>
+</ul>
+<p>The main difference here is that instead of using dictionaries and list, we’re using our new classes to hold the data.</p>
+<p>As usual, we first need to load our data from the JSON file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../data/bookstore-data-simplified.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">bkst_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id5">
+<h4>Try it out!<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<p>Working with your team, can you complete the code below to create a list of <code class="docutils literal notranslate"><span class="pre">Course</span></code> instances, each of which holds a list of <code class="docutils literal notranslate"><span class="pre">Text</span></code> instances?</p>
+<p>Fix the partial code in the function below and add code as needed so that the tests complete without errors.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">transform_course_data</span><span class="p">(</span><span class="n">course_data</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Transforms a list of nested dictionaries representing courses and textbooks into instances</span>
+<span class="sd">    of the Course and Text classes, defined above. Returns a list of Course instances.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">courses</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Note that the loop variable here is called course_dict</span>
+    <span class="c1"># To remind us that it&#39;s a dictionary, not an instance of our Course class</span>
+    <span class="k">for</span> <span class="n">course_dict</span> <span class="ow">in</span> <span class="n">course_data</span><span class="p">:</span>
+        <span class="n">course</span> <span class="o">=</span> <span class="n">Course</span><span class="p">()</span>  <span class="c1"># How do we initialize a Course instance with the data in course_dict?</span>
+        <span class="k">for</span> <span class="n">text_dict</span> <span class="ow">in</span> <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">]:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">()</span> <span class="c1"># How do we initialize a Text instance from text_dict?</span>
+            <span class="c1"># Now what do we do with text once we&#39;ve created it?</span>
+        <span class="c1"># Did you forget to do something with the course variable created above?</span>
+    <span class="k">return</span> <span class="n">courses</span>
+<span class="c1"># Call the function to create the list of Courses</span>
+<span class="n">courses</span> <span class="o">=</span> <span class="n">transform_course_data</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">)</span>
+<span class="c1"># Tests</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">courses</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">courses</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span><span class="o">.</span><span class="n">texts</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">[</span><span class="mi">99</span><span class="p">][</span><span class="s1">&#39;texts&#39;</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">courses</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span><span class="o">.</span><span class="n">texts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">convert_price</span><span class="p">()</span> <span class="o">==</span> <span class="mf">113.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(for instructors)</p>
+<p>The completed code should look like the following. Note that the order of arguments to <code class="docutils literal notranslate"><span class="pre">Course()</span></code> and <code class="docutils literal notranslate"><span class="pre">Text()</span></code> matter.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">transform_course_data</span><span class="p">(</span><span class="n">course_data</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Transforms a list of nested dictionaries representing courses and textbooks into instances</span>
+<span class="sd">    of the Course and Text classes, defined above. Returns a list of Course instances.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">courses</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Note that the loop variable here is called course_dict</span>
+    <span class="c1"># To remind us that it&#39;s a dictionary, not an instance of our Course class</span>
+    <span class="k">for</span> <span class="n">course_dict</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
+        <span class="n">course</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;department&#39;</span><span class="p">],</span> <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;course&#39;</span><span class="p">],</span> 
+                        <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;section&#39;</span><span class="p">],</span> <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">],</span> 
+                        <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;term_name&#39;</span><span class="p">])</span> 
+        <span class="k">for</span> <span class="n">text_dict</span> <span class="ow">in</span> <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">]:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="n">text_dict</span><span class="p">[</span><span class="s1">&#39;isbn&#39;</span><span class="p">],</span> <span class="n">text_dict</span><span class="p">[</span><span class="s1">&#39;item_type&#39;</span><span class="p">],</span> 
+                        <span class="n">text_dict</span><span class="p">[</span><span class="s1">&#39;price_display&#39;</span><span class="p">],</span> <span class="n">text_dict</span><span class="p">[</span><span class="s1">&#39;type_condition&#39;</span><span class="p">])</span> 
+            <span class="n">course</span><span class="o">.</span><span class="n">texts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">courses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">courses</span>
+<span class="n">courses</span> <span class="o">=</span> <span class="n">transform_course_data</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">courses</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">courses</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span><span class="o">.</span><span class="n">texts</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">[</span><span class="mi">99</span><span class="p">][</span><span class="s1">&#39;texts&#39;</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">courses</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span><span class="o">.</span><span class="n">texts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">convert_price</span><span class="p">()</span> <span class="o">==</span> <span class="mf">113.5</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">transform_course_data</span><span class="p">(</span><span class="n">course_data</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Transforms a list of nested dictionaries representing courses and textbooks into instances</span>
+<span class="sd">    of the Course and Text classes, defined above. Returns a list of Course instances.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">courses</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Note that the loop variable here is called course_dict</span>
+    <span class="c1"># To remind us that it&#39;s a dictionary, not an instance of our Course class</span>
+    <span class="k">for</span> <span class="n">course_dict</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
+        <span class="n">course</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;department&#39;</span><span class="p">],</span> <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;course&#39;</span><span class="p">],</span> 
+                        <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;section&#39;</span><span class="p">],</span> <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">],</span> 
+                        <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;term_name&#39;</span><span class="p">])</span> 
+        <span class="k">for</span> <span class="n">text_dict</span> <span class="ow">in</span> <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">]:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="n">text_dict</span><span class="p">[</span><span class="s1">&#39;isbn&#39;</span><span class="p">],</span> <span class="n">text_dict</span><span class="p">[</span><span class="s1">&#39;item_type&#39;</span><span class="p">],</span> 
+                        <span class="n">text_dict</span><span class="p">[</span><span class="s1">&#39;price_display&#39;</span><span class="p">],</span> <span class="n">text_dict</span><span class="p">[</span><span class="s1">&#39;type_condition&#39;</span><span class="p">])</span> 
+            <span class="n">course</span><span class="o">.</span><span class="n">texts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">courses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">courses</span>
+<span class="n">courses</span> <span class="o">=</span> <span class="n">transform_course_data</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">courses</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">courses</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span><span class="o">.</span><span class="n">texts</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">[</span><span class="mi">99</span><span class="p">][</span><span class="s1">&#39;texts&#39;</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">courses</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span><span class="o">.</span><span class="n">texts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">convert_price</span><span class="p">()</span> <span class="o">==</span> <span class="mf">113.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="ii-5-classes-why-bother">
+<h3>II.5 Classes: Why bother?<a class="headerlink" href="#ii-5-classes-why-bother" title="Permalink to this heading">#</a></h3>
+<p>It may strike you that we’ve haven’t gained much practical advantage from converting our list of nested dictionaries to a list of class instances. It may seem to you that it makes just as much sense to express the relationships between courses and texts through the keys of a dictionary as through the attributes of a class.</p>
+<p>If so, you’re not wrong – and you may be learning something about your own emerging preferences as a programmer.</p>
+<p><em>You absolutely do not have to use classes in order to write effective Python code.</em> Even some very skilled programmers hardly ever use them. The choice to use classes depends both on your own preferences and on the context in which you are writing code.</p>
+<p>That said, classes can be useful because they can make relationships more explicit. Compare the results of the following two lines of code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The first element of bkst_data is of type&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The first element of courses is of type&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">courses</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The first element of courses is of type &lt;class &#39;__main__.Course&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>What do you notice? Can you think of reasons why programmers might want to use classes instead of (or in addition to) dictionaries when modeling their data?</p>
+<p>(for instructors)</p>
+<ul class="simple">
+<li><p>Elicit responses to the above questions from each team or from individuals.</p></li>
+<li><p>Here is one way of explaining the difference.</p></li>
+</ul>
+<blockquote>
+<div><p>The first line tells us that something is a <code class="docutils literal notranslate"><span class="pre">dict</span></code>, which we could also determine by inspecting the JSON file in a text editor. A Python dictionary is a data structure with certain functionality and structure, but it doesn’t have any particular <em>meaning</em> in relation to any sort of user story. We can use dictionaries for any number of things.</p>
+</div></blockquote>
+<blockquote>
+<div><p>By contrast, the second line tells us that something is an instance of a class called <code class="docutils literal notranslate"><span class="pre">Course</span></code>. Whatever else <code class="docutils literal notranslate"><span class="pre">Course</span></code> does, the name alone indicates some sort of relationship to things out in the world; it suggests the existence of a user story. (Without good documentation, of course, the name of a class won’t provide that much help to the users of your code. But it does provide a foundation for writing code that makes its purpose and functionality as explicit as possible.</p>
+</div></blockquote>
+<blockquote>
+<div><p>In addition, as code becomes more complex, using classes can help us both read the code itself and understand any errors that the code generates. The class names serve as guideposts, signalling what portion of the code we’re dealing with at a given moment. (This becomes particularly useful when code is large enough that it makes sense to break it into multiple files.)</p>
+</div></blockquote>
+</section>
+<section id="ii-6-a-final-example">
+<h3>II.6 A final example<a class="headerlink" href="#ii-6-a-final-example" title="Permalink to this heading">#</a></h3>
+<p>In the code that follows, we redo the exercise of finding the course with the most expensive textbook. In this version of the exercise, we leverage methods and attributes to record, for each instance of Course, its most expensive text.</p>
+<p>First, we need to re-write the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class to include a new method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Course</span><span class="p">:</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dept</span><span class="p">,</span> <span class="n">course_number</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">instructor</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Creates an instance of a course.</span>
+<span class="sd">        dept, course_number, section, instructor, term: should be of type str</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dept</span> <span class="o">=</span> <span class="n">dept</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">course_number</span> <span class="o">=</span> <span class="n">course_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">section</span> <span class="o">=</span> <span class="n">section</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instructor</span> <span class="o">=</span> <span class="n">instructor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">term</span> <span class="o">=</span> <span class="n">term</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">texts</span> <span class="o">=</span> <span class="p">[]</span>  
+        <span class="bp">self</span><span class="o">.</span><span class="n">most_expensive</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="nf">add_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Adds a given text to the list of texts for this course. </span>
+<span class="sd">        text should be an instance of the Text class.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">texts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">convert_price</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">price</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">most_expensive</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">most_expensive</span> <span class="o">=</span> <span class="n">price</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ve added a method <code class="docutils literal notranslate"><span class="pre">add_text</span></code> to the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class.</p>
+<p>This method does two things:</p>
+<ul class="simple">
+<li><p>Append its argument to the list of texts for the course on which the method is called.</p></li>
+<li><p>Update that course’s <code class="docutils literal notranslate"><span class="pre">most_expensive</span></code> attribute if this text is more expensive that any text we’ve already added to this course.</p></li>
+</ul>
+<p>Note that this method does <em>not</em> return anything. That’s because as a method, it has access to the underlying instance of <code class="docutils literal notranslate"><span class="pre">Course</span></code> that it’s been called on (the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument), and here, we’re storing both the texts and the most expensive text on the instance itself!</p>
+<p>In other words, we’re stipulating that it’s a behavior of a course to know its most expensive textbook.</p>
+<p>We’ve already seen one example of a method that doesn’t return anything: the <code class="docutils literal notranslate"><span class="pre">list.append()</span></code> method. Like our method above, when we call <code class="docutils literal notranslate"><span class="pre">append</span></code> on a list, we add a value to the underlying list, so we don’t get any value back from the method call.</p>
+<p>We’ve said that functions and methods are used to transform data. In many cases, the data to be transformed are the arguments themselves. But in cases like <code class="docutils literal notranslate"><span class="pre">list.append()</span></code> or <code class="docutils literal notranslate"><span class="pre">Course.add_text()</span></code>, the data to be transformed actually the underlying class instances.</p>
+<hr class="docutils" />
+<p>In the following code, we rewrite our <code class="docutils literal notranslate"><span class="pre">transform_course_data</span></code> function to use our new method when adding texts. Note that we’ve included our tests, so as to confirm that our class re-write didn’t change any other behaviors.</p>
+<p>Make sure you can identify the line we’ve changed in the definition of <code class="docutils literal notranslate"><span class="pre">transform_course_data</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">transform_course_data</span><span class="p">(</span><span class="n">course_data</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Transforms a list of nested dictionaries representing courses and textbooks into instances</span>
+<span class="sd">    of the Course and Text classes, defined above. Returns a list of Course instances.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">courses</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Note that the loop variable here is called course_dict</span>
+    <span class="c1"># To remind us that it&#39;s a dictionary, not an instance of our Course class</span>
+    <span class="k">for</span> <span class="n">course_dict</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
+        <span class="n">course</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;department&#39;</span><span class="p">],</span> <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;course&#39;</span><span class="p">],</span> 
+                        <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;section&#39;</span><span class="p">],</span> <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">],</span> 
+                        <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;term_name&#39;</span><span class="p">])</span> 
+        <span class="k">for</span> <span class="n">text_dict</span> <span class="ow">in</span> <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">]:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="n">text_dict</span><span class="p">[</span><span class="s1">&#39;isbn&#39;</span><span class="p">],</span> <span class="n">text_dict</span><span class="p">[</span><span class="s1">&#39;item_type&#39;</span><span class="p">],</span> 
+                        <span class="n">text_dict</span><span class="p">[</span><span class="s1">&#39;price_display&#39;</span><span class="p">],</span> <span class="n">text_dict</span><span class="p">[</span><span class="s1">&#39;type_condition&#39;</span><span class="p">])</span> 
+            <span class="n">course</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">courses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">courses</span>
+<span class="n">courses</span> <span class="o">=</span> <span class="n">transform_course_data</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">courses</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">courses</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span><span class="o">.</span><span class="n">texts</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">[</span><span class="mi">99</span><span class="p">][</span><span class="s1">&#39;texts&#39;</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">courses</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span><span class="o">.</span><span class="n">texts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">convert_price</span><span class="p">()</span> <span class="o">==</span> <span class="mf">113.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now if we want to find the course with the most expensive textbook, we can use the following code.</p>
+<p>Note that instead of keeping track of the most expensive with two variables – one for the price, one for the course info – we can use just one (<code class="docutils literal notranslate"><span class="pre">most_expensive_course</span></code>). However, we have to initialize this variable with an instance of <code class="docutils literal notranslate"><span class="pre">Course</span></code>, so for expedience’s sake, we just use the first <code class="docutils literal notranslate"><span class="pre">Course</span></code> instance in our <code class="docutils literal notranslate"><span class="pre">courses</span></code> list.</p>
+<p>Then we loop over the rest of the list (<code class="docutils literal notranslate"><span class="pre">courses[1:]</span></code>) – there’s no need to compare the first course to itself.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">most_expensive_course</span> <span class="o">=</span> <span class="n">courses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">courses</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="k">if</span> <span class="n">course</span><span class="o">.</span><span class="n">most_expensive</span> <span class="o">&gt;</span> <span class="n">most_expensive_course</span><span class="o">.</span><span class="n">most_expensive</span><span class="p">:</span>
+        <span class="n">most_expensive_course</span> <span class="o">=</span> <span class="n">course</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Most expensive course is:&#39;</span><span class="p">,</span> <span class="n">most_expensive_course</span><span class="o">.</span><span class="n">dept</span><span class="p">,</span> 
+        <span class="n">most_expensive_course</span><span class="o">.</span><span class="n">course_number</span><span class="p">,</span> <span class="n">most_expensive_course</span><span class="o">.</span><span class="n">section</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Most expensive course is: PHYS 1011 10
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ii-7-saving-our-work">
+<h3>II.7 Saving our work<a class="headerlink" href="#ii-7-saving-our-work" title="Permalink to this heading">#</a></h3>
+<p>One disadvantage to defining your own classes is that they don’t work well with common formats like JSON. The reason is that JSON is meant to work with any number of different programming languages, and the Python <code class="docutils literal notranslate"><span class="pre">json</span></code> library maps the most common Python types onto the JSON format. But the <code class="docutils literal notranslate"><span class="pre">json</span></code> library doesn’t know anything about our <code class="docutils literal notranslate"><span class="pre">Course</span></code> and <code class="docutils literal notranslate"><span class="pre">Text</span></code> classes.</p>
+<p>It’s not too difficult to write a function that would take the attributes of our classes and convert them back to lists and dictionaries – sort of the inverse of our <code class="docutils literal notranslate"><span class="pre">transform_course_data</span></code> function.</p>
+<p>But there <em>is</em> an easier way. The Python <code class="docutils literal notranslate"><span class="pre">pickle</span></code> library allows us to save <em>any</em> valid Python type – including those that we create – as a binary file on disk.</p>
+<p>The file won’t be readable in a text editor, unfortunately. But you can open it in Python using <code class="docutils literal notranslate"><span class="pre">pickle</span></code> and work with its class instances just as if you had defined those classes yourself.</p>
+<p>Below we pickle our <code class="docutils literal notranslate"><span class="pre">courses</span></code> list so that we can work with it at a later date.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../data/bookstore-data-simplified.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">courses</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="wrapping-up">
+<h2>Wrapping Up<a class="headerlink" href="#wrapping-up" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../homework/HW_3_GR.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Graded Homework: Day 3</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../homework/HW_4_GR.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Graded Homework: Day 4</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-creating-a-model">I. Creating a Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-modeling-with-classes">II. Modeling with Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-defining-a-class">II.1 Defining a Class</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Try it out!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-as-templates">Classes as templates</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-vs-instances">Classes vs. instances</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-notation">Dot notation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-defining-relationships">II.2 Defining relationships</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Try it out!</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-adding-methods">II.3 Adding methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Try it out!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Try it out!</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-4-completing-the-model">II.4 Completing the model</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Try it out!</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-5-classes-why-bother">II.5 Classes: Why bother?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-6-a-final-example">II.6 A final example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-7-saving-our-work">II.7 Saving our work</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up">Wrapping Up</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GW Libraries & Academic Innovation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
