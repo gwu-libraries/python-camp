@@ -4,8 +4,6 @@
 format: jb-book
 root: intro
 parts:
-- caption: Setup
-  chapters:
 - caption: Day 1
   chapters:
   - file: notebooks/lessons/1_1_choreographing_code
@@ -45,5 +43,5 @@ parts:
 - caption: Final Homework
   chapters:
   - file: notebooks/homework/HW_4_GR
-  - title: Graded Exercise Day 4
+    title: Graded Exercise Day 4
  
