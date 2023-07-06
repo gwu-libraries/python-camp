@@ -1,22 +1,21 @@
+function createIndents() {
+    document.querySelectorAll(".parsons-row-ss").forEach((row) => {
+        row.querySelectorAll(".parsons-ss").forEach((cell, i) => {
+            cell.style.left = 50*i;
+        });
+    });
+}
+
 function dragstart_handler(ev) {
     // Add the block's id to the data transfer object
-    ev.dataTransfer.setData("text/plain", ev.target.id);
-    // If the block being dragged is located in a solution cell, and if the cell spans multiple columns, we need to reset it and add back another sibling 
-    let oldParent = ev.target.parentNode;
-    if ((oldParent.className == "parsons-ss") && oldParent.style.gridColumn.includes("span")) {
-           // Reset column span on parent element
-           oldParent.style.gridColumn = "";
-           // Add new solution-space cell
-           let ss = document.createElement("div");
-           ss.className = "parsons-ss";
-           // Add the event listeners to the new element
-           ss.addEventListener("dragover", dragover_handler);
-           ss.addEventListener("drop", drop_handler);
-           // Add this to the block's grandparent
-           if (oldParent.parentNode) {
-               oldParent.parentNode.appendChild(ss);
-           }
-    }
+    ev.dataTransfer.setData("text/plain", ev.target.id);    
+
+    let dragStartParent = ev.target.parentElement;
+
+    if (dragStartParent.className == "parsons-ss") {
+        // Reset flex setting on parent element
+        //dragStartParent.style.flexGrow = "1";
+     }
 }
 
 function dragover_handler(ev) {
@@ -24,8 +23,17 @@ function dragover_handler(ev) {
     ev.dataTransfer.dropEffect = "move";
 }
 
+function dragenter_handler(ev) {
+    ev.target.classList.add("dragover");
+}
+
+function dragleave_handler(ev) {
+    ev.target.classList.remove("dragover");
+}
+
 function disAllowDrop(ev) {
     // Added to draggable elements to prevent them becoming drop zones
+    //TO DO: implement swap between two elements
     ev.stopPropagation();
 }
 
@@ -34,20 +42,17 @@ function drop_handler(ev) {
     // Get the id of the block to move to the current element
     const data = ev.dataTransfer.getData("text/plain");
     let block = document.getElementById(data);
-    // TO DO:  implement check to allow each row to have at most 1 block
     // If there is already a block in this row (other than the currently selected block), no drop is allowed
     let otherBlock = ev.target.parentElement.querySelector(".parsons-block");
-    if ((otherBlock) && (block != otherBlock)) {
+    if ((otherBlock) && (block != otherBlock) && (ev.target.parentElement.className == "parsons-row-ss")) {
         return;
     }
     // remove the error class in case this is a move from a solution slot with an error applied
     block.classList.remove("parsons-error");
-    // If the target is a solution cell and has a next sibling element, we remove it and set the grid-column property so that this element spans its own place and that vacated by its former sibling
-    if ((ev.target.className == "parsons-ss") && ev.target.nextElementSibling) {
-        ev.target.nextElementSibling.remove();
-        ev.target.style.gridColumn = "span 2";
-    }
+
     ev.target.appendChild(block);
+    ev.target.classList.remove("dragover");
+
 
 }
 
@@ -153,8 +158,34 @@ function displayPyOutput(output) {
     outputDiv.appendChild(outputSpan);
 }
 
+function clearOutput() {
+    // Clears Python stdout/stderr from the screen
+    let outputDiv = document.querySelector(".parsons-output");
+    removeAllButFirst(outputDiv);
+    // remove error class on any blocks
+    document.querySelectorAll(".parsons-block").forEach(elem => {
+        elem.classList.remove("parsons-error");
+    });
+}
+
+function resetProblem() {
+    // Resets solution space; returns all blocks to problem space and shuffles order; clears output
+    clearOutput();
+    let blocks = document.querySelectorAll(".parsons-block"),
+        problemCells = document.querySelectorAll(".parsons-ps"),
+        indices = Array.from(Array(blocks.length).keys()); // array of indices for shuffling
+    // shuffles indices 
+    indices = indices.sort((a, b) => 0.5 - Math.random());
+    // reassign blocks in new, random order
+    indices.forEach((index, i) => {
+        problemCells[i].appendChild(blocks[index]);
+    });
+
+}
+
 window.addEventListener("DOMContentLoaded", async () => {
    
+    createIndents();
     // Block while Pyodide loads
     let pyodidePromise = await loadPy();
 
@@ -167,11 +198,17 @@ window.addEventListener("DOMContentLoaded", async () => {
         block.addEventListener("dragover", disAllowDrop);
     });
     
-    // Get the drag targets (the drop zones)
-    const targets = document.querySelectorAll(".parsons-ss, .parsons-ps");
-    targets.forEach(target => {
+    // Blocks can be dragged from and dropped in any of these elements
+    const dragTargets = document.querySelectorAll(".parsons-ss, .parsons-ps");
+    dragTargets.forEach(target => {
         target.addEventListener("dragover", dragover_handler);
         target.addEventListener("drop", drop_handler);
+    });
+    // For these targets -- the solution cells -- provide more fine-grained UX
+    const dropTargets = document.querySelectorAll(".parsons-ss");
+    dropTargets.forEach(target => {
+        target.addEventListener("dragenter", dragenter_handler);
+        target.addEventListener("dragleave", dragleave_handler);
     });
 
       // button to trigger code execution
@@ -179,16 +216,12 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     button.addEventListener("click", (event) => {
         // clear output area before running new code
-        let outputDiv = document.querySelector(".parsons-output");
-        removeAllButFirst(outputDiv);
-        // remove error class on any blocks
-        document.querySelectorAll(".parsons-block").forEach(elem => {
-            elem.classList.remove("parsons-error");
-        });
+       clearOutput();
         let codeToRun = parseParsonsCode();
         runPyodide(codeToRun, pyodidePromise);
     });
-    console.log('Drag-and-drop initialized.')
+
+    document.querySelector(".parsons-reset").addEventListener("click", resetProblem);
 
 });
 

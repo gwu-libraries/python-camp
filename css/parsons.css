@@ -1,28 +1,49 @@
+
 .parsons-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* 3-column grid container */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 10px;
 }
 
-.parsons-column-ps, .parsons-row-ss {
-    display: grid;  /* Sub-grid for rows within a column */
+.parsons-column-ss, .parsons-column-ps {
+    display: grid;  
     row-gap: 5px;
+    border: 1px solid black;
+    padding: 10px;
 }
 
-.parsons-row-ss {
-    grid-template-columns: 1fr 1fr 2fr; /*  slots for indented blocks */
+.parsons-row-ss, .parsons-ps {
+    /* grid-template-columns: 1fr 1fr 2fr;   slots for indented blocks */
+    /*display: flex;*/
+    position: relative;
+    border: 1px dotted black;
 }
-.parsons-block, .parsons-ps, .parsons-ss {
-    height: 50px;  /* Fixed height for element */
+.parsons-ss {
+    /*flex-grow: 1;*/
+    position: absolute;
+    width: 500px;
 }
+
+.parsons-ss.dragover {
+    background-color: yellow;
+}
+
 .parsons-ps, .parsons-ss {
-    border: 1px solid black;
+    height: 60px;
+}
+
+.parsons-block  {
+    height: 50px;  /* Fixed height for element */
+    user-select: none;
+
 }
 .parsons-block {
+    width: 500px;
     background-color: lightblue;
-    /*width: 300px;*/
-    /*overflow: hidden;*/
+    border-radius: 10px;
+    padding: 5px;
 }
+
 
 .parsons-output {
     border: 1px;
