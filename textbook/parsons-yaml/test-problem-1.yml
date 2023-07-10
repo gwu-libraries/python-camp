@@ -1,0 +1,9 @@
+python_code: |
+    counter = 0
+    my_list = [1, 2, 3, 4]
+    for item in my_list:
+        if item % 2 == 0:
+            counter += 1
+    print(counter)
+problem: > 
+    Write come code that counts how many numbers divisible by 2 are in the first four positive integers.

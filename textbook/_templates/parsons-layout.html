@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <script src="../js/parsons.js"></script>
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js"></script>
+        <link rel="stylesheet" href="../css/parsons.css">
+    </head>
+
+    <body>
+        <!-- class names ending in "ps" correspond to the problem space, "ss" to the solution space -->
+        <header class="doc-container">
+            <h1 class="page-title">Parsons Problem</h1>
+            <p class="problem-statement">
+                {{ parsons.problem|trim }}
+            </p>
+            <ol class="instructions">
+                <li>In the space below, drag lines of code from the rows on the left to the empty rows on the right.</li>
+                <li>Arrange the lines of code in the logical order that will produce the desired output.</li>
+                <li>To indent a line of code, follow the yellow highlighting when positioning it over an empty row.</li>
+                <li>To run your code, click the <strong>Run code</strong> button. The output of running your code, including any error messages, will appear in the panel at the bottom </li>
+                <li>Click the <strong>Reset</strong> button to clear the code space on the right and start over.</li>
+        </header>
+        <main>
+            <section id="python-input"">
+                <h2>Compose your code here</h2>
+                <div class="parsons-container">
+                    <div class="parsons-column-ps">
+                        {% for line in parsons.python_code %}
+                            <div class="parsons-ps">
+                                <div class="parsons-block" id="pb-{{ loop.index }}" draggable="true">
+                                    {{ line|trim }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <!-- Use separate divs for each row of the target area, since we need to provide multiple columns in each row (for code indentation) and want to be able to control the columns independently between rows -->
+                    <div class="parsons-column-ss">
+                        {% for line in parsons.python_code %}
+                            <div class="parsons-row-ss" id="ss-row-{{ loop.index }}">
+                                {% set outer_loop = loop %}
+                                {% for depth in range(parsons.max_depth + 1) %}
+                                    <div class="parsons-ss" id="ss-{{ outer_loop.index }}-{{ depth + 1 }}"></div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div> 
+                <div class="parsons-controller">
+                    <button class="parsons-submit" type="button">
+                        Run code
+                    </button>
+                    <button class="parsons-reset" type="button">
+                        Reset
+                    </button>
+                </div>  
+            </section>
+            <section id="python-output">
+                <h2>Python output</h2>
+                <div class="parsons-output">
+                        <span class="parsons-output-line">
+                            >>Python output here...
+                        </span>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

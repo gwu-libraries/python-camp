@@ -13,8 +13,12 @@ function dragstart_handler(ev) {
     let dragStartParent = ev.target.parentElement;
 
     if (dragStartParent.className == "parsons-ss") {
-        // Reset flex setting on parent element
-        //dragStartParent.style.flexGrow = "1";
+
+        let previousSibs = getPreviousSiblings(dragStartParent);
+        previousSibs.forEach(node => {
+            let indentNode = node.querySelector(".indent-char");
+            if (indentNode) indentNode.remove();
+        });
      }
 }
 
@@ -25,6 +29,7 @@ function dragover_handler(ev) {
 
 function dragenter_handler(ev) {
     ev.target.classList.add("dragover");
+ 
 }
 
 function dragleave_handler(ev) {
@@ -53,7 +58,17 @@ function drop_handler(ev) {
     ev.target.appendChild(block);
     ev.target.classList.remove("dragover");
 
-
+    // Add indentation symbol as UX cue to previous divs in the current row
+    if (ev.target.className == 'parsons-ss') {
+        let previousSibs = getPreviousSiblings(ev.target);
+        previousSibs.forEach(node => {
+            let newIndentChar = document.createElement("span");
+            newIndentChar.textContent = "\u21e5";
+            newIndentChar.className = "indent-char";
+            node.appendChild(newIndentChar);
+         });
+    }
+ 
 }
 
 function parseParsonsCode() {
@@ -180,6 +195,9 @@ function resetProblem() {
     indices.forEach((index, i) => {
         problemCells[i].appendChild(blocks[index]);
     });
+    // remove all indentation markers
+    let indentChars = document.querySelectorAll(".indent-char");
+    indentChars.forEach(charNode => charNode.remove());
 
 }
 
