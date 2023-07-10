@@ -7,6 +7,14 @@ function createIndents() {
 }
 
 function dragstart_handler(ev) {
+    // We don't want to drag anything but the actual DIV block
+    if (!ev.target.classList.contains("parsons-block")) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        return
+    }
+    console.log("Dragging element")
+    console.log(ev.target)
     // Add the block's id to the data transfer object
     ev.dataTransfer.setData("text/plain", ev.target.id);    
 
@@ -28,11 +36,13 @@ function dragover_handler(ev) {
 }
 
 function dragenter_handler(ev) {
+    ev.preventDefault();
     ev.target.classList.add("dragover");
  
 }
 
 function dragleave_handler(ev) {
+    ev.preventDefault();
     ev.target.classList.remove("dragover");
 }
 
