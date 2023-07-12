@@ -31,7 +31,24 @@ html:
   use_issues_button: true
   use_repository_button: true
 
+parse:
+  myst_substitutions:
+    parsons_url: https://gwu-libraries.github.io/python-camp/parsons-problems/html
+  myst_enable_extensions:
+    # - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    # - html_admonition
+    # - html_image
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
+    - tasklist
+    - html_image
+
 sphinx:
   recursive_update: true
   config:
-    html_extra_path: ["parsons-assets"] # Parsons Problems .js, .css, and .html live here
+    html_extra_path: ["parsons-assets", "static-assets"] # Parsons Problems .js, .css, and .html live here

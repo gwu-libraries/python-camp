@@ -4,7 +4,13 @@ import yaml
 import click
 import logging
 import re
+from random import shuffle
  
+
+logging.basicConfig()
+logger=logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
 # Regex for extracting leading spaces from strings of code
 LEADING_SPACES = re.compile('^(\s*)\S.+')
 
@@ -28,11 +34,13 @@ def load_yaml(yaml_files):
             parsons_dict = yaml.safe_load(f)
             if (not 'python_code' in parsons_dict) or (not 'problem' in parsons_dict):
                 logging.warning(f'Expected key(s) missing from {file}. Each YAML file should contain a "python_code" key and an "problem" key.')
-                logging.warning(f'Skipping {file}.')
+                logger.warning(f'Skipping {file}.')
                 yield None
             else:
-                # Strips leading/trailing whitespace from the code block
+                # Strips leading/trailing whitespace from the code block and split on line breaks
                 parsons_dict['python_code'] = parsons_dict['python_code'].strip().split('\n')
+                # Randomize code order
+                parsons_dict['python_code'] = shuffle(parsons_dict['python_code'])
                 yield file, parsons_dict
 
 def get_max_depth(python_code):
@@ -61,6 +69,7 @@ def render_template(parsons_to_render, template, html_path):
     for fp, parsons_dict in parsons_to_render:
         filename = fp.stem
         filepath = Path(__file__).parents[1] / html_path / filename
+        logger.info(f' Rendering template for {filename}...')
         with open(f'{filepath}.html', 'w') as fhp:
             # Add max depth to template arguments
             parsons_dict['max_depth'] = get_max_depth(parsons_dict['python_code'])

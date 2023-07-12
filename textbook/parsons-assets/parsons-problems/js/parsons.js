@@ -7,14 +7,16 @@ function createIndents() {
 }
 
 function dragstart_handler(ev) {
+    ev.stopPropagation();
     // We don't want to drag anything but the actual DIV block
-    if (!ev.target.classList.contains("parsons-block")) {
+    if ((ev.target.nodeType == Node.TEXT_NODE) || !ev.target.classList.contains("parsons-block")) {
         ev.preventDefault();
-        ev.stopPropagation();
         return
     }
-    console.log("Dragging element")
-    console.log(ev.target)
+    // Add the hidden class to the element; this corrects for the conflict between the browser-native drag-and-drop and the drag-and-drop HTML API
+    // Thanks to Max Turer for this!
+    ev.target.classList.add("hidden");
+    
     // Add the block's id to the data transfer object
     ev.dataTransfer.setData("text/plain", ev.target.id);    
 
@@ -36,13 +38,13 @@ function dragover_handler(ev) {
 }
 
 function dragenter_handler(ev) {
-    ev.preventDefault();
+    ev.stopPropagation();
     ev.target.classList.add("dragover");
  
 }
 
 function dragleave_handler(ev) {
-    ev.preventDefault();
+    ev.stopPropagation();
     ev.target.classList.remove("dragover");
 }
 
@@ -53,7 +55,6 @@ function disAllowDrop(ev) {
 }
 
 function drop_handler(ev) {
-    ev.preventDefault();
     // Get the id of the block to move to the current element
     const data = ev.dataTransfer.getData("text/plain");
     let block = document.getElementById(data);
@@ -119,6 +120,12 @@ async function loadPy() {
                 "exc_args": sys.last_value.args, # JS --> array of arrays
                 "full_tb": traceback.format_exception(sys.last_type, sys.last_value, sys.last_traceback) # JS --> array of strings
                 }`);
+    // Creates a function context in which to run the user-submitted code. This prevents variables from leaking into the pyodide global scope.
+    await pyodide.runPython(`
+    def execute_code(code_str):
+        exec(code_str)
+        return
+    `);
     return pyodide;
 }
 
@@ -129,10 +136,13 @@ async function runPyodide(codeLines, pyodidePromise) {
         return codeObj.code
     }).join("\n");
     let pyodide = await pyodidePromise;
+    // Get a reference to the function executor created on load()
+    let execute_code = pyodide.globals.get("execute_code");
     // Get a reference to the global error handler created in load()
     let reformat_exception = pyodide.globals.get("reformat_exception");
     try {
-        await pyodide.runPython(codeBlock);
+        //await pyodide.runPython(codeBlock);
+        execute_code(codeBlock);
     } catch (err) {
         handlePyException(reformat_exception());
     }
@@ -144,7 +154,7 @@ function handlePyException(excProxy) {
         // Looks for the line number in the stack trace
         // tb should be an array of strings
         return tbArray.reduce( (result, line) => {
-            if (line.includes("<exec>")) {
+            if (line.includes("<string>")) {
                 let match = line.match(/.+ line (\d+)/);
                 if (match) result = match[1];
             }
@@ -165,6 +175,7 @@ function handlePyException(excProxy) {
     displayPyOutput(`${excName}: ${excMsg}`);
     // If the array of arguments has more than one element, the line number will be the second element of the array in position 1
     let lineNo = excArgs.length > 1 ? excArgs[1][1] : extractLineNo(excMap.get("full_tb"));
+    console.log(excMap);
     highlightError(lineNo);
 }
 
@@ -191,6 +202,10 @@ function clearOutput() {
     document.querySelectorAll(".parsons-block").forEach(elem => {
         elem.classList.remove("parsons-error");
     });
+    // clear any rogue highlighting
+    document.querySelectorAll(".dragover").forEach(elem => {
+        elem.classList.remove("dragover");
+    });
 }
 
 function resetProblem() {
@@ -203,6 +218,8 @@ function resetProblem() {
     indices = indices.sort((a, b) => 0.5 - Math.random());
     // reassign blocks in new, random order
     indices.forEach((index, i) => {
+        // just in case
+        blocks[index].classList.remove("hidden");
         problemCells[i].appendChild(blocks[index]);
     });
     // remove all indentation markers
@@ -224,6 +241,9 @@ window.addEventListener("DOMContentLoaded", async () => {
     blocks.forEach(block => {
         block.addEventListener("dragstart", dragstart_handler);
         block.addEventListener("dragover", disAllowDrop);
+        block.addEventListener("dragend", ev => {
+            ev.target.classList.remove("hidden");
+        })
     });
     
     // Blocks can be dragged from and dropped in any of these elements

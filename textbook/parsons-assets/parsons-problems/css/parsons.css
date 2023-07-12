@@ -1,3 +1,7 @@
+.problem-statement {
+    font-size: 22;
+}
+
 
 .instructions {
     font-size: 18;
@@ -16,19 +20,22 @@
 }
 
 .parsons-row-ss, .parsons-ps {
-    /* grid-template-columns: 1fr 1fr 2fr;   slots for indented blocks */
-    /*display: flex;*/
     position: relative;
     border: 1px dotted black;
 }
 .parsons-ss {
-    /*flex-grow: 1;*/
     position: absolute;
     width: 500px;
+    display: flex;
+    align-items: center;
 }
 
 .parsons-ss.dragover {
     background-color: yellow;
+}
+
+.parsons-ss.dragover * {
+    pointer-events: none;
 }
 
 .parsons-ps, .parsons-ss {
@@ -40,15 +47,24 @@
     user-select: none;
     font-size: 18;
     font-family: monospace;
-
-}
-.parsons-block {
     width: 500px;
     background-color: lightblue;
     border-radius: 10px;
     padding: 5px;
 }
 
+.parsons-block:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    transition: 0.01s;
+    transform: translateX(-9999px);
+}
+
+.indent-char {
+    padding-left: 1em;
+}
 
 .parsons-output {
     border: 2px solid black;

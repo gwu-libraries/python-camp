@@ -1,7 +1,6 @@
 import json
 import re
 from collections import defaultdict
-from copy import deepcopy
 from datetime import datetime
 from time import sleep
 import httpx
@@ -169,6 +168,7 @@ class BookstoreScraper:
                 return []
             else:
                 latest_file = sorted(previous_files)[-1]
+                print(latest_file)
                 with open(latest_file) as f:
                     return json.load(f)
         self.data = get_latest(self.data_dir, self.file_prefix)
