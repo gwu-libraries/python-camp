@@ -411,11 +411,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Questions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap up</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-data-semantics">Part 1: Data semantics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-syntax">Part 2: Syntax</a></li>
-</ul>
-</li>
 </ul>
             </nav>
         </div>
@@ -599,12 +594,17 @@ document.write(`
 <p>As we saw in the previous activity, dictionaries allow us to store data in fields, similar to a database. The elements on the left-hand side of the colons are called <strong>keys</strong>, and the elements on the right-hand side of the colons are called <strong>values</strong>.</p>
 <p>Here the keys are <strong>strings</strong>; anything enclosed in quotation marks in Python is a string.</p>
 <p>We can use the keys to retrieve the values from the dictionary.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span>
 </pre></div>
 </div>
 </div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;department&#39;: &#39;CHEM&#39;,
  &#39;course&#39;: &#39;2151&#39;,
@@ -691,6 +691,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -793,86 +794,6 @@ document.write(`
 </ol>
 </section>
 </section>
-<section id="wrap-up">
-<h2>Wrap up<a class="headerlink" href="#wrap-up" title="Permalink to this heading">#</a></h2>
-<p>(for instructors)</p>
-<section id="part-1-data-semantics">
-<h3>Part 1: Data semantics<a class="headerlink" href="#part-1-data-semantics" title="Permalink to this heading">#</a></h3>
-<p>The goal in this part of the discussion is to highlight how data formats like JSON allow us to <em>represent relationships</em>. Our dataset represents a model of something out in the world (textbooks/course materials used by courses at GW), and we’re using Python in order to <em>interact with that model</em> in various ways.</p>
-<p>Instructors should document the modeling that emerges from this discussion as a tool for use in subsequent team activities.</p>
-<ol class="arabic simple">
-<li><p>Ask for volunteers (note takers or others) to share the data diagramming done by their teams. The cleaned data has the following hierarchy:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="n">bkst_data</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span>
-<span class="o">---</span><span class="n">a</span> <span class="n">course</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span>
-<span class="o">------</span><span class="n">department</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">...</span><span class="n">course</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">instructor</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span><span class="p">]</span>
-<span class="o">------</span><span class="n">texts</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span>
-<span class="o">---------</span><span class="n">a</span> <span class="n">text</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span>
-<span class="o">------------</span><span class="n">title</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">...</span><span class="n">author</span><span class="p">,</span> <span class="n">isbn</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span><span class="p">]</span>
-
-</pre></div>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>Note the presence of the different data types, but emphasize that the homework for Day 1 will cover the differences in detail. For now, focus on how the data elements relate to one another. Language like the following can help:</p></li>
-</ol>
-<ul class="simple">
-<li><p>A course record (in this dataset) <em>has</em> a department, instructor, etc.</p></li>
-<li><p>A course <em>can have</em> one or more texts.</p></li>
-<li><p>A text has a title, price, etc.</p></li>
-</ul>
-<ol class="arabic simple" start="3">
-<li><p>Help teams surface any questions they have about the data or points of confusion.</p></li>
-</ol>
-</section>
-<section id="part-2-syntax">
-<h3>Part 2: Syntax<a class="headerlink" href="#part-2-syntax" title="Permalink to this heading">#</a></h3>
-<p>The goal of this part of the discussion is to start to identify the syntactic elements of Python that allow us to model the world in certain ways.</p>
-<p>Have each team/note taker share their inventory of syntactic elements.</p>
-<p>It’s not necessary at this point to go through all of these elements in detail. Depending on the mood of the group, however, it may be useful to highlight the following (as preparation for the homework):</p>
-<ul class="simple">
-<li><p><strong>Quotation marks</strong> <code class="docutils literal notranslate"><span class="pre">''</span></code></p>
-<ul>
-<li><p>surround strings of characters (letters, numbers, other punctuation)</p></li>
-<li><p>occuring on the left side of a colon (e.g., <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">isbn</span></code>), they function as field names, in Python called <strong>keys</strong></p></li>
-<li><p>occuring on the right side of a colon (e.g., <code class="docutils literal notranslate"><span class="pre">CHEM</span></code>, <code class="docutils literal notranslate"><span class="pre">Organic</span> <span class="pre">Chemistry</span> <span class="pre">Model</span> <span class="pre">Set</span></code>), they function as field <strong>values</strong></p></li>
-<li><p>also used inside square brackets (see below) to retrieve values from their fields:  <code class="docutils literal notranslate"><span class="pre">text['title']</span></code></p></li>
-<li><p>can be single or double: makes no difference to Python</p></li>
-</ul>
-</li>
-<li><p><strong>Square brackets</strong> <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
-<ul>
-<li><p>enclose a collection of data elements called a <strong>list</strong></p></li>
-<li><p>elements of a list can be any other type of Python data, or even multiple types</p></li>
-<li><p>also used for accessing data in two ways:</p>
-<ul>
-<li><p>by position (from a list): <code class="docutils literal notranslate"><span class="pre">bkst_data[0]</span></code></p></li>
-<li><p>by field (from a dictionary): <code class="docutils literal notranslate"><span class="pre">my_course['department']</span></code></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>Curly braces</strong> <code class="docutils literal notranslate"><span class="pre">{}</span></code></p>
-<ul>
-<li><p>enclose a collection of data elements called a <strong>dictionary</strong></p></li>
-<li><p>dictionaries have more structure than lists: each element comprises a field name (<strong>key</strong>) associated with a <strong>value</strong></p></li>
-<li><p>square brackets are used to access dictionary values by key (see above)</p></li>
-</ul>
-</li>
-<li><p><strong>Commas</strong></p>
-<ul>
-<li><p>used to separate elements in a dictionary or list</p></li>
-</ul>
-</li>
-<li><p><strong>Parentheses</strong></p>
-<ul>
-<li><p>used when calling <strong>functions</strong>: <code class="docutils literal notranslate"><span class="pre">print(&quot;Hello,</span> <span class="pre">world!&quot;)</span></code>, <code class="docutils literal notranslate"><span class="pre">len(bkst_data)</span></code></p></li>
-<li><p>enclose values or variables passed to the function for processing (<strong>arguments</strong>)</p></li>
-</ul>
-</li>
-</ul>
-</section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -967,11 +888,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Try it out!</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Questions</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap up</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-data-semantics">Part 1: Data semantics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-syntax">Part 2: Syntax</a></li>
 </ul>
 </li>
 </ul>

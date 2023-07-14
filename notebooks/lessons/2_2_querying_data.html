@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Programming Techniques" href="../homework/HW_2_programming_techniques.html" />
-    <link rel="prev" title="Creating a Team Database" href="2_1_describing_the_team.html" />
+    <link rel="prev" title="Describing the Team" href="2_1_describing_the_team.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -403,7 +403,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-queries">3. More queries</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap up</a></li>
 </ul>
             </nav>
         </div>
@@ -423,7 +422,6 @@ document.write(`
 <li><p>To use lists, loops, and conditionals to answer basic questions about a dataset</p></li>
 <li><p>To design data structures with specific purposes (use cases) in mind</p></li>
 </ul>
-<p>Instructors should review the material in the <code class="docutils literal notranslate"><span class="pre">Preliminaries</span></code> section with the whole group, before giving teams their assignments.</p>
 </section>
 <section id="preliminaries">
 <h2>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this heading">#</a></h2>
@@ -451,14 +449,6 @@ document.write(`
 <section id="try-it-out">
 <h4>Try it out!<a class="headerlink" href="#try-it-out" title="Permalink to this heading">#</a></h4>
 <p>Write an expression with the <code class="docutils literal notranslate"><span class="pre">book_price</span></code> variable that returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<p>(for instructors)</p>
-<p>Solicit examples from the group. Make sure to demonstrate the case of equality, emphasizing the double equals sign, e.g.,</p>
-<p><code class="docutils literal notranslate"><span class="pre">book_price</span> <span class="pre">==</span> <span class="pre">55</span></code></p>
-<p>It may help also to point out that just as we saw that it’s not possible to add a <code class="docutils literal notranslate"><span class="pre">str</span></code> value and an <code class="docutils literal notranslate"><span class="pre">int</span></code> (or <code class="docutils literal notranslate"><span class="pre">float</span></code>), we also can’t compare string and numeric types:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;$55.99&#39;</span> <span class="o">&gt;</span> <span class="mi">60</span>
-</pre></div>
-</div>
-<p>The code above will produce a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>.</p>
 </section>
 </section>
 <section id="if-statements">
@@ -532,21 +522,6 @@ document.write(`
 <li><p>Otherwise, the <em>first</em> <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code> statement that is <code class="docutils literal notranslate"><span class="pre">True</span></code> will be executed, and <em>all the rest</em> will be ignored. In other words, if the conditions you’re testing for are not mutually exclusive, you should write the most specific test first.</p></li>
 <li><p>Each <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> statement ends with a colon and is followed by an <strong>indented block</strong> of code. This is the same pattern we saw with <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p></li>
 </ul>
-<p>(for instructors)</p>
-<p>Make sure to take questions at this point. In particular, the implications of the third rule above may not be immediately apparent to learners. An example may help:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pub_price</span> <span class="o">=</span> <span class="mf">100.99</span>
-<span class="n">on_sale</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="k">if</span> <span class="n">pub_price</span> <span class="o">&gt;</span> <span class="mi">100</span> <span class="ow">and</span> <span class="n">on_sale</span><span class="p">:</span>
-    <span class="n">retail_price</span> <span class="o">=</span> <span class="n">pub_price</span> <span class="o">*</span> <span class="mf">1.25</span>
-<span class="k">elif</span> <span class="n">on_sale</span><span class="p">:</span>
-    <span class="n">retail_price</span> <span class="o">=</span> <span class="n">pub_price</span> <span class="o">*</span> <span class="mf">1.35</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">retail_price</span> <span class="o">=</span> <span class="n">pub_price</span> <span class="o">*</span> <span class="mf">1.40</span>
-    
-</pre></div>
-</div>
-<p>In this example, we calculate retail price from a publisher’s price, using a markup percentage. The percentage to be applied depends on whether or not the book is on sale, with an extra discount for books over $100 that are on sale.</p>
-<p>If we didn’t put the compound condition in the first position (<code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">pub_price</span> <span class="pre">&gt;</span> <span class="pre">100</span> <span class="pre">and</span> <span class="pre">on_sale</span></code>), then sale books over $100 would not get the appropriate discount.</p>
 </section>
 <section id="a-for-loop-pattern">
 <h3>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop pattern<a class="headerlink" href="#a-for-loop-pattern" title="Permalink to this heading">#</a></h3>
@@ -587,9 +562,6 @@ Counter after loop 1250
 </div>
 </div>
 </div>
-<p>(for instructors)</p>
-<p>Point out that the <code class="docutils literal notranslate"><span class="pre">print()</span></code> statements emphasize the fact that the <code class="docutils literal notranslate"><span class="pre">counter</span></code> variable is incremented by the loop, so that it goes from 0 to 1250 (the number of items in the list).</p>
-<p>Point out that this code essentially does the same thing as <code class="docutils literal notranslate"><span class="pre">len(bkst_data)</span></code>.</p>
 </section>
 </section>
 <section id="team-activities">
@@ -623,17 +595,6 @@ Counter after loop 1250
 <li><p>An empty list has a length of 0.</p></li>
 <li><p>This exercise requires you to use an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement inside a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p></li>
 </ul>
-<p>(for instructors)</p>
-<p>Solutions should look something like the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">with_texts</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">course</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">with_texts</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Percentage of courses with textbooks:&#39;</span><span class="p">,</span> <span class="n">with_texts</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">))</span> 
-</pre></div>
-</div>
-<p>Take a moment to review solutions from the teams before proceeding to the next activity.</p>
-<p>Highlight the levels of indentation involved with the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
 </section>
 </section>
 <section id="querying-nested-data">
@@ -662,19 +623,6 @@ Counter after loop 1250
 </div>
 </div>
 </div>
-<p>(for instructors)</p>
-<p>Have each team share either their solution OR where they go stuck (if they did not find a solution).</p>
-<p>The following code represents one possible solution:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">most_expensive</span> <span class="o">=</span> <span class="mi">0</span>               <span class="c1"># Initialize variable to track most expensive seen</span>
-<span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>         <span class="c1"># Loop over courses (outer loop)</span>
-    <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">]:</span> <span class="c1"># Loop over textbooks (inner loop)</span>
-        <span class="n">price</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="s1">&#39;price_display&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:])</span>  <span class="c1"># Slice string, convert to float</span>
-        <span class="k">if</span> <span class="n">price</span> <span class="o">&gt;</span> <span class="n">most_expensive</span><span class="p">:</span>   <span class="c1"># Compare this price with most expensive</span>
-            <span class="n">most_expensive</span> <span class="o">=</span> <span class="n">price</span>   <span class="c1"># Update if necessary</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Most expensive textbook costs&#39;</span><span class="p">,</span> <span class="n">most_expensive</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>It may be worth pointing out that when <code class="docutils literal notranslate"><span class="pre">course['texts']</span></code> is empty, the line <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">book</span> <span class="pre">in</span> <span class="pre">course['texts']:</span></code> will simply exit without iterating (as opposed to throwing an error). This is useful, since it means we don’t need explicitly to check for a list length &gt; 0.</p>
 </section>
 <section id="more-queries">
 <h3>3. More queries<a class="headerlink" href="#more-queries" title="Permalink to this heading">#</a></h3>
@@ -696,48 +644,7 @@ Counter after loop 1250
 </div>
 </div>
 </div>
-<p>Possible solution to #1 above:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">most_expensive</span> <span class="o">=</span> <span class="mi">0</span>              
-<span class="n">most_exp_course</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>        
-    <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">]:</span> 
-        <span class="n">price</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="s1">&#39;price_display&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:])</span>  
-        <span class="k">if</span> <span class="n">price</span> <span class="o">&gt;</span> <span class="n">most_expensive</span><span class="p">:</span>  
-            <span class="n">most_expensive</span> <span class="o">=</span> <span class="n">price</span>   
-            <span class="n">most_exp_course</span> <span class="o">=</span> <span class="n">course</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Course with the most expensive textbook:&#39;</span><span class="p">,</span> <span class="n">most_exp_course</span><span class="p">)</span>  
-</pre></div>
-</div>
-<p>Possible solution to #2 above:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">most_expensive</span> <span class="o">=</span> <span class="mi">0</span>              
-<span class="n">most_exp_text</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>        
-    <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">]:</span> 
-        <span class="n">price</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="s1">&#39;price_display&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:])</span>  
-        <span class="k">if</span> <span class="n">price</span> <span class="o">&gt;</span> <span class="n">most_expensive</span><span class="p">:</span>  
-            <span class="n">most_expensive</span> <span class="o">=</span> <span class="n">price</span>   
-            <span class="n">most_exp_text</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
-            <span class="n">most_exp_text</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The most expensive textbook:&#39;</span><span class="p">,</span> <span class="n">most_exp_text</span><span class="p">)</span> 
-</pre></div>
-</div>
-<p>If teams get stuck, it may help to explain that all this problem requires is the use of an additional variable to keep track of which course/text is the most expensive. It is perhaps most straightfoward to create a dictionary for this second variable, since the information that we want (describing the course and/or the text) is already in this form.</p>
-<p>(for instructors)</p>
 </section>
-</section>
-<section id="wrap-up">
-<h2>Wrap up<a class="headerlink" href="#wrap-up" title="Permalink to this heading">#</a></h2>
-<p>Today you did the following:</p>
-<ul class="simple">
-<li><p>Used Python dictionaries to store and update data about your team.</p></li>
-<li><p>Used conditionals, <code class="docutils literal notranslate"><span class="pre">for</span></code> loops, and the “counter” pattern to answers basic questions about the textbook dataset.</p></li>
-</ul>
-<p>In the homework tonight, you’ll build on this knowledge to practice more ways of interacting with the textbook data. You’ll also some learn some new tools to help you take your</p>
-<p>Tonight’s homework has two parts:</p>
-<ol class="arabic simple">
-<li><p>A section with self-guided exercises for you to do on your own. In your teams tomorrow, you’ll build on the skills introduced in these exercises.</p></li>
-<li><p>A shorter section of autograded exercises which you will submit to the OpenEdX site to record your score. You can resubmit the exercises as many times as you like, but you’ll need to get at least 80% correct in order to receive your Python Camp certificate.</p></li>
-</ol>
 </section>
 </section>
 
@@ -778,7 +685,7 @@ Counter after loop 1250
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Creating a Team Database</p>
+        <p class="prev-next-title">Describing the Team</p>
       </div>
     </a>
     <a class="right-next"
@@ -827,7 +734,6 @@ Counter after loop 1250
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-queries">3. More queries</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap up</a></li>
 </ul>
   </nav></div>
 

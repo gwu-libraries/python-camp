@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/homework/HW_1_from_code_to_data';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Creating a Team Database" href="../lessons/2_1_describing_the_team.html" />
+    <link rel="next" title="Describing the Team" href="../lessons/2_1_describing_the_team.html" />
     <link rel="prev" title="From Data to Code" href="../lessons/1_2_from_data_to_code.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -572,6 +572,7 @@ document.write(`
 <section id="id1">
 <h4>Try it out!<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <p>Create two variables to hold the title and author of a textbook. The title and author can be anything you like; the variable names should be <code class="docutils literal notranslate"><span class="pre">book_title</span></code> and <code class="docutils literal notranslate"><span class="pre">book_author</span></code>, respectively.</p>
+<p>Now check your answer by expanding the hidden solution cell below.</p>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -706,6 +707,7 @@ document.write(`
 <section id="id2">
 <h3>Try it out!<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>Create a variable called <code class="docutils literal notranslate"><span class="pre">section_num</span></code> to hold the two-digit section number at the end of the <code class="docutils literal notranslate"><span class="pre">course</span></code> string, and <code class="docutils literal notranslate"><span class="pre">print</span></code> the variable.</p>
+<p>Now check your answer by expanding the hidden solution cell below.</p>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -796,13 +798,14 @@ document.write(`
 <h4>Try it out!<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
 <p>Use <code class="docutils literal notranslate"><span class="pre">split()</span></code> on the <code class="docutils literal notranslate"><span class="pre">term</span></code> variable (defined above) and compare the output with that of <code class="docutils literal notranslate"><span class="pre">course.split()</span></code>.</p>
 <p>Can you tell how <code class="docutils literal notranslate"><span class="pre">split()</span></code> works? How does it know where to separate the string?</p>
+<p>Now check your answer by expanding the hidden solution cell below.</p>
+<div class="toggle docutils container">
 <p>If you ran the code <code class="docutils literal notranslate"><span class="pre">term.split()</span></code>, you should have gotten output like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Summer&#39;</span><span class="p">,</span> <span class="s1">&#39;2023&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
+<p><code class="docutils literal notranslate"><span class="pre">['Summer',</span> <span class="pre">'2023']</span></code></p>
 <p>As you might have guessed, <code class="docutils literal notranslate"><span class="pre">split()</span></code> separates a string on the <strong>white space</strong> (which can be a regular space, a tab, or a line break).</p>
 <p>If you imagine a string as a six-pack of some canned beverage, the spaces are like the plastic rings holding the six-pack together. When we call <code class="docutils literal notranslate"><span class="pre">split()</span></code> on the string, that’s like pulling each can out of the six-pack and discarding the plastic rings: you are left with six individual cans (a list of strings without spaces).</p>
 <p>You can use <code class="docutils literal notranslate"><span class="pre">split()</span></code> with other characters, too. We’ll see some examples later.</p>
+</div>
 </section>
 </section>
 </section>
@@ -845,6 +848,7 @@ document.write(`
 <section id="id5">
 <h4>Try it out!<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
 <p>Use the slicing syntax you learned above to extract and items the first two items from the <code class="docutils literal notranslate"><span class="pre">course_info</span></code> variable.</p>
+<p>Now check your answer by expanding the hidden solution cell below.</p>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -909,6 +913,7 @@ $99.99
 <p>All of the prices follow the same format, beginning with the dollar sign. To calculate the sales tax, we need to multiply each price by a fixed percentage – let’s say 110%, or 1.1, to reflect a sales tax of 10% on the dollar.</p>
 <p>But as we saw above, we can’t perform math with strings, and <code class="docutils literal notranslate"><span class="pre">book_prices</span></code> is a list of strings. To convert our strings to numbers, we first need to remove the dollar sign from each price.</p>
 <p>Modify the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop above so that it prints each price <em>without</em> the dollar sign. For a hint, consult the example above where we created the variable <code class="docutils literal notranslate"><span class="pre">course_section</span></code>.</p>
+<p>Now check your answer by expanding the hidden solution cell below.</p>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -933,7 +938,8 @@ $99.99
 <li><p>Use the <code class="docutils literal notranslate"><span class="pre">float()</span></code> function to convert <code class="docutils literal notranslate"><span class="pre">price_num</span></code> to a float, and multiply the result by <code class="docutils literal notranslate"><span class="pre">1.1</span></code>.</p></li>
 <li><p>Assign the result of this calculation to <code class="docutils literal notranslate"><span class="pre">price_num</span></code> and print it.</p></li>
 </ol>
-<p>If the foregoing feels intimidating, try this Parsons Problem first. It allows you to focus on the logical order of the actions to be performed, rather than on the syntax of the commands.</p>
+<p>If the foregoing feels intimidating, try this <a class="reference external" href="https://gwu-libraries.github.io/python-camp/parsons-problems/html/homework_1.html">Parsons Problem</a> first. It allows you to focus on the logical order of the actions to be performed, rather than on the syntax of the commands.</p>
+<p>Now check your answer by expanding the hidden solution cell below.</p>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1014,7 +1020,7 @@ $99.99
 </pre></div>
 </div>
 <p>Using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, transform this list into three separate lists: one to hold the department codes, one to hold the course numbers, and one to hold the section numbers.</p>
-<p>The cells below will get you started. For more help, check out this Parsons Problem.</p>
+<p>The cells below will get you started. For more help, check out this <a class="reference external" href="https://gwu-libraries.github.io/python-camp/parsons-problems/html/homework_1_2.html">Parsons Problem</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">courses</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CHEM 1001 10&#39;</span><span class="p">,</span> <span class="s1">&#39;CHEM 1001 11&#39;</span><span class="p">,</span> <span class="s1">&#39;BISC 1111 10&#39;</span><span class="p">,</span> <span class="s1">&#39;BISC 2207 10&#39;</span><span class="p">,</span> <span class="s1">&#39;PSC 1001 10&#39;</span><span class="p">,</span>
@@ -1032,6 +1038,7 @@ $99.99
 </div>
 </div>
 </div>
+<p>Now check your answer by expanding the hidden solution cell below.</p>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1109,7 +1116,7 @@ $99.99
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Creating a Team Database</p>
+        <p class="prev-next-title">Describing the Team</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

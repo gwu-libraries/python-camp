@@ -397,7 +397,6 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap Up</a></li>
 </ul>
             </nav>
         </div>
@@ -444,10 +443,6 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">As</span> <span class="n">a</span> <span class="n">___________</span><span class="p">,</span> <span class="n">I</span> <span class="n">want</span> <span class="n">to</span> <span class="n">_____________________</span><span class="p">,</span> <span class="n">so</span> <span class="n">that</span> <span class="n">____________________</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>(for instructors)</p>
-<p>At this point, each team should share their user stories with the larger group, and the instructors should document them so that all teams can refer back to them.</p>
-<p>Acknowledge that some user stories may be beyond the scope of what we can accomplish now, either because we haven’t learned the relevant tools yet (e.g., making a website), or because our dataset doesn’t support it (e.g., correlating textbook cost with course enrollment).</p>
-<p>Note that writing code is almost always an interative process. If we can’t tackle the full scope of a user story at the moment, we can find identify a piece of it to work on, given our skills and resources.</p>
 </section>
 </section>
 <section id="ii-coding-your-story">
@@ -472,21 +467,6 @@ document.write(`
 <ol class="arabic simple" start="5">
 <li><p>Once you’ve settled on a minimal implementation, how are you going to get there? Try to describe the sequence of steps your implementation will take, and flag any steps that you have questions about.</p></li>
 </ol>
-<p>(for instructors)</p>
-<p>At this point, instructors should check in with each team to help them work through the above questions and/or address any questions the teams have flagged about implementation.</p>
-<p>If a team has chosen a more complex user story and/or an implementation that requires a Python feature or programming technique we haven’t covered, consider one of two approaches:</p>
-<ol class="arabic simple">
-<li><p>Steer the team toward a simpler version of what they’re trying to accomplish, e.g., “Python has great tools for data visualization, but we aren’t learning about them in Python Camp. But instead of actually producing a graph or chart, try thinking through what the data would need to look like (in terms of structure) in order to produce such a chart. Can you write some code to transform the bookstore dataset into that structure?”</p></li>
-<li><p>If the team seems up for it, <em>and if you feel comfortable supporting them</em>, you can introduce the feature or technique that the team needs to do what they propose. Examples at this stage might include things like</p></li>
-</ol>
-<ul class="simple">
-<li><p>creating a CSV file;</p></li>
-<li><p>using one or more string methods we haven’t covered;</p></li>
-<li><p>sorting a list;</p></li>
-<li><p>looping over the items (key/value pairs) in a dictionary;</p></li>
-<li><p>etc.</p></li>
-</ul>
-<p>Make sure to refer the team to documentation about the feature in the official Python docs and/or elsewhere.</p>
 </section>
 <section id="ii-2-implementation">
 <h3>II.2 Implementation<a class="headerlink" href="#ii-2-implementation" title="Permalink to this heading">#</a></h3>
@@ -553,94 +533,8 @@ document.write(`
      <span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>  <span class="c1"># Prints the value associated with each key</span>
 </pre></div>
 </div>
-<p>(for instructors)</p>
-<p>Here is a solution to the first optional user story:</p>
-<blockquote>
-<div><p>As a student, I want to see summary statistics about textbook cost by department, so that I can know what to expect from various possible majors: e.g, average textbook cost, most expensive textbook, least expensive textbook, etc.</p>
-</div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, we create a dictionary to associate each department with a list of textbook prices</span>
-
-<span class="n">prices_by_dept</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
-    <span class="n">dept</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;department&#39;</span><span class="p">]</span>
-    <span class="c1"># If this key doesn&#39;t exist in our dictionary, we need to create new list</span>
-    <span class="k">if</span> <span class="n">dept</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">prices_by_dept</span><span class="p">:</span>
-        <span class="n">prices</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c1"># Otherwise, we want to add to an existing list</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">prices</span> <span class="o">=</span> <span class="n">prices_by_dept</span><span class="p">[</span><span class="n">dept</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">]:</span>
-        <span class="n">price</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="s1">&#39;price_display&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:])</span>
-        <span class="n">prices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>
-    <span class="c1"># We update the dictionary with our new/modified list for this key</span>
-    <span class="n">prices_by_dept</span><span class="p">[</span><span class="n">dept</span><span class="p">]</span> <span class="o">=</span> <span class="n">prices</span>
-    
-<span class="c1"># Next we convert each department&#39;s list of prices into summary stats</span>
-
-<span class="k">for</span> <span class="n">dept</span> <span class="ow">in</span> <span class="n">prices_by_dept</span><span class="p">:</span>
-    <span class="n">prices</span> <span class="o">=</span> <span class="n">prices_by_dept</span><span class="p">[</span><span class="n">dept</span><span class="p">]</span>
-    <span class="c1"># Only create stats for lists that are not empty</span>
-    <span class="k">if</span> <span class="n">prices</span><span class="p">:</span>
-        <span class="c1"># Replace the department&#39;s list of prices with a dictionary holding the stats</span>
-        <span class="c1"># Using built-in Python functions sum, len, max, and min</span>
-        <span class="n">prices_by_dept</span><span class="p">[</span><span class="n">dept</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;average_cost&#39;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">),</span>
-                    <span class="s1">&#39;max_cost&#39;</span><span class="p">:</span> <span class="nb">max</span><span class="p">(</span><span class="n">prices</span><span class="p">),</span>
-                    <span class="s1">&#39;min_cost&#39;</span><span class="p">:</span> <span class="nb">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)}</span>
-    <span class="c1"># If there are no prices, we use Python&#39;s null value</span>
-    <span class="c1"># Could also just have left it an empty list</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">prices_by_dept</span><span class="p">[</span><span class="n">dept</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<p>If a team has successfully implemented this user story and is ready to work on enhancements, have them choose one of the following next steps:</p>
-<ul class="simple">
-<li><p>Add a summary statistic indicating the average number of texts per course. (Note that the same text might appear multiple times under a single course, for instance, if it’s being offered for purchase and for rent, and/or in print and digitally. Teams might want to focus on a single combination of <code class="docutils literal notranslate"><span class="pre">item_type</span></code> and <code class="docutils literal notranslate"><span class="pre">type_condition</span></code>, e.g., new print books for purchase.)</p></li>
-<li><p>Revise the price statistics so that they are based only on new books available for purchase.</p></li>
-</ul>
-<p>(for instructors)</p>
-<p>Here is a solution to the second optional user story:</p>
-<blockquote>
-<div><p>As a librarian, I want to enter an ISBN (the unique 10- or 13-digit number publishers use to identify their books) and see which courses at GW require that text, so that I can anticipate demand on library reserves.</p>
-</div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a dictionary to hold each ISBN and its associated courses</span>
-<span class="n">courses_by_isbn</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
-    <span class="c1"># Capture data about the course as a new dictionary</span>
-    <span class="n">course_info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;department&#39;</span><span class="p">:</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;department&#39;</span><span class="p">],</span>
-                    <span class="s1">&#39;course&#39;</span><span class="p">:</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;course&#39;</span><span class="p">],</span>
-                    <span class="s1">&#39;section&#39;</span><span class="p">:</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;section&#39;</span><span class="p">]}</span>
-    <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">]:</span>
-        <span class="c1"># Get the ISBN for each text</span>
-        <span class="n">isbn</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="s1">&#39;isbn&#39;</span><span class="p">]</span>
-        <span class="c1"># If the ISBN already exists in the outer dictionary, </span>
-        <span class="c1"># append this course to the list</span>
-        <span class="k">if</span> <span class="n">isbn</span> <span class="ow">in</span> <span class="n">courses_by_isbn</span><span class="p">:</span>
-            <span class="n">courses_by_isbn</span><span class="p">[</span><span class="n">isbn</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course_info</span><span class="p">)</span>
-        <span class="c1"># If the ISBN hasn&#39;t been seen before, </span>
-        <span class="c1"># we need to initialize the list of courses</span>
-        <span class="c1"># Note the brackets around the course_info variable: </span>
-        <span class="c1"># we&#39;re creating a list with one element</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">courses_by_isbn</span><span class="p">[</span><span class="n">isbn</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">course_info</span><span class="p">]</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<p>A problem with this implementation is that duplication can arise when the same course lists the a given ISBN multiple times (because it’s available for both purchase and rental, etc.). As a follow-up, teams can work on refining the code to remove duplication, by checking for the presence of a given course in the ISBN list before appending it.</p>
-<p>(for instructors)</p>
 </section>
 </section>
-</section>
-<section id="wrap-up">
-<h2>Wrap Up<a class="headerlink" href="#wrap-up" title="Permalink to this heading">#</a></h2>
-<p>Before the end of the day, whether or not all teams have finished, instructors should make time for sharing and discussion. The following questions might serve as prompts. Alternately, it may be useful to have everyone answer one or two of these in writing (as a self-assessment).</p>
-<ul class="simple">
-<li><p>How did you approach implementation?</p></li>
-<li><p>What obstacles did you encounter? How did you solve or try to solve them?</p></li>
-<li><p>If you found yourself revising your user story or your plan during implementation, how and why did that happen?</p></li>
-<li><p>What do you wish you knew about Python or programming in doing this exercise?</p></li>
-<li><p>What have you learned from this process?</p></li>
-</ul>
 </section>
 </section>
 
@@ -724,7 +618,6 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap Up</a></li>
 </ul>
   </nav></div>
 

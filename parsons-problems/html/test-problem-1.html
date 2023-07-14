@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <script src="../js/parsons.js"></script>
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js"></script>
+        <link rel="stylesheet" href="../css/parsons.css">
+    </head>
+
+    <body>
+        <!-- class names ending in "ps" correspond to the problem space, "ss" to the solution space -->
+        <header class="doc-container">
+            <h1 class="page-title">Parsons Problem</h1>
+            <h2 class="problem-statement">
+                Write come code that counts how many numbers divisible by 2 are in the first four positive integers.
+            </h2>
+            <ol class="instructions">
+                <li>In the space below, drag lines of code from the rows on the left to the empty rows on the right.</li>
+                <li>Arrange the lines of code in the logical order that will produce the desired output.</li>
+                <li>To indent a line of code, follow the yellow highlighting when positioning it over an empty row.</li>
+                <li>To run your code, click the <strong>Run code</strong> button. The output of running your code, including any error messages, will appear in the panel at the bottom </li>
+                <li>Click the <strong>Reset</strong> button to clear the code space on the right and start over.</li>
+        </header>
+        <main>
+            <section id="python-input"">
+                <h2>Compose your code here</h2>
+                <div class="parsons-container">
+                    <div class="parsons-column-ps">
+                        
+                            <div class="parsons-ps">
+                                <div class="parsons-block" id="pb-1" draggable="true">
+                                    counter = 0
+                                </div>
+                            </div>
+                        
+                            <div class="parsons-ps">
+                                <div class="parsons-block" id="pb-2" draggable="true">
+                                    my_list = [1, 2, 3, 4]
+                                </div>
+                            </div>
+                        
+                            <div class="parsons-ps">
+                                <div class="parsons-block" id="pb-3" draggable="true">
+                                    for item in my_list:
+                                </div>
+                            </div>
+                        
+                            <div class="parsons-ps">
+                                <div class="parsons-block" id="pb-4" draggable="true">
+                                    if item % 2 == 0:
+                                </div>
+                            </div>
+                        
+                            <div class="parsons-ps">
+                                <div class="parsons-block" id="pb-5" draggable="true">
+                                    counter += 1
+                                </div>
+                            </div>
+                        
+                            <div class="parsons-ps">
+                                <div class="parsons-block" id="pb-6" draggable="true">
+                                    print(counter)
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <!-- Use separate divs for each row of the target area, since we need to provide multiple columns in each row (for code indentation) and want to be able to control the columns independently between rows -->
+                    <div class="parsons-column-ss">
+                        
+                            <div class="parsons-row-ss" id="ss-row-1">
+                                
+                                
+                                    <div class="parsons-ss" id="ss-1-1"></div>
+                                
+                                    <div class="parsons-ss" id="ss-1-2"></div>
+                                
+                                    <div class="parsons-ss" id="ss-1-3"></div>
+                                
+                            </div>
+                        
+                            <div class="parsons-row-ss" id="ss-row-2">
+                                
+                                
+                                    <div class="parsons-ss" id="ss-2-1"></div>
+                                
+                                    <div class="parsons-ss" id="ss-2-2"></div>
+                                
+                                    <div class="parsons-ss" id="ss-2-3"></div>
+                                
+                            </div>
+                        
+                            <div class="parsons-row-ss" id="ss-row-3">
+                                
+                                
+                                    <div class="parsons-ss" id="ss-3-1"></div>
+                                
+                                    <div class="parsons-ss" id="ss-3-2"></div>
+                                
+                                    <div class="parsons-ss" id="ss-3-3"></div>
+                                
+                            </div>
+                        
+                            <div class="parsons-row-ss" id="ss-row-4">
+                                
+                                
+                                    <div class="parsons-ss" id="ss-4-1"></div>
+                                
+                                    <div class="parsons-ss" id="ss-4-2"></div>
+                                
+                                    <div class="parsons-ss" id="ss-4-3"></div>
+                                
+                            </div>
+                        
+                            <div class="parsons-row-ss" id="ss-row-5">
+                                
+                                
+                                    <div class="parsons-ss" id="ss-5-1"></div>
+                                
+                                    <div class="parsons-ss" id="ss-5-2"></div>
+                                
+                                    <div class="parsons-ss" id="ss-5-3"></div>
+                                
+                            </div>
+                        
+                            <div class="parsons-row-ss" id="ss-row-6">
+                                
+                                
+                                    <div class="parsons-ss" id="ss-6-1"></div>
+                                
+                                    <div class="parsons-ss" id="ss-6-2"></div>
+                                
+                                    <div class="parsons-ss" id="ss-6-3"></div>
+                                
+                            </div>
+                        
+                    </div>
+                </div> 
+                <div class="parsons-controller">
+                    <button class="parsons-submit" type="button">
+                        Run code
+                    </button>
+                    <button class="parsons-reset" type="button">
+                        Reset
+                    </button>
+                </div>  
+            </section>
+            <section id="python-output">
+                <h2>Python output</h2>
+                <div class="parsons-output">
+                        <span class="parsons-output-line">
+                            >>Python output here...
+                        </span>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

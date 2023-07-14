@@ -1,0 +1,86 @@
+.problem-statement {
+    font-size: 22;
+}
+
+
+.instructions {
+    font-size: 18;
+}
+.parsons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+}
+
+.parsons-column-ss, .parsons-column-ps {
+    display: grid;  
+    row-gap: 5px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.parsons-row-ss, .parsons-ps {
+    position: relative;
+    border: 1px dotted black;
+}
+.parsons-ss {
+    position: absolute;
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.parsons-ss.dragover {
+    background-color: yellow;
+}
+
+.parsons-ss.dragover * {
+    pointer-events: none;
+}
+
+.parsons-ps, .parsons-ss {
+    height: 60px;
+}
+
+.parsons-block  {
+    height: 50px;  /* Fixed height for element */
+    user-select: none;
+    font-size: 18;
+    font-family: monospace;
+    width: 500px;
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.parsons-block:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    transition: 0.01s;
+    transform: translateX(-9999px);
+}
+
+.indent-char {
+    padding-left: 1em;
+}
+
+.parsons-output {
+    border: 2px solid black;
+    background-color: lightgray;
+    width: 30%;
+    height: 300px;
+    padding: 5px;
+    font-size: 18;
+    font-family: monospace;
+
+}
+
+.parsons-output-line {
+    display: block;
+}
+
+.parsons-error {
+    background-color: lightcoral;
+}
