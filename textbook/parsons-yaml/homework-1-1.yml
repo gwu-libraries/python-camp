@@ -1,0 +1,8 @@
+python_code: |
+    book_prices = ['$55.99', '$119.95', '$13.95']
+    for price in book_prices:
+        price_num = price[1:]
+        price_num = float(price_num) * 1.1
+        print(price_num)
+problem: > 
+    Write a for loop to convert each price to a float and multiply it by 1.1 to find the total price with sales tax.

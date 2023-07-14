@@ -40,7 +40,7 @@ def load_yaml(yaml_files):
                 # Strips leading/trailing whitespace from the code block and split on line breaks
                 parsons_dict['python_code'] = parsons_dict['python_code'].strip().split('\n')
                 # Randomize code order
-                parsons_dict['python_code'] = shuffle(parsons_dict['python_code'])
+                shuffle(parsons_dict['python_code'])
                 yield file, parsons_dict
 
 def get_max_depth(python_code):

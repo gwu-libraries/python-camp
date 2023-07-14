@@ -1,0 +1,9 @@
+python_code: |
+    courses = ['CHEM 1001 10', 'BISC 1111 10', 'BISC 2207 10']
+    depts = []
+    for course in courses:
+      course_info = course.split()
+      depts.append(course_info[0])
+    print(depts)
+problem: > 
+    Using a for loop, transform the list of courses into a list of departments.

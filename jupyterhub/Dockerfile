@@ -6,9 +6,6 @@ RUN apt-get update -qq \
 
 RUN pip install nbgitpuller notebook jupytext>=1.6 jupyter_contrib_nbextensions 
 
-RUN jupyter contrib nbextension install --sys-prefix && jupyter nbextension enable hide_input/main --sys-prefix
+RUN jupyter contrib nbextension install --sys-prefix && jupyter nbextension enable rubberband/main --sys-prefix && jupyter nbextension enable exercise2/main --sys-prefix 
 
-CMD ["bash", "-c", "./jh-startup.sh"]
-
-
-
+CMD ["./jh-startup.sh"]

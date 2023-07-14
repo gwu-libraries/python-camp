@@ -173,7 +173,7 @@ class BookstoreScraper:
                     return json.load(f)
         self.data = get_latest(self.data_dir, self.file_prefix)
         if self.data:
-            logging.info(f'Found {len(self.data)} records.')
+            logger.info(f'Found {len(self.data)} records.')
         self.courses = get_latest(self.data_dir, course_file_prefix)
         return self
 
@@ -223,11 +223,13 @@ class BookstoreScraper:
             return course_info['department'], course_info['course'], course_info['section']
         
         new_courses = []
-        # Build list of tuples from previous bookstore data
-        bkstr_index = [extract_course_info(d) for d in self.data]
+        # Build set of tuples from previous bookstore data
+        bkstr_index = {extract_course_info(d) for d in self.data}
         for course in courses:
             if (course['code'], course['number'], course['section']) not in bkstr_index:
                 new_courses.append(course)
+                # Add to index to prevent duplication 
+                bkstr_index.add((course['code'], course['number'], course['section']))
         return new_courses
 
     def run_scraper(self, headers):
