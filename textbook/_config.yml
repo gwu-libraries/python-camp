@@ -22,8 +22,12 @@ bibtex_bibfiles:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/gwu-libraries/python-camp  # Online location of your book
-  path_to_book: textbook  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  path_to_book: _sources  # Optional path to your book, relative to the repository root
+  branch: gh-pages  # Which branch of the repository should be used when creating links (optional)
+
+launch_buttons:
+  notebook_interface: "classic"
+  jupyterhub_url: "http://ec2-18-222-180-6.us-east-2.compute.amazonaws.com/jupyter/"
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository

@@ -15,6 +15,7 @@ services:
     environment:
       - VIRTUAL_HOST=ec2-18-222-180-6.us-east-2.compute.amazonaws.com
       - VIRTUAL_PORT=8000
+      - TEST_USERS=jupytertest
 
   nginx-proxy:
     image: nginxproxy/nginx-proxy
