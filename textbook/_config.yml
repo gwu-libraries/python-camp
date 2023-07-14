@@ -3,7 +3,7 @@
 
 title: "Python Camp: Programming for Beginners"
 author: "GW Libraries & Academic Innovation"
-logo: logo.png
+logo: python-camp.png
 exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", "parsons-yaml"]
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
