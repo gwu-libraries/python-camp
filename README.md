@@ -9,7 +9,22 @@ Notebooks can be launched in JupyterHub or downloaded for running locally.
 
 - Each lesson in the JupyterBook format has a launch button in the upper right menu that provides an option to open the notebook in JupyterHub.
 - For **registered users**, this link allows the user to open an executable notebook in a running instance of JupyterHub. (Currently, this points to a test instance, not for use in production.)
-- 
+- The version of the notebook that launches in JupyterHub uses slightly different formatting from the version that appears in the JupyterBook. See the details on postprocessing below.
+
+## Autograded homeworks/GitHub Classroom (beta)
+
+- GitHub Classroom supports autograding of assignments submitted by students from a roster. 
+- Each assignment corresponds to a separate repo on GitHub. Each repo ([example](https://github.com/gwu-libraries/python-camp-hw-2-gr)) should contain only the assignment notebook, a README, and, in a `course-utils` folder, the `autograder.py` script from the `course-utils` folder in the main Python Camp repo.
+- When a student accepts the invitation to an assignment, GitHub creates a new repo for that student for that particular assignment. (It's not currently possible to manage all assignments as a single repo with GitHub Classroom.) 
+  - The student uploads their version of the homework notebook, and a GitHub Actions workflow runs the tests in `course-utils/autograder.py` against the committed file. 
+  - Pass/fail is recorded both in the student's repo and in the GitHub Classroom site. 
+- To manage development these separate assignment repos, I am testing the following workflow:
+  1. Each homework assignment repo is linked to the main repo as a git [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+  2. These submodule links are housed within the `homework-modules` folder of the main repo.
+  3. After cloning the main repo, to get access to the submodule files, run `git submodule update --init --recursive`.
+  4. Changes made to the homework notebooks need to copied into the appropriate submodule directory with `homework-modules`.
+  5. Changes can be pushed to the remote (submodule) repos using `git push --recurse-submodules=on-demand`.
+  6. Changes can be pulled from the remote repos using `git submodule update --remote --merge` (or `git submodule update --remote --rebase`).s
 
 ## Publishing/updating lessons
 
