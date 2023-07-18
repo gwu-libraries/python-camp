@@ -1,0 +1,13 @@
+python_code: |
+    courses = ['CHEM 1001 10', 'CHEM 1002, 10', 'CHEM 1002 11', 'BISC 1100 10']
+    courses_db = []
+    for course in courses:
+      course_info = course.split() 
+      course_dict = {}
+      course_dict['dept'] = course_info[0]
+      course_dict['course'] = course_info[1]
+      course_dict['section'] = course_info[2]
+      courses_db.append(course_dict)
+    print(courses_db)
+problem: > 
+    write some code that will transform the data in the courses list into a list of dictionaries called courses_db. Each dictionary should have the same three keys: dept, course, and section. And there should be one dictionary for each of the courses in the original courses list.

@@ -21,9 +21,9 @@ Notebooks can be launched in JupyterHub or downloaded for running locally.
 - To manage development these separate assignment repos, I am testing the following workflow:
   1. Each homework assignment repo is linked to the main repo as a git [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
   2. These submodule links are housed within the `homework-modules` folder of the main repo.
-  3. After cloning the main repo, to get access to the submodule files, run `git submodule update --init --recursive`.
-  4. Changes made to the homework notebooks need to copied into the appropriate submodule directory with `homework-modules`.
-  5. Changes can be pushed to the remote (submodule) repos using `git push --recurse-submodules=on-demand`.
+  3. To clone the repo with the submodules, run `git clone --recurse-submodules` on the main repo.
+  4. Changes made to the homework notebooks need to copied into the appropriate submodule directory within `homework-modules`.
+  5. Changes can be pushed to the remote (submodule) repos using `git push --recurse-submodules=on-demand`. (Note that changes must be committed first both in the submodule directory and in the root repo directory.)
   6. Changes can be pulled from the remote repos using `git submodule update --remote --merge` (or `git submodule update --remote --rebase`).s
 
 ## Publishing/updating lessons
