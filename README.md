@@ -39,6 +39,8 @@ Notebooks can be launched in JupyterHub or downloaded for running locally.
   - Builds Parsons Problems from the YAML files in `textbook/parsons-yml`. 
   - Builds a clean copy of the book itself (using the `jupyter-book publish` command). This script converts the `.ipynb` files to `.html`.
   - Runs a postprocessing script to remove Sphinx directives and any cells tagged as `remove-cell` from the `.ipynb` files in `textbook/_build/html/_sources`. THese are the versions of the notebooks that end users can download or open in JupyterHub. Postprocessing makes for a cleaner user experience in the classic Jupyter environment (and allows us to remove content designed only for instructors, etc.).
+  - Copies any homework notebooks for autograding (these should be labeled as follows: `HW-1-GR`, `HW-2-GR`, etc.) from the `textbook/notebooks/homework` directory to the appropriate subdirectory (these should be labeled as follows: `python-camp-hw-1-gr`, `python-camp-hw-2-gr`, etc.) in the `homework-modules` directory. These subdirectories are manages as git submodules; upon copying the files over, the `publish.sh` script will commit and push any changes (to the associated repos).
+6. From the root of the `python-camp` repo, create a new commit and push to `origin main` (to update the reference to the submodule commits).
 
 ## JupyterBook formatting tags
 
