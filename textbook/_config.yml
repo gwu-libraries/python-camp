@@ -37,7 +37,29 @@ html:
 
 parse:
   myst_substitutions:
-    parsons_url: https://gwu-libraries.github.io/python-camp/parsons-problems/html
+    application_url: "[application form](https://library.gwu.edu)"  # Insert URL for Google Form here
+    application_deadline: September 7, 2023 # Deadline for form
+    current_semester: Fall 2023 
+    schedule: |
+      :::{list-table} 
+      :header-rows: 1
+
+      * - Date
+        - Day
+        - Time
+      * - October 9, 2023
+        - Monday
+        - 1 pm - 5 pm
+      * - October 11, 2023
+        - Wednesday
+        - 1 pm - 5 pm
+      * - October 12, 2023
+        - Thursday
+        - 1 pm - 5 pm
+      * - October 13, 2023
+        - Friday
+        - 1 pm - 5 pm
+      :::
   myst_enable_extensions:
     # - amsmath
     - colon_fence

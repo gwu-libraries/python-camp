@@ -19,7 +19,38 @@ then Python Camp may be for you!
 
 ## What Does It Involve?
 
+Over the course of **four days**, participants will spend approximately **four hours a day** together, working in small teams on activities facilitated by Python Camp instructors. 
+
+In addition, participants will complete approximately **one to two hours** of self-guided homework lessons each day. These lessons are intended to be done individually and serve to prepare participants for the team-based learning on the following day. The homework includes a handful of shorter exercises to test participants' knowledge, which will be graded. 
+
+Successful completion of these exercises, as well as attendance and participation during all four days of Python Camp, will confer a certificate of achievement. 
+
+**Please note that Python Camp is an in-person, on-site experience.** We are best able to support the active-learning goals of Python Camp when we are all physically in the same room together, and we don't have the resources to replicate this experience for remote learners at this time. 
+
+During Python Camp, you can expect the following:
+
+- To gain exposure to the basics of the Python language, including variables, simple and complex data types, loops, conditionals, and classes.
+
+- To work with these concepts in a context that emphasizes their application to practical problems.
+
+- To practice designing data structures, writing user stories, and interpreting error messages.
+
+- To practice team-based programming, with a focus on communication, knowledge-sharing, and brainstorming.
+
+- To get to know others who share an interest in learning to program, to work together to solve problems in a supportive environment, and to have fun!
+
+## When and Where?
+
+For the **{{ current_semester }}** term, Python Camp will be take place according to the following schedule.
+
+{{ schedule }}
+
 ## How Do I Apply?
+
+Because demand is typically high and space is limited, we give priority to those who consider themselves beginners at programming, who have not recently learned a language similar to Python (_e.g._, R), and who don't currently have other opportunities to learn Python through their coursework at GW. 
+
+To apply, please submit the {{ application_url }} by **{{ application_deadline }}**. Decisions will be announced within two weeks of the application deadline. 
+
 
 ## Acknowledgments
 

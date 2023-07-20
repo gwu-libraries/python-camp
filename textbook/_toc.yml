@@ -4,6 +4,10 @@
 format: jb-book
 root: intro
 parts:
+- caption: Preliminaries
+  chapters:
+  - file: guidelines
+    title: "Collaborating on Code: Guidelines for a Good Experience"
 - caption: Day 1
   chapters:
   - file: notebooks/lessons/1_1_choreographing_code
