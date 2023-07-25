@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/python-camp.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -424,28 +425,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dataset">The dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source">Source</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#format">Format</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-lists">Navigating lists</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Try it out!</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-nested-data">Navigating nested data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Try it out!</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Questions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Try it out!</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Questions</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-lists">Navigating lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-nested-data">Navigating nested data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-discussion">Questions for Discussion</a></li>
 </ul>
             </nav>
         </div>
@@ -481,10 +466,10 @@ document.write(`
 </section>
 <section id="the-dataset">
 <h2>The dataset<a class="headerlink" href="#the-dataset" title="Permalink to this heading">#</a></h2>
-<p>Over the next few days, we’ll be working together on a dataset containing information about textbooks assigned by courses at GW for the <strong>[add term]</strong> semester.</p>
+<p>Over the next few days, we’ll be working together on a dataset containing information about textbooks assigned by courses at GW for the Summer 2023 semester.</p>
 <section id="source">
 <h3>Source<a class="headerlink" href="#source" title="Permalink to this heading">#</a></h3>
-<p>This dataset was obtained by scraping the <a class="reference external" href="https://www.bkstr.com/georgewashingtonstore/shop/textbooks-and-course-materials">GW Bookstore</a> website. Because web scraping is a rather advanced topic, we won’t be covering that process in Python Camp.(The <a class="reference external" href="https://github.com/gwu-libraries/python-camp/blob/main/course-utils/gw_bookstore_scraping.ipynb">code</a> is available in the Python Camp GitHup repository, for those who are interested.)</p>
+<p>This dataset was obtained by scraping the <a class="reference external" href="https://www.bkstr.com/georgewashingtonstore/shop/textbooks-and-course-materials">GW Bookstore</a> website. Because web scraping is a rather advanced topic, we won’t be covering that process in Python Camp.</p>
 <p>The dataset was also pre-processed to simplify it somewhat (removing extraneous and redundant elements, etc.).</p>
 </section>
 <section id="format">
@@ -497,9 +482,8 @@ document.write(`
 </ul>
 <p>We’ll explore these three aspects of JSON today.</p>
 </section>
-</section>
 <section id="loading-the-data">
-<h2>Loading the data<a class="headerlink" href="#loading-the-data" title="Permalink to this heading">#</a></h2>
+<h3>Loading the data<a class="headerlink" href="#loading-the-data" title="Permalink to this heading">#</a></h3>
 <p>The code below will load data from an external file located in a directory called <code class="docutils literal notranslate"><span class="pre">data</span></code>. The directory is relative to the current directory (in which this notebook lives).</p>
 <ol class="arabic simple">
 <li><p>We <strong>import</strong> a Python library called <code class="docutils literal notranslate"><span class="pre">json</span></code>. A library is just some external Python code that provides a particular functionality. The <code class="docutils literal notranslate"><span class="pre">json</span></code> library allows us to convert data in JSON format to Python data types. (More on data types below).</p></li>
@@ -530,17 +514,18 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="question">
-<h3>Question<a class="headerlink" href="#question" title="Permalink to this heading">#</a></h3>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
 <p>You have encountered a Python list before. What was the name of the variable that held a list in the “Choreographing Code” exercise?</p>
-</section>
-<section id="notes">
-<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="admonition-notes admonition">
+<p class="admonition-title">Notes</p>
 <ul class="simple">
 <li><p>Going forward, when referring to functions and their output, we will say that the function <strong>returns</strong> something.</p></li>
 <li><p>Every Python value has a defined <strong>type</strong>.</p></li>
 <li><p>When we use the word <strong>variable</strong>, we’re generally referring to the combination of a name and a value. Thus, we can say, “the variable <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> is a list.”</p></li>
 </ul>
+</div>
 </section>
 </section>
 <section id="navigating-lists">
@@ -563,9 +548,10 @@ document.write(`
 </div>
 </div>
 <p>The code above uses <strong>indexing</strong> to access the first element in the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> list. When you run it, you should see data enclosed in curly braces (<code class="docutils literal notranslate"><span class="pre">{}</span></code>).</p>
-<section id="try-it-out">
-<h3>Try it out!<a class="headerlink" href="#try-it-out" title="Permalink to this heading">#</a></h3>
+<div class="admonition-try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>In the cell below, use indexing to look at other elements in the list. (Change the number inside the square brackets in the expression <code class="docutils literal notranslate"><span class="pre">bkst_data[0]</span></code>).</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -573,18 +559,18 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section id="questions">
-<h3>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h3>
+<div class="admonition-questions admonition">
+<p class="admonition-title">Questions</p>
 <ul class="simple">
 <li><p>What data elements do you see that might prove useful to our project (identifying courses with high- and low-cost textbooks)?</p></li>
 <li><p>What data elements do you have questions about?</p></li>
 </ul>
-</section>
-<section id="id1">
-<h3>Try it out!<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>For an example of course with assigned textbooks, look at the element in the 100th position in the list (at index 99).</p>
 <p>Note any additional data elements that might be useful, as well as any that you have questions about.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -593,9 +579,9 @@ document.write(`
 </div>
 </div>
 </section>
-</section>
 <section id="navigating-nested-data">
 <h2>Navigating nested data<a class="headerlink" href="#navigating-nested-data" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">len()</span></code> function returns the length of a list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">)</span>
@@ -608,19 +594,22 @@ document.write(`
 </div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">len()</span></code> function returns the length of a list. Here we can see that there are 1,250 top-level elements in <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>. But each element contains other elements below it.</p>
-<section id="id2">
-<h3>Question<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>What does each top-level element in the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> list represent?</p>
+<p>There are 1,250 top-level elements in <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>. But each element contains other elements below it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span> <span class="o">=</span> <span class="n">bkst_data</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">my_course</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_course</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict
+</div>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>What does each top-level element in the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> list represent?</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">my_course</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -629,105 +618,6 @@ document.write(`
 <p>As we saw in the previous activity, dictionaries allow us to store data in fields, similar to a database. The elements on the left-hand side of the colons are called <strong>keys</strong>, and the elements on the right-hand side of the colons are called <strong>values</strong>.</p>
 <p>Here the keys are <strong>strings</strong>; anything enclosed in quotation marks in Python is a string.</p>
 <p>We can use the keys to retrieve the values from the dictionary.</p>
-<div class="cell tag_hide-output docutils container">
-<div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span>
-</pre></div>
-</div>
-</div>
-<details class="hide below-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell output</span>
-<span class="expanded">Hide code cell output</span>
-</summary>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;department&#39;: &#39;CHEM&#39;,
- &#39;course&#39;: &#39;2151&#39;,
- &#39;section&#39;: &#39;10&#39;,
- &#39;instructor&#39;: &#39;LaKeisha McClary&#39;,
- &#39;term_name&#39;: &#39;Summer 2023&#39;,
- &#39;texts&#39;: [{&#39;title&#39;: &#39;Organic Chemistry (Loose Pgs)&#39;,
-   &#39;author&#39;: &#39;Klein&#39;,
-   &#39;edition&#39;: &#39;4th&#39;,
-   &#39;isbn&#39;: &#39;9781119659594&#39;,
-   &#39;material_type&#39;: &#39;TXT&#39;,
-   &#39;requirement_type&#39;: &#39;RQ&#39;,
-   &#39;copy_right_year&#39;: &#39;2021&#39;,
-   &#39;publisher&#39;: &#39;John Wiley &amp; Sons, Incorporated&#39;,
-   &#39;type_condition&#39;: &#39;BUY_USED&#39;,
-   &#39;price_display&#39;: &#39;$113.50&#39;,
-   &#39;item_type&#39;: &#39;print&#39;},
-  {&#39;title&#39;: &#39;Organic Chemistry (Loose Pgs)&#39;,
-   &#39;author&#39;: &#39;Klein&#39;,
-   &#39;edition&#39;: &#39;4th&#39;,
-   &#39;isbn&#39;: &#39;9781119659594&#39;,
-   &#39;material_type&#39;: &#39;TXT&#39;,
-   &#39;requirement_type&#39;: &#39;RQ&#39;,
-   &#39;copy_right_year&#39;: &#39;2021&#39;,
-   &#39;publisher&#39;: &#39;John Wiley &amp; Sons, Incorporated&#39;,
-   &#39;type_condition&#39;: &#39;BUY_NEW&#39;,
-   &#39;price_display&#39;: &#39;$151.25&#39;,
-   &#39;item_type&#39;: &#39;print&#39;},
-  {&#39;title&#39;: &#39;Organic Chemistry Molecular Model Set&#39;,
-   &#39;author&#39;: &#39;Prentice Hall&#39;,
-   &#39;edition&#39;: &#39;N/A&#39;,
-   &#39;isbn&#39;: &#39;9780205081363&#39;,
-   &#39;material_type&#39;: &#39;TXT&#39;,
-   &#39;requirement_type&#39;: &#39;RQ&#39;,
-   &#39;copy_right_year&#39;: &#39;1984&#39;,
-   &#39;publisher&#39;: &#39;Pearson&#39;,
-   &#39;type_condition&#39;: &#39;RENTAL_USED&#39;,
-   &#39;price_display&#39;: &#39;$66.25&#39;,
-   &#39;item_type&#39;: &#39;print&#39;},
-  {&#39;title&#39;: &#39;Organic Chemistry Molecular Model Set&#39;,
-   &#39;author&#39;: &#39;Prentice Hall&#39;,
-   &#39;edition&#39;: &#39;N/A&#39;,
-   &#39;isbn&#39;: &#39;9780205081363&#39;,
-   &#39;material_type&#39;: &#39;TXT&#39;,
-   &#39;requirement_type&#39;: &#39;RQ&#39;,
-   &#39;copy_right_year&#39;: &#39;1984&#39;,
-   &#39;publisher&#39;: &#39;Pearson&#39;,
-   &#39;type_condition&#39;: &#39;BUY_USED&#39;,
-   &#39;price_display&#39;: &#39;$99.50&#39;,
-   &#39;item_type&#39;: &#39;print&#39;},
-  {&#39;title&#39;: &#39;Organic Chemistry Molecular Model Set&#39;,
-   &#39;author&#39;: &#39;Prentice Hall&#39;,
-   &#39;edition&#39;: &#39;N/A&#39;,
-   &#39;isbn&#39;: &#39;9780205081363&#39;,
-   &#39;material_type&#39;: &#39;TXT&#39;,
-   &#39;requirement_type&#39;: &#39;RQ&#39;,
-   &#39;copy_right_year&#39;: &#39;1984&#39;,
-   &#39;publisher&#39;: &#39;Pearson&#39;,
-   &#39;type_condition&#39;: &#39;BUY_NEW&#39;,
-   &#39;price_display&#39;: &#39;$132.50&#39;,
-   &#39;item_type&#39;: &#39;print&#39;},
-  {&#39;title&#39;: &#39;Organic Chemistry, Integrated E-Text with E-Solutions Manual&#39;,
-   &#39;author&#39;: &#39;Klein&#39;,
-   &#39;edition&#39;: &#39;4th&#39;,
-   &#39;isbn&#39;: &#39;9781119776741&#39;,
-   &#39;material_type&#39;: &#39;CEB&#39;,
-   &#39;requirement_type&#39;: &#39;RQ&#39;,
-   &#39;copy_right_year&#39;: None,
-   &#39;publisher&#39;: &#39;John Wiley &amp; Sons, Incorporated&#39;,
-   &#39;type_condition&#39;: &#39;RENTAL_NEW&#39;,
-   &#39;price_display&#39;: &#39;$50.19&#39;,
-   &#39;item_type&#39;: &#39;digital&#39;},
-  {&#39;title&#39;: &#39;Organic Chemistry, Integrated E-Text with E-Solutions Manual&#39;,
-   &#39;author&#39;: &#39;Klein&#39;,
-   &#39;edition&#39;: &#39;4th&#39;,
-   &#39;isbn&#39;: &#39;9781119776741&#39;,
-   &#39;material_type&#39;: &#39;CEB&#39;,
-   &#39;requirement_type&#39;: &#39;RQ&#39;,
-   &#39;copy_right_year&#39;: None,
-   &#39;publisher&#39;: &#39;John Wiley &amp; Sons, Incorporated&#39;,
-   &#39;type_condition&#39;: &#39;BUY_NEW&#39;,
-   &#39;price_display&#39;: &#39;$119.50&#39;,
-   &#39;item_type&#39;: &#39;digital&#39;}]}
-</pre></div>
-</div>
-</div>
-</details>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_dept</span> <span class="o">=</span> <span class="n">my_course</span><span class="p">[</span><span class="s1">&#39;department&#39;</span><span class="p">]</span>
@@ -741,10 +631,10 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section id="id3">
-<h3>Try it out!<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<div class="admonition-try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Practice accessing other elements within <code class="docutils literal notranslate"><span class="pre">my_course</span></code> using keys.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -752,10 +642,11 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section id="id4">
-<h3>Questions<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<p>Which elements can you NOT access this way?</p>
+<div class="admonition-questions admonition">
+<p class="admonition-title">Questions</p>
+<p>Which pieces of information in <code class="docutils literal notranslate"><span class="pre">my_course</span></code> can you NOT access this way?</p>
+</div>
+<p>The textbooks associated with this course/section are stored within a <strong>nested</strong> element: a list associated with the key <code class="docutils literal notranslate"><span class="pre">'texts'</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">my_course</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">])</span>
@@ -768,6 +659,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>This particular course/section has 7 entries under the <code class="docutils literal notranslate"><span class="pre">texts</span></code> heading.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">my_course</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">])</span>
@@ -780,12 +672,14 @@ document.write(`
 </div>
 </div>
 </div>
-<p>The textbooks associated with this course/section are stored within a <strong>nested</strong> element: a list associated with the key <code class="docutils literal notranslate"><span class="pre">'texts'</span></code>.</p>
-<p>This particular course/section has 7 entries under the <code class="docutils literal notranslate"><span class="pre">texts</span></code> heading.</p>
-</section>
-<section id="id5">
-<h3>Question<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
 <p>At this point, we have drilled down a few levels into our dataset, and things might be starting to look rather complicated. Take a moment with your team to sketch on paper the structure of our dataset so far. Draw it in whatever way feels most intuitive to you (without worrying about Python data types for the moment).</p>
+</div>
+<div class="admonition-try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p>Use indexing to look at each of the items in the <code class="docutils literal notranslate"><span class="pre">my_books</span></code> variable. With your team, revise your sketch/data diagram to reflect how course materials are represented in this dataset.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_books</span> <span class="o">=</span> <span class="n">my_course</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">]</span>
@@ -793,26 +687,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;title&#39;: &#39;Organic Chemistry (Loose Pgs)&#39;,
- &#39;author&#39;: &#39;Klein&#39;,
- &#39;edition&#39;: &#39;4th&#39;,
- &#39;isbn&#39;: &#39;9781119659594&#39;,
- &#39;material_type&#39;: &#39;TXT&#39;,
- &#39;requirement_type&#39;: &#39;RQ&#39;,
- &#39;copy_right_year&#39;: &#39;2021&#39;,
- &#39;publisher&#39;: &#39;John Wiley &amp; Sons, Incorporated&#39;,
- &#39;type_condition&#39;: &#39;BUY_USED&#39;,
- &#39;price_display&#39;: &#39;$113.50&#39;,
- &#39;item_type&#39;: &#39;print&#39;}
-</pre></div>
 </div>
-</div>
-</div>
-</section>
-<section id="id6">
-<h3>Try it out!<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
-<p>Use indexing to look at each of the items in the <code class="docutils literal notranslate"><span class="pre">my_books</span></code> variable. With your team, revise your sketch/data diagram to reflect how course materials are represented in this dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -821,13 +696,12 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="id7">
-<h3>Questions<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="questions-for-discussion">
+<h2>Questions for Discussion<a class="headerlink" href="#questions-for-discussion" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>We’re ultimately interested in the cost of course materials as reported by the bookstore. Where do the relevant data elements reside within the structure we have been exploring?</p></li>
 <li><p>Up to we’ve been looking at our data in terms of content and organization: thinking about what different elements represent, and how those elements relate to each other. Now take a few moments and look at the data in terms of <strong>syntax</strong>. With your team, make an inventory of the differents kinds of punctuation marks you see in the parts of the dataset you have examined, and discuss any patterns you notice in how punctuation is used.</p></li>
 </ol>
-</section>
 </section>
 </section>
 
@@ -903,28 +777,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dataset">The dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source">Source</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#format">Format</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-lists">Navigating lists</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Try it out!</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-nested-data">Navigating nested data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Question</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Try it out!</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Questions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Try it out!</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Questions</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-lists">Navigating lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-nested-data">Navigating nested data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-discussion">Questions for Discussion</a></li>
 </ul>
   </nav></div>
 

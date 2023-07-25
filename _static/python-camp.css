@@ -1,0 +1,6 @@
+div.try-it-out .admonition-title:before {
+    content: "\f120";
+}
+/* div.try-it-out .admonition-title {
+    background-color: #6cd279;
+}*/
