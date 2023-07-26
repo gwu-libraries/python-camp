@@ -421,19 +421,22 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-data">Structured data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists-dictionaries">Lists &amp; dictionaries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dictionary-to-describe-yourself">Creating a dictionary to describe yourself</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-template">Dictionary template</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-plan">Lesson Plan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-data">Structured data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists-versus-dictionaries">Lists versus dictionaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dictionary-to-describe-yourself">Creating a dictionary to describe yourself</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-template">Dictionary template</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dictionaries">Using dictionaries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-list-of-dictionaries">Creating a list of dictionaries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-dictionaries-in-a-list">Modifying dictionaries in a list</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dictionaries">Using dictionaries</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-list-of-dictionaries-in-json-format">Saving a list of dictionaries in JSON format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-data">Tabular data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-data-in-python">Tabular data in Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-dictionaries-in-a-list">Modifying dictionaries in a list</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-list-of-dictionaries-in-json-format">Saving a list of dictionaries in JSON format</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -455,55 +458,81 @@ document.write(`
 <li><p>To compose complex data structures and interact with them using loops</p></li>
 </ul>
 </section>
+<section id="lesson-plan">
+<h2>Lesson Plan<a class="headerlink" href="#lesson-plan" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Walk through the content under <code class="docutils literal notranslate"><span class="pre">Structured</span> <span class="pre">data</span></code> and have each team discuss the questions together before sharing out.</p></li>
+<li><p>Walk through and demonstrate the example of creating a single dictionary to represent oneself.</p></li>
+<li><p>Demonstrate how to add a key/value pair to the dictionary.</p></li>
+<li><p>Check in at this point to see what questions have arisen.</p></li>
+<li><p>Introduce the concept of tabular data, maybe by using a spreadsheet as a visual aid.</p></li>
+<li><p>Ask each team to work through the remaining exercises and troubleshoot as needed.</p></li>
+<li><p>Wrap up and take questions.</p></li>
+</ol>
+</section>
 <section id="structured-data">
 <h2>Structured data<a class="headerlink" href="#structured-data" title="Permalink to this heading">#</a></h2>
 <p>Like most programming languages, Python gives us various tools for organizing data, each of which involves certain tradeoffs.</p>
-<p>In <a class="reference external" href="https://github.com/gwu-libraries/python-camp/blob/main/notebooks/homework/from_code_to_data.ipynb">the homework</a> you worked with the following data types:</p>
+<p>In <a class="reference external" href="https://gwu-libraries.github.io/python-camp/notebooks/homework/HW_1_from_code_to_data.html">the homework</a> you worked with the following data types:</p>
 <ul class="simple">
 <li><p>floats and integers</p></li>
 <li><p>strings</p></li>
 <li><p>lists</p></li>
 </ul>
 <p>The real power of these tools lies in our ability to compose them together in order to reflect both the complexity of the data we’re working with, and our goals (or those of our end users).</p>
-<p>But it can be challenging to decide which Python types to use in a given circumstance. Before we dive into more code, take a few minutes to discuss the following questions with your team:</p>
+<p>But it can be challenging to decide which Python types to use in a given circumstance. Before we dive into more code, take a few minutes to discuss the following questions with your team.</p>
+<div class="question admonition">
+<p class="admonition-title">Questions</p>
 <ol class="arabic simple">
 <li><p>If you’re going to the store to buy groceries, how do you generally keep track of the items you need? What pieces of information are relevant to this task?</p></li>
 <li><p>What about keeping track of the courses you’re taking in a given semester?</p></li>
 <li><p>Many of us now rely on our phones to store our contacts (friends, family, etc.). What if you had to give up your phone for a month – how would you organize your contacts? What would that look like?</p></li>
 <li><p>If you were going to record some information about the members of your team, what information would you capture? Make a list of fields that the team can agree on.</p></li>
 </ol>
-</section>
-<section id="lists-dictionaries">
-<h2>Lists &amp; dictionaries<a class="headerlink" href="#lists-dictionaries" title="Permalink to this heading">#</a></h2>
+</div>
+<section id="lists-versus-dictionaries">
+<h3>Lists versus dictionaries<a class="headerlink" href="#lists-versus-dictionaries" title="Permalink to this heading">#</a></h3>
 <p>In the examples above, we were talking about lists of things. But <em>not all lists are created equal</em>.</p>
 <p>For instance, in the homework, you worked with two different lists:</p>
-<ul class="simple">
+<ol class="arabic simple">
 <li><p>A list of book prices, where each item represented the price of a book. Beyond the price, there was no other information about the book to be gleaned from that list.</p></li>
 <li><p>A list of Python strings describing courses. Each string contained three pieces of information:</p>
-<ul>
+<ul class="simple">
 <li><p>a department code</p></li>
 <li><p>a course number</p></li>
 <li><p>and a section number.</p></li>
 </ul>
 </li>
-</ul>
+</ol>
 <p>You used the list of course strings to create three separate lists: one for the department codes, one for the course numbers, and one for the section numbers.</p>
 <p>But it would be handy if we could keep track of those three pieces of information in the same place (using a single data structure). Managing three lists would, in this case, be cumbersome, and if we were dealing with a large number of courses, potentially error prone.</p>
 <p>Let’s see how Python dictionaries can help!</p>
 </section>
 <section id="creating-a-dictionary-to-describe-yourself">
-<h2>Creating a dictionary to describe yourself<a class="headerlink" href="#creating-a-dictionary-to-describe-yourself" title="Permalink to this heading">#</a></h2>
+<h3>Creating a dictionary to describe yourself<a class="headerlink" href="#creating-a-dictionary-to-describe-yourself" title="Permalink to this heading">#</a></h3>
 <p>In this activity, you’ll create a data structure to hold information about your team, and you’ll write Python code to update it.</p>
 <p>First, create a Python dictionary to hold information about yourself. Follow the template below, but feel free to use the fields that your team agreed upon in the first activity (Question 4 above).</p>
 <section id="dictionary-template">
-<h3>Dictionary template<a class="headerlink" href="#dictionary-template" title="Permalink to this heading">#</a></h3>
+<h4>Dictionary template<a class="headerlink" href="#dictionary-template" title="Permalink to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dolsy</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Dolsy Smith,</span>
          <span class="s1">&#39;job_title&#39;</span><span class="p">:</span> <span class="s1">&#39;Software Developer/Librarian&#39;</span><span class="p">,</span>
          <span class="s1">&#39;gw_unit&#39;</span><span class="p">:</span> <span class="s1">&#39;GW Libraries &amp; Academic Innovation&#39;</span><span class="p">,</span>
          <span class="s1">&#39;email_address&#39;</span><span class="p">:</span> <span class="s1">&#39;dsmith@gwu.edu&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Create your dictionary in the cell below and run the cell to make sure the code works.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Notes</p>
 <ul class="simple">
 <li><p>Note the curly braces (<code class="docutils literal notranslate"><span class="pre">{}</span></code>) at the start and end of the dictionary. Python uses square brackets for lists and curly braces for dictionaries.</p></li>
 <li><p>The field names – on the left side of the colon – are called <strong>keys</strong>.</p></li>
@@ -513,24 +542,21 @@ document.write(`
 <li><p>Note the commas at the end of each line. These separate key-value pairs. It’s not required to break the dictionary into multiple lines, but if you do, you must break after the comma.</p></li>
 <li><p>In the template, I assigned this dictionary of data about me to a variable called <code class="docutils literal notranslate"><span class="pre">dolsy</span></code>. Assign your dictionary to whatever variable name you like.</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 </section>
 <section id="using-dictionaries">
-<h2>Using dictionaries<a class="headerlink" href="#using-dictionaries" title="Permalink to this heading">#</a></h2>
+<h3>Using dictionaries<a class="headerlink" href="#using-dictionaries" title="Permalink to this heading">#</a></h3>
 <p>If your dictionary was successfully created and assigned to a variable, you should be able to access the values by using their corresponding keys.</p>
 <p>For instance, to print my email address, I’d do the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">dolsy</span><span class="p">[</span><span class="s1">&#39;email_address&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Note that here we surround the key with <strong>square brackets</strong> rather than curly braces. The syntax is meant to remind you of how we access individual items in a list.</p>
+<div class="admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Try printing a few of the values in your dictionary.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -539,15 +565,31 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="creating-a-list-of-dictionaries">
-<h2>Creating a list of dictionaries<a class="headerlink" href="#creating-a-list-of-dictionaries" title="Permalink to this heading">#</a></h2>
-<p>Coding a list of dictionaries by hand to represent a large dataset doesn’t make sense. But before we learn how to do so automatically, let’s practice the manual way.</p>
+</section>
+<section id="tabular-data">
+<h2>Tabular data<a class="headerlink" href="#tabular-data" title="Permalink to this heading">#</a></h2>
+<p>A single dictionary is a good way to represent something in the real world – an <strong>object</strong> or an entity – that has multiple properties or <strong>attributes</strong>. Something like a course, a textbook, or yourself!</p>
+<p>The dictionary’s <strong>keys</strong> can help us organize the attributes by labels, just the way we might label the different elements of each entry in an addressbook: name, email address, phone number, etc.</p>
+<p>You might also think of the dictionary keys as the column headings in a spreadsheet. In a spreadsheet, each row uses the same column headings, which allows us to do things like sort or filter the data by particular attributes. For example, if we covert our addressbook to an Excel file, assuming we have a column for email address, we can easily compute how many of our contacts have GW email addresses.</p>
+<p>We call such a data structure <strong>tabular</strong> because it is organized as a table, i.e., with rows and columns.</p>
+<section id="tabular-data-in-python">
+<h3>Tabular data in Python<a class="headerlink" href="#tabular-data-in-python" title="Permalink to this heading">#</a></h3>
+<p>How do we represent tabular data in Python?</p>
+<p>There are some very handy Python <strong>libraries</strong> for working with tables. But we can also handle tabular data with just the Python types you’ve already encountered.</p>
+<p>One common approach, which we will work through together, is to create a <strong>list of dictionaries</strong>.</p>
+<ul class="simple">
+<li><p>On the analogy with a spreadsheet, each dictionary in the list would be another row of the table.</p></li>
+<li><p>Each dictionary would have the same <strong>keys</strong> (with different <strong>values</strong>), corresponding to the data in the various columns of the spreadsheet.</p></li>
+</ul>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Just as you did for yourself, create one dictionary for each member of your team.</p>
 <ul class="simple">
 <li><p>For each person, the keys will be the same, but the values will be different.</p></li>
 <li><p>Assign each dictionary to a different variable.</p></li>
 <li><p>Create as many new code cells below as you need, using the plus button in the toolbar above.</p></li>
 </ul>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -556,6 +598,8 @@ document.write(`
 </div>
 </div>
 <p>Now you should have multiple variables, each of which represents a dictionary of data about one of your team members.</p>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Create a new variable to store a list of those dictionaries. For instance, if I have variables <code class="docutils literal notranslate"><span class="pre">dolsy</span></code>, <code class="docutils literal notranslate"><span class="pre">marcus</span></code>, <code class="docutils literal notranslate"><span class="pre">debbie</span></code>, and <code class="docutils literal notranslate"><span class="pre">alex</span></code>, to add them to a list, I could write</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_team</span> <span class="o">=</span> <span class="p">[</span><span class="n">dolsy</span><span class="p">,</span> <span class="n">marcus</span><span class="p">,</span> <span class="n">debbie</span><span class="p">,</span> <span class="n">alex</span><span class="p">]</span>
 
@@ -563,6 +607,7 @@ document.write(`
 </div>
 <p>Note that because I’m putting <strong>variables</strong> in this list, not strings, I don’t use quotation marks. (I don’t want to create a list of names, but a list of dictionaries, each of which is represented by one of these variables.)</p>
 <p>Then <code class="docutils literal notranslate"><span class="pre">print()</span></code> your list to confirm that it contains the data about your team.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -572,9 +617,9 @@ document.write(`
 </div>
 </section>
 <section id="modifying-dictionaries-in-a-list">
-<h2>Modifying dictionaries in a list<a class="headerlink" href="#modifying-dictionaries-in-a-list" title="Permalink to this heading">#</a></h2>
-<p>Take a moment to congratulate yourself. You’ve just used Python to create a tiny database to hold the information about your team. A <strong>database</strong> is essentially a list of records (dictionaries), where the values in the records can be accessed by fields (keys).</p>
-<p>We can even save this database to a file so that it can be re-used later!</p>
+<h3>Modifying dictionaries in a list<a class="headerlink" href="#modifying-dictionaries-in-a-list" title="Permalink to this heading">#</a></h3>
+<p>Take a moment to congratulate yourself. You’ve just used Python to create a tabular dataset representing your team.</p>
+<p>We can even save this dataset to a file so that it can be re-used later!</p>
 <p>But first let’s add another piece of information to each team member’s record.</p>
 <p>In the example above, I retrieved my email adddress by writing <code class="docutils literal notranslate"><span class="pre">dolsy['email_address']</span></code>, where <code class="docutils literal notranslate"><span class="pre">'email_address'</span></code> is a key in the <code class="docutils literal notranslate"><span class="pre">dolsy</span></code> dictionary.</p>
 <p>In a similar fashion, I can add a new key/value pair to my dictionary as follows:</p>
@@ -582,11 +627,12 @@ document.write(`
 </pre></div>
 </div>
 <p>The foregoing code would add a list containing one item – the string <code class="docutils literal notranslate"><span class="pre">'Python'</span></code> – to the <code class="docutils literal notranslate"><span class="pre">dolsy</span></code> dictionary, associating it with the key <code class="docutils literal notranslate"><span class="pre">'programming</span> <span class="pre">_languages'</span></code>. I’m using a list since it’s conceivable that someone can know multiple programming languages.</p>
-<section id="try-it-out">
-<h3>Try it out!<a class="headerlink" href="#try-it-out" title="Permalink to this heading">#</a></h3>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Write a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to add a <code class="docutils literal notranslate"><span class="pre">'programming_languages'</span></code> key, and the value <code class="docutils literal notranslate"><span class="pre">['Python']</span></code>, to each dictionary in your list.</p>
 <p>Then print your list to confirm that the operation was successful.</p>
-<p>If you want additional help, consult this <a class="reference external" href="https://gwu-libraries.github.io/python-camp/parsons-problems/html/lessons_2_1_1.html">Parsons’ Problem</a>.</p>
+<p>If you want additional help, consult this <a class="reference external" href="https://gwu-libraries.github.io/python-camp/parsons-problems/html/lessons-2-1-1.html">Parsons’ Problem</a>.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -595,9 +641,8 @@ document.write(`
 </div>
 </div>
 </section>
-</section>
 <section id="saving-a-list-of-dictionaries-in-json-format">
-<h2>Saving a list of dictionaries in JSON format<a class="headerlink" href="#saving-a-list-of-dictionaries-in-json-format" title="Permalink to this heading">#</a></h2>
+<h3>Saving a list of dictionaries in JSON format<a class="headerlink" href="#saving-a-list-of-dictionaries-in-json-format" title="Permalink to this heading">#</a></h3>
 <p>Now let’s save our database to disk. We’ll use the <code class="docutils literal notranslate"><span class="pre">json</span></code> library and the <code class="docutils literal notranslate"><span class="pre">file</span></code> function as we did on Day 1 (to load the GW Bookstore dataset), except that this time we’ll be <strong>writing</strong> to the file, not reading from it.</p>
 <p>First we import the <code class="docutils literal notranslate"><span class="pre">json</span></code> library.</p>
 <div class="cell docutils container">
@@ -618,6 +663,7 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -689,19 +735,22 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-data">Structured data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists-dictionaries">Lists &amp; dictionaries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dictionary-to-describe-yourself">Creating a dictionary to describe yourself</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-template">Dictionary template</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lesson-plan">Lesson Plan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-data">Structured data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists-versus-dictionaries">Lists versus dictionaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dictionary-to-describe-yourself">Creating a dictionary to describe yourself</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-template">Dictionary template</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dictionaries">Using dictionaries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-list-of-dictionaries">Creating a list of dictionaries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-dictionaries-in-a-list">Modifying dictionaries in a list</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dictionaries">Using dictionaries</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-list-of-dictionaries-in-json-format">Saving a list of dictionaries in JSON format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-data">Tabular data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-data-in-python">Tabular data in Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-dictionaries-in-a-list">Modifying dictionaries in a list</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-list-of-dictionaries-in-json-format">Saving a list of dictionaries in JSON format</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

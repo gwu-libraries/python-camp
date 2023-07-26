@@ -422,32 +422,14 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hints">Hints</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-1-printing-values">Action 1: Printing values</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-2-assigning-names-to-values">Action 2: Assigning names to values</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Hints</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-3-calculating-with-variables">Action 3: Calculating with variables</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Hints</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-4-joining-strings">Action 4: Joining strings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Hints</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-5-creating-a-list">Action 5: Creating a list</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Hints</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-6-looping-over-a-list">Action 6: Looping over a list</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Hints</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-7-creating-a-dictionary">Action 7: Creating a dictionary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Hints</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-1-printing-a-value">Action 1: Printing a value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-2a-creating-a-variable-number">Action 2a: Creating a variable (number)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-2b-creating-a-variable-string">Action 2b: Creating a variable (string)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-3a-working-with-numbers">Action 3a: Working with numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-3b-working-with-strings">Action 3b: Working with strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-4a-creating-a-list">Action 4a: Creating a list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-4b-slicing-a-string">Action 4b: Slicing a string</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-5-looping-over-a-list">Action 5: Looping over a list</a></li>
 </ul>
             </nav>
         </div>
@@ -471,38 +453,48 @@ document.write(`
 </section>
 <section id="instructions">
 <h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h2>
-<p>This notebook contains a few cells of Python code.</p>
+<p>This notebook contains a few cells of Python code. These are labeled “Actions” and numbered 1 through 8. Each team will be assigned two actions.</p>
 <p>Your task, as a team, is as follows:</p>
 <ol class="arabic simple">
-<li><p>Run each cell of code.</p></li>
+<li><p>Run the cell of code corresponding to the action.</p></li>
 <li><p>Examine the output.</p></li>
 <li><p>Model the action that the code performs, using pen, paper, and sticky notes.</p></li>
 </ol>
 <p>To run each cell, place your cursor in the cell and press <code class="docutils literal notranslate"><span class="pre">Control</span></code> + <code class="docutils literal notranslate"><span class="pre">Enter</span></code> (or <code class="docutils literal notranslate"><span class="pre">Command</span></code> + <code class="docutils literal notranslate"><span class="pre">Return</span></code> on a Mac). The output of running the code will appear below the cell.</p>
-<p>Then we’ll share our models for discussion in the larger group.</p>
+<p>Below each cell is a hidden cell containing some hints. Click the <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">Solution</span></code> button to reveal the hints.</p>
+<p>Once all teams have worked through their actions, we’ll share our models for discussion in the larger group.</p>
 </section>
-<section id="hints">
-<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this heading">#</a></h2>
-<p>Below each cell and its output, you can find hints to help you understand what’s going on.</p>
-<hr class="docutils" />
-</section>
-<section id="action-1-printing-values">
-<h2>Action 1: Printing values<a class="headerlink" href="#action-1-printing-values" title="Permalink to this heading">#</a></h2>
+<section id="action-1-printing-a-value">
+<h2>Action 1: Printing a value<a class="headerlink" href="#action-1-printing-a-value" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Python Camp!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to Python Camp!
+</div>
+</section>
+<section id="action-2a-creating-a-variable-number">
+<h2>Action 2a: Creating a variable (number)<a class="headerlink" href="#action-2a-creating-a-variable-number" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_participants</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">num_participants</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hints</p>
+<ul class="simple">
+<li><p>The name (left side of the equals sign) acts like a label for the value (right side of the equal sign – here, the number 20).</p></li>
+<li><p>The number 20 is written without quotation marks. What happens if you add them, like so? <code class="docutils literal notranslate"><span class="pre">&quot;20&quot;</span></code></p></li>
+</ul>
+<img alt="Video of assigning a number" src="https://gwu-libraries.github.io/python-camp/img/gifs-lg/assigning-a-number.gif" />
+</div>
 </section>
-<section id="action-2-assigning-names-to-values">
-<h2>Action 2: Assigning names to values<a class="headerlink" href="#action-2-assigning-names-to-values" title="Permalink to this heading">#</a></h2>
+<section id="action-2b-creating-a-variable-string">
+<h2>Action 2b: Creating a variable (string)<a class="headerlink" href="#action-2b-creating-a-variable-string" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_workshop</span> <span class="o">=</span> <span class="s2">&quot;Python Camp&quot;</span>
@@ -510,23 +502,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python Camp
-</pre></div>
 </div>
-</div>
-</div>
-<section id="id1">
-<h3>Hints<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">Hints</p>
 <ul class="simple">
 <li><p>Try changing the text between quotation marks to see how the output varies.</p></li>
 <li><p>The name (left side of the equals sign) acts like a label for the value (right side of the equal sign – here, the content between quotation marks).</p></li>
 <li><p>What do you think <code class="docutils literal notranslate"><span class="pre">print</span></code> does when it is given the name <code class="docutils literal notranslate"><span class="pre">my_workshop</span></code>?</p></li>
 </ul>
+</div>
 </section>
-</section>
-<section id="action-3-calculating-with-variables">
-<h2>Action 3: Calculating with variables<a class="headerlink" href="#action-3-calculating-with-variables" title="Permalink to this heading">#</a></h2>
+<section id="action-3a-working-with-numbers">
+<h2>Action 3a: Working with numbers<a class="headerlink" href="#action-3a-working-with-numbers" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_students</span> <span class="o">=</span> <span class="mi">50</span>
@@ -536,24 +523,19 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2999.5
-</pre></div>
 </div>
-</div>
-</div>
-<section id="id2">
-<h3>Hints<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">Hints</p>
 <ul class="simple">
-<li><p>We call the combination of <em>name</em>–&gt;<em>value</em> a <strong>variable</strong>.</p></li>
 <li><p>Variables in programming are similar to variables in algebra.</p></li>
 <li><p>But whereas algebraic variables represent unknown values in equations to be solved, in programming, we use variables for many different reasons.</p></li>
-<li><p>One important use for variables is simply to make our code more readable.</p></li>
+<li><p>One important use for variables is simply to make our code more readable: e.g., to assign names to quantities.</p></li>
+<li><p>What happens if you put the numbers in the code above inside quotation marks?</p></li>
 </ul>
+</div>
 </section>
-</section>
-<section id="action-4-joining-strings">
-<h2>Action 4: Joining strings<a class="headerlink" href="#action-4-joining-strings" title="Permalink to this heading">#</a></h2>
+<section id="action-3b-working-with-strings">
+<h2>Action 3b: Working with strings<a class="headerlink" href="#action-3b-working-with-strings" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book_title</span> <span class="o">=</span> <span class="s2">&quot;Python Distilled&quot;</span>
@@ -562,23 +544,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python Distilled by David Beazley
-</pre></div>
 </div>
-</div>
-</div>
-<section id="id3">
-<h3>Hints<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">Hints</p>
 <ul class="simple">
 <li><p>Anything in Python between quotation marks is called a <strong>string</strong>.</p></li>
 <li><p>When working with strings, it’s important to pay close attention to what falls <em>inside the quotation marks</em> and what sits outside the quotation marks.</p></li>
 <li><p>The Jupyter Notebook interface helpfully highlights strings in red to distinguish them from the surrounding code.</p></li>
 </ul>
+</div>
 </section>
-</section>
-<section id="action-5-creating-a-list">
-<h2>Action 5: Creating a list<a class="headerlink" href="#action-5-creating-a-list" title="Permalink to this heading">#</a></h2>
+<section id="action-4a-creating-a-list">
+<h2>Action 4a: Creating a list<a class="headerlink" href="#action-4a-creating-a-list" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book_prices</span> <span class="o">=</span> <span class="p">[</span><span class="mf">129.99</span><span class="p">,</span> <span class="mf">99.95</span><span class="p">,</span> <span class="mf">13.99</span><span class="p">,</span> <span class="mf">50.00</span><span class="p">,</span> <span class="mf">250.00</span><span class="p">]</span>
@@ -588,84 +565,59 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>129.99
-250.0
-250.0
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hints</p>
+<ul class="simple">
+<li><p>Lists allow us to store values in a certain order in the computer’s memory.</p></li>
+<li><p>We can access the values in the stored list by their position or <strong>index</strong>.</p></li>
+<li><p>Try changing the numbers in square brackets to see what happens to the output.</p></li>
+<li><p>In math, we use negative numbers to count down backwards from zero (<code class="docutils literal notranslate"><span class="pre">-1,</span> <span class="pre">-2,</span> <span class="pre">-3...</span></code>). Can you tell what the <code class="docutils literal notranslate"><span class="pre">-1</span></code> in <code class="docutils literal notranslate"><span class="pre">book_prices[-1]</span></code> is doing here?</p></li>
+</ul>
+</div>
+</section>
+<section id="action-4b-slicing-a-string">
+<h2>Action 4b: Slicing a string<a class="headerlink" href="#action-4b-slicing-a-string" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">course_info</span> <span class="o">=</span> <span class="s2">&quot;CHEM 1012&quot;</span>
+<span class="n">dept_code</span> <span class="o">=</span> <span class="n">course_info</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dept_code</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<section id="id4">
-<h3>Hints<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">Hints</p>
 <ul class="simple">
-<li><p>Lists allow us to store values in a certain order in the computer’s memory.</p></li>
-<li><p>We can access the values in the stored list by their position.</p></li>
-<li><p>Try changing the numbers in square brackets to see what happens to the output.</p></li>
-<li><p>In math, we use negative numbers to count down backwards from zero (<code class="docutils literal notranslate"><span class="pre">-1,</span> <span class="pre">-2,</span> <span class="pre">-3...</span></code>). Can you tell what the <code class="docutils literal notranslate"><span class="pre">-1</span></code> in <code class="docutils literal notranslate"><span class="pre">book_prices[-1]</span></code> is doing here?</p></li>
-<li><p>Note that in the previous Action, we used the plus sign (<code class="docutils literal notranslate"><span class="pre">+</span></code>) to combine strings in our <code class="docutils literal notranslate"><span class="pre">print</span></code> statement. In this example, we’re using a comma (<code class="docutils literal notranslate"><span class="pre">,</span></code>) to combine values. What happens if you change the comma to a plus sign?</p></li>
+<li><p>A string is a sequence of characters (just as written words in English can be described as sequences of letters).</p></li>
+<li><p>Each character in the sequence has a position, called an <strong>index</strong>.</p></li>
+<li><p>The first index in the sequence is numbered <code class="docutils literal notranslate"><span class="pre">0</span></code>, not <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p>Note the numbers separated by the colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>) and enclosed in <strong>square brackets</strong> (<code class="docutils literal notranslate"><span class="pre">[]</span></code>). Try changing these numbers and see how it effects the output.</p></li>
 </ul>
+</div>
 </section>
-</section>
-<section id="action-6-looping-over-a-list">
-<h2>Action 6: Looping over a list<a class="headerlink" href="#action-6-looping-over-a-list" title="Permalink to this heading">#</a></h2>
+<section id="action-5-looping-over-a-list">
+<h2>Action 5: Looping over a list<a class="headerlink" href="#action-5-looping-over-a-list" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">book_prices</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book_prices</span> <span class="o">=</span> <span class="p">[</span><span class="mf">129.99</span><span class="p">,</span> <span class="mf">99.95</span><span class="p">,</span> <span class="mf">13.99</span><span class="p">,</span> <span class="mf">50.00</span><span class="p">,</span> <span class="mf">250.00</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">book_prices</span><span class="p">:</span>
     <span class="n">sales_tax</span> <span class="o">=</span> <span class="n">price</span> <span class="o">*</span> <span class="mf">.1</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">price</span> <span class="o">+</span> <span class="n">sales_tax</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>142.989
-109.94500000000001
-15.389
-55.0
-275.0
-</pre></div>
 </div>
-</div>
-</div>
-<section id="id5">
-<h3>Hints<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">Hints</p>
 <ul class="simple">
 <li><p>We often use lists in Python to hold data that we want to process in sequence – such as applying sales tax to every price in a list of prices.</p></li>
 <li><p>Note that <code class="docutils literal notranslate"><span class="pre">book_prices</span></code> here is the same variable used in the previous action.</p></li>
 <li><p>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop allows us to perform the same action for every value in a list of values.</p></li>
+<li><p>Try adding or removing numbers from the <code class="docutils literal notranslate"><span class="pre">book_prices</span></code> list to see what happens to the output.</p></li>
 </ul>
-</section>
-</section>
-<section id="action-7-creating-a-dictionary">
-<h2>Action 7: Creating a dictionary<a class="headerlink" href="#action-7-creating-a-dictionary" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Python Distilled&quot;</span><span class="p">,</span> 
-             <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;David Beazley&quot;</span><span class="p">,</span>
-             <span class="s2">&quot;isbn&quot;</span><span class="p">:</span> <span class="s2">&quot;0134173279&quot;</span><span class="p">,</span>
-             <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;Addison-Wesley&quot;</span><span class="p">,</span>
-             <span class="s2">&quot;publication_date&quot;</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
-             <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mf">49.99</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">book_data</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">book_data</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">])</span>
-</pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python Distilled
-49.99
-</pre></div>
-</div>
-</div>
-</div>
-<section id="id6">
-<h3>Hints<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Dictionaries allow us to store data with more structure than lists.</p></li>
-<li><p>The concept is similar to a record in a database, which can contain one or more fields.</p></li>
-<li><p>Note that the <strong>curly braces</strong> (<code class="docutils literal notranslate"><span class="pre">{}</span></code>) enclose the entire dictionary, which we’ve written on multiple lines here to make it more readable.</p></li>
-</ul>
-</section>
 </section>
 </section>
 
@@ -738,32 +690,14 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hints">Hints</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-1-printing-values">Action 1: Printing values</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-2-assigning-names-to-values">Action 2: Assigning names to values</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Hints</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-3-calculating-with-variables">Action 3: Calculating with variables</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Hints</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-4-joining-strings">Action 4: Joining strings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Hints</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-5-creating-a-list">Action 5: Creating a list</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Hints</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-6-looping-over-a-list">Action 6: Looping over a list</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Hints</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-7-creating-a-dictionary">Action 7: Creating a dictionary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Hints</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-1-printing-a-value">Action 1: Printing a value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-2a-creating-a-variable-number">Action 2a: Creating a variable (number)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-2b-creating-a-variable-string">Action 2b: Creating a variable (string)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-3a-working-with-numbers">Action 3a: Working with numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-3b-working-with-strings">Action 3b: Working with strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-4a-creating-a-list">Action 4a: Creating a list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-4b-slicing-a-string">Action 4b: Slicing a string</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action-5-looping-over-a-list">Action 5: Looping over a list</a></li>
 </ul>
   </nav></div>
 

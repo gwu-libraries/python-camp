@@ -422,21 +422,16 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals-boolean-values">Conditionals &amp; Boolean values</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals-boolean-values">Conditionals &amp; Boolean values</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statements"><code class="docutils literal notranslate"><span class="pre">if</span></code> statements</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-for-loop-pattern">A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop pattern</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#team-activities">Team Activities</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-over-data">1. Counting over data</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hints">Hints</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-over-data">1. Counting over data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#querying-nested-data">2. Querying nested data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-queries">3. More queries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap up</a></li>
 </ul>
 </li>
 </ul>
@@ -482,10 +477,17 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="try-it-out">
-<h4>Try it out!<a class="headerlink" href="#try-it-out" title="Permalink to this heading">#</a></h4>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Write an expression with the <code class="docutils literal notranslate"><span class="pre">book_price</span></code> variable that returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-</section>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="if-statements">
 <h3><code class="docutils literal notranslate"><span class="pre">if</span></code> statements<a class="headerlink" href="#if-statements" title="Permalink to this heading">#</a></h3>
@@ -551,6 +553,8 @@ document.write(`
 </div>
 </div>
 </div>
+<div class="notes admonition">
+<p class="admonition-title">Notes</p>
 <p>Here are some rules of thumb for writing <code class="docutils literal notranslate"><span class="pre">if</span></code> statements in Python:</p>
 <ul class="simple">
 <li><p>You can have as many <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements as you want, provided they follow an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p></li>
@@ -558,6 +562,7 @@ document.write(`
 <li><p>Otherwise, the <em>first</em> <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code> statement that is <code class="docutils literal notranslate"><span class="pre">True</span></code> will be executed, and <em>all the rest</em> will be ignored. In other words, if the conditions you’re testing for are not mutually exclusive, you should write the most specific test first.</p></li>
 <li><p>Each <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> statement ends with a colon and is followed by an <strong>indented block</strong> of code. This is the same pattern we saw with <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p></li>
 </ul>
+</div>
 </section>
 <section id="a-for-loop-pattern">
 <h3>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop pattern<a class="headerlink" href="#a-for-loop-pattern" title="Permalink to this heading">#</a></h3>
@@ -605,7 +610,9 @@ Counter after loop 1250
 <section id="counting-over-data">
 <h3>1. Counting over data<a class="headerlink" href="#counting-over-data" title="Permalink to this heading">#</a></h3>
 <p>As we say on Day 1, not all courses report textbooks to the bookstore.</p>
-<p><em>What percentage of courses have reported textbooks?</em></p>
+<p><strong>Question</strong>: <em>What percentage of courses have reported textbooks?</em></p>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Working with your team, write some code that will answer that question, using the<code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> dataset. Below you can expand the hidden cell for some hints. But before you do that, make sure your team discusses the <em>logic</em> you might use to approach this problem.</p>
 <p>Here are some questions that can help:</p>
 <ul class="simple">
@@ -613,6 +620,7 @@ Counter after loop 1250
 <li><p>How can you adapt the previous “counter” pattern to this task?</p></li>
 <li><p>You want to count those items in the list that meet a certain condition. What is that condition?</p></li>
 </ul>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -620,9 +628,8 @@ Counter after loop 1250
 </div>
 </div>
 </div>
-<section id="hints">
-<h4>Hints<a class="headerlink" href="#hints" title="Permalink to this heading">#</a></h4>
-<p>Expand the cell below for some hints.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Hints</p>
 <ul class="simple">
 <li><p>The textbooks associated with each course comprise a list.</p></li>
 <li><p>That list is associated with the <code class="docutils literal notranslate"><span class="pre">texts</span></code> key in the dictionary that represents each course in <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>.</p></li>
@@ -631,12 +638,25 @@ Counter after loop 1250
 <li><p>An empty list has a length of 0.</p></li>
 <li><p>This exercise requires you to use an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement inside a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p></li>
 </ul>
-</section>
+</div>
 </section>
 <section id="querying-nested-data">
 <h3>2. Querying nested data<a class="headerlink" href="#querying-nested-data" title="Permalink to this heading">#</a></h3>
 <p>This next activity is a little more challenging.</p>
-<p><em>What is the cost of the most expensive textbook?</em></p>
+<p><strong>Question</strong>: <em>What is the cost of the most expensive textbook?</em></p>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p>Working with your team, write some code that will answer that question, using the<code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> dataset. Below you can expand the hidden cell for some hints. But before you do that, make sure your team discusses the <em>logic</em> you might use to approach this problem.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hints</p>
 <p>Here are some hints upfront. As before, make sure you discuss the logical approach with your team before writing any code.</p>
 <ul class="simple">
 <li><p>In a variation on the “counter” pattern we’ve used above, instead of incrementing the counter variable, we simply replace it whenever a certain condition is met. In other words, we can use a counter variable to keep track of the most expensive textbook we’ve seen so far, as we loop through the list.</p></li>
@@ -652,16 +672,11 @@ Counter after loop 1250
 <p>For example, run this expression in a code cell below: <code class="docutils literal notranslate"><span class="pre">'$100.99'</span> <span class="pre">&gt;</span> <span class="pre">'$11.99'</span></code>. The output should be <code class="docutils literal notranslate"><span class="pre">False</span></code>. Can you guess why?</p>
 </li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="more-queries">
 <h3>3. More queries<a class="headerlink" href="#more-queries" title="Permalink to this heading">#</a></h3>
+<p><strong>Questions</strong></p>
 <ol class="arabic simple">
 <li><p>Can you and your team adapt the preceding solution so as to identify <em>the course</em> with the most expensive textbook?</p></li>
 <li><p>What about the <em>title</em> and <em>author</em> of the most expensive textbook?</p></li>
@@ -680,6 +695,20 @@ Counter after loop 1250
 </div>
 </div>
 </div>
+</section>
+<section id="wrap-up">
+<h3>Wrap up<a class="headerlink" href="#wrap-up" title="Permalink to this heading">#</a></h3>
+<p>Today you did the following:</p>
+<ul class="simple">
+<li><p>Used Python dictionaries to store and update data about your team.</p></li>
+<li><p>Used conditionals, <code class="docutils literal notranslate"><span class="pre">for</span></code> loops, and the “counter” pattern to answers basic questions about the textbook dataset.</p></li>
+</ul>
+<p>In the homework tonight, you’ll build on this knowledge to practice more ways of interacting with the textbook data. You’ll also some learn some new tools to help you take your</p>
+<p>Tonight’s homework has two parts:</p>
+<ol class="arabic simple">
+<li><p>A section with self-guided exercises for you to do on your own. In your teams tomorrow, you’ll build on the skills introduced in these exercises.</p></li>
+<li><p>A shorter section of autograded exercises which you will submit to the OpenEdX site to record your score. You can resubmit the exercises as many times as you like, but you’ll need to get at least 80% correct in order to receive your Python Camp certificate.</p></li>
+</ol>
 </section>
 </section>
 </section>
@@ -753,21 +782,16 @@ Counter after loop 1250
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals-boolean-values">Conditionals &amp; Boolean values</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals-boolean-values">Conditionals &amp; Boolean values</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statements"><code class="docutils literal notranslate"><span class="pre">if</span></code> statements</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-for-loop-pattern">A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop pattern</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#team-activities">Team Activities</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-over-data">1. Counting over data</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hints">Hints</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-over-data">1. Counting over data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#querying-nested-data">2. Querying nested data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-queries">3. More queries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap up</a></li>
 </ul>
 </li>
 </ul>
