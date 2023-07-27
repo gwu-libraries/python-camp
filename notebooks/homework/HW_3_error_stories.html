@@ -421,31 +421,18 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-debugging">I. Debugging</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-debugging-with-print">I.1 Debugging with <code class="docutils literal notranslate"><span class="pre">print()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-preventing-errors-with-if">I.2 Preventing errors with <code class="docutils literal notranslate"><span class="pre">if</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Try it out!</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-debugging-with-print">I.1 Debugging with <code class="docutils literal notranslate"><span class="pre">print()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-preventing-errors-with-if">I.2 Preventing errors with <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-testing-code">II. Testing code</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-writing-testable-code">II.1 Writing testable code</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Try it out!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-writing-testable-code">II.1 Writing testable code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-writing-tests">II.2 Writing tests</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-writing-tests">II.2 Writing tests</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Try it out!</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Try it out!</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up-final-exercise">Wrap up / Final exercise</a></li>
 </ul>
             </nav>
         </div>
@@ -467,8 +454,15 @@ document.write(`
 <li><p>To write code to test Python code</p></li>
 </ul>
 </section>
-<section id="instructions">
-<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h2>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>To err is human. And since writing code is a human activity, it’s no less error-prone than anything else. Just as human stories tend to dramatize the protagonists’ mishaps, misteps, and mistakes en route to their triumphs and successes, the stories we tell in code necessarily traffic in errors.</p>
+<p>Of course, we want our code to work, which usually means “to work without obvious errors or bugs.” But the important word there is <em>obvious</em>. A lot of work goes into making code appear free from errors.</p>
+<p>Part of that work involves writing code in such a way that it can respond to errors, and/or respond to situations that might cause errors and avert them.</p>
+<p>Another part of that work involves testing code to confirm that it works as intended in a variety of scenarios.</p>
+<p>We’ll look at each of these strategies below.</p>
+<div class="how-to admonition">
+<p class="admonition-title">How to Use this Notebook</p>
 <p>This notebook is intended for you to work through independently, in order to review and clarify the concepts introduced on Python Camp Day 3, and to lay the groundwork for the activities on Python Camp Day 4. However, feel free to collaborate with others in working through it. It is also intended to serve as a resource you can return to review as necessary.</p>
 <ol class="arabic simple">
 <li><p>Read the documentation above each cell containing code and run the cell (<code class="docutils literal notranslate"><span class="pre">Ctrl+Enter</span></code> or <code class="docutils literal notranslate"><span class="pre">Cmd+Return</span></code>) to view the output.</p></li>
@@ -478,14 +472,7 @@ document.write(`
 <li><p>Optional annotations (labeled <code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">the</span> <span class="pre">curious...</span></code>) provide additional explanation and/or context for those who want them. Feel free to skip these sections if you like. As a beginner, it’s important to maintain a balanced cognitive load: taking in too much information all at once can impede your progress toward understanding. This balance looks different for everyone, but we have tried to keep the main content focused on a few key concepts, tools, and techniques, while providing that additional context for those who might benefit from it.</p></li>
 <li><p>Follow the instructions at the end to complete and submit a short, autograded assignment to test your knowledge. (You may submit the assignment as many times as you like.)</p></li>
 </ol>
-</section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>To err is human. And since writing code is a human activity, it’s no less error-prone than anything else. Just as human stories tend to dramatize the protagonists’ mishaps, misteps, and mistakes en route to their triumphs and successes, the stories we tell in code necessarily traffic in errors.</p>
-<p>Of course, we want our code to work, which usually means “to work without obvious errors or bugs.” But the important word there is <em>obvious</em>. A lot of work goes into making code appear free from errors.</p>
-<p>Part of that work involves writing code in such a way that it can respond to errors, and/or respond to situations that might cause errors and avert them.</p>
-<p>Another part of that work involves testing code to confirm that it works as intended in a variety of scenarios.</p>
-<p>We’ll look at each of these strategies below.</p>
+</div>
 </section>
 <section id="i-debugging">
 <h2>I. Debugging<a class="headerlink" href="#i-debugging" title="Permalink to this heading">#</a></h2>
@@ -529,6 +516,8 @@ document.write(`
 </div>
 </div>
 </div>
+<div class="notes admonition">
+<p class="admonition-title">Notes</p>
 <p>Running this code produces an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>. Until you gain some familiarity with Python exceptions, the name of the exception will be less useful than the message that follows it:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;NoneType&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;split&#39;</span>
 
@@ -540,14 +529,16 @@ document.write(`
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> tells that something went wrong with the call to the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method. The phrase <code class="docutils literal notranslate"><span class="pre">'NoneType</span> <span class="pre">object'</span></code> may seem opaque. But recall what we’ve learned about the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method: that it’s <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str.split">defined</a> to work with strings. That’s the meaning of the “str” when we write it as <code class="docutils literal notranslate"><span class="pre">str.split()</span></code>: it tells us that Python <em>strings</em> have access to this method. Other Python data types do not.</p>
 <p>An <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> occurs when we try to use a method on a data type that doesn’t “have” that method. We’ll learn more about the concept of <strong>attributes</strong> on Day 4. For now, the important thing is to find out when and why the value of <code class="docutils literal notranslate"><span class="pre">course['instructor']</span></code> might <em>not</em> be a string.</p>
+</div>
 <section id="i-1-debugging-with-print">
 <h3>I.1 Debugging with <code class="docutils literal notranslate"><span class="pre">print()</span></code><a class="headerlink" href="#i-1-debugging-with-print" title="Permalink to this heading">#</a></h3>
 <p>One of the best ways to debug code is also one of the simplest: using the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function.</p>
 <p>If we know that an error is ocurring inside a loop, but we don’t know what data element triggered the error, we can take advantage of the fact that the loop will be <strong>interrupted</strong> when the error occurs.</p>
 <p>By using <code class="docutils literal notranslate"><span class="pre">print()</span></code> to display the element we’re interested in on each iteration, we can observe where the loop stops: if we’ve put our <code class="docutils literal notranslate"><span class="pre">print()</span></code> in the right place, the last value printed should be one that triggered the error.</p>
-<section id="try-it-out">
-<h4>Try it out!<a class="headerlink" href="#try-it-out" title="Permalink to this heading">#</a></h4>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Copy the buggy code from above and paste it into the cell below. Add one or more calls to the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function and see if you can identify the source of the <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -555,6 +546,7 @@ document.write(`
 </div>
 </div>
 </div>
+<div class="toggle docutils container">
 <p>One approach is as follows: to print the value of the <code class="docutils literal notranslate"><span class="pre">'instructor'</span></code> key on each iteration of the loop.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop over courses in the dataset</span>
 <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
@@ -569,7 +561,7 @@ document.write(`
 <p>Doing so reveals that the last value printed before the error is not a name but <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <p>Note that <code class="docutils literal notranslate"><span class="pre">None</span></code> is <em>not</em> a string; it’s a special Python type (written without quotation marks) that stands for a null value.</p>
 <p>As the <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> informs us, we cannot use the <code class="docutils literal notranslate"><span class="pre">split</span></code> method on a <code class="docutils literal notranslate"><span class="pre">None</span></code> value. (There’s not much you <em>can</em> do with <code class="docutils literal notranslate"><span class="pre">None</span></code>; that’s because it’s a null: used to designate the absence of a value.)</p>
-</section>
+</div>
 </section>
 <section id="i-2-preventing-errors-with-if">
 <h3>I.2 Preventing errors with <code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#i-2-preventing-errors-with-if" title="Permalink to this heading">#</a></h3>
@@ -606,9 +598,10 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="id1">
-<h4>Try it out!<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Can you use our <code class="docutils literal notranslate"><span class="pre">print()</span></code> debugging technique to identify the cause of this <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>?</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -616,13 +609,26 @@ document.write(`
 </div>
 </div>
 </div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hints</p>
 <p>The line</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>expects a string for the value of <code class="docutils literal notranslate"><span class="pre">course['instructor']</span></code>that follows a familiar pattern:  <code class="docutils literal notranslate"><span class="pre">'first_name</span> <span class="pre">last_name'</span></code>, where white space separates the first and last name.</p>
 <p>In other words, this code works only if the result of the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method is a list with two elements. And <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> will produce a list with two elements <em>only if</em> the string has a <em>single</em> instance of white space.</p>
+</div>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Reading the documentation for <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str.split"><code class="docutils literal notranslate"><span class="pre">str.split()</span></code></a>, can you identify an argument to the method that could prevent this error? How can we force <code class="docutils literal notranslate"><span class="pre">split</span></code> to return only <em>two</em> elements?</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>Expand the cell below to see a possible solution.</p>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
@@ -646,13 +652,15 @@ document.write(`
 </div>
 </details>
 </div>
-<p>Note that the code above runs without errors, but it doesn’t necessarily solve the problem posed by the instructors’ names in our dataset.</p>
+<div class="notes admonition">
+<p class="admonition-title">Notes</p>
+<p>Note that the code in the provided solutione runs without errors, but it doesn’t necessarily solve the problem posed by the instructors’ names in our dataset.</p>
 <p>This code will handle names where the <em>last name</em> (surname) contains spaces. But where a middle name or middle initial is given, or where the <em>first name</em> (the given name) contains spaces, it will assign the wrong values to the <code class="docutils literal notranslate"><span class="pre">'last_name'</span></code> key.</p>
 <p>This fact illustrates an important point.</p>
 <blockquote>
 <div><p>Code that runs without errors is not necessarily code that works as intended.</p>
 </div></blockquote>
-</section>
+</div>
 </section>
 </section>
 <section id="ii-testing-code">
@@ -662,12 +670,13 @@ document.write(`
 <section id="ii-1-writing-testable-code">
 <h3>II.1 Writing testable code<a class="headerlink" href="#ii-1-writing-testable-code" title="Permalink to this heading">#</a></h3>
 <p>Code tends to be easier to test when it’s organized into discrete units. Writing <strong>functions</strong> is a great way to organize code in units that can be easily tested. (Functions also make our code more readable and easier to modify in response to new user stories, new datasets, etc.)</p>
-<section id="id2">
-<h4>Try it out!<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>The following cell contains the function signature (the <code class="docutils literal notranslate"><span class="pre">def</span></code> line) and the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement for a function called <code class="docutils literal notranslate"><span class="pre">extract_instructor_names</span></code>.</p>
 <p>This function takes as argument a single dictionary, checks for the presence of a key called <code class="docutils literal notranslate"><span class="pre">instructor</span></code>, and if the latter is present, adds <code class="docutils literal notranslate"><span class="pre">first_name</span></code> and <code class="docutils literal notranslate"><span class="pre">last_name</span></code> entries to the dictionary.</p>
 <p>The function should do the same thing as the body of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop above, but without the loop: in other words, we want to be able to use our function to process a single course (not a list of courses).</p>
 <p>See if you can fill out the body of the function below.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">extract_instructor_names</span><span class="p">(</span><span class="n">course_dict</span><span class="p">):</span>
@@ -706,15 +715,15 @@ document.write(`
 </details>
 </div>
 </section>
-</section>
 <section id="ii-2-writing-tests">
 <h3>II.2 Writing tests<a class="headerlink" href="#ii-2-writing-tests" title="Permalink to this heading">#</a></h3>
 <p>Now that we have a function that works for a single course dictionary, we can write some tests.</p>
 <p>We’ll be using the <code class="docutils literal notranslate"><span class="pre">assert</span></code> keyword, which you have noticed in yesterday’s autograded homework exercise.</p>
 <p><code class="docutils literal notranslate"><span class="pre">assert</span></code> is used almost exclusively in writing tests. Like an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, an <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement evaluates a given condition. But instead of being followed by a block of code to execute if the condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">assert</span></code> does nothing if the condition is true. However, if the condition is <code class="docutils literal notranslate"><span class="pre">False</span></code>, it causes an <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>.</p>
-<section id="id3">
-<h4>Try it out!<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Modify <code class="docutils literal notranslate"><span class="pre">x</span></code> in the code below so that the <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement produces an error. Note that following the condition, we can provide (as a Python string) a message; this message will appear in the <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code> itself.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -753,10 +762,10 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section id="id4">
-<h4>Try it out!<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Write a test for our function to verify it’s behavior on a name with three parts.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -785,6 +794,10 @@ document.write(`
 </div>
 </section>
 </section>
+<section id="wrap-up-final-exercise">
+<h2>Wrap up / Final exercise<a class="headerlink" href="#wrap-up-final-exercise" title="Permalink to this heading">#</a></h2>
+<p>In this homework, you practiced debugging errors with the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, and you used <code class="docutils literal notranslate"><span class="pre">if</span></code> statements to avert possible errors due to inconsistencies in the data. Finally, you worked with the <code class="docutils literal notranslate"><span class="pre">assert</span></code> keyword to construct tests for code (to ensure that your code is working as expected).</p>
+<p>The final part of the homework or today is an <a class="reference internal" href="HW_3_GR.html"><span class="doc std std-doc">autograded exercise</span></a>, designed to test your grasp of the concepts covered on Days 1, 2, and 3.</p>
 </section>
 </section>
 
@@ -856,31 +869,18 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-debugging">I. Debugging</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-debugging-with-print">I.1 Debugging with <code class="docutils literal notranslate"><span class="pre">print()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-preventing-errors-with-if">I.2 Preventing errors with <code class="docutils literal notranslate"><span class="pre">if</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Try it out!</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-debugging-with-print">I.1 Debugging with <code class="docutils literal notranslate"><span class="pre">print()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-preventing-errors-with-if">I.2 Preventing errors with <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-testing-code">II. Testing code</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-writing-testable-code">II.1 Writing testable code</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Try it out!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-writing-testable-code">II.1 Writing testable code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-writing-tests">II.2 Writing tests</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-writing-tests">II.2 Writing tests</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Try it out!</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Try it out!</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up-final-exercise">Wrap up / Final exercise</a></li>
 </ul>
   </nav></div>
 

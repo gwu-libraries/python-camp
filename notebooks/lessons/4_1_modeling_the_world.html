@@ -422,34 +422,17 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-creating-a-model">I. Creating a Model</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-creating-a-model">I. Creating a Model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-modeling-with-classes">II. Modeling with Classes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-defining-a-class">II.1 Defining a Class</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Try it out!</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-defining-relationships">II.2 Defining relationships</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Try it out!</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-adding-methods">II.3 Adding methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Try it out!</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Try it out!</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-4-completing-the-model">II.4 Completing the model</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Try it out!</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-defining-a-class">II.1 Defining a Class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-defining-relationships">II.2 Defining relationships</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-adding-methods">II.3 Adding methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-4-completing-the-model">II.4 Completing the model</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-5-classes-why-bother">II.5 Classes: Why bother?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-6-a-final-example">II.6 A final example</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-7-saving-our-work">II.7 Saving our work</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up">Wrapping Up</a></li>
 </ul>
             </nav>
         </div>
@@ -486,8 +469,11 @@ document.write(`
 <h2>I. Creating a Model<a class="headerlink" href="#i-creating-a-model" title="Permalink to this heading">#</a></h2>
 <p>On the first day of Python Camp, each team created a schema to describe the structure of our bookstore dataset.</p>
 <p>Today we’re going to revisit that work, but instead of starting from a dataset, we’re going to start from what we know about that aspect of the world that the dataset itself describes: GW courses and textbooks.</p>
-<section id="try-it-out">
-<h3>Try it out!<a class="headerlink" href="#try-it-out" title="Permalink to this heading">#</a></h3>
+<p>The image in the cell below shows an example of a model of Python Camp. This model is very simple: it includes only three kinds of object (Python Camp itself, instructors, and learners) and two relationships. We’ve left out other important aspects of Python Camp, like lessons, homework exercises, etc.</p>
+<p>Since there can be multiple instances of Python Camp, each of which can have multiple instructors and learners, we list some attributes that could help us identify one particular <strong>instance</strong> of Python Camp, or one particular instructor or learner, from the others.</p>
+<a class="reference internal image-reference" href="https://gwu-libraries.github.io/python-camp/img/sample-object-model-python-camp.png"><img alt="Flow chart with three boxes, one labeled Python Camp, one labeled Instructor, and one labeled Learner. The Python Camp box is connected to the other two with arrows labeled &quot;has one or more&quot;" class="align-center" src="https://gwu-libraries.github.io/python-camp/img/sample-object-model-python-camp.png" style="width: 300px;" /></a>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>In your teams, create a model of GW courses and textbooks.</p>
 <ul class="simple">
 <li><p>Modeling describes kinds of <strong>objects</strong> – kinds of things – and their relationships. What kinds of objects are involved in talking about textbooks? How are these objects related?</p></li>
@@ -495,10 +481,7 @@ document.write(`
 <li><p>In modeling, we have to make choices about the level of detail we want to represent. In this case, we’re limited by the GW bookstore dataset, so we can restrict our model to those pieces of information already captured in the dataset.</p></li>
 <li><p>But try not to think about Python syntax or data structures at this point. Think in terms of the “real” world of courses and textbooks.</p></li>
 </ul>
-<p>The image in the cell below shows an example of a model of Python Camp. This model is very simple: it includes only three kinds of object (Python Camp itself, instructors, and learners) and two relationships. We’ve left out other important aspects of Python Camp, like lessons, homework exercises, etc.</p>
-<p>Since there can be multiple instances of Python Camp, each of which can have multiple instructors and learners, we list some attributes that could help us identify one particular <strong>instance</strong> of Python Camp, or one particular instructor or learner, from the others.</p>
-<a class="reference internal image-reference" href="https://gwu-libraries.github.io/python-camp/img/sample-object-model-python-camp.png"><img alt="Flow chart with three boxes, one labeled Python Camp, one labeled Instructor, and one labeled Learner. The Python Camp box is connected to the other two with arrows labeled &quot;has one or more&quot;" class="align-center" src="https://gwu-libraries.github.io/python-camp/img/sample-object-model-python-camp.png" style="width: 300px;" /></a>
-</section>
+</div>
 </section>
 <section id="ii-modeling-with-classes">
 <h2>II. Modeling with Classes<a class="headerlink" href="#ii-modeling-with-classes" title="Permalink to this heading">#</a></h2>
@@ -530,6 +513,8 @@ document.write(`
 </div>
 </div>
 </div>
+<div class="notes admonition">
+<p class="admonition-title">Notes</p>
 <p>Let’s unpack the code above.</p>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">class</span></code> keyword (like the <code class="docutils literal notranslate"><span class="pre">def</span></code> keyword for functions) indicates the definition of a class.</p></li>
@@ -548,6 +533,7 @@ document.write(`
 <li><p>We could use different names for the attributes and the method arguments, but it usually makes more sense to keep them the same.</p></li>
 </ul>
 <p>The purpose of all of this will become clearer below.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="s1">&#39;AMST&#39;</span><span class="p">,</span> <span class="s1">&#39;6190&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Elisabeth Anker&#39;</span><span class="p">,</span> <span class="s1">&#39;Summer 2023&#39;</span><span class="p">)</span>
@@ -576,10 +562,10 @@ Section: 10
 <p>We can retrieve the attributes from the instance by using the dot notation: <code class="docutils literal notranslate"><span class="pre">my_course.dept</span></code>, etc.</p>
 <p>This works because our <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method assigns these arguments to instances of the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class via the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument.</p>
 <p>We’ve used classes and methods before. Recall the <code class="docutils literal notranslate"><span class="pre">split</span></code> method available on strings. We can write <code class="docutils literal notranslate"><span class="pre">'AMST</span> <span class="pre">6190</span> <span class="pre">10'.split()</span></code> because in Python, the quotation marks <em>automatically</em> create a new instance of the special <code class="docutils literal notranslate"><span class="pre">str</span></code> class, and every instance of the <code class="docutils literal notranslate"><span class="pre">str</span></code> class gets access to the string methods.</p>
-<section id="id1">
-<h4>Try it out!<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Create another instance of the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class below, using a different variable name from <code class="docutils literal notranslate"><span class="pre">my_course</span></code> and different arguments. See if you can print the department, course number, and section from your new instance.</p>
-</section>
+</div>
 </section>
 <section id="ii-2-defining-relationships">
 <h3>II.2 Defining relationships<a class="headerlink" href="#ii-2-defining-relationships" title="Permalink to this heading">#</a></h3>
@@ -604,8 +590,8 @@ Section: 10
 </div>
 </div>
 <p>We’ve simply added a new attribute to our class called <code class="docutils literal notranslate"><span class="pre">texts</span></code>, which we have initialized as an empty list. This list will hold instances of the <code class="docutils literal notranslate"><span class="pre">Text</span></code> class, which we’ll create next.</p>
-<section id="id2">
-<h4>Try it out!<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Following the example of our <code class="docutils literal notranslate"><span class="pre">Course</span></code> class, define a class called <code class="docutils literal notranslate"><span class="pre">Text</span></code> to hold the attributes we identified when modeling textbooks above. The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method should take arguments corresponding to those attributes and assign them to the class instance via the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument.</p>
 <p>To keep things simple, use only the attributes of the textbook we’ve used thus far:</p>
 <ul class="simple">
@@ -614,6 +600,7 @@ Section: 10
 <li><p>item_type (whether print or digital)</p></li>
 <li><p>type_condition (BUY_NEW, BUY_USED, RENTAL_NEW, RENTAL_USED)</p></li>
 </ul>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -622,7 +609,6 @@ Section: 10
 </div>
 </div>
 </section>
-</section>
 <section id="ii-3-adding-methods">
 <h3>II.3 Adding methods<a class="headerlink" href="#ii-3-adding-methods" title="Permalink to this heading">#</a></h3>
 <p>Our <code class="docutils literal notranslate"><span class="pre">Course</span></code> class has no methods other than <code class="docutils literal notranslate"><span class="pre">__init__</span></code>, because we just using it store some data about each course.</p>
@@ -630,13 +616,7 @@ Section: 10
 <p>For example, consider a spreadsheet application like Google Sheets or Excel. The application allows you to create multiple spreadsheets. The data on different spreadsheets can be very different, but all spreadsheets (within the same application) share certain features: like the ability to save the document, to format cells, to sort and filter, etc.</p>
 <p>If we wanted to model the spreadsheet application using classes and methods, we might imagine a <code class="docutils literal notranslate"><span class="pre">SpreadSheet</span></code> class. This class might have a <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute to store the data associated with a particular spreadsheet (available as <code class="docutils literal notranslate"><span class="pre">spreadsheet.data</span></code>, if <code class="docutils literal notranslate"><span class="pre">spreadsheet</span></code> is an instance of our <code class="docutils literal notranslate"><span class="pre">SpreadSheet</span></code> class). To save the spreadsheet, we could call <code class="docutils literal notranslate"><span class="pre">spreadsheet.save()</span></code>, which would (internally) use the <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute to access the data and write it to disk.</p>
 <p>In the code below, we’ll add a method to our <code class="docutils literal notranslate"><span class="pre">Text</span></code> class. The functionality is familiar: converting a string representation of a price to a float.</p>
-<p>Expand the collapsed cell to see and run the code.</p>
-<div class="cell tag_hide-cell docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell content</span>
-<span class="expanded">Hide code cell content</span>
-</summary>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Text</span><span class="p">:</span>
 
@@ -657,16 +637,19 @@ Section: 10
 </pre></div>
 </div>
 </div>
-</details>
 </div>
+<div class="notes admonition">
+<p class="admonition-title">Notes</p>
 <p>Note that our <code class="docutils literal notranslate"><span class="pre">covert_price</span></code> method takes a single argument: <code class="docutils literal notranslate"><span class="pre">self</span></code>. When we <em>call</em> this method, we won’t actually provide any arguments to this method. We’ll simply write <code class="docutils literal notranslate"><span class="pre">my_text.convert_price()</span></code> (assuming <code class="docutils literal notranslate"><span class="pre">my_text</span></code> is an instance of the <code class="docutils literal notranslate"><span class="pre">Text</span></code> class).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">self</span></code> argument is a reference to the instance (<code class="docutils literal notranslate"><span class="pre">my_text</span></code>) <em>itself</em> – hence the name <code class="docutils literal notranslate"><span class="pre">self</span></code>. The Python interpreter automatically handles the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument when calling the method (if we call it using dot notation).</p>
 <p>Inside the method, the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument allows us access to the attributes of <code class="docutils literal notranslate"><span class="pre">my_text</span></code> (as initialized when we create our <code class="docutils literal notranslate"><span class="pre">my_text</span></code> instance).</p>
-<section id="id3">
-<h4>Try it out!<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+</div>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Create an instance of the <code class="docutils literal notranslate"><span class="pre">Text</span></code> class called <code class="docutils literal notranslate"><span class="pre">my_text</span></code>, assigning it attributes the way we did in creating <code class="docutils literal notranslate"><span class="pre">my_course</span></code> from the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class.</p>
 <p>Then call <code class="docutils literal notranslate"><span class="pre">my_text.convert_price()</span></code> to confirm that the method works.</p>
 <p>Remember that <code class="docutils literal notranslate"><span class="pre">convert_price()</span></code> assumes that <code class="docutils literal notranslate"><span class="pre">self.price</span></code> is a string beginning with the dollar sign (<code class="docutils literal notranslate"><span class="pre">$</span></code>).</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -674,11 +657,11 @@ Section: 10
 </div>
 </div>
 </div>
-</section>
-<section id="id4">
-<h4>Try it out!<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Now can you use the <code class="docutils literal notranslate"><span class="pre">assert</span></code> keyword to write a test for the <code class="docutils literal notranslate"><span class="pre">convert_price()</span></code> method?</p>
 <p>Tests are especially useful when working with functions and classes. Since both functions and classes allow us to encapsulate (hide the details of) our logic, tests help us ensure the behavor continues to work as expected as we make changes (to add new features, etc.)</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -700,7 +683,6 @@ Section: 10
 </div>
 </details>
 </div>
-</section>
 </section>
 <section id="ii-4-completing-the-model">
 <h3>II.4 Completing the model<a class="headerlink" href="#ii-4-completing-the-model" title="Permalink to this heading">#</a></h3>
@@ -724,10 +706,11 @@ Section: 10
 </div>
 </div>
 </div>
-<section id="id5">
-<h4>Try it out!<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Working with your team, can you complete the code below to create a list of <code class="docutils literal notranslate"><span class="pre">Course</span></code> instances, each of which holds a list of <code class="docutils literal notranslate"><span class="pre">Text</span></code> instances?</p>
 <p>Fix the partial code in the function below and add code as needed so that the tests complete without errors.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">transform_course_data</span><span class="p">(</span><span class="n">course_data</span><span class="p">):</span>
@@ -755,7 +738,6 @@ Section: 10
 </div>
 </div>
 </div>
-</section>
 </section>
 <section id="ii-5-classes-why-bother">
 <h3>II.5 Classes: Why bother?<a class="headerlink" href="#ii-5-classes-why-bother" title="Permalink to this heading">#</a></h3>
@@ -787,7 +769,10 @@ Section: 10
 </div>
 </div>
 </div>
+<div class="question admonition">
+<p class="admonition-title">Question</p>
 <p>What do you notice? Can you think of reasons why programmers might want to use classes instead of (or in addition to) dictionaries when modeling their data?</p>
+</div>
 </section>
 <section id="ii-6-a-final-example">
 <h3>II.6 A final example<a class="headerlink" href="#ii-6-a-final-example" title="Permalink to this heading">#</a></h3>
@@ -823,6 +808,8 @@ Section: 10
 </div>
 </div>
 </div>
+<div class="notes admonition">
+<p class="admonition-title">Notes</p>
 <p>We’ve added a method <code class="docutils literal notranslate"><span class="pre">add_text</span></code> to the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class.</p>
 <p>This method does two things:</p>
 <ul class="simple">
@@ -833,7 +820,7 @@ Section: 10
 <p>In other words, we’re stipulating that it’s a behavior of a course to know its most expensive textbook.</p>
 <p>We’ve already seen one example of a method that doesn’t return anything: the <code class="docutils literal notranslate"><span class="pre">list.append()</span></code> method. Like our method above, when we call <code class="docutils literal notranslate"><span class="pre">append</span></code> on a list, we add a value to the underlying list, so we don’t get any value back from the method call.</p>
 <p>We’ve said that functions and methods are used to transform data. In many cases, the data to be transformed are the arguments themselves. But in cases like <code class="docutils literal notranslate"><span class="pre">list.append()</span></code> or <code class="docutils literal notranslate"><span class="pre">Course.add_text()</span></code>, the data to be transformed actually the underlying class instances.</p>
-<hr class="docutils" />
+</div>
 <p>In the following code, we rewrite our <code class="docutils literal notranslate"><span class="pre">transform_course_data</span></code> function to use our new method when adding texts. Note that we’ve included our tests, so as to confirm that our class re-write didn’t change any other behaviors.</p>
 <p>Make sure you can identify the line we’ve changed in the definition of <code class="docutils literal notranslate"><span class="pre">transform_course_data</span></code>.</p>
 <div class="cell docutils container">
@@ -865,8 +852,6 @@ Section: 10
 </div>
 </div>
 <p>Now if we want to find the course with the most expensive textbook, we can use the following code.</p>
-<p>Note that instead of keeping track of the most expensive with two variables – one for the price, one for the course info – we can use just one (<code class="docutils literal notranslate"><span class="pre">most_expensive_course</span></code>). However, we have to initialize this variable with an instance of <code class="docutils literal notranslate"><span class="pre">Course</span></code>, so for expedience’s sake, we just use the first <code class="docutils literal notranslate"><span class="pre">Course</span></code> instance in our <code class="docutils literal notranslate"><span class="pre">courses</span></code> list.</p>
-<p>Then we loop over the rest of the list (<code class="docutils literal notranslate"><span class="pre">courses[1:]</span></code>) – there’s no need to compare the first course to itself.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">most_expensive_course</span> <span class="o">=</span> <span class="n">courses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -883,6 +868,11 @@ Section: 10
 </pre></div>
 </div>
 </div>
+</div>
+<div class="notes admonition">
+<p class="admonition-title">Notes</p>
+<p>Note that instead of keeping track of the most expensive with two variables – one for the price, one for the course info – we can use just one (<code class="docutils literal notranslate"><span class="pre">most_expensive_course</span></code>). However, we have to initialize this variable with an instance of <code class="docutils literal notranslate"><span class="pre">Course</span></code>, so for expedience’s sake, we just use the first <code class="docutils literal notranslate"><span class="pre">Course</span></code> instance in our <code class="docutils literal notranslate"><span class="pre">courses</span></code> list.</p>
+<p>Then we loop over the rest of the list (<code class="docutils literal notranslate"><span class="pre">courses[1:]</span></code>) – there’s no need to compare the first course to itself.</p>
 </div>
 </section>
 <section id="ii-7-saving-our-work">
@@ -902,9 +892,6 @@ Section: 10
 </div>
 </div>
 </section>
-</section>
-<section id="wrapping-up">
-<h2>Wrapping Up<a class="headerlink" href="#wrapping-up" title="Permalink to this heading">#</a></h2>
 </section>
 </section>
 
@@ -977,34 +964,17 @@ Section: 10
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-creating-a-model">I. Creating a Model</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-creating-a-model">I. Creating a Model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-modeling-with-classes">II. Modeling with Classes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-defining-a-class">II.1 Defining a Class</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Try it out!</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-defining-relationships">II.2 Defining relationships</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Try it out!</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-adding-methods">II.3 Adding methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Try it out!</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Try it out!</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-4-completing-the-model">II.4 Completing the model</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Try it out!</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-defining-a-class">II.1 Defining a Class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-defining-relationships">II.2 Defining relationships</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-adding-methods">II.3 Adding methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-4-completing-the-model">II.4 Completing the model</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-5-classes-why-bother">II.5 Classes: Why bother?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-6-a-final-example">II.6 A final example</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-7-saving-our-work">II.7 Saving our work</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up">Wrapping Up</a></li>
 </ul>
   </nav></div>
 

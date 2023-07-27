@@ -421,32 +421,19 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-writing-reading-documentation">I. Writing &amp; Reading Documentation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-commenting-on-code">I.1 Commenting on Code</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-using-the-python-documentation">I.2 Using the Python documentation</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Try it out!</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-commenting-on-code">I.1 Commenting on Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-using-the-python-documentation">I.2 Using the Python documentation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-writing-functions">II. Writing Functions</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-defining-vs-calling-functions">II.1 Defining vs. calling functions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-arguments-and-return-values">II.2 Arguments and return values</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Try it out!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-arguments-and-return-values">II.2 Arguments and return values</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-errors-exceptions">III. Errors &amp; Exceptions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-the-curious">For the curious</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-exercise">Final exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-errors-exceptions">III. Errors &amp; Exceptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up-final-exercise">Wrap up / Final exercise</a></li>
 </ul>
             </nav>
         </div>
@@ -468,9 +455,14 @@ document.write(`
 <li><p>To interpret Python exceptions (error messages) in order to fix bugs</p></li>
 </ul>
 </section>
-<section id="instructions">
-<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h2>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>By now, you have written Python code to solve various problems. Some problems could be solved in one or two lines; others (like finding the most expensive textbook in our dataset) required several lines of code.</p>
+<p>Given all that you have learned so far, you could go on to solve many, many more problems using Python. In other words, we’ve covered the bare essentials; it’s one of the main advantages of Python (as a programming language) that these essentials can be covered in just a couple of days.</p>
+<p>But the Python language offers many other tools and techniques to make code more robust, reusable, and efficient. One way to think about these tools and techniques is that they help us write <em>programs</em> as opposed to writing code, a <strong>program</strong> being some code that is designed for use by different users in different contexts. Even if you are the only user of your code, applying these programming techniques can make your work more productive and your code more effective.</p>
 <p>This notebook is intended for you to work through independently, in order to review and clarify the concepts introduced on Python Camp Day 2, and to lay the groundwork for the activities on Python Camp Day 3. However, feel free to collaborate with others in working through it. It is also intended to serve as a resource you can return to review as necessary.</p>
+<div class="how-to admonition">
+<p class="admonition-title">How to Use this Notebook</p>
 <ol class="arabic simple">
 <li><p>Read the documentation above each cell containing code and run the cell (<code class="docutils literal notranslate"><span class="pre">Ctrl+Enter</span></code> or <code class="docutils literal notranslate"><span class="pre">Cmd+Return</span></code>) to view the output.</p></li>
 <li><p>Follow the prompts labeled <code class="docutils literal notranslate"><span class="pre">Try</span> <span class="pre">it</span> <span class="pre">out!</span></code> that ask you to write your own code in the provided blank cells.</p></li>
@@ -479,12 +471,7 @@ document.write(`
 <li><p>Optional annotations (labeled <code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">the</span> <span class="pre">curious...</span></code>) provide additional explanation and/or context for those who want them. Feel free to skip these sections if you like. As a beginner, it’s important to maintain a balanced cognitive load: taking in too much information all at once can impede your progress toward understanding. This balance looks different for everyone, but we have tried to keep the main content focused on a few key concepts, tools, and techniques, while providing that additional context for those who might benefit from it.</p></li>
 <li><p>Follow the instructions at the end to complete and submit a short, autograded assignment to test your knowledge. (You may submit the assignment as many times as you like.)</p></li>
 </ol>
-</section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>By now, you have written Python code to solve various problems. Some problems could be solved in one or two lines; others (like finding the most expensive textbook in our dataset) required several lines of code.</p>
-<p>Given all that you have learned so far, you could go on to solve many, many more problems using Python. In other words, we’ve covered the bare essentials; it’s one of the main advantages of Python (as a programming language) that these essentials can be covered in just a couple of days.</p>
-<p>But the Python language offers many other tools and techniques to make code more robust, reusable, and efficient. One way to think about these tools and techniques is that they help us write <em>programs</em> as opposed to writing code, a <strong>program</strong> being some code that is designed for use by different users in different contexts. Even if you are the only user of your code, applying these programming techniques can make your work more productive and your code more effective.</p>
+</div>
 </section>
 <section id="i-writing-reading-documentation">
 <h2>I. Writing &amp; Reading Documentation<a class="headerlink" href="#i-writing-reading-documentation" title="Permalink to this heading">#</a></h2>
@@ -505,9 +492,10 @@ document.write(`
 <h3>I.1 Commenting on Code<a class="headerlink" href="#i-1-commenting-on-code" title="Permalink to this heading">#</a></h3>
 <p>The code below loops through the bookstore data and counts the total number of textbooks where the type of the text is digital (as opposed to print).</p>
 <p>Above each line of code is a blank line beginning with the hash symbol (<code class="docutils literal notranslate"><span class="pre">#</span></code>). This is a Python <strong>comment</strong>. The Python interpreter ignores comments when executing code, so they are present purely for the programmer’s benefit.</p>
-<section id="try-it-out">
-<h4>Try it out!<a class="headerlink" href="#try-it-out" title="Permalink to this heading">#</a></h4>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>For each comment, write (in your own words) an explanation of what the line below is doing. Your comment text can be anything that makes sense to you. Just make sure that your text follows the hash symbol. (If you want to make a comment that spans multiple lines, just create an extra line below the first and begin that new line with the hash symbol.)</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
@@ -531,15 +519,33 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
+<p>Expand the cell below to see one possible way of documenting this code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the counter </span>
+<span class="n">digital_count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Loop over each course in the bkst_data list</span>
+<span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
+    <span class="c1"># Loop over each text in the course dictionary</span>
+    <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">]:</span>
+        <span class="c1"># Check the value of the item_type key: is it a digital book?</span>
+        <span class="k">if</span> <span class="n">text</span><span class="p">[</span><span class="s1">&#39;item_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;digital&#39;</span><span class="p">:</span>
+            <span class="c1"># If so, increment the counter</span>
+            <span class="n">digital_count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="c1"># Print the total number of digital texts</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of digital textbooks:&#39;</span><span class="p">,</span> <span class="n">digital_count</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="i-2-using-the-python-documentation">
 <h3>I.2 Using the Python documentation<a class="headerlink" href="#i-2-using-the-python-documentation" title="Permalink to this heading">#</a></h3>
 <p>Lucky for us, documentation consists of much more than lines of comments on code. Both the Python <strong>standard library</strong> (the set of functions, data types, methods, and other tools that are available with the basic installation of Python) and a wide array of third-party Python libraries come with extensive documentation.</p>
 <p>Learning how to read and navigate this documentation is a skill in itself.</p>
 <p>The “official” Python documentation – for the core language and the standard library – resides at <a class="reference external" href="https://docs.python.org/3/">https://docs.python.org/3/</a>. This site will often appear in Google results when searching for documentation on specific functions, methods, etc.</p>
-<section id="id1">
-<h4>Try it out!<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>In the previous homework, we used the <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> method to separate a single string on its <strong>white space</strong> into a <strong>list</strong> of substrings.
 The code</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;CHEM 1001 10&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
@@ -561,6 +567,7 @@ The code</p>
 </ul>
 <p>Write some code that will split such a string on the underscore character (<code class="docutils literal notranslate"><span class="pre">_</span></code>), so that we can separate each of these strings into two data points.</p>
 <p>Expand the hidden cell below to see an explanation and a solution.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -568,6 +575,7 @@ The code</p>
 </div>
 </div>
 </div>
+<div class="toggle docutils container">
 <p>The crucial line of the Python documentation for methods is the first, called the <strong>method signature</strong>. For <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> the method signature looks like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -596,7 +604,7 @@ The code</p>
 </pre></div>
 </div>
 <p>Either of those will yield the result we want: <code class="docutils literal notranslate"><span class="pre">['RENTAL',</span> <span class="pre">'NEW']</span></code>. Note that the underscore character is <em>enclosed in quotation marks</em> when passing it as an argument to <code class="docutils literal notranslate"><span class="pre">str.split()</span></code>.</p>
-</section>
+</div>
 </section>
 </section>
 <section id="ii-writing-functions">
@@ -615,6 +623,8 @@ The code</p>
 </div>
 </div>
 </div>
+<div class="notes admonition">
+<p class="admonition-title">Notes</p>
 <p>When you run the above cell, you shouldn’t see any output. That’s because <strong>defining a function</strong> and using the function are two separate operations.</p>
 <p>Let’s unpack our function definition, piece by piece:</p>
 <ul class="simple">
@@ -625,6 +635,7 @@ The code</p>
 <li><p>Then there’s a <strong>colon</strong>, followed by an indented block (as in the <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">if</span></code> statements you wrote today).</p></li>
 <li><p>The code in the indented block is the <strong>body</strong> of the function. The function body is what will be executed when we <strong>call</strong> the function</p></li>
 </ul>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_message</span><span class="p">()</span>
@@ -707,6 +718,8 @@ Price with tax is 110.209
 </div>
 </div>
 </div>
+<div class="notes admonition">
+<p class="admonition-title">Notes</p>
 <ul class="simple">
 <li><p>In the code above, we called <code class="docutils literal notranslate"><span class="pre">add_sales_tax</span></code> inside a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, passing it the loop variable <code class="docutils literal notranslate"><span class="pre">p</span></code> in parentheses.</p></li>
 <li><p>During the execution of the function, the value of <code class="docutils literal notranslate"><span class="pre">p</span></code> is copied into to the <code class="docutils literal notranslate"><span class="pre">price</span></code> variable (which is internal to the function).</p></li>
@@ -719,8 +732,9 @@ Price with tax is 110.209
 <ul class="simple">
 <li><p>Note that we documented our function inside its definition, so that others would understand how to use it.</p></li>
 </ul>
-<section id="id2">
-<h4>Try it out!<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+</div>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <p>Write a function, <code class="docutils literal notranslate"><span class="pre">dollars_to_float()</span></code>, to convert a string starting with a dollar sign to a float. You’ve used this code before – now encapsulate it in a function so that you can re-use it in the future without retyping it.</p>
 <p>Once you’ve written your function, test it by calling it on the following strings:</p>
 <ul class="simple">
@@ -728,6 +742,7 @@ Price with tax is 110.209
 <li><p><code class="docutils literal notranslate"><span class="pre">'$9.99'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'$200.00'</span></code></p></li>
 </ul>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -777,7 +792,6 @@ Price with tax is 110.209
 </div>
 </section>
 </section>
-</section>
 <section id="iii-errors-exceptions">
 <h2>III. Errors &amp; Exceptions<a class="headerlink" href="#iii-errors-exceptions" title="Permalink to this heading">#</a></h2>
 <p>Errors can be jarring. For many of us, error messages on the computer inspire frustration, even anger. They may even make us feel misunderstood, or else that we lack understanding, that we just don’t “get” it.</p>
@@ -785,8 +799,8 @@ Price with tax is 110.209
 <p>In the example above, we didn’t design the function specifically to work for strings with commas, and indeed, it doesn’t. The <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> – technically, this kind of error is called an <strong>exception</strong> – means simply that the Python interpreter encountered a kind of value it didn’t expect and doesn’t know what to do with.</p>
 <p>Such errors/exceptions are valuable to the programmer; they tell us where the bugs are (or might be) in our programs. Python even provides mechanisms for checking for errors proactively, so that our code doesn’t grind to a halt whenever it encounters one.</p>
 <p>On Days 3 and 4, we’ll work more with errors and exceptions, and we’ll learn about an approach to writing code that uses errors to guide development.</p>
-<section id="for-the-curious">
-<h3>For the curious<a class="headerlink" href="#for-the-curious" title="Permalink to this heading">#</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">For the curious</p>
 <p>What’s the difference between an <strong>error</strong> and an <strong>exception</strong>?</p>
 <p>Technically, even though they often have the word <code class="docutils literal notranslate"><span class="pre">Error</span></code> in their name, most of the errors you’ll encounter when programming in Python are called <em>exceptions</em>. These describe situations where a line of code may or may not work, depending on other factors. These other factors include the rest of the code in the program, the input to the program, the environment in which the program is being run, etc.</p>
 <p>The example above is an exception because the line <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">float(amt)</span></code> works whenever <code class="docutils literal notranslate"><span class="pre">amt</span></code> is a string containing only numerals and a period, but it fails if other characters are present in the string (like a comma).</p>
@@ -796,11 +810,13 @@ Price with tax is 110.209
 </pre></div>
 </div>
 <p>But in practice, this distinction doesn’t matter very much, so feel free to refer to both exceptions and syntax errors as errors!</p>
+</div>
 </section>
-</section>
-<section id="final-exercise">
-<h2>Final exercise<a class="headerlink" href="#final-exercise" title="Permalink to this heading">#</a></h2>
-<p>The final exercise is an autograded homework, designed to test your grasp of the concepts covered on Days 1 and 2. When you upload the homework file to the OpenEdX site, it will generate your score. You may upload it as many times as you like; only the last score recorded counts to your certificate.</p>
+<section id="wrap-up-final-exercise">
+<h2>Wrap up / Final exercise<a class="headerlink" href="#wrap-up-final-exercise" title="Permalink to this heading">#</a></h2>
+<p>In this homework, you practiced writing documenting code with <strong>comments</strong>. You used the official Python documentation to learn more about the <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> <strong>method</strong>. And you wrote your first Python <strong>function</strong>, <code class="docutils literal notranslate"><span class="pre">dollars_to_float</span></code>. You also encountered some Python error messages, which we’ll learn more about tomorrow.</p>
+<p>You’ll use your <code class="docutils literal notranslate"><span class="pre">dollars_to_float</span></code> function, as well as the skills covered in this homework, in the team exercises tomorrow.</p>
+<p>The final part of the homework or today is an <a class="reference internal" href="HW_2_GR.html"><span class="doc std std-doc">autograded exercise</span></a>, designed to test your grasp of the concepts covered on Days 1 and 2.</p>
 </section>
 </section>
 
@@ -872,32 +888,19 @@ Price with tax is 110.209
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-writing-reading-documentation">I. Writing &amp; Reading Documentation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-commenting-on-code">I.1 Commenting on Code</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it out!</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-using-the-python-documentation">I.2 Using the Python documentation</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Try it out!</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-commenting-on-code">I.1 Commenting on Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-using-the-python-documentation">I.2 Using the Python documentation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-writing-functions">II. Writing Functions</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-defining-vs-calling-functions">II.1 Defining vs. calling functions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-arguments-and-return-values">II.2 Arguments and return values</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Try it out!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-arguments-and-return-values">II.2 Arguments and return values</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-errors-exceptions">III. Errors &amp; Exceptions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-the-curious">For the curious</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-exercise">Final exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-errors-exceptions">III. Errors &amp; Exceptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up-final-exercise">Wrap up / Final exercise</a></li>
 </ul>
   </nav></div>
 

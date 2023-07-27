@@ -7,8 +7,18 @@ div.question .admonition-title:after {
 div.notes .admonition-title:after {
     content: "\f5da";
 }
+
+/*
+div.how-to .adminition-title:after {
+
+}*/
+
  div.try-it-out .admonition-title {
     background-color: lightgreen;
+}
+
+div.animation .admonition-title:after {
+    content: "\f03d";
 }
 /* div.notes .admonition-title {
     background-color: #6cd279;
