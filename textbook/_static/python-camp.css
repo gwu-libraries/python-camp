@@ -1,0 +1,31 @@
+div.try-it-out .admonition-title:after {
+    content: "\f120";
+}
+div.question .admonition-title:after {
+    content: "\e4e3";
+}
+div.notes .admonition-title:after {
+    content: "\f5da";
+}
+
+/*
+div.how-to .adminition-title:after {
+
+}*/
+
+ div.try-it-out .admonition-title {
+    background-color: lightgreen;
+}
+
+div.animation .admonition-title:after {
+    content: "\f03d";
+}
+/* div.notes .admonition-title {
+    background-color: #6cd279;
+}*/
+/* div.question .admonition-title {
+    background-color: #6cd279;
+}*/
+/* div.hint .admonition-title {
+    background-color: #6cd279;
+}*/
