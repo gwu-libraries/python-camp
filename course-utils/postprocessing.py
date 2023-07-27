@@ -11,13 +11,14 @@ logger=logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
-# Pattern that offsets myST directives in the notebook JSON
-DIRECTIVE_QUOTES = '````'
-# Pattern for an {image} directive followed by a URL
-IMAGE_PATTERN = re.compile('````{image}\s?(.+)\n') 
-# Pattern for an {admonition} directive followed by a tag
-ADMON_PATTERN = re.compile('````{admonition}\s?(.+)\n')
-# heading level to apply to admonitions, etc.
+# Pattern that contains Sphinx directives in the notebook JSON
+DIRECTIVE_PATTERN = re.compile('````{(\w+)}\s?(.*)\n') 
+DIRECTIVE_BACKTICKS = 4
+# Mapping from Sphinx directives to optional literal text for Markdown headings
+DIRECTIVE_MAPPING = {'image': None,
+                     'admonition': None,
+                     'hint': 'Hint',
+                     'toggle': None}
 HEADING_SUB_LEVEL = 4
 # Cells with tags in this list will be removed
 TAGS_TO_REMOVE = {'instructor', 'remove-cell'}
@@ -39,21 +40,25 @@ class Notebook:
         for i, cell in enumerate(self.nb_json['cells']):
             # Assumes the directive encloses the entire cell, excluding any blank initial lines
             cell_content = list(dropwhile(lambda x: not x or x.isspace(), cell['source']))
-            if cell['cell_type'] == 'markdown' and cell_content[0].startswith(DIRECTIVE_QUOTES):
-                image_match = IMAGE_PATTERN.match(cell_content[0])
-                admon_match = ADMON_PATTERN.match(cell_content[0])
-                if image_match:
-                        # Extract alt text if present
-                        alt_tag = [c for c in cell_content if c.startswith(':alt:')]
-                        alt_text = alt_tag[0].replace(':alt: ', '') if alt_tag else ''
-                        self.nb_json['cells'][i]['source'] = [f'![{alt_text}]({image_match.groups(1)})']
-                        continue
-                elif admon_match:
-                    # Replace admonition with appropriate level of Markdown heading
-                    cell_content[0] = '#' * HEADING_SUB_LEVEL + f' {admon_match.groups(1)}'
-                # Omit last line (closing backticks for directive) and any CSS definitions
-                cell_content = [c for c in cell_content if not c.startswith(DIRECTIVE_QUOTES) and not c.startswith(':class:')]
-                self.nb_json['cells'][i]['source'] = cell_content
+            m = DIRECTIVE_PATTERN.match(cell_content[0])
+            if not m:
+                continue
+            match m.groups():
+                # Custom admonition -- label provided in the text following the directive
+                case ('admonition', admon_type):
+                    cell_content[0] = '#' * HEADING_SUB_LEVEL + f' {admon_type}'
+                # Image directive -- URL follows the directive
+                case ('image', image_url):
+                    # Extract alt text if present
+                    alt_tag = [c for c in cell_content if c.startswith(':alt:')]
+                    alt_text = alt_tag[0].replace(':alt: ', '') if alt_tag else ''
+                    cell_content = [f'![{alt_text}]({image_url})']
+                # Other directive -- no label provided
+                case (directive, ''):
+                    cell_content[0] = '#' * HEADING_SUB_LEVEL + f' {DIRECTIVE_MAPPING[directive]}'
+            # Remove closing backticks and any class statements
+            cell_content = [c for c in cell_content if not c.startswith('`' * DIRECTIVE_BACKTICKS) and not c.startswith(':class:')]
+            self.nb_json['cells'][i]['source'] = cell_content
         return self
     
     def remove_tagged_cells(self, tags=TAGS_TO_REMOVE):
