@@ -54,6 +54,10 @@ function main() {
     echo "Updating submodules"
     update_hw_modules
 
+    echo "Committing post-processing changes"
+    # Add any new Parsons Problems created in step one
+    git add textbook/parsons-assets/parsons-problems/html
+    git commit -a -m "Committing submodule changes"
 
 }
 
