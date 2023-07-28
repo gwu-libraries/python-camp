@@ -29,7 +29,8 @@ function update_hw_modules() {
                 echo "Copying ${file} to ${dir}/"
                 cp ${file} ${dir}/
                 echo "Committing and updating"
-                git -C ${dir} commit -am "Change to ${fname}.ipynb commited from main repo"
+                git -C ${dir} add $(basename $file)
+                git -C ${dir} diff-index --quiet HEAD || git -C ${dir} commit -am "Change to $(basename $file)commited from main repo"
                 git -C ${dir} push origin main
             fi
         done
