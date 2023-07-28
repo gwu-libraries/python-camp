@@ -6,6 +6,12 @@ div.question .admonition-title:after {
 }
 div.notes .admonition-title:after {
     content: "\f5da";
+    color: var(--pst-color-info);
+}
+
+div.notes .admonition-title:before {
+    background-color: var(--pst-color-info);
+    opacity: .1;
 }
 
 /*
