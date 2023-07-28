@@ -53,9 +53,12 @@ class Notebook:
                     alt_tag = [c for c in cell_content if c.startswith(':alt:')]
                     alt_text = alt_tag[0].replace(':alt: ', '') if alt_tag else ''
                     cell_content = [f'![{alt_text}]({image_url})']
-                # Other directive -- no label provided
-                case (directive, ''):
+                # Other directive -- no label provided, but heading needed
+                case (directive, '') if DIRECTIVE_MAPPING.get(directive):
                     cell_content[0] = '#' * HEADING_SUB_LEVEL + f' {DIRECTIVE_MAPPING[directive]}'
+                # No heading needed
+                case _:
+                    cell_content.pop(0)
             # Remove closing backticks and any class statements
             cell_content = [c for c in cell_content if not c.startswith('`' * DIRECTIVE_BACKTICKS) and not c.startswith(':class:')]
             self.nb_json['cells'][i]['source'] = cell_content
