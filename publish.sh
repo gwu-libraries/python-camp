@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -e
-set -x
 
 shopt -s nullglob    # Use empty array if globbing pails
 shopt -s nocaseglob  # Ignore case in globbing

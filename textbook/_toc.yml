@@ -48,4 +48,8 @@ parts:
   chapters:
   - file: notebooks/homework/HW_4_GR
     title: Graded Exercise Day 4
+- caption: Python Reference
+  chapters:
+  - file: glossary
+    title: Glossary of Programming Terms
  
