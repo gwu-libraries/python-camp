@@ -1,0 +1,865 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Glossary &#8212; Python Camp: Programming for Beginners</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/python-camp.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'glossary';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Graded Homework: Day 4" href="notebooks/homework/HW_4_GR.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/python-camp.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/python-camp.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Python Camp: Programming for Beginners
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preliminaries</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="guidelines.html">Collaborating on Code: Guidelines for a Good Experience</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/1_1_choreographing_code.html">Choreographing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/1_2_from_data_to_code.html">From Data to Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_1_from_code_to_data.html">From Code to Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/2_1_describing_the_team.html">Describing the Team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/2_2_querying_data.html">Querying Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_2_programming_techniques.html">Programming Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_2_GR.html">Graded Execise Day 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/3_1_from_story_to_code.html">From Story to Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_3_error_stories.html">Error Stories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_3_GR.html">Graded Execise Day 3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/4_1_modeling_the_world.html">Modeling the World</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_4_GR.html">Graded Exercise Day 4</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Reference</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Glossary of Programming Terms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/gwu-libraries/python-camp" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/gwu-libraries/python-camp/issues/new?title=Issue%20on%20page%20%2Fglossary.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/glossary.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Glossary</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this heading">#</a></h1>
+<dl class="glossary">
+<dt id="term-append">append<a class="headerlink" href="#term-append" title="Permalink to this term">#</a></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">append()</span></code> method adds an element to the end of a <a class="reference internal" href="#term-list"><span class="xref std std-term">list</span></a>.</p>
+<p>For instance, if the <a class="reference internal" href="#term-variable"><span class="xref std std-term">variable</span></a> <code class="docutils literal notranslate"><span class="pre">my_list</span></code> is defined as <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code>, after we run the code <code class="docutils literal notranslate"><span class="pre">my_list.append(4)</span></code> once, <code class="docutils literal notranslate"><span class="pre">my_list</span></code> will be equal to <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code>.</p>
+</dd>
+<dt id="term-arguments">arguments<a class="headerlink" href="#term-arguments" title="Permalink to this term">#</a></dt><dd><p>The arguments to a <a class="reference internal" href="#term-function"><span class="xref std std-term">function</span></a> are <a class="reference internal" href="#term-variable"><span class="xref std std-term">variable</span></a>s defined as part of the function itself. In a <a class="reference internal" href="#term-function-definition"><span class="xref std std-term">function definition</span></a>, the arguments appear between the <a class="reference internal" href="#term-parentheses"><span class="xref std std-term">parentheses</span></a> following the function name. Arguments may be optional or required. In the following example, the function <code class="docutils literal notranslate"><span class="pre">my_func</span></code> is defined to take one argument, <code class="docutils literal notranslate"><span class="pre">x</span></code>, to which the function adds 5. When we call <code class="docutils literal notranslate"><span class="pre">my_func</span></code>, we provide a value between parentheses, which is assigned to the variable <code class="docutils literal notranslate"><span class="pre">x</span></code> within the function.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def my_func(x):     # defining my_func with one required argument, x
+    return x + 5    # Adds 5 to the value of x and returns it
+
+print(my_func(10))  # calling my_func --&gt; prints 15
+</pre></div>
+</div>
+</dd>
+<dt id="term-attributes">attributes<a class="headerlink" href="#term-attributes" title="Permalink to this term">#</a></dt><dd><p>An attribute is like a <a class="reference internal" href="#term-variable"><span class="xref std std-term">variable</span></a> except that it belongs to the <a class="reference internal" href="#term-instance"><span class="xref std std-term">instance</span></a> of a Python <a class="reference internal" href="#term-class"><span class="xref std std-term">class</span></a> or <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a>. An attribute may refer to a value, or it may be the name of a function, in which case it is called a <a class="reference internal" href="#term-method"><span class="xref std std-term">method</span></a>. For instance <code class="docutils literal notranslate"><span class="pre">append()</span></code> is a method that belongs to instances of the <code class="docutils literal notranslate"><span class="pre">list</span></code> type, an instance of which is automatically created in Python whenever you assign a variable to values enclosed in <a class="reference internal" href="#term-square-brackets"><span class="xref std std-term">square brackets</span></a>. Hence we can write <code class="docutils literal notranslate"><span class="pre">my_list</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code>, and <code class="docutils literal notranslate"><span class="pre">my_list</span></code> will, by definition, have access to the <code class="docutils literal notranslate"><span class="pre">append()</span></code> method.</p>
+<p>Because the variable <code class="docutils literal notranslate"><span class="pre">my_list</span></code> has the attribute (method) <code class="docutils literal notranslate"><span class="pre">append</span></code>, we can access the attribute with <a class="reference internal" href="#term-dot-notation"><span class="xref std std-term">dot notation</span></a>: <code class="docutils literal notranslate"><span class="pre">my_list.append()</span></code>.</p>
+<p>In defining custom classes, attributes provide a way to associate data with behaviors. For instance, if I am writing a program to keep track of students’ grades, I could define a <code class="docutils literal notranslate"><span class="pre">Student</span></code> class, instances of which would have attributes to store information specific to each student, such as name, degree, test scores, etc.</p>
+<p>Code to define such a class might look like the following:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>class Student:
+
+    def __init__(self, name, degree):           # __init__ method; called when creating an instance of Student
+        self.name = name                        # the variable self refers to the instance of Student being created
+        self.degree = degree                    # self.name is how we refer to an attribute in the definition of a class
+        self.scores = []                        # initializing self.scores to an empty list, assuming we haven&#39;t recorded any yet
+</pre></div>
+</div>
+<p>Then I can create an instance of the <code class="docutils literal notranslate"><span class="pre">Student</span></code> class with the specified attributes:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>student1 = Student(&#39;Dolsy Smith&#39;, &#39;MSI&#39;)        # Creating an instance; the arguments to `Student()` are used by the `__init__` method.
+print(student1.name)                            # Accessing the `name` attribute -&gt; prints &#39;Dolsy Smith&#39;
+</pre></div>
+</div>
+</dd>
+<dt id="term-block">block<a class="headerlink" href="#term-block" title="Permalink to this term">#</a></dt><dd><p>A chunk of Python code separated from the surrounding code by being indented. Blocks are required in the following situations (and in others that we have not seen in Python Camp):
+- in a {term}’function definition<code class="docutils literal notranslate">&#160;&#160;&#160;&#160; <span class="pre">-</span> <span class="pre">in</span> <span class="pre">a</span> <span class="pre">{term}</span></code>for loop<code class="docutils literal notranslate">&#160;&#160;&#160;&#160; <span class="pre">-</span> <span class="pre">in</span> <span class="pre">an</span> <span class="pre">{term}</span></code>if statement<code class="docutils literal notranslate">&#160;&#160;&#160;&#160; <span class="pre">-</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">definition</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">Python</span> <span class="pre">{term}</span></code>class`</p>
+<p>Lines of code in the block are executed together. Thus, the block of code in a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is executed as many times as specified by the loop, while the block of code underneath an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is executed only if the <a class="reference internal" href="#term-conditional-expression"><span class="xref std std-term">conditional expression</span></a> in the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>Blocks can also be nested, in which case, the amount of indentation determines which code belongs to which block. The code below contains three blocks, each nested inside the other.</p>
+<a class="reference internal image-reference" href="img/nested-blocks.png"><img alt="A diagram of nested blocks in Python" class="align-center" src="img/nested-blocks.png" style="width: 500px;" /></a>
+<p>When run, the code prints <code class="docutils literal notranslate"><span class="pre">[25.5,</span> <span class="pre">100.99,</span> <span class="pre">50.75]</span></code>.</p>
+<p>Ihe convention is to use four spaces (or a tab set to four spaces) as the basic unit of indentation (We say “the basic unit,” because when creating nested code blocks, each level of indentation will correspond to one or more instances of the basic unit.)</p>
+</dd>
+<dt id="term-Boolean-operator">Boolean operator<a class="headerlink" href="#term-Boolean-operator" title="Permalink to this term">#</a></dt><dd><p>A Python <a class="reference internal" href="#term-keyword"><span class="xref std std-term">keyword</span></a> used primarily in <code class="docutils literal notranslate"><span class="pre">if</span></code> statements (see <a class="reference internal" href="#term-conditional-expression"><span class="xref std std-term">conditional expression</span></a>s) to evaluate one or more <a class="reference internal" href="#term-Boolean-value"><span class="xref std std-term">Boolean value</span></a>s (or Python expressions evaluated as Boolean values). For instance, the following block of code prints the phrase “That’s me!” only if both conditions in parentheses are <code class="docutils literal notranslate"><span class="pre">True</span></code>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if (first_name == &#39;Dolsy&#39;) and (last_name == &#39;Smith&#39;):
+    print(&quot;That&#39;s me!&quot;)
+</pre></div>
+</div>
+<p>The Boolean operators in Python are <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">not</span></code>. The following table summarizes their use:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Number of Terms</p></th>
+<th class="head"><p>Evaluates as <code class="docutils literal notranslate"><span class="pre">True</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>and</p></td>
+<td><p>2</p></td>
+<td><p>Only if both terms are <code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>or</p></td>
+<td><p>2</p></td>
+<td><p>If at least one term is <code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>not</p></td>
+<td><p>1</p></td>
+<td><p>If the term is <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt id="term-Boolean-value">Boolean value<a class="headerlink" href="#term-Boolean-value" title="Permalink to this term">#</a></dt><dd><p>A special Python <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a> used primarily in <a class="reference internal" href="#term-conditional-expression"><span class="xref std std-term">conditional expression</span></a>s. There are only two Boolean values: <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code>. But any other Python value can be treated as a Boolean if used inside a conditional expression. For instance, if <code class="docutils literal notranslate"><span class="pre">x</span></code> is an integer, the following code will divide 2 by <code class="docutils literal notranslate"><span class="pre">x</span></code> unless <code class="docutils literal notranslate"><span class="pre">x</span></code> is 0. (All integers in Python evaluate as <code class="docutils literal notranslate"><span class="pre">True</span></code> except for 0, which evaluates as <code class="docutils literal notranslate"><span class="pre">False</span></code>.)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if x:
+    print(2/x) 
+</pre></div>
+</div>
+</dd>
+<dt id="term-character">character<a class="headerlink" href="#term-character" title="Permalink to this term">#</a></dt><dd><p>A character is the basic unit of a Python <a class="reference internal" href="#term-string"><span class="xref std std-term">string</span></a>. In Python, characters are defined according to the <a class="reference external" href="https://home.unicode.org/">Unicode standard</a> by default. Unicode characters comprise the following (and more):
+- Letters of most written alphabets
+- Arabic numerals
+- Punctuation marks
+- Emojis
+- Non-alphabetic scripts (such as Chinese, Japanese kanji, etc.)
+- Common symbols and special characters</p>
+<p>In Python, characters are relevant mostly because we can divide strings into their constituent characters. For instance, if <code class="docutils literal notranslate"><span class="pre">my_str</span></code> is defined as the string <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Camp</span></code>, we can extract the first <code class="docutils literal notranslate"><span class="pre">P</span></code> (the first character) by writing <code class="docutils literal notranslate"><span class="pre">my_str[0]</span></code>.</p>
+</dd>
+<dt id="term-class">class<a class="headerlink" href="#term-class" title="Permalink to this term">#</a></dt><dd><p>A Python class is a custom Python data <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a>. Classes can have <a class="reference internal" href="#term-attributes"><span class="xref std std-term">attributes</span></a> and <a class="reference internal" href="#term-method"><span class="xref std std-term">method</span></a>s: that is, associated data and behaviors.</p>
+<p>Classes allow programmers to model aspects of the real-world in more flexible ways than with the built-in Python types.</p>
+<p>Classes are defined by writing the <a class="reference internal" href="#term-keyword"><span class="xref std std-term">keyword</span></a> <code class="docutils literal notranslate"><span class="pre">class</span></code> followed by a name, followed by a colon. The body of the class (an indented <a class="reference internal" href="#term-block"><span class="xref std std-term">block</span></a>) usually contains one or more methods. The special <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method is called when <a class="reference internal" href="#term-instance"><span class="xref std std-term">instance</span></a>s of the class are created.</p>
+<p>You might think of a class as blueprint or template that specifies how data should be stored in memory. If we have a dataset of books, and we want to make sure that for every book, we capture its title, we could create a <code class="docutils literal notranslate"><span class="pre">Book</span></code> class with a required <code class="docutils literal notranslate"><span class="pre">title</span></code> attribute. Then we would be unable to create a new instance of <code class="docutils literal notranslate"><span class="pre">Book</span></code> without providing a title.</p>
+<p>This templating is more powerful than what is provided by a Python <a class="reference internal" href="#term-dictionary"><span class="xref std std-term">dictionary</span></a>. A dictionary has keys that are associated with values, but there is no easy way to make a given key <strong>required</strong> for any instance of a dictionary.</p>
+</dd>
+<dt id="term-collection">collection<a class="headerlink" href="#term-collection" title="Permalink to this term">#</a></dt><dd><p>The term <strong>collection</strong> refers to a Python <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a> that we use to associate multiple, discrete units of data. An <a class="reference internal" href="#term-integer"><span class="xref std std-term">integer</span></a> is not a collection, but a <a class="reference internal" href="#term-string"><span class="xref std std-term">string</span></a>, a <a class="reference internal" href="#term-list"><span class="xref std std-term">list</span></a>, and a <a class="reference internal" href="#term-dictionary"><span class="xref std std-term">dictionary</span></a> are all examples of collections. The following table shows the kind of data we can store in each of these collections, and how the data are associated in memory:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Unit of Data</p></th>
+<th class="head"><p>How Stored in Memory</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>String</p></td>
+<td><p>Unicode character</p></td>
+<td><p>Sequentially</p></td>
+</tr>
+<tr class="row-odd"><td><p>List</p></td>
+<td><p>Any Python type</p></td>
+<td><p>Sequentially</p></td>
+</tr>
+<tr class="row-even"><td><p>Dictionary</p></td>
+<td><p>Keys: numbers or strings; Values: any Python type</p></td>
+<td><p>Values stored by keys</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt id="term-colon">colon<a class="headerlink" href="#term-colon" title="Permalink to this term">#</a></dt><dd><p>A colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>) is used in Python in three ways:</p>
+<ol class="arabic simple">
+<li><p>To signal the start of a code <a class="reference internal" href="#term-block"><span class="xref std std-term">block</span></a>, as in a <a class="reference internal" href="#term-for-loop"><span class="xref std std-term">for loop</span></a>, <a class="reference internal" href="#term-if-statement"><span class="xref std std-term">if statement</span></a>, or <a class="reference internal" href="#term-function-definition"><span class="xref std std-term">function definition</span></a>.</p></li>
+<li><p>To separate the starting and ending positions in the <a class="reference internal" href="#term-slice"><span class="xref std std-term">slice</span></a> of a list or string.</p></li>
+<li><p>To separate <a class="reference internal" href="#term-key"><span class="xref std std-term">key</span></a>s and <a class="reference internal" href="#term-value"><span class="xref std std-term">value</span></a>s in defining a <a class="reference internal" href="#term-dictionary"><span class="xref std std-term">dictionary</span></a>.</p></li>
+</ol>
+</dd>
+<dt id="term-comma">comma<a class="headerlink" href="#term-comma" title="Permalink to this term">#</a></dt><dd><p>Commas (<code class="docutils literal notranslate"><span class="pre">,</span></code>) are primarily used in Python in the following ways:
+1. To separate items in the definition of a <a class="reference internal" href="#term-list"><span class="xref std std-term">list</span></a> or <a class="reference internal" href="#term-dictionary"><span class="xref std std-term">dictionary</span></a>.
+2. To separate the <a class="reference internal" href="#term-arguments"><span class="xref std std-term">arguments</span></a> in a <a class="reference internal" href="#term-function-definition"><span class="xref std std-term">function definition</span></a> or <a class="reference internal" href="#term-function-call"><span class="xref std std-term">function call</span></a>.</p>
+</dd>
+<dt id="term-comment">comment<a class="headerlink" href="#term-comment" title="Permalink to this term">#</a></dt><dd><p>A line in code not meant to be executed by Python. You can create a comment in one of two ways:</p>
+<ul class="simple">
+<li><p>By prefixing the line with the hash symbol (<code class="docutils literal notranslate"><span class="pre">#</span></code>)</p></li>
+<li><p>By writing the comment between sets of three quotation marks (<code class="docutils literal notranslate"><span class="pre">'''</span></code>). This approach is useful for comments that span multiple lines.</p></li>
+</ul>
+<p>We use comments to document our code for ourselves and for others.</p>
+</dd>
+<dt id="term-conditional-expression">conditional expression<a class="headerlink" href="#term-conditional-expression" title="Permalink to this term">#</a></dt><dd><p>Python code that evaluates as either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. Conditional expressions are commonly used inside <a class="reference internal" href="#term-if-statement"><span class="xref std std-term">if statement</span></a>s to create actions that will occur only if certain Boolean conditions are met.</p>
+<p>Conditional expressions will often contain the double equals sign (<code class="docutils literal notranslate"><span class="pre">==</span></code>), which evaluates as <code class="docutils literal notranslate"><span class="pre">True</span></code> if the values/variables on either side of the double equals are considered equivalent.</p>
+<p>For instance, if the variable <code class="docutils literal notranslate"><span class="pre">x</span></code> is defined as the integer 3, then <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">3</span></code> will evaluate to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+<dt id="term-curly-braces">curly braces<a class="headerlink" href="#term-curly-braces" title="Permalink to this term">#</a></dt><dd><p>Curly braces (<code class="docutils literal notranslate"><span class="pre">{}</span></code>) are used when defining a Python <a class="reference internal" href="#term-dictionary"><span class="xref std std-term">dictionary</span></a>.</p>
+</dd>
+<dt id="term-dictionary">dictionary<a class="headerlink" href="#term-dictionary" title="Permalink to this term">#</a></dt><dd><p>A Python <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a> that stores data in memory by associating <a class="reference internal" href="#term-key"><span class="xref std std-term">key</span></a>s with <a class="reference internal" href="#term-value"><span class="xref std std-term">value</span></a>s, much in the way terms and definitions are associated in a glossary like this one.</p>
+<p>Dictionaries are defined by enclosing pairs of keys and values inside <a class="reference internal" href="#term-curly-braces"><span class="xref std std-term">curly braces</span></a>, as in the following example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>my_info = {&#39;name&#39;: &#39;Dolsy Smith, &#39;job_title&#39;: &#39;Librarian&#39;}
+</pre></div>
+</div>
+<p>To access items in a dictionary, we provide a key inside <a class="reference internal" href="#term-square-brackets"><span class="xref std std-term">square brackets</span></a>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(my_info[&#39;job_title&#39;])     # Prints &quot;Librarian&quot;
+</pre></div>
+</div>
+</dd>
+<dt id="term-dot-notation">dot notation<a class="headerlink" href="#term-dot-notation" title="Permalink to this term">#</a></dt><dd><p>When an <a class="reference internal" href="#term-instance"><span class="xref std std-term">instance</span></a> of a Python <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a> (or <a class="reference internal" href="#term-class"><span class="xref std std-term">class</span></a>) has <a class="reference internal" href="#term-attributes"><span class="xref std std-term">attributes</span></a> or <a class="reference internal" href="#term-method"><span class="xref std std-term">method</span></a>s, we use dot notation to access the attributes/methods. For instance, a <a class="reference internal" href="#term-list"><span class="xref std std-term">list</span></a> has an <code class="docutils literal notranslate"><span class="pre">append()</span></code> method, so for a given list <code class="docutils literal notranslate"><span class="pre">my_list</span></code>, we can write <code class="docutils literal notranslate"><span class="pre">my_list.append(3)</span></code> (to add the integer <code class="docutils literal notranslate"><span class="pre">3</span></code> to the end of the list).</p>
+</dd>
+<dt id="term-double-equals-sign">double equals sign<a class="headerlink" href="#term-double-equals-sign" title="Permalink to this term">#</a></dt><dd><p>Two equals-sign symbols together (<code class="docutils literal notranslate"><span class="pre">==</span></code>) are used in <code class="docutils literal notranslate"><span class="pre">conditional</span> <span class="pre">expression</span></code>s to test for equivalence between two variables or values.</p>
+<p>It’s important not to confuse the double equals sign with the single equals sign (<code class="docutils literal notranslate"><span class="pre">=</span></code>), which is used to assign values in creating <a class="reference internal" href="#term-variable"><span class="xref std std-term">variable</span></a>s.</p>
+<p>Here’s a way to remember the difference: <strong>one</strong> equals sign <strong>makes</strong> two things equal, while <strong>two</strong> equals signs <strong>tests</strong> for equality.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x = 5           # &quot;Make the variable x equal to 5&quot;
+x == 5          # &quot;Is the variable x equal to 5?&quot; -- in this case, evaluates to `True`
+</pre></div>
+</div>
+</dd>
+<dt id="term-float">float<a class="headerlink" href="#term-float" title="Permalink to this term">#</a></dt><dd><p>A Python <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a> for storing numbers with decimal components, e.g., <code class="docutils literal notranslate"><span class="pre">10.5</span></code>, <code class="docutils literal notranslate"><span class="pre">3.14159265359</span></code>, etc. Unlike some programming languages, Python handles the conversion between floats and <a class="reference internal" href="#term-integer"><span class="xref std std-term">integer</span></a>s automatically, so writing <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">10</span> <span class="pre">+</span> <span class="pre">.5</span></code> will assign <code class="docutils literal notranslate"><span class="pre">x</span></code> to <code class="docutils literal notranslate"><span class="pre">10.5</span></code>.</p>
+</dd>
+<dt id="term-for-loop">for loop<a class="headerlink" href="#term-for-loop" title="Permalink to this term">#</a></dt><dd><p>A structure for doing iteration, i.e., repeating one or more actions a certain number of times. In Python, <code class="docutils literal notranslate"><span class="pre">for</span></code> loops are designed to be easy to use with <a class="reference internal" href="#term-collection"><span class="xref std std-term">collection</span></a> data <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a>s, such as dictionaries and lists. The following <code class="docutils literal notranslate"><span class="pre">for</span></code> loop will print each element of the <code class="docutils literal notranslate"><span class="pre">book_prices</span></code> list in order:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>book_prices = [22.99, 11.50, 50.50, 120.25]
+for price in book_prices:                       # The price variable takes on each value from book_prices in order
+    print(price)
+</pre></div>
+</div>
+</dd>
+<dt id="term-function">function<a class="headerlink" href="#term-function" title="Permalink to this term">#</a></dt><dd><p>A Python structure for storing code that can be executed at a later time (any number of times). We create functions by writing a <a class="reference internal" href="#term-function-definition"><span class="xref std std-term">function definition</span></a>, and we use functions by writing a <a class="reference internal" href="#term-function-call"><span class="xref std std-term">function call</span></a>.</p>
+<p>Many Python commands are built-in functions, like <code class="docutils literal notranslate"><span class="pre">print()</span></code>, <code class="docutils literal notranslate"><span class="pre">len()</span></code>, <code class="docutils literal notranslate"><span class="pre">type()</span></code>. <code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">float()</span></code>, etc.</p>
+<p>By defining our own functions, we can reduce redundancy (saving ourselves from having to write the same code over and over whenever we want to perform the same set of actions).</p>
+<p>The function <a class="reference internal" href="#term-arguments"><span class="xref std std-term">arguments</span></a> represent the function’s inputs, and the <a class="reference internal" href="#term-return"><span class="xref std std-term">return</span></a> value represents its output.</p>
+<p>You might think of a function as the kitchen in a restaurant. When you call a function with arguments, that’s like submitting an order. The kitchen knows how to handle orders from the menu, and it generally rejects orders not on the menu. Accordingly, if a function is defined so as to take an integer/float argument, and you call this function with a string, the function code will likely raise an error.</p>
+<p>When a function returns a value, that’s like the dish prepared by the kitchen in response to your order.</p>
+<p>When eating at a restaurant, you don’t need to cook the dish that you order. Likewise, writing functions allows us to separate the execution of one piece of code from the rest of our code. (This is called encapsulation.) Other people can use functions that we wrote (if we package them and distribute them as Python {term}`module’s), and we can reuse the same function in different programs.</p>
+<p>Writing functions also helps make code more readable by breaking it up into smaller, logically coherent parts.</p>
+</dd>
+<dt id="term-function-body">function body<a class="headerlink" href="#term-function-body" title="Permalink to this term">#</a></dt><dd><p>The body of a <a class="reference internal" href="#term-function"><span class="xref std std-term">function</span></a> is the <a class="reference internal" href="#term-block"><span class="xref std std-term">block</span></a> of code indented underneath the name of the function in a <a class="reference internal" href="#term-function-definition"><span class="xref std std-term">function definition</span></a>. The function body contains the code that executes when the function is called.</p>
+</dd>
+<dt id="term-function-call">function call<a class="headerlink" href="#term-function-call" title="Permalink to this term">#</a></dt><dd><p>We call a <a class="reference internal" href="#term-function"><span class="xref std std-term">function</span></a><code class="docutils literal notranslate"> <span class="pre">(or</span> <span class="pre">{term}</span></code>method<code class="docutils literal notranslate"><span class="pre">)</span> <span class="pre">when</span> <span class="pre">we</span> <span class="pre">write</span> <span class="pre">the</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">function</span> <span class="pre">followed</span> <span class="pre">by</span> <span class="pre">parentheses.</span> <span class="pre">The</span> <span class="pre">parentheses</span> <span class="pre">may</span> <span class="pre">or</span> <span class="pre">may</span> <span class="pre">not</span> <span class="pre">contain</span> <span class="pre">{term}</span></code>arguments`, depending on how the function has been defined. But the parentheses are required. (Otherwise, the function is not called.)</p>
+<p>Calling a function triggers Python to execute the code in the <a class="reference internal" href="#term-function-definition"><span class="xref std std-term">function definition</span></a>.</p>
+</dd>
+<dt id="term-function-definition">function definition<a class="headerlink" href="#term-function-definition" title="Permalink to this term">#</a></dt><dd><p>A function definition starts with the <code class="docutils literal notranslate"><span class="pre">def</span></code> <a class="reference internal" href="#term-keyword"><span class="xref std std-term">keyword</span></a>, followed by the name of a function, zero or more <a class="reference internal" href="#term-arguments"><span class="xref std std-term">arguments</span></a> in parenthese, and a colon. The <a class="reference internal" href="#term-function-body"><span class="xref std std-term">function body</span></a> is indented underneath the first line of the function definition.</p>
+<p>When Python executes code that <strong>defines</strong> a function, the code in the function body is <em>not</em> executed. It is merely stored in memory, to be executed later when the function is called. (See <a class="reference internal" href="#term-function-call"><span class="xref std std-term">function call</span></a>.)</p>
+<p>In this way, a function definition is like a <a class="reference internal" href="#term-variable"><span class="xref std std-term">variable</span></a> assignment, except that what’s being stored in this case is not data, but Python code itself.</p>
+</dd>
+<dt id="term-if-statement">if statement<a class="headerlink" href="#term-if-statement" title="Permalink to this term">#</a></dt><dd><p>We use <code class="docutils literal notranslate"><span class="pre">if</span></code> statements to write code that performs different actions depending on the presence of certain conditions. In the simplest kind of <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, we use one <a class="reference internal" href="#term-conditional-expression"><span class="xref std std-term">conditional expression</span></a> to determine whether or not a single <a class="reference internal" href="#term-block"><span class="xref std std-term">block</span></a> of code will be executed.</p>
+<p>The following code prints <code class="docutils literal notranslate"><span class="pre">10</span></code> only if the <a class="reference internal" href="#term-variable"><span class="xref std std-term">variable</span></a> <code class="docutils literal notranslate"><span class="pre">x</span></code> is <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if x == 5:
+    print(x * 2)
+</pre></div>
+</div>
+<p>To express more complex logic, we can use one or more <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements after an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement to test for alternate conditions, and an <code class="docutils literal notranslate"><span class="pre">else</span></code> statement to trigger behavior that doesn’t match any of the express conditions.</p>
+<p>The following code prints a different message depending on whether a variable matches one of a cetain number of strings or none at all:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if favorite_language == &#39;Python&#39;:
+    print(&#39;Good choice!&#39;)
+elif favorite_language == &#39;Ruby&#39;:
+    print(&#39;Another good choice!&#39;)
+else:
+    print(&quot;Sorry, I don&#39;t know that language.&quot;)         # This will be executed when favorite_language is anything but &#39;Python&#39; or &#39;Ruby&#39;
+</pre></div>
+</div>
+</dd>
+<dt id="term-import">import<a class="headerlink" href="#term-import" title="Permalink to this term">#</a></dt><dd><p>A Python <a class="reference internal" href="#term-keyword"><span class="xref std std-term">keyword</span></a> used to load into memory some Python types or functions that are stored externally (i.e., not loaded automatically when starting a Python session). Code that defines such types or functions is called a <strong>module</strong>. There are modules that form part of the basic Python installation (like the <code class="docutils literal notranslate"><span class="pre">json</span></code> module), and there are modules that are created by third parties for use with Python – also called <strong>packages</strong> – which must be installed separately before they can be used. For more information on installing third-party modules/packages, see the <a class="reference external" href="https://packaging.python.org/en/latest/tutorials/installing-packages/">Python documentation</a>.</p>
+</dd>
+<dt id="term-indented-block">indented block<a class="headerlink" href="#term-indented-block" title="Permalink to this term">#</a></dt><dd><p>See <a class="reference internal" href="#term-block"><span class="xref std std-term">block</span></a>.</p>
+</dd>
+<dt id="term-index">index<a class="headerlink" href="#term-index" title="Permalink to this term">#</a></dt><dd><p>The position of an element in a <a class="reference internal" href="#term-list"><span class="xref std std-term">list</span></a> or a <a class="reference internal" href="#term-character"><span class="xref std std-term">character</span></a> in a <a class="reference internal" href="#term-string"><span class="xref std std-term">string</span></a>. We can use the index to extract a single element/character, or we can use a range of indices to extract a <a class="reference internal" href="#term-slice"><span class="xref std std-term">slice</span></a> (a subset of the string or list).</p>
+<p>Indices in Python start at <code class="docutils literal notranslate"><span class="pre">0</span></code> (meaning, the first element or character is considered to have an index of 0, not 1) and increase from left to right.</p>
+<p>We can also use negative numbers for indices, in which case we start with <code class="docutils literal notranslate"><span class="pre">-1</span></code> and count <strong>down</strong> as we move to the <strong>left</strong>. So if <code class="docutils literal notranslate"><span class="pre">my_list</span></code> has 5 elements, the following is <code class="docutils literal notranslate"><span class="pre">True</span></code> (because the indices refer to the same element):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>`my_list[4] == my_list[-1]`
+</pre></div>
+</div>
+<p>Note that if <code class="docutils literal notranslate"><span class="pre">my_list</span></code> grows to include more than 5 elements, the expression above will not necessarily be <code class="docutils literal notranslate"><span class="pre">True</span></code>, since <code class="docutils literal notranslate"><span class="pre">4</span></code> would no longer be the same index as <code class="docutils literal notranslate"><span class="pre">-1</span></code>.</p>
+</dd>
+<dt id="term-indexing">indexing<a class="headerlink" href="#term-indexing" title="Permalink to this term">#</a></dt><dd><p>See <a class="reference internal" href="#term-index"><span class="xref std std-term">index</span></a>.</p>
+</dd>
+<dt id="term-instance">instance<a class="headerlink" href="#term-instance" title="Permalink to this term">#</a></dt><dd><p>An instance of a Python <a class="reference internal" href="#term-class"><span class="xref std std-term">class</span></a> a value whose <code class="docutils literal notranslate"><span class="pre">type</span></code> is of that class.</p>
+<p>For instance, if we write <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code>, then <code class="docutils literal notranslate"><span class="pre">x</span></code> will refer to an instance of the type <code class="docutils literal notranslate"><span class="pre">int</span></code> (<a class="reference internal" href="#term-integer"><span class="xref std std-term">integer</span></a>).</p>
+<p>Let’s say we define a class called <code class="docutils literal notranslate"><span class="pre">Student</span></code> like so:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>class Student:
+
+    def __init__(self, name):
+        self.name = name
+</pre></div>
+</div>
+<p>Then we can create instances of <code class="docutils literal notranslate"><span class="pre">Student</span></code> as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>student1 = Student(&quot;Neha&quot;)
+student2 = Student(&quot;Li&quot;)
+</pre></div>
+</div>
+<p>These instances will be different, because <code class="docutils literal notranslate"><span class="pre">student1.name</span></code> has the value <code class="docutils literal notranslate"><span class="pre">&quot;Neha&quot;``,</span> <span class="pre">and</span> </code>student2.name<code class="docutils literal notranslate"><span class="pre">has</span> <span class="pre">the</span> <span class="pre">value</span></code>”Li”`.</p>
+</dd>
+<dt id="term-integer">integer<a class="headerlink" href="#term-integer" title="Permalink to this term">#</a></dt><dd><p>A Python <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a> for storing numbers without decimal components, e.g., <code class="docutils literal notranslate"><span class="pre">10</span></code>, <code class="docutils literal notranslate"><span class="pre">300000</span></code>, etc. See also <a class="reference internal" href="#term-float"><span class="xref std std-term">float</span></a>.</p>
+</dd>
+<dt id="term-JSON">JSON<a class="headerlink" href="#term-JSON" title="Permalink to this term">#</a></dt><dd><p>An acronym for Javascript Object Notation, JSON is a very common data format that (despite its name) can be used with any programming language that supports it. JSON works well with Python because the basic JSON data types readily map onto basic Python <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a>s (strings, integers/floats, lists, and dictionaries).</p>
+<p>We use the <code class="docutils literal notranslate"><span class="pre">json</span></code> module to store and read JSON data with Python code.</p>
+</dd>
+<dt id="term-key">key<a class="headerlink" href="#term-key" title="Permalink to this term">#</a></dt><dd><p>One of the two required parts of every entry in a Python <a class="reference internal" href="#term-dictionary"><span class="xref std std-term">dictionary</span></a>. A dictionary key is similar to the <a class="reference internal" href="#term-index"><span class="xref std std-term">index</span></a> of a Python <a class="reference internal" href="#term-list"><span class="xref std std-term">list</span></a>, except that list indices are always numeric and always proceed in order, starting from 0, whereas a dictionary key can be any string or number, as long as it’s unique (compared to the other keys in the same dictionary).</p>
+<p>But just as each list index points to a different element in the list, each dictionary key is associated with a particular <a class="reference internal" href="#term-value"><span class="xref std std-term">value</span></a> in the dictionary.</p>
+<p>The following are some examples of data we could store in dictionaries and how we might construct their keys and values.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset</p></th>
+<th class="head"><p>Keys</p></th>
+<th class="head"><p>Values</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Census data</p></td>
+<td><p>Zipcodes</p></td>
+<td><p>Population by zip code</p></td>
+</tr>
+<tr class="row-odd"><td><p>Class roster</p></td>
+<td><p>Student ID’s</p></td>
+<td><p>Grades for each student</p></td>
+</tr>
+<tr class="row-even"><td><p>Bookstore inventory</p></td>
+<td><p>ISBN’s</p></td>
+<td><p>Metadata about each book</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt id="term-keyword">keyword<a class="headerlink" href="#term-keyword" title="Permalink to this term">#</a></dt><dd><p>A word in the Python programming language that is <strong>reserved</strong>, meaning that you cannot use it for the name of a variable or function. Some examples include <code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">import</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code>, and <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p>
+<p>See the Python documentation for the complete list of <a class="reference external" href="https://docs.python.org/3.8/reference/lexical_analysis.html#keywords">keywords</a>.</p>
+</dd>
+<dt id="term-list">list<a class="headerlink" href="#term-list" title="Permalink to this term">#</a></dt><dd><p>A Python <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a> for storing data sequentially, i.e., in order, where the data to be stored can consist of any mixture of valid Python types.</p>
+<p>All of the following are valid Python lists:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>my_numbers = [3, 5, 7, 9]                                   # List of integers
+instructors = [&#39;Marcus&#39;, &#39;Alex&#39;, &#39;Debbie&#39;, &#39;Josh&#39;, &#39;Dan&#39;]   # List of strings
+misc_data = [45, &#39;07051978&#39;, &#39;librarian&#39;, 182]              # List of integers and strings
+</pre></div>
+</div>
+<p>Note: be careful when creating lists of mixed types (as in the last example above). In using this list, you would need to remember which elements are integers and which are strings purely by their position in the list, which makes it easy to write code that will produce unwanted errors.</p>
+<p>It’s more common to use a <a class="reference internal" href="#term-dictionary"><span class="xref std std-term">dictionary</span></a> to represent complex data of multiple types, since each element in a dictionary has a <a class="reference internal" href="#term-key"><span class="xref std std-term">key</span></a> that can be more descriptive. For example, if our dictionary has an <code class="docutils literal notranslate"><span class="pre">age</span></code> key, we might guess that this key will correspond to a numeric type, not a string.</p>
+</dd>
+<dt id="term-loop-variable">loop variable<a class="headerlink" href="#term-loop-variable" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="#term-variable"><span class="xref std std-term">variable</span></a> in a <a class="reference internal" href="#term-for-loop"><span class="xref std std-term">for loop</span></a> that assumes the value of each element in the <a class="reference internal" href="#term-collection"><span class="xref std std-term">collection</span></a> over which the loop runs.</p>
+<p>For instance, given the the following code</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>for number in [1, 3, 5, 7]:
+    print(number * 2)           # Multiples each number by 2
+</pre></div>
+</div>
+<p>the following table shows the values of the loop variable on each time through the loop (the loop iteration):</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Loop iteration</p></th>
+<th class="head"><p>Value of <code class="docutils literal notranslate"><span class="pre">number</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>7</p></td>
+</tr>
+</tbody>
+</table>
+<p>It’s important to note that when a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is complete, the loop variable still exists, at which point it has the <strong>last</strong> value to which it was assigned in the course of the loop. (In the code above, that would be <code class="docutils literal notranslate"><span class="pre">7</span></code>). Normally, you don’t want to use a loop variable <em>outside</em> the code <a class="reference internal" href="#term-block"><span class="xref std std-term">block</span></a> of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. However, because Python doesn’t raise an error or otherwise warn you if you do so, it’s easy to do so by mistake. A good rule of thumb: the loop variable should normally only appear in code indented underneath the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop where the loop variable is defined.</p>
+</dd>
+<dt id="term-method">method<a class="headerlink" href="#term-method" title="Permalink to this term">#</a></dt><dd><p>Basically, the same as a Python <a class="reference internal" href="#term-function"><span class="xref std std-term">function</span></a>, except that a method belongs (by definition) to a particular Python <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a> or <a class="reference internal" href="#term-class"><span class="xref std std-term">class</span></a>. We call methods using <a class="reference internal" href="#term-dot-notation"><span class="xref std std-term">dot notation</span></a>.</p>
+<p>Since every <a class="reference internal" href="#term-instance"><span class="xref std std-term">instance</span></a> of the type <a class="reference internal" href="#term-string"><span class="xref std std-term">string</span></a> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) has access to the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method, we can use the method like so:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>courses = &#39;CHEM BISC PHIL ANTH PSCI&#39;
+course_list = courses.split()           # course_list is [&#39;CHEM&#39;, &#39;BISC&#39;, &#39;PHIL&#39;, &#39;ANTH&#39;, &#39;PSCI&#39;]
+</pre></div>
+</div>
+<p>Methods are essentially a syntactic convenience. As in the example above, they save us the trouble of passing an argument (see <a class="reference internal" href="#term-arguments"><span class="xref std std-term">arguments</span></a>) to tell the method what specific instance it should be applied to. Since <code class="docutils literal notranslate"><span class="pre">courses</span></code> is defined as an instance of the string type, when we call <code class="docutils literal notranslate"><span class="pre">courses.split()</span></code>, Python assumes that we want to split the string called <code class="docutils literal notranslate"><span class="pre">courses</span></code>.</p>
+<p>Alternately, we could write <code class="docutils literal notranslate"><span class="pre">str.split(courses)</span></code>, which calls the same method from the <code class="docutils literal notranslate"><span class="pre">str</span></code> type directly, but that way is more verbose (and so seldom, if ever, used).</p>
+</dd>
+<dt id="term-module">module<a class="headerlink" href="#term-module" title="Permalink to this term">#</a></dt><dd><p>See <a class="reference internal" href="#term-import"><span class="xref std std-term">import</span></a>.</p>
+</dd>
+<dt id="term-parentheses">parentheses<a class="headerlink" href="#term-parentheses" title="Permalink to this term">#</a></dt><dd><p>Parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> are used in Python primarily to denote a function or method, either in the <a class="reference internal" href="#term-function-definition"><span class="xref std std-term">function definition</span></a> or the <a class="reference internal" href="#term-function-call"><span class="xref std std-term">function call</span></a>. The <a class="reference internal" href="#term-arguments"><span class="xref std std-term">arguments</span></a> to the function/method, if any, appear between the parentheses.</p>
+<p>Parentheses are <strong>not</strong> optional in these situations; if there are no arguments, the parentheses will be empty (but they must be present).</p>
+</dd>
+<dt id="term-return">return<a class="headerlink" href="#term-return" title="Permalink to this term">#</a></dt><dd><p>The ‘return<code class="docutils literal notranslate"> <span class="pre">{term}</span></code>keyword<code class="docutils literal notranslate"> <span class="pre">is</span> <span class="pre">used</span> <span class="pre">in</span> <span class="pre">a</span> <span class="pre">{term}</span></code>function definition<code class="docutils literal notranslate"> <span class="pre">to</span> <span class="pre">provide</span> <span class="pre">a</span> <span class="pre">value</span> <span class="pre">back</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">code</span> <span class="pre">that</span> <span class="pre">made</span> <span class="pre">the</span> <span class="pre">{term}</span></code>function call`.</p>
+<p>See <a class="reference internal" href="#term-function"><span class="xref std std-term">function</span></a> for more information.</p>
+</dd>
+<dt id="term-slice">slice<a class="headerlink" href="#term-slice" title="Permalink to this term">#</a></dt><dd><p>A slice is a subset of a Python <a class="reference internal" href="#term-list"><span class="xref std std-term">list</span></a> or <a class="reference internal" href="#term-string"><span class="xref std std-term">string</span></a>. To create a slice, we use <a class="reference internal" href="#term-square-brackets"><span class="xref std std-term">square brackets</span></a> around a pair of numbers separated by a <a class="reference internal" href="#term-colon"><span class="xref std std-term">colon</span></a>, where the first number is the position of the first element we want to include, and the last element is <strong>one plus</strong> the position of the last element to include.</p>
+<p>To take the first three elements of the list <code class="docutils literal notranslate"><span class="pre">my_list</span></code>, we would write <code class="docutils literal notranslate"><span class="pre">my_list[0:3]</span></code>, because the first element is in position 0, and the third element is in position 2 (and 2 + 1 = 3).</p>
+<p>The fact that the first number in a slice is inclusive and the second number is exclusive does take some getting used to. There’s no good reason for it except convention.</p>
+<p>We can also use some shorthand when taking a slice that starts with the first element in the list or that includes the last element.</p>
+<p><code class="docutils literal notranslate"><span class="pre">my_list[:3]</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">my_list[0:3]</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">my_list</span></code> has 5 elements in total, then</p>
+<p><code class="docutils literal notranslate"><span class="pre">my_list[3:5]</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">my_list[3:]</span></code>.</p>
+</dd>
+<dt id="term-square-brackets">square brackets<a class="headerlink" href="#term-square-brackets" title="Permalink to this term">#</a></dt><dd><p>Square brackets (<code class="docutils literal notranslate"><span class="pre">[]</span></code>) are used in a few different ways in Python:
+- In defining a <a class="reference internal" href="#term-list"><span class="xref std std-term">list</span></a><code class="docutils literal notranslate"><span class="pre">:</span> </code>my_list = [1, 3, 5, 7]<code class="docutils literal notranslate">&#160;&#160;&#160;&#160; <span class="pre">-</span> <span class="pre">In</span> <span class="pre">accessing</span> <span class="pre">a</span> <span class="pre">value</span> <span class="pre">by</span> <span class="pre">its</span> <span class="pre">{term}</span></code>index<code class="docutils literal notranslate"> <span class="pre">in</span> <span class="pre">a</span> <span class="pre">{term}</span></code>string<code class="docutils literal notranslate"><span class="pre">or</span> <span class="pre">list:</span></code>print(my_list[2])<code class="docutils literal notranslate"> <span class="pre">(This</span> <span class="pre">prints</span> <span class="pre">the</span> <span class="pre">number</span> <span class="pre">'5'.)</span>&#160;&#160;&#160;&#160; <span class="pre">-</span> <span class="pre">In</span> <span class="pre">creating</span> <span class="pre">a</span> <span class="pre">{term}</span></code>slice<code class="docutils literal notranslate"><span class="pre">of</span> <span class="pre">a</span> <span class="pre">string</span> <span class="pre">or</span> <span class="pre">list:</span></code>my_list[0:2]<code class="docutils literal notranslate">&#160;&#160;&#160;&#160; <span class="pre">-</span> <span class="pre">In</span> <span class="pre">accessing</span> <span class="pre">the</span> <span class="pre">value</span> <span class="pre">in</span> <span class="pre">a</span> <span class="pre">dictionary</span> <span class="pre">by</span> <span class="pre">its</span> <span class="pre">{term}</span></code>key<code class="docutils literal notranslate"><span class="pre">:</span> </code>print(my_dict[‘name’])<code class="docutils literal notranslate"><span class="pre">prints</span> <span class="pre">the</span> <span class="pre">value</span> <span class="pre">associated</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">key</span></code>name<code class="docutils literal notranslate"><span class="pre">in</span></code>my_dict`.</p>
+</dd>
+<dt id="term-string">string<a class="headerlink" href="#term-string" title="Permalink to this term">#</a></dt><dd><p>A basic Python <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a> comprising a <a class="reference internal" href="#term-collection"><span class="xref std std-term">collection</span></a> of <a class="reference internal" href="#term-character"><span class="xref std std-term">character</span></a>s. We can create a sting by enclosing any text (really, anything you can type on your keyboard) between quotation marks.</p>
+<p>Like elements in <a class="reference internal" href="#term-list"><span class="xref std std-term">list</span></a>s, we can access characters within string by their <a class="reference internal" href="#term-index"><span class="xref std std-term">index</span></a>. We can also create <a class="reference internal" href="#term-slice"><span class="xref std std-term">slice</span></a>s of strings.</p>
+<p>Strings have <a class="reference internal" href="#term-method"><span class="xref std std-term">method</span></a>s, such as <code class="docutils literal notranslate"><span class="pre">split()</span></code>. See the <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">Python documentation</a> for a complete list.</p>
+</dd>
+<dt id="term-type">type<a class="headerlink" href="#term-type" title="Permalink to this term">#</a></dt><dd><p>A Python type is, in essence, a set of behaviors associated with a certain way of representing data. Let’s unpack this a bit.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- We say &quot;a certain way of representing data&quot; rather than &quot;a certain kind of data&quot; because what we might consider the _same_  data in the &quot;real&quot; world -- like a list of numbers -- can be represented in Python by many different types, depending on the use case. 
+  - A number can be a {term}`string``: `&quot;07051978&quot;`. 
+  - A number can be an {term}`integer`: 7051978
+  - A number can be a {term}`float`: 7051978.0
+  - Or it could be an instance of another type, like a [date](https://docs.python.org/3/library/datetime.html). 
+</pre></div>
+</div>
+<p>We say a “set of behaviors” because Python doesn’t “know” what makes a date (as a human construct for measuring time) different, in principle, from any other set of numbers. Rather, each type is associated with certain <a class="reference internal" href="#term-attributes"><span class="xref std std-term">attributes</span></a> and <a class="reference internal" href="#term-method"><span class="xref std std-term">method</span></a>s that determine how the type can be used.</p>
+<p>For instance, if our number is represented as a string, we can extract each digit as a single character, or take a <a class="reference internal" href="#term-slice"><span class="xref std std-term">slice</span></a> of some subset of digits. If our number is represented as an integer or float, we can add, subtract, multiply, or divide with it.</p>
+<p>I like to think of a Python type as a kitchen appliance. Each applicance has attachments specially designed to enable it do certain things. A food processor might have a grater attachment, which I can use to shred carrots. I can’t shred carrots in a stand mixer, because a stand mixer doesn’t have the right attachment. But I can beat eggs or knead flour in a stand mixer, which might be hard or impossible to do in a food processor.</p>
+<p>Just as cooks choose the right appliance for the task at hand, so programmers choose the kind of <code class="docutils literal notranslate"><span class="pre">type</span></code> to use depending on goals and context.</p>
+</dd>
+<dt id="term-value">value<a class="headerlink" href="#term-value" title="Permalink to this term">#</a></dt><dd><p>The word <em>value</em> is ambiguous when talking about Python. On the one hand, we can talk about any occurence of data as a <em>value</em>, as when we say that in defining a <a class="reference internal" href="#term-variable"><span class="xref std std-term">variable</span></a>, the value goes on the right of the equals sign.</p>
+<p>But <em>value</em> is also the technical term for one half of the paired elements that make up a Python <a class="reference internal" href="#term-dictionary"><span class="xref std std-term">dictionary</span></a>, which consists of pairs of <a class="reference internal" href="#term-key"><span class="xref std std-term">key</span></a>s and values.</p>
+<p>What the two uses of <em>value</em> have in common is that they both refer to something that is being assigned to or associated with something else.</p>
+<p>Thus, in creating a dictionary, the values fall on the right side of the <a class="reference internal" href="#term-colon"><span class="xref std std-term">colon</span></a>s (or on the right side of the equals sign, if we’re assigning a single key to its value).</p>
+</dd>
+<dt id="term-variable">variable<a class="headerlink" href="#term-variable" title="Permalink to this term">#</a></dt><dd><p>A variable consists of two parts: a name and a value. The <strong>name</strong> must be a <a class="reference external" href="https://www.asmeurer.com/python-unicode-variable-names/">valid</a> and unique sequence of characters, <em>without</em> quotation marks; the name will serve as the variable’s handle in the program.</p>
+<p>The <strong>value</strong> can be an <a class="reference internal" href="#term-instance"><span class="xref std std-term">instance</span></a> of any valid Python <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a>, such as a string, integer, float, list, dictionary – or an instance of a user-defined <a class="reference internal" href="#term-class"><span class="xref std std-term">class</span></a>.</p>
+<p>Thus, by assigning this long integer to the name <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x = 123456789123456789
+</pre></div>
+</div>
+<p>we can refer to the variable <code class="docutils literal notranslate"><span class="pre">x</span></code> subsequently in our code in order to work with this number. Whenever we use <code class="docutils literal notranslate"><span class="pre">x</span></code> – as in <code class="docutils literal notranslate"><span class="pre">print(x)</span></code> or <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x*2</span></code> – Python will retrieve the variable’s value from memory and substitute it for the name <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>In creating variables, we assign a name to a value with the single equals sign. The names goes on the left of the equals sign, the value on the right.</p>
+</dd>
+<dt id="term-white-space">white space<a class="headerlink" href="#term-white-space" title="Permalink to this term">#</a></dt><dd><p>The phrase <em>white space</em> refers to characters created by the spacebar, the tab key, and/or the return/enter key on your keyboard.</p>
+</dd>
+</dl>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="notebooks/homework/HW_4_GR.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Graded Homework: Day 4</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GW Libraries & Academic Innovation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
