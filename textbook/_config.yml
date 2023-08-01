@@ -37,7 +37,7 @@ html:
 
 parse:
   myst_substitutions:
-    application_url: "[application form](https://library.gwu.edu)"  # Insert URL for Google Form here
+    application_url: "[application form](https://forms.gle/y99QWaKS7WBFp93a9)"  # Insert URL for Google Form here
     application_deadline: September 7, 2023 # Deadline for form
     current_semester: Fall 2023 
     schedule: |
