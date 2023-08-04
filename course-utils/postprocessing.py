@@ -22,6 +22,9 @@ DIRECTIVE_MAPPING = {'image': None,
 HEADING_SUB_LEVEL = 4
 # Cells with tags in this list will be removed
 TAGS_TO_REMOVE = {'instructor', 'remove-cell'}
+# Pattern for Sphinx glossary directive
+TERM_PATTERN = re.compile(r'{term}`([A-Za-z ]+)`')
+GLOSSARY_URL = 'https://gwu-libraries.github.io/python-camp/glossary.html#term-'
 
 class Notebook:
 
@@ -32,6 +35,41 @@ class Notebook:
         '''
         self.nb_json = self.load_nb(nb_file)
     
+    def hide_tags(self):
+        ''''
+        Hides the Tags cell toolbar by default, to prevent users from accidentally deleting or modifying tags.
+        '''
+        if 'celltoolbar' in self.nb_json['metadata']:
+            del self.nb_json['metadata']['celltoolbar']
+        return self
+
+    def make_glossary_links(self):
+        '''
+        Replaces instances of the {term} directive in notebook Markdown with links to the term in the glossary.
+        '''
+        def term_expand(match_obj):
+            '''
+            Function applied in re.sub to replace every instance of the {term} directive in a string with its expanded form as a Markdown link
+            '''
+            term = match_obj.group(1)
+            return f'[{term}]({GLOSSARY_URL}{term.replace(" ", "-")})'
+
+        for cell in self.nb_json['cells']:
+            if cell['cell_type'] == 'markdown':
+                for i, line in enumerate(cell['source']):
+                    # Iterate over matches in line
+                    new_line = re.sub(TERM_PATTERN, term_expand, line)
+                    cell['source'][i] = new_line
+        return self
+    
+    def ensure_hidden(self):
+        '''
+        Ensures that cells using the Exercise2 Jupyter Notebook extension are hidden by default. 
+        '''
+        for cell in self.nb_json['cells']:
+            if 'solution2' in cell['metadata']:
+                cell['metadata']['solution2'] = 'hidden'
+        return self
 
     def remove_directives(self):
         '''
@@ -46,7 +84,7 @@ class Notebook:
             match m.groups():
                 # Custom admonition -- label provided in the text following the directive
                 case ('admonition', admon_type):
-                    cell_content[0] = '#' * HEADING_SUB_LEVEL + f' {admon_type}'
+                    cell_content[0] = '#' * HEADING_SUB_LEVEL + f' {admon_type}\n'
                 # Image directive -- URL follows the directive
                 case ('image', image_url):
                     # Extract alt text if present
@@ -55,7 +93,7 @@ class Notebook:
                     cell_content = [f'![{alt_text}]({image_url})']
                 # Other directive -- no label provided, but heading needed
                 case (directive, '') if DIRECTIVE_MAPPING.get(directive):
-                    cell_content[0] = '#' * HEADING_SUB_LEVEL + f' {DIRECTIVE_MAPPING[directive]}'
+                    cell_content[0] = '#' * HEADING_SUB_LEVEL + f' {DIRECTIVE_MAPPING[directive]}\n'
                 # No heading needed
                 case _:
                     cell_content.pop(0)
@@ -113,7 +151,7 @@ def main(nb_input, nb_output):
         
         logger.info(f'Processing notebook {in_}; saving output to {out}.')
         nb = Notebook(in_)
-        nb.remove_directives().remove_tagged_cells().save_nb(out)
+        nb.remove_directives().remove_tagged_cells().make_glossary_links().ensure_hidden().hide_tags().save_nb(out)
 
 if __name__ == '__main__':
     main()

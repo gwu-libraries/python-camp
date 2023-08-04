@@ -1,7 +1,5 @@
 python_code: |
-    team = [{'name': 'Dolsy', 'state': 'DC'}, 
-            {'name': 'Marcus', 'state': 'VA'},
-            {'name': 'Alex', 'state': 'DC'}]
+    team = [{'name': 'Alex', 'state': 'DC'}, {'name': 'Marcus', 'state': 'VA'}]
     for person in team:
       person['programming_languages'] = ['Python']
     print(team)
