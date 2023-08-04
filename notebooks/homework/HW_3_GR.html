@@ -424,6 +424,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
 </ul>
@@ -440,6 +441,21 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="graded-homework-day-3">
 <h1>Graded Homework: Day 3<a class="headerlink" href="#graded-homework-day-3" title="Permalink to this heading">#</a></h1>
 <p>This homework should be completed after the <a class="reference external" href="https://gwu-libraries.github.io/python-camp/notebooks/homework/HW_3_error_stories.html">Error Stories</a> notebook.</p>
+<section id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h2>
+<p>Below you will find one or more exercises. For each exercise, do the following:</p>
+<ol class="arabic simple">
+<li><p>Run the first code cell under the exercise heading. This will execute some code needed to set up the problem.</p></li>
+<li><p>Reading the instructions and write code in the code cell labeled with the comment <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">code</span> <span class="pre">here</span></code>. Run this code.</p></li>
+<li><p>Assuming your code does not produce any errors, run the code in the cell below the <code class="docutils literal notranslate"><span class="pre">Tests</span></code> heading. Each line of this code consists of a Python <a class="reference internal" href="../../glossary.html#term-assert-statement"><span class="xref std std-term">assert statement</span></a>.</p>
+<ul class="simple">
+<li><p>If you see an <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>, don’t panic! The error is written so as to help you pinpoint the part of your code that’s not working as expected. After making a change in your code, re-run <strong>both</strong> the cell with your code and the cell with the tests. Repeat until you see no errors.</p></li>
+<li><p>If you run the cell with the test code and you see no output, congratulations! That means that your code has passed all the tests and works as expected. Go to step 4 to submit.</p></li>
+</ul>
+</li>
+<li><p>Submit your code by downloading this notebook from JupyterHub and uploading it to the GitHub repository for this assignment. See <a class="reference external" href="https://gwu-libraries.github.io/python-camp/homework.html">the documentation</a> for detailed instructions.</p></li>
+</ol>
+</section>
 <section id="exercise-1">
 <h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h2>
 <p>The following sample contains metadata about some course texts.</p>
@@ -468,7 +484,8 @@ document.write(`
 <p>The function is currently failing a couple of tests. Can you fix the code so that it passes the tests?</p>
 <div class="cell tag_solution:ex1 docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_isbn_dict</span><span class="p">(</span><span class="n">book_list</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="k">def</span> <span class="nf">create_isbn_dict</span><span class="p">(</span><span class="n">book_list</span><span class="p">):</span>
     <span class="n">isbn_dict</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">book_list</span><span class="p">:</span>
         <span class="n">isbn</span> <span class="o">=</span> <span class="n">book</span><span class="p">[</span><span class="s1">&#39;isbn&#39;</span><span class="p">]</span>
@@ -494,24 +511,6 @@ document.write(`
 <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">create_isbn_dict</span><span class="p">(</span><span class="n">books</span><span class="p">)[</span><span class="s1">&#39;9780385490818&#39;</span><span class="p">],</span> <span class="nb">float</span><span class="p">),</span> <span class="s1">&#39;Dictionary values should be floats.&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">test_phrase</span><span class="p">,</span> <span class="s1">&#39;assigns lowest value for each key&#39;</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">create_isbn_dict</span><span class="p">(</span><span class="n">books</span><span class="p">)[</span><span class="s1">&#39;9780385490818&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">7.48</span><span class="p">,</span> <span class="s1">&#39;ISBN 9780385490818 should correspond to 7.48.&#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Testing: create_isbn_dict is a function
-Testing: create_isbn_dict returns a dictionary
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">81</span><span class="o">-</span><span class="mi">64043</span><span class="n">da17b3b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">assert</span> <span class="nb">callable</span><span class="p">(</span><span class="n">create_isbn_dict</span><span class="p">),</span> <span class="s1">&#39;create_isbn_dict is not a function&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">test_phrase</span><span class="p">,</span> <span class="s1">&#39;returns a dictionary&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">create_isbn_dict</span><span class="p">(</span><span class="n">books</span><span class="p">),</span> <span class="nb">dict</span><span class="p">),</span> <span class="s1">&#39;create_isbn_dict should return a dictionary.&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="n">test_phrase</span><span class="p">,</span> <span class="s1">&#39;contains specific key&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="k">assert</span> <span class="s1">&#39;9781250753892&#39;</span> <span class="ow">in</span> <span class="n">create_isbn_dict</span><span class="p">(</span><span class="n">books</span><span class="p">),</span> <span class="s1">&#39;9781250753892 missing from returned dictionary.&#39;</span>
-
-<span class="ne">AssertionError</span>: create_isbn_dict should return a dictionary.
 </pre></div>
 </div>
 </div>
@@ -547,23 +546,6 @@ Testing: create_isbn_dict returns a dictionary
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">82</span><span class="o">-</span><span class="mi">2</span><span class="n">da9ba52f7fa</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">create_isbn_dict</span><span class="p">(</span><span class="n">more_books</span><span class="p">)</span>
-
-<span class="nn">&lt;ipython-input-80-d617dc11e1dc&gt;</span> in <span class="ni">create_isbn_dict</span><span class="nt">(book_list)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">isbn_dict</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">book_list</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">4</span>         <span class="n">isbn</span> <span class="o">=</span> <span class="n">book</span><span class="p">[</span><span class="s1">&#39;isbn&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="n">price</span> <span class="o">=</span> <span class="n">book</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="k">if</span> <span class="p">(</span><span class="n">isbn</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">isbn_dict</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">isbn_dict</span><span class="p">[</span><span class="n">isbn</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">price</span><span class="p">):</span>
-
-<span class="ne">KeyError</span>: &#39;isbn&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Your task now: modify <code class="docutils literal notranslate"><span class="pre">create_isbn_dict</span></code> so that it works on <code class="docutils literal notranslate"><span class="pre">more_books</span></code> as well as <code class="docutils literal notranslate"><span class="pre">books</span></code>. Enter your new version of the function in the cell below.</p>
 <div class="cell tag_solution:ex2 docutils container">
@@ -583,30 +565,6 @@ Testing: create_isbn_dict returns a dictionary
                          <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Test2&#39;</span><span class="p">,</span> 
                           <span class="s1">&#39;isbn&#39;</span><span class="p">:</span> <span class="s1">&#39;9782441757935&#39;</span><span class="p">,</span> 
                           <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="s1">&#39;$19.99&#39;</span><span class="p">}])</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;9782441757935&#39;</span><span class="p">:</span> <span class="mf">19.99</span><span class="p">},</span> <span class="s1">&#39;Should return dictionary with one element.&#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Testing: create_isbn_dict handles missing data
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">83</span><span class="o">-</span><span class="n">fe755949b05f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">test_phrase</span> <span class="o">=</span> <span class="s1">&#39;Testing: create_isbn_dict&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">test_phrase</span><span class="p">,</span> <span class="s1">&#39;handles missing data&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">assert</span> <span class="n">create_isbn_dict</span><span class="p">([{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Test&#39;</span><span class="p">,</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span>                           <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="s1">&#39;39.99&#39;</span><span class="p">},</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                          <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Test2&#39;</span><span class="p">,</span> 
-
-<span class="nn">&lt;ipython-input-80-d617dc11e1dc&gt;</span> in <span class="ni">create_isbn_dict</span><span class="nt">(book_list)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">isbn_dict</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">book_list</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">4</span>         <span class="n">isbn</span> <span class="o">=</span> <span class="n">book</span><span class="p">[</span><span class="s1">&#39;isbn&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="n">price</span> <span class="o">=</span> <span class="n">book</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="k">if</span> <span class="p">(</span><span class="n">isbn</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">isbn_dict</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">isbn_dict</span><span class="p">[</span><span class="n">isbn</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">price</span><span class="p">):</span>
-
-<span class="ne">KeyError</span>: &#39;isbn&#39;
 </pre></div>
 </div>
 </div>
@@ -681,6 +639,7 @@ Testing: create_isbn_dict returns a dictionary
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
 </ul>

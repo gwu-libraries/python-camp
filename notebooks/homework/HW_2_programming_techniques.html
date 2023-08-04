@@ -486,7 +486,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../data/bookstore-data-simplified.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../../data/bookstore-data-summer-2023.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">bkst_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -495,10 +495,10 @@ document.write(`
 <section id="i-1-commenting-on-code">
 <h3>I.1 Commenting on Code<a class="headerlink" href="#i-1-commenting-on-code" title="Permalink to this heading">#</a></h3>
 <p>The code below loops through the bookstore data and counts the total number of textbooks where the type of the text is digital (as opposed to print).</p>
-<p>Above each line of code is a blank line beginning with the hash symbol (<code class="docutils literal notranslate"><span class="pre">#</span></code>). This is a Python <strong>comment</strong>. The Python interpreter ignores comments when executing code, so they are present purely for the programmer’s benefit.</p>
+<p>Above each line of code is a blank line beginning with the hash symbol (<code class="docutils literal notranslate"><span class="pre">#</span></code>). This is a Python <a class="reference internal" href="../../glossary.html#term-comment"><span class="xref std std-term">comment</span></a>. The Python interpreter ignores comments when executing code, so they are present purely for the programmer’s benefit.</p>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
-<p>For each comment, write (in your own words) an explanation of what the line below is doing. Your comment text can be anything that makes sense to you. Just make sure that your text follows the hash symbol. (If you want to make a comment that spans multiple lines, just create an extra line below the first and begin that new line with the hash symbol.)</p>
+<p>For each comment, write (in your own words) an explanation of what the line of code below the comment is doing. Your comment text can be anything that makes sense to you. Just make sure that your text follows the hash symbol. (If you want to make a comment that spans multiple lines, just create an extra line below the first and begin that new line with the hash symbol.)</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -547,10 +547,10 @@ document.write(`
 <h3>I.2 Using the Python documentation<a class="headerlink" href="#i-2-using-the-python-documentation" title="Permalink to this heading">#</a></h3>
 <p>Lucky for us, documentation consists of much more than lines of comments on code. Both the Python <strong>standard library</strong> (the set of functions, data types, methods, and other tools that are available with the basic installation of Python) and a wide array of third-party Python libraries come with extensive documentation.</p>
 <p>Learning how to read and navigate this documentation is a skill in itself.</p>
-<p>The “official” Python documentation – for the core language and the standard library – resides at <a class="reference external" href="https://docs.python.org/3/">https://docs.python.org/3/</a>. This site will often appear in Google results when searching for documentation on specific functions, methods, etc.</p>
+<p>The official Python documentation – for the core language and the standard library – resides at <a class="reference external" href="https://docs.python.org/3/">https://docs.python.org/3/</a>. This site will often appear in Google results when searching for documentation on specific functions, methods, etc.</p>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
-<p>In the previous homework, we used the <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> method to separate a single string on its <strong>white space</strong> into a <strong>list</strong> of substrings.
+<p>In the previous homework, we used the <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> <a class="reference internal" href="../../glossary.html#term-method"><span class="xref std std-term">method</span></a> to separate a single <a class="reference internal" href="../../glossary.html#term-string"><span class="xref std std-term">string</span></a> on its <a class="reference internal" href="../../glossary.html#term-white-space"><span class="xref std std-term">white space</span></a> into a <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a> of substrings.
 The code</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;CHEM 1001 10&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </pre></div>
@@ -559,9 +559,9 @@ The code</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;CHEM&#39;</span><span class="p">,</span> <span class="s1">&#39;1001&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>(The method is referred to as <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> in the docs because it can be used on anything of type <code class="docutils literal notranslate"><span class="pre">str</span></code>, i.e, on any Python string.)</p>
+<p>(The method is referred to as <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> in the docs because it can be used on any value of the string <a class="reference internal" href="../../glossary.html#term-type"><span class="xref std std-term">type</span></a>.)</p>
 <p>Here is the <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str.split">documentation</a> for <code class="docutils literal notranslate"><span class="pre">str.split()</span></code>.</p>
-<p>Reading that documentation, can you tell how to use the <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> method to separate a string on <em>something other</em> than whitespace?</p>
+<p>Reading that documentation, can you tell how to use the <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> method to separate a string on <em>something other</em> than white space?</p>
 <p>For example, our bookstore dataset indicates whether a text is for sale or rental, new or used, by the following strings:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">BUY_NEW</span></code></p></li>
@@ -581,12 +581,12 @@ The code</p>
 </div>
 <div class="toggle docutils container">
 <p>The crucial line of the Python documentation for methods is the first, called the <strong>method signature</strong>. For <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> the method signature looks like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=-</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>As mentioned above, the <code class="docutils literal notranslate"><span class="pre">str</span></code> here refers to any Python value of type string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). In other words, you can call the <code class="docutils literal notranslate"><span class="pre">split</span></code> method on anything between single or double quotes, or on any variable that has been assigned to a value surrounded by single or double quotes.</p></li>
-<li><p>The part between <strong>parentheses</strong> defines the method’s <strong>arguments</strong>.</p></li>
+<li><p>The part between <a class="reference internal" href="../../glossary.html#term-parentheses"><span class="xref std std-term">parentheses</span></a> defines the method’s <strong>arguments</strong>.</p></li>
 <li><p>Each argument is given a <strong>default value</strong>, meaning that (in this case), these arguments are optional.</p>
 <ul>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">sep</span></code> argument defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
@@ -598,7 +598,7 @@ The code</p>
 <blockquote>
 <div><p>If sep is not specified or is None, a different splitting algorithm is applied: runs of consecutive whitespace are regarded as a single separator, and the result will contain no empty strings at the start or end if the string has leading or trailing whitespace.</p>
 </div></blockquote>
-<p>That’s a little dense, but basically, it describes the behavior we’ve seen when using <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> (with nothing between the parentheses): the string is split on the whitespace.</p>
+<p>That’s a little dense, but basically, it describes the behavior we’ve seen when using <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> (with nothing between the parentheses): the string is split on the white space.</p>
 <p>To split on something else, we need to provide a value for the <code class="docutils literal notranslate"><span class="pre">sep</span></code> argument. We can do that in one of two ways:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;RENTAL_NEW&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
 </pre></div>
@@ -632,11 +632,11 @@ The code</p>
 <p>When you run the above cell, you shouldn’t see any output. That’s because <strong>defining a function</strong> and using the function are two separate operations.</p>
 <p>Let’s unpack our function definition, piece by piece:</p>
 <ul class="simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">def</span></code> keyword tells Python that we’re defining a function.</p></li>
-<li><p>We have to give our function a name, following the same rules as for Python variables (only letters, numbers, and underscores; must begin with a letter).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">def</span></code> <a class="reference internal" href="../../glossary.html#term-keyword"><span class="xref std std-term">keyword</span></a> tells Python that we’re defining a function.</p></li>
+<li><p>We have to give our function a name, following the same rules as for Python variable names (only letters, numbers, and underscores; must begin with a letter).</p></li>
 <li><p>As with variables, our function names should be unique. We <em>don’t</em> want to give a function the same name as an existing Python function. For instance, calling this function <code class="docutils literal notranslate"><span class="pre">print</span></code> would overwrite the built-in Python <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, which would mean that we could no longer use the latter.</p></li>
 <li><p>Immediately after the function name, we need <strong>parentheses</strong>. Here the parentheses are empty because this function takes no <strong>arguments</strong>. We’ll look at arguments later.</p></li>
-<li><p>Then there’s a <strong>colon</strong>, followed by an indented block (as in the <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">if</span></code> statements you wrote today).</p></li>
+<li><p>Then there’s a <strong>colon</strong>, followed by an indented <a class="reference internal" href="../../glossary.html#term-block"><span class="xref std std-term">block</span></a> (as in the <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">if</span></code> statements you wrote today).</p></li>
 <li><p>The code in the indented block is the <strong>body</strong> of the function. The function body is what will be executed when we <strong>call</strong> the function</p></li>
 </ul>
 </div>
@@ -661,32 +661,32 @@ The code</p>
 <p>Most functions are used to transform data in some way. Such functions take some input and return some (different) output. Examples you’ve seen so far include the following:</p>
 <table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>function name</p></th>
-<th class="head"><p>input</p></th>
-<th class="head"><p>output</p></th>
+<tr class="row-odd"><th class="head text-left"><p>function name</p></th>
+<th class="head text-left"><p>input</p></th>
+<th class="head text-left"><p>output</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">str.split()</span></code></p></td>
-<td><p>a string, and optionally, a separator</p></td>
-<td><p>a list of strings</p></td>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">str.split()</span></code></p></td>
+<td class="text-left"><p>a string, and optionally, a separator</p></td>
+<td class="text-left"><p>a list of strings</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">open()</span></code></p></td>
-<td><p>the name of a file</p></td>
-<td><p>a file handle (for working with the file’s contents)</p></td>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">open()</span></code></p></td>
+<td class="text-left"><p>the name of a file</p></td>
+<td class="text-left"><p>a file handle (for working with the file’s contents)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">float()</span></code></p></td>
-<td><p>a string</p></td>
-<td><p>a float</p></td>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float()</span></code></p></td>
+<td class="text-left"><p>a string</p></td>
+<td class="text-left"><p>a float</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">print()</span></code></p></td>
-<td><p>one or more strings</p></td>
-<td><p>those strings, displayed on the screen</p></td>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">print()</span></code></p></td>
+<td class="text-left"><p>one or more values of any Python type</p></td>
+<td class="text-left"><p>those values, displayed on the screen</p></td>
 </tr>
 </tbody>
 </table>
-<p>The <strong>arguments</strong> to the function are variables that hold the input. These variables are used within the body of the function definition (after the <code class="docutils literal notranslate"><span class="pre">def</span></code> line).</p>
-<p>In order to produce output, a function will usually <strong>return</strong> a value, using the <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword. <code class="docutils literal notranslate"><span class="pre">return</span></code> will usually be the last line of the function.</p>
+<p>The <strong>arguments</strong> in the function definition are variables that hold the input. These variables are used within the body of the function (in the block of code that comes after the <code class="docutils literal notranslate"><span class="pre">def</span></code> line).</p>
+<p>In order to produce output, a function will usually <strong>return</strong> a value, using the <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword. <code class="docutils literal notranslate"><span class="pre">return</span></code> will usually start the last line of the function.</p>
 <p>For instance, the function below calculates sales tax on a given price.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -725,7 +725,7 @@ Price with tax is 110.209
 <div class="notes admonition">
 <p class="admonition-title">Notes</p>
 <ul class="simple">
-<li><p>In the code above, we called <code class="docutils literal notranslate"><span class="pre">add_sales_tax</span></code> inside a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, passing it the loop variable <code class="docutils literal notranslate"><span class="pre">p</span></code> in parentheses.</p></li>
+<li><p>In the code above, we called <code class="docutils literal notranslate"><span class="pre">add_sales_tax</span></code> inside a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, passing it the <a class="reference internal" href="../../glossary.html#term-loop-variable"><span class="xref std std-term">loop variable</span></a> <code class="docutils literal notranslate"><span class="pre">p</span></code> in parentheses.</p></li>
 <li><p>During the execution of the function, the value of <code class="docutils literal notranslate"><span class="pre">p</span></code> is copied into to the <code class="docutils literal notranslate"><span class="pre">price</span></code> variable (which is internal to the function).</p></li>
 <li><p>We are calling <code class="docutils literal notranslate"><span class="pre">add_sales_tax()</span></code> <em>inside</em> our call to the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function.</p></li>
 </ul>
@@ -740,6 +740,7 @@ Price with tax is 110.209
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
 <p>Write a function, <code class="docutils literal notranslate"><span class="pre">dollars_to_float()</span></code>, to convert a string starting with a dollar sign to a float. You’ve used this code before – now encapsulate it in a function so that you can re-use it in the future without retyping it.</p>
+<p>Don’t forget to <code class="docutils literal notranslate"><span class="pre">return</span></code> something, otherwise your function will have no effect!</p>
 <p>Once you’ve written your function, test it by calling it on the following strings:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">'$10'</span></code></p></li>
@@ -801,13 +802,13 @@ Price with tax is 110.209
 <p>Errors can be jarring. For many of us, error messages on the computer inspire frustration, even anger. They may even make us feel misunderstood, or else that we lack understanding, that we just don’t “get” it.</p>
 <p>Learning to program (in virtually any language) involves learning how to deal with errors. There’s no such thing as a piece of software without “bugs,” if only because for any given piece of software, someone can find a way to use it for which it was not intended.</p>
 <p>In the example above, we didn’t design the function specifically to work for strings with commas, and indeed, it doesn’t. The <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> – technically, this kind of error is called an <strong>exception</strong> – means simply that the Python interpreter encountered a kind of value it didn’t expect and doesn’t know what to do with.</p>
-<p>Such errors/exceptions are valuable to the programmer; they tell us where the bugs are (or might be) in our programs. Python even provides mechanisms for checking for errors proactively, so that our code doesn’t grind to a halt whenever it encounters one.</p>
+<p>Such errors/exceptions are valuable (no pun intended) to the programmer; they tell us where the bugs are (or might be) in our programs. Python even provides mechanisms for checking for errors proactively, so that our code doesn’t grind to a halt whenever it encounters one.</p>
 <p>On Days 3 and 4, we’ll work more with errors and exceptions, and we’ll learn about an approach to writing code that uses errors to guide development.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">For the curious</p>
 <p>What’s the difference between an <strong>error</strong> and an <strong>exception</strong>?</p>
 <p>Technically, even though they often have the word <code class="docutils literal notranslate"><span class="pre">Error</span></code> in their name, most of the errors you’ll encounter when programming in Python are called <em>exceptions</em>. These describe situations where a line of code may or may not work, depending on other factors. These other factors include the rest of the code in the program, the input to the program, the environment in which the program is being run, etc.</p>
-<p>The example above is an exception because the line <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">float(amt)</span></code> works whenever <code class="docutils literal notranslate"><span class="pre">amt</span></code> is a string containing only numerals and a period, but it fails if other characters are present in the string (like a comma).</p>
+<p>The example above is an exception because the line <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">float(amt)</span></code> works <em>except</em> when <code class="docutils literal notranslate"><span class="pre">amt</span></code> is a string that contains something besides numerals and a period.</p>
 <p>Different from exceptions are <strong>syntax errors</strong>. A syntax error means that the line of code will never work because Python cannot parse it (i.e., interpret it correctly).</p>
 <p>For example, the following line of code will produce a syntax error because I failed to close the quotation marks around the string argument to <code class="docutils literal notranslate"><span class="pre">print()</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, cruel world!)</span>

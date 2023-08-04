@@ -472,16 +472,16 @@ document.write(`
 <section id="i-creating-a-model">
 <h2>I. Creating a Model<a class="headerlink" href="#i-creating-a-model" title="Permalink to this heading">#</a></h2>
 <p>On the first day of Python Camp, each team created a schema to describe the structure of our bookstore dataset.</p>
-<p>Today we’re going to revisit that work, but instead of starting from a dataset, we’re going to start from what we know about that aspect of the world that the dataset itself describes: GW courses and textbooks.</p>
-<p>The image in the cell below shows an example of a model of Python Camp. This model is very simple: it includes only three kinds of object (Python Camp itself, instructors, and learners) and two relationships. We’ve left out other important aspects of Python Camp, like lessons, homework exercises, etc.</p>
-<p>Since there can be multiple instances of Python Camp, each of which can have multiple instructors and learners, we list some attributes that could help us identify one particular <strong>instance</strong> of Python Camp, or one particular instructor or learner, from the others.</p>
-<a class="reference internal image-reference" href="https://gwu-libraries.github.io/python-camp/img/sample-object-model-python-camp.png"><img alt="Flow chart with three boxes, one labeled Python Camp, one labeled Instructor, and one labeled Learner. The Python Camp box is connected to the other two with arrows labeled &quot;has one or more&quot;" class="align-center" src="https://gwu-libraries.github.io/python-camp/img/sample-object-model-python-camp.png" style="width: 300px;" /></a>
+<p>Today we’re going to revisit that work, but instead of starting from a dataset, we’re going to start from what we know about that aspect of the world that the dataset itself describes: <strong>courses and textbooks</strong>.</p>
+<p>The image in the cell below shows an example of a model of Python Camp. This model is very simple: it includes only three kinds of things (Python Camp itself, instructors, and learners) and two relationships. We’ve left out other important aspects of Python Camp, like lessons, homework exercises, etc.</p>
+<p>Since there can be multiple instances of Python Camp, each of which can have multiple instructors and learners, we list some attributes that could help us identify one particular instance of Python Camp, or one particular instructor or learner, from the others.</p>
+<a class="reference internal image-reference" href="https://gwu-libraries.github.io/python-camp/img/sample-object-model-python-camp.png"><img alt="Flow chart with three boxes, one labeled Python Camp, one labeled Instructor, and one labeled Learner. The Python Camp box is connected to the other two with arrows labeled &quot;has one or more&quot;" class="align-center" src="https://gwu-libraries.github.io/python-camp/img/sample-object-model-python-camp.png" style="width: 500px;" /></a>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
 <p>In your teams, create a model of GW courses and textbooks.</p>
 <ul class="simple">
-<li><p>Modeling describes kinds of <strong>objects</strong> – kinds of things – and their relationships. What kinds of objects are involved in talking about textbooks? How are these objects related?</p></li>
-<li><p>We can also include details about objects as <strong>attributes</strong>. These are like tags that help distinguish one particular object from others of its kind.</p></li>
+<li><p>Modeling describes kinds of objects, entities, or things – and their relationships. What kinds of things are involved in talking about textbooks? How are these things related?</p></li>
+<li><p>We can also include details about these things as <a class="reference internal" href="../../glossary.html#term-attributes"><span class="xref std std-term">attributes</span></a>. These are like tags that help distinguish one particular thing from others of its kind.</p></li>
 <li><p>In modeling, we have to make choices about the level of detail we want to represent. In this case, we’re limited by the GW bookstore dataset, so we can restrict our model to those pieces of information already captured in the dataset.</p></li>
 <li><p>But try not to think about Python syntax or data structures at this point. Think in terms of the “real” world of courses and textbooks.</p></li>
 </ul>
@@ -489,16 +489,17 @@ document.write(`
 </section>
 <section id="ii-modeling-with-classes">
 <h2>II. Modeling with Classes<a class="headerlink" href="#ii-modeling-with-classes" title="Permalink to this heading">#</a></h2>
-<p>To represent our objects and relationships explicitly in Python, we use Python <strong>classes</strong>.</p>
+<p>To represent things and relationships explicitly in Python, we use Python <strong>classes</strong>.</p>
 <p>Working with classes can seem intimidating at first. But keep in mind: the primary reason for using classes is <em>to make our code more readable for ourselves</em> (and for other people who might reuse our code).</p>
-<p>We’ve already modeled the relationship between GW courses and textbooks using Python <strong>lists</strong> and <strong>dictionaries</strong>, and our code won’t work better if we add classes to the mix.</p>
+<p>We’ve already modeled the relationship between courses and textbooks using the Python types <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a> and <a class="reference internal" href="../../glossary.html#term-dictionary"><span class="xref std std-term">dictionary</span></a>. Our code won’t necessarily work better (run faster or be less error-prone) if we add classes to the mix.</p>
 <p>But once you get the hang of them, you may find that using classes makes your code easier to read and reason about.</p>
+<p>And if you continue to write code in Python, you’ll find yourself working with classes all the time, even if you’re not creating them yourself. For instance, if you use a Python <a class="reference internal" href="../../glossary.html#term-library"><span class="xref std std-term">library</span></a> like pandas or numpy (both heavily used for data analysis), Python classes provide the interface to these libraries.</p>
 <section id="ii-1-defining-a-class">
 <h3>II.1 Defining a Class<a class="headerlink" href="#ii-1-defining-a-class" title="Permalink to this heading">#</a></h3>
-<p>A class is sort of like a Python <strong>function</strong> in that it must be defined before it can be used. The class definition is where we specify the attributes each object in the class will have, as well as its relationships to other classes/kinds of objects.</p>
-<p>A class defines a <em>kind</em> of object: like a species in biology, or a type of particle in physics. Hence we don’t put details about <em>particular objects</em> in the class definition. (In defining the species “dog,” we wouldn’t include the names of any particular dogs, for instance.)</p>
-<p>There’s one more important thing about Python classes: in addition to attributes and relationships, they also define <strong>behaviors</strong>. These behaviors are defined as functions, which we call <strong>methods</strong>, to distinguish them from functions that are not associated with particular classes.</p>
-<p>We’ll cover creating methods later, but in the code below, note that <code class="docutils literal notranslate"><span class="pre">__init__</span></code> is a special method that is used to add attributes to the objects in a class.</p>
+<p>A class is sort of like a Python <a class="reference internal" href="../../glossary.html#term-function"><span class="xref std std-term">function</span></a> in that it must be defined before it can be used. The class definition is where we specify the <strong>attributes</strong> that each <strong>instance</strong> of the class will have. These attributes can express either properties that belong to the particular kinds of things represented by the class, or relationships to other kinds of things.</p>
+<p>A class defines a <em>kind</em> of thing: like a species in biology, or a type of particle in physics. Hence we don’t put details about <em>particular objects</em> in the class definition. (In defining the species “dog,” we wouldn’t include the names of any particular dogs, for instance.)</p>
+<p>There’s one more important thing about Python classes: in addition to attributes and relationships, they also define <strong>behaviors</strong>. These behaviors are defined as functions, which we call <strong>methods</strong>, to distinguish them from functions that are not associated with specific classes.</p>
+<p>We’ll cover creating methods later, but in the code below, note that <code class="docutils literal notranslate"><span class="pre">__init__</span></code> is a special method that is used to add attributes to the instances of a class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Course</span><span class="p">:</span>
@@ -506,7 +507,7 @@ document.write(`
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dept</span><span class="p">,</span> <span class="n">course_number</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">instructor</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Creates an instance of a course.</span>
-<span class="sd">        dept, course_number, section, instructor, term: should be of type str</span>
+<span class="sd">        dept, course_number, section, instructor, term: should be of type string</span>
 <span class="sd">        &#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dept</span> <span class="o">=</span> <span class="n">dept</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">course_number</span> <span class="o">=</span> <span class="n">course_number</span>
@@ -521,9 +522,9 @@ document.write(`
 <p class="admonition-title">Notes</p>
 <p>Let’s unpack the code above.</p>
 <ul class="simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">class</span></code> keyword (like the <code class="docutils literal notranslate"><span class="pre">def</span></code> keyword for functions) indicates the definition of a class.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">class</span></code> <a class="reference internal" href="../../glossary.html#term-keyword"><span class="xref std std-term">keyword</span></a> (like the <code class="docutils literal notranslate"><span class="pre">def</span></code> keyword for functions) indicates the definition of a class.</p></li>
 <li><p>Like a function, a class needs a name. It’s Python convention to name classes with capitalized names, to differentiate them from other variables.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">class</span></code> statement ends with a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>), and the body of the class is indented underneath it.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">class</span></code> line ends with a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>), and the body of the class is indented underneath it.</p></li>
 <li><p>Typically, a class definition will include one or more <strong>method</strong> definitions.</p></li>
 <li><p>Methods are defined like functions, with these two differences:</p>
 <ul>
@@ -531,10 +532,11 @@ document.write(`
 <li><p>Methods take a special first argument named <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></li>
 </ul>
 </li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method here accepts five arguments in addition to <code class="docutils literal notranslate"><span class="pre">self</span></code>: <code class="docutils literal notranslate"><span class="pre">dept</span></code>, <code class="docutils literal notranslate"><span class="pre">course_number</span></code>, <code class="docutils literal notranslate"><span class="pre">section</span></code>, <code class="docutils literal notranslate"><span class="pre">instructor</span></code> and <code class="docutils literal notranslate"><span class="pre">term</span></code>.</p></li>
-<li><p>The triple quotation marks underneath the <code class="docutils literal notranslate"><span class="pre">def</span></code> line are called a <strong>docstring</strong>. Like a comment (beginning with <code class="docutils literal notranslate"><span class="pre">#</span></code>), a docstring at the beginning of a function or method definition allows us to document the behavior of the function or method.</p></li>
-<li><p>The body of the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method here reassigns each of those arguments to new variables beginning with <code class="docutils literal notranslate"><span class="pre">self</span></code>, followed by a dot <code class="docutils literal notranslate"><span class="pre">.</span></code> and a name. The latter are the class <strong>attributes</strong>.</p></li>
-<li><p>We could use different names for the attributes and the method arguments, but it usually makes more sense to keep them the same.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method here accepts five <a class="reference internal" href="../../glossary.html#term-arguments"><span class="xref std std-term">arguments</span></a> in addition to <code class="docutils literal notranslate"><span class="pre">self</span></code>: <code class="docutils literal notranslate"><span class="pre">dept</span></code>, <code class="docutils literal notranslate"><span class="pre">course_number</span></code>, <code class="docutils literal notranslate"><span class="pre">section</span></code>, <code class="docutils literal notranslate"><span class="pre">instructor</span></code> and <code class="docutils literal notranslate"><span class="pre">term</span></code>.</p></li>
+<li><p>These are variables signifying that when creating an instance of the class (more on that in a minute), users must provide five discrete pieces of information.</p></li>
+<li><p>The triple quotation marks underneath the <code class="docutils literal notranslate"><span class="pre">def</span></code> line are called a <strong>docstring</strong>. Like a <a class="reference internal" href="../../glossary.html#term-comment"><span class="xref std std-term">comment</span></a> (beginning with <code class="docutils literal notranslate"><span class="pre">#</span></code>), a docstring at the beginning of a function or method definition allows us to document the behavior of the function or method.</p></li>
+<li><p>The body of the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method here reassigns each of those arguments to new variables beginning with <code class="docutils literal notranslate"><span class="pre">self</span></code>, followed by a dot <code class="docutils literal notranslate"><span class="pre">.</span></code> and a name. The latter are the class <a class="reference internal" href="../../glossary.html#term-attributes"><span class="xref std std-term">attributes</span></a>.</p></li>
+<li><p>We could use different names for the attributes and the method <a class="reference internal" href="../../glossary.html#term-arguments"><span class="xref std std-term">arguments</span></a>, but it usually makes more sense to keep them the same.</p></li>
 </ul>
 <p>The purpose of all of this will become clearer below.</p>
 </div>
@@ -546,7 +548,15 @@ document.write(`
 </div>
 </div>
 <p>In the line above, we create a single <strong>instance</strong> of our <code class="docutils literal notranslate"><span class="pre">Course</span></code> class.</p>
-<p>Note that when creating the instance, we use syntax that looks very much like calling a Python function, passing the arguments that will become the attributes of this course in parentheses.</p>
+<p>An instance is one example of the kind of thing defined by our class.</p>
+<div class="notes admonition">
+<p class="admonition-title">Notes</p>
+<ul class="simple">
+<li><p>When working with classes, we almost always create instances. Creating an instance of a class is a lot like making a <a class="reference internal" href="../../glossary.html#term-function-call"><span class="xref std std-term">function call</span></a> in Python. On its own, the class definition just sits in memory, doing nothing.</p></li>
+<li><p>Only when we create an instance does it actually do something.</p></li>
+<li><p>Note that when creating the instance, we use syntax that looks very much like calling a Python function, passing the arguments that will become the attributes of this course in parentheses.</p></li>
+</ul>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Department:&#39;</span><span class="p">,</span> <span class="n">my_course</span><span class="o">.</span><span class="n">dept</span><span class="p">)</span>
@@ -563,12 +573,20 @@ Section: 10
 </div>
 </div>
 </div>
-<p>We can retrieve the attributes from the instance by using the dot notation: <code class="docutils literal notranslate"><span class="pre">my_course.dept</span></code>, etc.</p>
-<p>This works because our <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method assigns these arguments to instances of the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class via the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument.</p>
-<p>We’ve used classes and methods before. Recall the <code class="docutils literal notranslate"><span class="pre">split</span></code> method available on strings. We can write <code class="docutils literal notranslate"><span class="pre">'AMST</span> <span class="pre">6190</span> <span class="pre">10'.split()</span></code> because in Python, the quotation marks <em>automatically</em> create a new instance of the special <code class="docutils literal notranslate"><span class="pre">str</span></code> class, and every instance of the <code class="docutils literal notranslate"><span class="pre">str</span></code> class gets access to the string methods.</p>
+<p>We can retrieve the attributes from the instance by using <a class="reference internal" href="../../glossary.html#term-dot-notation"><span class="xref std std-term">dot notation</span></a>: <code class="docutils literal notranslate"><span class="pre">my_course.dept</span></code>, etc.</p>
+<p>This works because our <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method assigns these arguments to instances of the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class via the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument.</p>
+<p>We’ve used classes and methods before. Recall the <code class="docutils literal notranslate"><span class="pre">split</span></code> method available on strings. We can write <code class="docutils literal notranslate"><span class="pre">'AMST</span> <span class="pre">6190</span> <span class="pre">10'.split()</span></code> because in Python, the quotation marks <em>automatically</em> create a new instance of the <code class="docutils literal notranslate"><span class="pre">str</span></code> type, and every instance of the <code class="docutils literal notranslate"><span class="pre">str</span></code> type gets access to the string methods.</p>
+<p>And in case you’re wondering, a Python class is essentially a user-defined Python <a class="reference internal" href="../../glossary.html#term-type"><span class="xref std std-term">type</span></a>…just like a <a class="reference internal" href="../../glossary.html#term-string"><span class="xref std std-term">string</span></a>, a <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a>, or a <a class="reference internal" href="../../glossary.html#term-dictionary"><span class="xref std std-term">dictionary</span></a>!</p>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
 <p>Create another instance of the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class below, using a different variable name from <code class="docutils literal notranslate"><span class="pre">my_course</span></code> and different arguments. See if you can print the department, course number, and section from your new instance.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="ii-2-defining-relationships">
@@ -615,7 +633,7 @@ Section: 10
 </section>
 <section id="ii-3-adding-methods">
 <h3>II.3 Adding methods<a class="headerlink" href="#ii-3-adding-methods" title="Permalink to this heading">#</a></h3>
-<p>Our <code class="docutils literal notranslate"><span class="pre">Course</span></code> class has no methods other than <code class="docutils literal notranslate"><span class="pre">__init__</span></code>, because we just using it store some data about each course.</p>
+<p>Our <code class="docutils literal notranslate"><span class="pre">Course</span></code> class has no methods other than <code class="docutils literal notranslate"><span class="pre">__init__</span></code>, because we are just using it store some data about each course.</p>
 <p>But the real power and convenience of classes enters when we add custom methods that define behavior specific to instances of that class. Methods make classes and their instances more than just places to park data.</p>
 <p>For example, consider a spreadsheet application like Google Sheets or Excel. The application allows you to create multiple spreadsheets. The data on different spreadsheets can be very different, but all spreadsheets (within the same application) share certain features: like the ability to save the document, to format cells, to sort and filter, etc.</p>
 <p>If we wanted to model the spreadsheet application using classes and methods, we might imagine a <code class="docutils literal notranslate"><span class="pre">SpreadSheet</span></code> class. This class might have a <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute to store the data associated with a particular spreadsheet (available as <code class="docutils literal notranslate"><span class="pre">spreadsheet.data</span></code>, if <code class="docutils literal notranslate"><span class="pre">spreadsheet</span></code> is an instance of our <code class="docutils literal notranslate"><span class="pre">SpreadSheet</span></code> class). To save the spreadsheet, we could call <code class="docutils literal notranslate"><span class="pre">spreadsheet.save()</span></code>, which would (internally) use the <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute to access the data and write it to disk.</p>
@@ -644,7 +662,7 @@ Section: 10
 </div>
 <div class="notes admonition">
 <p class="admonition-title">Notes</p>
-<p>Note that our <code class="docutils literal notranslate"><span class="pre">covert_price</span></code> method takes a single argument: <code class="docutils literal notranslate"><span class="pre">self</span></code>. When we <em>call</em> this method, we won’t actually provide any arguments to this method. We’ll simply write <code class="docutils literal notranslate"><span class="pre">my_text.convert_price()</span></code> (assuming <code class="docutils literal notranslate"><span class="pre">my_text</span></code> is an instance of the <code class="docutils literal notranslate"><span class="pre">Text</span></code> class).</p>
+<p>Note that our <code class="docutils literal notranslate"><span class="pre">convert_price</span></code> method takes a single argument: <code class="docutils literal notranslate"><span class="pre">self</span></code>. When we <em>call</em> this method, we won’t actually provide any arguments to this method. We’ll simply write <code class="docutils literal notranslate"><span class="pre">my_text.convert_price()</span></code> (assuming <code class="docutils literal notranslate"><span class="pre">my_text</span></code> is an instance of the <code class="docutils literal notranslate"><span class="pre">Text</span></code> class).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">self</span></code> argument is a reference to the instance (<code class="docutils literal notranslate"><span class="pre">my_text</span></code>) <em>itself</em> – hence the name <code class="docutils literal notranslate"><span class="pre">self</span></code>. The Python interpreter automatically handles the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument when calling the method (if we call it using dot notation).</p>
 <p>Inside the method, the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument allows us access to the attributes of <code class="docutils literal notranslate"><span class="pre">my_text</span></code> (as initialized when we create our <code class="docutils literal notranslate"><span class="pre">my_text</span></code> instance).</p>
 </div>
@@ -704,7 +722,7 @@ Section: 10
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../data/bookstore-data-simplified.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../../data/bookstore-data-summer-2023.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">bkst_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -747,7 +765,8 @@ Section: 10
 <h3>II.5 Classes: Why bother?<a class="headerlink" href="#ii-5-classes-why-bother" title="Permalink to this heading">#</a></h3>
 <p>It may strike you that we’ve haven’t gained much practical advantage from converting our list of nested dictionaries to a list of class instances. It may seem to you that it makes just as much sense to express the relationships between courses and texts through the keys of a dictionary as through the attributes of a class.</p>
 <p>If so, you’re not wrong – and you may be learning something about your own emerging preferences as a programmer.</p>
-<p><em>You absolutely do not have to use classes in order to write effective Python code.</em> Even some very skilled programmers hardly ever use them. The choice to use classes depends both on your own preferences and on the context in which you are writing code.</p>
+<p><em>You absolutely do not have to use classes in order to write effective Python code.</em></p>
+<p>Even some very skilled programmers hardly ever use them. The choice to use classes depends both on your own preferences and on the context in which you are writing code.</p>
 <p>That said, classes can be useful because they can make relationships more explicit. Compare the results of the following two lines of code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -881,7 +900,7 @@ Section: 10
 </section>
 <section id="ii-7-saving-our-work">
 <h3>II.7 Saving our work<a class="headerlink" href="#ii-7-saving-our-work" title="Permalink to this heading">#</a></h3>
-<p>One disadvantage to defining your own classes is that they don’t work well with common formats like JSON. The reason is that JSON is meant to work with any number of different programming languages, and the Python <code class="docutils literal notranslate"><span class="pre">json</span></code> library maps the most common Python types onto the JSON format. But the <code class="docutils literal notranslate"><span class="pre">json</span></code> library doesn’t know anything about our <code class="docutils literal notranslate"><span class="pre">Course</span></code> and <code class="docutils literal notranslate"><span class="pre">Text</span></code> classes.</p>
+<p>One disadvantage to defining your own classes is that they don’t work well with common formats like <a class="reference internal" href="../../glossary.html#term-JSON"><span class="xref std std-term">JSON</span></a>. The reason is that JSON is meant to work with any number of different programming languages, and the Python <code class="docutils literal notranslate"><span class="pre">json</span></code> library maps the most common Python types onto the JSON format. But the <code class="docutils literal notranslate"><span class="pre">json</span></code> library doesn’t know anything about our <code class="docutils literal notranslate"><span class="pre">Course</span></code> and <code class="docutils literal notranslate"><span class="pre">Text</span></code> classes.</p>
 <p>It’s not too difficult to write a function that would take the attributes of our classes and convert them back to lists and dictionaries – sort of the inverse of our <code class="docutils literal notranslate"><span class="pre">transform_course_data</span></code> function.</p>
 <p>But there <em>is</em> an easier way. The Python <code class="docutils literal notranslate"><span class="pre">pickle</span></code> library allows us to save <em>any</em> valid Python type – including those that we create – as a binary file on disk.</p>
 <p>The file won’t be readable in a text editor, unfortunately. But you can open it in Python using <code class="docutils literal notranslate"><span class="pre">pickle</span></code> and work with its class instances just as if you had defined those classes yourself.</p>
@@ -889,7 +908,7 @@ Section: 10
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../data/bookstore-data-simplified.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../../data/bookstore-data-summer-2023.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">courses</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>

@@ -1,4 +1,5 @@
 function createIndents() {
+    // Create left margin for indented blocks
     document.querySelectorAll(".parsons-row-ss").forEach((row) => {
         row.querySelectorAll(".parsons-ss").forEach((cell, i) => {
             cell.style.left = 50*i;
@@ -7,8 +8,9 @@ function createIndents() {
 }
 
 function dragstart_handler(ev) {
-    ev.stopPropagation();
     // We don't want to drag anything but the actual DIV block
+
+    ev.stopPropagation();
     if ((ev.target.nodeType == Node.TEXT_NODE) || !ev.target.classList.contains("parsons-block")) {
         ev.preventDefault();
         return
@@ -38,20 +40,13 @@ function dragover_handler(ev) {
 }
 
 function dragenter_handler(ev) {
-    ev.stopPropagation();
+    ev.preventDefault();
     ev.target.classList.add("dragover");
- 
 }
 
 function dragleave_handler(ev) {
-    ev.stopPropagation();
+    ev.preventDefault();
     ev.target.classList.remove("dragover");
-}
-
-function disAllowDrop(ev) {
-    // Added to draggable elements to prevent them becoming drop zones
-    //TO DO: implement swap between two elements
-    ev.stopPropagation();
 }
 
 function drop_handler(ev) {
@@ -61,6 +56,8 @@ function drop_handler(ev) {
     // If there is already a block in this row (other than the currently selected block), no drop is allowed
     let otherBlock = ev.target.parentElement.querySelector(".parsons-block");
     if ((otherBlock) && (block != otherBlock) && (ev.target.parentElement.className == "parsons-row-ss")) {
+        ev.preventDefault();
+        ev.target.classList.remove("dragover");
         return;
     }
     // remove the error class in case this is a move from a solution slot with an error applied
@@ -79,7 +76,15 @@ function drop_handler(ev) {
             node.appendChild(newIndentChar);
          });
     }
- 
+}
+
+function swapDrop(ev) {
+    // Allows swapping one draggable element for another
+    const data = ev.dataTransfer.getData("text/plain"); // element to swap
+    let block = document.getElementById(data);
+    let blockToSwap = ev.target;
+    swapElements(block, blockToSwap);
+    ev.stopPropagation();
 }
 
 function parseParsonsCode() {
@@ -240,7 +245,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     // Add the ondragstart event listener to each element
     blocks.forEach(block => {
         block.addEventListener("dragstart", dragstart_handler);
-        block.addEventListener("dragover", disAllowDrop);
+        block.addEventListener("dragover", dragover_handler);
+        block.addEventListener("drop", swapDrop);
         block.addEventListener("dragend", ev => {
             ev.target.classList.remove("hidden");
         })
@@ -288,5 +294,29 @@ function removeAllButFirst(elem) {
     // Removes all but the first child element of a given element
     while (elem.children.length > 1) {
         elem.children[elem.children.length-1].remove();
+    }
+}
+
+function swapElements(obj1, obj2) {
+    // from https://stackoverflow.com/questions/10716986/swap-two-html-elements-and-preserve-event-listeners-on-them
+    // save the location of obj2
+    var parent2 = obj2.parentNode;
+    var next2 = obj2.nextSibling;
+    // special case for obj1 is the next sibling of obj2
+    if (next2 === obj1) {
+        // just put obj1 before obj2
+        parent2.insertBefore(obj1, obj2);
+    } else {
+        // insert obj2 right before obj1
+        obj1.parentNode.insertBefore(obj2, obj1);
+
+        // now insert obj1 where obj2 was
+        if (next2) {
+            // if there was an element after obj2, then insert obj1 right before that
+            parent2.insertBefore(obj1, next2);
+        } else {
+            // otherwise, just append as last child
+            parent2.appendChild(obj1);
+        }
     }
 }

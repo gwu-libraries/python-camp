@@ -15,6 +15,12 @@ arguments
         
         print(my_func(10))  # calling my_func --> prints 15
 
+assert statement
+
+    Python code, using the `assert` keyword, that performs a logical test. Like an {term}`if statement`, an assert statement evaluates the code that follows it as a `Boolean expression`. However, instead of taking some action if the expression evaluates as `True`, the assert statement raises an `AssertionError` if the statement is `False`. (The assert statement does nothing if the expression evaluates as `True`). 
+
+    Assert statements are used primarily for debugging purposes; they are useful for testing certain normal or minimal conditions that your code should handle without error. (In that way, if you subsequently change your code in such a way that it no longer satisfies one of those conditions, the assert statement will let you know.)
+
 attributes
 
     An attribute is like a {term}`variable` except that it belongs to the {term}`instance` of a Python {term}`class` or {term}`type`. An attribute may refer to a value, or it may be the name of a function, in which case it is called a {term}`method`. For instance `append()` is a method that belongs to instances of the `list` type, an instance of which is automatically created in Python whenever you assign a variable to values enclosed in {term}`square brackets`. Hence we can write `my_list = [1, 2, 3]`, and `my_list` will, by definition, have access to the `append()` method. 
@@ -45,7 +51,7 @@ block
         - in an {term}`if statement`
         - in the definition of a Python {term}`class`
     
-    Lines of code in the block are executed together. Thus, the block of code in a `for` loop is executed as many times as specified by the loop, while the block of code underneath an `if` statement is executed only if the {term}`conditional expression` in the `if` statement evaluates to `True`. 
+    Lines of code in the block are executed together. Thus, the block of code in a `for` loop is executed as many times as specified by the loop, while the block of code underneath an `if` statement is executed only if the {term}`Boolean expression` in the `if` statement evaluates to `True`. 
 
     Blocks can also be nested, in which case, the amount of indentation determines which code belongs to which block. The code below contains three blocks, each nested inside the other.
 
@@ -59,10 +65,18 @@ block
 
     Ihe convention is to use four spaces (or a tab set to four spaces) as the basic unit of indentation (We say "the basic unit," because when creating nested code blocks, each level of indentation will correspond to one or more instances of the basic unit.)
     
+Boolean expression
+
+    Python code that evaluates as either `True` or `False`. Boolean expressions are commonly used inside {term}`if statement`s to create actions that will occur only if certain conditions are met. 
+
+    Boolean expressions will often contain the double equals sign (`==`), which evaluates as `True` if the values/variables on either side of the double equals are considered equivalent. 
+
+    For instance, if the variable `x` is defined as the integer 3, then `x == 3` will evaluate to `True`. 
+
 
 Boolean operator
 
-    A Python {term}`keyword` used primarily in `if` statements (see {term}`conditional expression`s) to evaluate one or more {term}`Boolean value`s (or Python expressions evaluated as Boolean values). For instance, the following block of code prints the phrase "That's me!" only if both conditions in parentheses are `True`:
+    A Python {term}`keyword` used primarily in {term}`if statement`s (see also {term}`Boolean expression`) to evaluate one or more {term}`Boolean value`s (or Python expressions evaluated as Boolean values). For instance, the following block of code prints the phrase "That's me!" only if both expressions in parentheses are `True`:
 
         if (first_name == 'Dolsy') and (last_name == 'Smith'):
             print("That's me!")
@@ -77,7 +91,7 @@ Boolean operator
 
 Boolean value
 
-    A special Python {term}`type` used primarily in {term}`conditional expression`s. There are only two Boolean values: `True` and `False`. But any other Python value can be treated as a Boolean if used inside a conditional expression. For instance, if `x` is an integer, the following code will divide 2 by `x` unless `x` is 0. (All integers in Python evaluate as `True` except for 0, which evaluates as `False`.)
+    A special Python {term}`type` used primarily in {term}`Boolean expression`s. There are only two Boolean values: `True` and `False`. But any other Python value can be treated as a Boolean if used inside a Boolean expression. For instance, if `x` is an integer, the following code will divide 2 by `x` unless `x` is 0. (All integers in Python evaluate as `True` except for 0, which evaluates as `False`.)
 
         if x:
             print(2/x) 
@@ -137,13 +151,7 @@ comment
 
     We use comments to document our code for ourselves and for others.
 
-conditional expression
 
-    Python code that evaluates as either `True` or `False`. Conditional expressions are commonly used inside {term}`if statement`s to create actions that will occur only if certain Boolean conditions are met. 
-
-    Conditional expressions will often contain the double equals sign (`==`), which evaluates as `True` if the values/variables on either side of the double equals are considered equivalent. 
-
-    For instance, if the variable `x` is defined as the integer 3, then `x == 3` will evaluate to `True`. 
 
 curly braces
 
@@ -168,7 +176,7 @@ dot notation
 
 double equals sign
 
-    Two equals-sign symbols together (`==`) are used in `conditional expression`s to test for equivalence between two variables or values.
+    Two equals-sign symbols together (`==`) are used in `Boolean expression`s to test for equivalence between two variables or values.
 
     It's important not to confuse the double equals sign with the single equals sign (`=`), which is used to assign values in creating {term}`variable`s.
 
@@ -227,7 +235,7 @@ function definition
 
 if statement
 
-    We use `if` statements to write code that performs different actions depending on the presence of certain conditions. In the simplest kind of `if` statement, we use one {term}`conditional expression` to determine whether or not a single {term}`block` of code will be executed. 
+    We use `if` statements to write code that performs different actions depending on the presence of certain conditions. In the simplest kind of `if` statement, we use one {term}`Boolean expression` to determine whether or not a single {term}`block` of code will be executed. 
 
     The following code prints `10` only if the {term}`variable` `x` is `5`.
 
@@ -247,7 +255,9 @@ if statement
 
 import
 
-    A Python {term}`keyword` used to load into memory some Python types or functions that are stored externally (i.e., not loaded automatically when starting a Python session). Code that defines such types or functions is called a **module**. There are modules that form part of the basic Python installation (like the `json` module), and there are modules that are created by third parties for use with Python -- also called **packages** -- which must be installed separately before they can be used. For more information on installing third-party modules/packages, see the [Python documentation](https://packaging.python.org/en/latest/tutorials/installing-packages/).
+    A Python {term}`keyword` used to load into memory some Python code that is stored externally (i.e., not loaded automatically when starting a Python session). Such code often defines Python classes or functions and is called a **module**. There are modules that form part of the basic Python installation (like the `json` module), and there are modules that are created by third parties for use with Python -- also called **packages** -- which must be installed separately before they can be used. For more information on installing third-party modules/packages, see the [Python documentation](https://packaging.python.org/en/latest/tutorials/installing-packages/).
+
+    The term **library** is also used to refer to one or more Python modules that has been packaged together. For instance, the [pandas library](https://pandas.pydata.org/) is a very popular Python library used for data analysis.
 
 indented block
 
@@ -319,6 +329,10 @@ keyword
 
     See the Python documentation for the complete list of [keywords](https://docs.python.org/3.8/reference/lexical_analysis.html#keywords).
 
+library
+
+    A term for a set of tools written in Python, usually involving functions and classes, designed to be used by other Python programmers. See {term}`import` for more information.
+
 list
 
     A Python {term}`type` for storing data sequentially, i.e., in order, where the data to be stored can consist of any mixture of valid Python types. 
@@ -370,11 +384,33 @@ module
 
     See {term}`import`.
 
+null value
+
+    A null value represents the absence of a value. A variable that has a null value is basically pointing to an empty address in the computer's memory. In order to represent this situation, Python uses the special {term}`type` called `None`. When you encounter a `None`, it's like a placeholder: there _could_ be a value there, but none has been assigned. 
+
+    Note that if you try to use a {term}`variable` name before assigning it to a value, Python will raise a `NameError`; it won't automatically assign the null value to your variable. (Some languages handle this situation differently.) In Python, null values tend to arise when loading data from external sources, and they often represent missing data: for instance, empty cells in a spreadsheet. 
+
+object
+
+    A generic term for a "thing" in Python and many other programming languages. In Python, every object is an {term}`instance` of a {term}`type`, which can be a built-in type or a user-defined {term}`class`.
+
 parentheses
 
     Parentheses `()` are used in Python primarily to denote a function or method, either in the {term}`function definition` or the {term}`function call`. The {term}`arguments` to the function/method, if any, appear between the parentheses.
 
     Parentheses are **not** optional in these situations; if there are no arguments, the parentheses will be empty (but they must be present).
+
+quotation marks
+
+    Python uses pairs of single (`''`) or double (`""`) quotation marks interchangeable to identify {term}`string` values. You can choose whichever style you like (single or double); the only requirement is that, for any given string, you use them consistently. 
+
+    For instance, the following line would produce a syntax error, because the string starts with a double quote but ends with a single quote:
+
+        my_name = "Dolsy Smith'
+    
+    If you need to use a quotation mark as part of your string, use the other kind of quotation marks to enclose the string itself. For instance, the code below (correctly) assigns a string containing an apostrophe:
+
+        my_message = "Python's a pretty cool language."
 
 return
 
@@ -455,6 +491,10 @@ variable
     we can refer to the variable `x` subsequently in our code in order to work with this number. Whenever we use `x` -- as in `print(x)` or `x = x*2` -- Python will retrieve the variable's value from memory and substitute it for the name `x`.
 
     In creating variables, we assign a name to a value with the single equals sign. The names goes on the left of the equals sign, the value on the right.
+
+Unicode
+
+    A system for representing characters from the world's many languages along with other symbols (mathematical symbols, emojis, etc.). Python handles Unicode by default, which means that you can use Python to work with text in languages other than English. See {term}`character` for more information. 
 
 white space
 

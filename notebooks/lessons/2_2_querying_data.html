@@ -460,13 +460,13 @@ document.write(`
 </section>
 <section id="preliminaries">
 <h2>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this heading">#</a></h2>
-<p>Before we return to our textbook dataset, we will introduce one new Python <strong>control structure</strong> and review a common <strong>programming pattern</strong>.</p>
+<p>Before we return to our textbook dataset, we will introduce one new piece of Python syntax and review a common programming pattern.</p>
 <section id="conditionals-boolean-values">
 <h3>Conditionals &amp; Boolean values<a class="headerlink" href="#conditionals-boolean-values" title="Permalink to this heading">#</a></h3>
 <p>In a very abstract sense, a computer is a machine for implementing binary logic. In binary logic, the only values allowed are <code class="docutils literal notranslate"><span class="pre">1</span></code>’s and <code class="docutils literal notranslate"><span class="pre">0</span></code>’s, which represent <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code>, respectively.</p>
-<p>Thus, at some level, <em>everything</em> we do in computation can be reduced to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> (from the computer’s perspective). But from a programmer’s perspective, this usually only matters in situations where we want the program to do different things based on certain conditions that may or may not obtain. This cases are called <em>conditionals</em>.</p>
-<p>For instance, we can tell Python to compare two numbers, using the standard operators you might have learned in math classes: greater than, less than, equal to, etc.</p>
-<p>Note that in Python, we represent equality by the <strong>double equals sign</strong> (<code class="docutils literal notranslate"><span class="pre">==</span></code>). A single equals sign is reserved for variable assignment.</p>
+<p>Thus, at some level, <em>everything</em> we do in computation can be reduced to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> (from the computer’s perspective). But from a programmer’s perspective, this usually only matters in situations where we want the program to do different things based on certain conditions that may or may not obtain. These cases are called <strong>conditional expressions</strong>.</p>
+<p>For instance, we can tell Python to compare two numbers, using the standard operators you might remember from your math courses: greater than, less than, equal to, etc.</p>
+<p>Note that in Python, we represent equality by the <strong>double equals sign</strong> (<code class="docutils literal notranslate"><span class="pre">==</span></code>). A single equals sign is reserved for <a class="reference internal" href="../../glossary.html#term-variable"><span class="xref std std-term">variable</span></a> assignment.</p>
 <p>Running the code below should return <code class="docutils literal notranslate"><span class="pre">True</span></code>, which is one of two special Python values called <strong>Boolean values</strong> (so named because the binary logic that computers implement was invented by the mathematician George Boole).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -496,8 +496,8 @@ document.write(`
 <section id="if-statements">
 <h3><code class="docutils literal notranslate"><span class="pre">if</span></code> statements<a class="headerlink" href="#if-statements" title="Permalink to this heading">#</a></h3>
 <p>Usually, we want to do more than evaluate whether an expression (like <code class="docutils literal notranslate"><span class="pre">book_price</span> <span class="pre">&lt;</span> <span class="pre">60</span></code>) is <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. Usually, we want the program to <em>take some action</em> based on the outcome of that evaluation.</p>
-<p>For this, we use the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
-<p>To print a message if the value of <code class="docutils literal notranslate"><span class="pre">book_price</span></code> is above a certain threshhold, we can write the following:</p>
+<p>For this, we use an <strong>if statement</strong>.</p>
+<p>To print a message if the value of the <code class="docutils literal notranslate"><span class="pre">book_price</span></code> variable is above a certain threshhold, we can write the following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">book_price</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
@@ -506,8 +506,8 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Running the code above produces no output, at least not if <code class="docutils literal notranslate"><span class="pre">book_price</span></code> is assigned as above (to the float value <code class="docutils literal notranslate"><span class="pre">55.99</span></code>).</p>
-<p>If we change the value of <code class="docutils literal notranslate"><span class="pre">book_price</span></code> so that the condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>, we should see our message:</p>
+<p>Running the code above produces no output, at least not if <code class="docutils literal notranslate"><span class="pre">book_price</span></code> is assigned as above (to the <a class="reference internal" href="../../glossary.html#term-float"><span class="xref std std-term">float</span></a> value <code class="docutils literal notranslate"><span class="pre">55.99</span></code>).</p>
+<p>If we change the value of <code class="docutils literal notranslate"><span class="pre">book_price</span></code> so that the condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>, we should see the intended message:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book_price</span> <span class="o">=</span> <span class="mf">101.99</span>
@@ -564,20 +564,20 @@ document.write(`
 <li><p>You can have as many <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements as you want, provided they follow an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">else</span></code> statement is a catch-all: it will be executed if none of the preceding <code class="docutils literal notranslate"><span class="pre">if</span></code> or <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
 <li><p>Otherwise, the <em>first</em> <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code> statement that is <code class="docutils literal notranslate"><span class="pre">True</span></code> will be executed, and <em>all the rest</em> will be ignored. In other words, if the conditions you’re testing for are not mutually exclusive, you should write the most specific test first.</p></li>
-<li><p>Each <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> statement ends with a colon and is followed by an <strong>indented block</strong> of code. This is the same pattern we saw with <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p></li>
+<li><p>Each <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> statement ends with a colon and is followed by an indented <a class="reference internal" href="../../glossary.html#term-block"><span class="xref std std-term">block</span></a> of code. This is the same pattern we saw with <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p></li>
 </ul>
 </div>
 </section>
 <section id="a-for-loop-pattern">
 <h3>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop pattern<a class="headerlink" href="#a-for-loop-pattern" title="Permalink to this heading">#</a></h3>
-<p>A very common use of <code class="docutils literal notranslate"><span class="pre">for</span></code> loops in Python is to count, aggregate, or otherwise keep track of certain values when processing a list.</p>
+<p>A very common use of a <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> in Python is to count, aggregate, or otherwise keep track of certain values when processing a list.</p>
 <p>We’ve seen a version of this pattern before: in the homework, you use a loop to convert some prices from strings to floats and then to adjust the price with sales tax. You collected the adjusted prices in a new list.</p>
 <p>In the example below, we’ll use this pattern to keep track of a single value. The value we’re tracking will simply be the number of items in the list.</p>
 <p>We’ll use our bookstore dataset, so the first step is to read the file into Python from disk.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../data/bookstore-data-simplified.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../../data/bookstore-data-summer-2023.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">bkst_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -716,7 +716,7 @@ Counter after loop 1250
 <p>Tonight’s homework has two parts:</p>
 <ol class="arabic simple">
 <li><p>A section with self-guided exercises for you to do on your own. In your teams tomorrow, you’ll build on the skills introduced in these exercises.</p></li>
-<li><p>A shorter section of autograded exercises which you will submit to the OpenEdX site to record your score. You can resubmit the exercises as many times as you like, but you’ll need to get at least 80% correct in order to receive your Python Camp certificate.</p></li>
+<li><p>A shorter section of autograded exercises which you will submit to our GitHub Classroom site to record your score. You can resubmit the exercises as many times as you like. Those who successfully complete the autograded homework exercises will receive a certificate of completion at the end of Python Camp.</p></li>
 </ol>
 </section>
 </section>

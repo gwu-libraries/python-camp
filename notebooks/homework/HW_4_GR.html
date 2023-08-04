@@ -424,6 +424,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
 </ul>
             </nav>
@@ -438,6 +439,21 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="graded-homework-day-4">
 <h1>Graded Homework: Day 4<a class="headerlink" href="#graded-homework-day-4" title="Permalink to this heading">#</a></h1>
+<section id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h2>
+<p>Below you will find one or more exercises. For each exercise, do the following:</p>
+<ol class="arabic simple">
+<li><p>Run the first code cell under the exercise heading. This will execute some code needed to set up the problem.</p></li>
+<li><p>Reading the instructions and write code in the code cell labeled with the comment <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">code</span> <span class="pre">here</span></code>. Run this code.</p></li>
+<li><p>Assuming your code does not produce any errors, run the code in the cell below the <code class="docutils literal notranslate"><span class="pre">Tests</span></code> heading. Each line of this code consists of a Python <a class="reference internal" href="../../glossary.html#term-assert-statement"><span class="xref std std-term">assert statement</span></a>.</p>
+<ul class="simple">
+<li><p>If you see an <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>, don’t panic! The error is written so as to help you pinpoint the part of your code that’s not working as expected. After making a change in your code, re-run <strong>both</strong> the cell with your code and the cell with the tests. Repeat until you see no errors.</p></li>
+<li><p>If you run the cell with the test code and you see no output, congratulations! That means that your code has passed all the tests and works as expected. Go to step 4 to submit.</p></li>
+</ul>
+</li>
+<li><p>Submit your code by downloading this notebook from JupyterHub and uploading it to the GitHub repository for this assignment. See <a class="reference external" href="https://gwu-libraries.github.io/python-camp/homework.html">the documentation</a> for detailed instructions.</p></li>
+</ol>
+</section>
 <section id="exercise-1">
 <h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h2>
 <p>The following cell contains metadata for a course and its textbooks, as well as the definition of a <code class="docutils literal notranslate"><span class="pre">Text</span></code> class.</p>
@@ -496,7 +512,8 @@ document.write(`
 <p>The builtin Python function <code class="docutils literal notranslate"><span class="pre">sum()</span></code> can be helpful for this exercise. Review the <a class="reference external" href="https://docs.python.org/3/library/functions.html?highlight=sum#sum">Python documentation</a> for help.</p>
 <div class="cell tag_solution:ex1 docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Course</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="k">class</span> <span class="nc">Course</span><span class="p">:</span>
     
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dept</span><span class="p">,</span> <span class="n">course_number</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">instructor</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
@@ -519,6 +536,22 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</div>
+<p>Expand the cell below for some hints.</p>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>There are two different values that the <code class="docutils literal notranslate"><span class="pre">item_type</span></code> dictionary <a class="reference internal" href="../../glossary.html#term-key"><span class="xref std std-term">key</span></a> can have in the <code class="docutils literal notranslate"><span class="pre">my_course</span></code> dataset defined above. The <code class="docutils literal notranslate"><span class="pre">Course.get_average_price()</span></code> method should filter the <code class="docutils literal notranslate"><span class="pre">Course.texts</span></code> list to identify just those texts where the attribute <code class="docutils literal notranslate"><span class="pre">Text.item_type</span></code> is equal to the <code class="docutils literal notranslate"><span class="pre">item_type</span></code> argument provided to the <code class="docutils literal notranslate"><span class="pre">Course.get_average_price()</span></code> method. If no <code class="docutils literal notranslate"><span class="pre">item_type</span></code> has been provided, the variable in the method will have the <code class="docutils literal notranslate"><span class="pre">None</span></code> <a class="reference internal" href="../../glossary.html#term-null-value"><span class="xref std std-term">null value</span></a>, in which case the method should just compute the average price of all the texts.</p>
+<p>Here’s a line-by-line description of one possible implementation of the <code class="docutils literal notranslate"><span class="pre">Course.get_average_price()</span></code> method in English. Your task is to translate it into Python.</p>
+<ol class="arabic simple">
+<li><p>Define an empty <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a> to hold the prices.</p></li>
+<li><p>Write a <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> to loop over the items in the <code class="docutils literal notranslate"><span class="pre">self.texts</span></code> attribute. (Note that we use <code class="docutils literal notranslate"><span class="pre">self</span></code> here, not <code class="docutils literal notranslate"><span class="pre">Course</span></code>, because each <a class="reference internal" href="../../glossary.html#term-instance"><span class="xref std std-term">instance</span></a> of the <code class="docutils literal notranslate"><span class="pre">Course</span></code> class will have its own list of texts.) Within the loop,
+a. Check whether the <code class="docutils literal notranslate"><span class="pre">item_type</span></code> argument has been provided (is not <code class="docutils literal notranslate"><span class="pre">None</span></code>), using an <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">statement</span></code>.
+b. If it has been provided, you need to check whether the value of the <code class="docutils literal notranslate"><span class="pre">item_type</span></code> argument matches the <code class="docutils literal notranslate"><span class="pre">item_type</span></code> attribute of the current text (using the <a class="reference internal" href="../../glossary.html#term-loop-variable"><span class="xref std std-term">loop variable</span></a>).
+c. If it matches, then add the price to the list of prices. To get the price in a format suitable for calculation, you can use the <code class="docutils literal notranslate"><span class="pre">convert_price()</span></code> method defined on the <code class="docutils literal notranslate"><span class="pre">Text</span></code> class. So if <code class="docutils literal notranslate"><span class="pre">text</span></code> is your loop variable, you could call <code class="docutils literal notranslate"><span class="pre">text.convert_price()</span></code> to get the price as a <a class="reference internal" href="../../glossary.html#term-float"><span class="xref std std-term">float</span></a>.
+d. If, on the other hand, the <code class="docutils literal notranslate"><span class="pre">item_type</span></code> argument is <code class="docutils literal notranslate"><span class="pre">None</span></code>, add the price (converted) to the list, regardless of its type.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">sum</span></code> function to find the total value of the price values in your list, and divide it by the length of the list. (Remember that the <code class="docutils literal notranslate"><span class="pre">len</span></code> function will provide the length of a list.)</p></li>
+<li><p>Return the result obtained in step 3.</p></li>
+</ol>
 </div>
 <div class="cell tag_test-case:ex1 docutils container">
 <div class="cell_input docutils container">
@@ -604,6 +637,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
 </ul>
   </nav></div>

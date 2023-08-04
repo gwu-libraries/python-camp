@@ -478,7 +478,7 @@ document.write(`
 </section>
 <section id="format">
 <h3>Format<a class="headerlink" href="#format" title="Permalink to this heading">#</a></h3>
-<p>The dataset is in <strong>JSON</strong> format. JSON (usually pronounced <em>jay-sawn</em>) is a common format for sharing data on the web. It’s not as concise or human-readable as some formats (e.g., CSV, which is often used for sharing tabular data). But it has a few advantages that make it popular with programmers:</p>
+<p>The dataset is in <a class="reference internal" href="../../glossary.html#term-JSON"><span class="xref std std-term">JSON</span></a> format. JSON (usually pronounced <em>jay-sawn</em>) is a common format for sharing data on the web. It’s not as concise or human-readable as some formats (e.g., CSV, which is often used for sharing tabular data). But it has a few advantages that make it popular with programmers:</p>
 <ul class="simple">
 <li><p>JSON data can be deeply nested, reflecting hierarchical relationships between data elements.</p></li>
 <li><p>The JSON format comprises structures that map well onto the most common data structures used by modern programming languages.</p></li>
@@ -490,16 +490,16 @@ document.write(`
 <h3>Loading the data<a class="headerlink" href="#loading-the-data" title="Permalink to this heading">#</a></h3>
 <p>The code below will load data from an external file located in a directory called <code class="docutils literal notranslate"><span class="pre">data</span></code>. The directory is relative to the current directory (in which this notebook lives).</p>
 <ol class="arabic simple">
-<li><p>We <strong>import</strong> a Python library called <code class="docutils literal notranslate"><span class="pre">json</span></code>. A library is just some external Python code that provides a particular functionality. The <code class="docutils literal notranslate"><span class="pre">json</span></code> library allows us to convert data in JSON format to Python data types. (More on data types below).</p></li>
-<li><p>We use the <code class="docutils literal notranslate"><span class="pre">open</span></code> function to open a file in a directory called <code class="docutils literal notranslate"><span class="pre">data</span></code>. The file is called <code class="docutils literal notranslate"><span class="pre">bookstore-data-cleaned.json</span></code>, where the <code class="docutils literal notranslate"><span class="pre">.json</span></code> extension indicates that this is a JSON-formatted file. (The file extension is part of the filename, like <code class="docutils literal notranslate"><span class="pre">docx</span></code> for Word documents or <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code> for Excel spreadsheets.)</p></li>
-<li><p>The file is assigned to the temporary name <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p></li>
-<li><p>We use the <code class="docutils literal notranslate"><span class="pre">json.load</span></code> <strong>method</strong> to read the file (<code class="docutils literal notranslate"><span class="pre">f</span></code>). This method is specifically designed for JSON files; it won’t work if the file does not contain data in valid JSON format.</p></li>
-<li><p>The contents of the file, as processed by <code class="docutils literal notranslate"><span class="pre">json.load</span></code>, are assigned to a new name, <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>.</p></li>
+<li><p>We <a class="reference internal" href="../../glossary.html#term-import"><span class="xref std std-term">import</span></a> a Python module called <code class="docutils literal notranslate"><span class="pre">json</span></code>. A module is just some external Python code that provides a particular functionality. The <code class="docutils literal notranslate"><span class="pre">json</span></code> module allows us to convert data in JSON format to Python types. (More on types below).</p></li>
+<li><p>We use the <code class="docutils literal notranslate"><span class="pre">open</span></code> function to open a file in a directory called <code class="docutils literal notranslate"><span class="pre">data</span></code>. The file is called <code class="docutils literal notranslate"><span class="pre">bookstore-data-summer-2023.json</span></code>, where the <code class="docutils literal notranslate"><span class="pre">.json</span></code> extension indicates that this is a JSON-formatted file. (The file extension is part of the filename, like <code class="docutils literal notranslate"><span class="pre">docx</span></code> for Word documents or <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code> for Excel spreadsheets.)</p></li>
+<li><p>The file is assigned to the temporary variable <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p></li>
+<li><p>We use the <code class="docutils literal notranslate"><span class="pre">json.load</span></code> <a class="reference internal" href="../../glossary.html#term-method"><span class="xref std std-term">method</span></a> to read the file (<code class="docutils literal notranslate"><span class="pre">f</span></code>). This method is specifically designed for JSON files; it won’t work if the file does not contain data in valid JSON format.</p></li>
+<li><p>The contents of the file, as processed by <code class="docutils literal notranslate"><span class="pre">json.load</span></code>, are assigned to a new variable, <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../data/bookstore-data-simplified.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../../data/bookstore-data-summer-2023.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">bkst_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -509,7 +509,7 @@ document.write(`
 </section>
 <section id="navigating-lists">
 <h2>Navigating lists<a class="headerlink" href="#navigating-lists" title="Permalink to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">type</span></code> <strong>function</strong> provides as output information about the value associated with the name <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>. It tells us the name of the Python data structure that characterizes this value.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">type</span></code> <a class="reference internal" href="../../glossary.html#term-function"><span class="xref std std-term">function</span></a> provides as output information about the value associated with the variable <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>. It tells us the name of the Python data structure that characterizes this value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">bkst_data</span><span class="p">)</span>
@@ -524,14 +524,14 @@ document.write(`
 </div>
 <div class="question admonition">
 <p class="admonition-title">Question</p>
-<p>You have encountered a Python list before. What was the name of the variable that held a list in the “Choreographing Code” exercise?</p>
+<p>You have encountered a Python <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a> before. What was the name of the variable that held a list in the “Choreographing Code” exercise?</p>
 </div>
 <div class="notes admonition">
 <p class="admonition-title">Notes</p>
 <ul class="simple">
 <li><p>Going forward, when referring to functions and their output, we will say that the function <strong>returns</strong> something.</p></li>
-<li><p>Every Python value has a defined <strong>type</strong>.</p></li>
-<li><p>When we use the word <strong>variable</strong>, we’re generally referring to the combination of a name and a value. Thus, we can say, “the variable <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> is a list.”</p></li>
+<li><p>Every Python value has a defined <a class="reference internal" href="../../glossary.html#term-type"><span class="xref std std-term">type</span></a>.</p></li>
+<li><p>When we use the word <a class="reference internal" href="../../glossary.html#term-variable"><span class="xref std std-term">variable</span></a>, we’re generally referring to the combination of a name and a value. The name points to the value, which is located somewhere in memory. When we say, “the variable <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> is a list,” we mean that the value to which the name <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> points is represented in Python as a list.</p></li>
 </ul>
 </div>
 <div class="cell docutils container">
@@ -551,7 +551,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>The code above uses <strong>indexing</strong> to access the first element in the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> list. When you run it, you should see data enclosed in curly braces (<code class="docutils literal notranslate"><span class="pre">{}</span></code>).</p>
+<p>The code above uses <a class="reference internal" href="../../glossary.html#term-index"><span class="xref std std-term">index</span></a>ing to access the first element in the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> list. When you run it, you should see data enclosed in curly braces (<code class="docutils literal notranslate"><span class="pre">{}</span></code>).</p>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
 <p>In the cell below, use indexing to look at other elements in the list. (Change the number inside the square brackets in the expression <code class="docutils literal notranslate"><span class="pre">bkst_data[0]</span></code>).</p>
@@ -598,7 +598,8 @@ document.write(`
 </div>
 </div>
 </div>
-<p>There are 1,250 top-level elements in <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>. But each element contains other elements below it.</p>
+<p>There are 1,250 top-level elements in <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>. But each element contains other elements nested within it.</p>
+<p>Here we assign one of those elements – the element in the 100th position – to a new variable, <code class="docutils literal notranslate"><span class="pre">my_course</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span> <span class="o">=</span> <span class="n">bkst_data</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span>
@@ -609,7 +610,7 @@ document.write(`
 </div>
 <div class="question admonition">
 <p class="admonition-title">Question</p>
-<p>What does each top-level element in the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> list represent?</p>
+<p>Look back at how we initially defined this dataset. In terms of that definition, what does each top-level element in the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> list represent?</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -618,9 +619,9 @@ document.write(`
 </div>
 </div>
 </div>
-<p>A single course is represented as a Python <strong>dictionary</strong> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) within the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> list.</p>
+<p>A single course is represented as a Python <a class="reference internal" href="../../glossary.html#term-dictionary"><span class="xref std std-term">dictionary</span></a> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) within the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> list.</p>
 <p>As we saw in the previous activity, dictionaries allow us to store data in fields, similar to a database. The elements on the left-hand side of the colons are called <strong>keys</strong>, and the elements on the right-hand side of the colons are called <strong>values</strong>.</p>
-<p>Here the keys are <strong>strings</strong>; anything enclosed in quotation marks in Python is a string.</p>
+<p>Here the keys are strings; anything enclosed in quotation marks in Python is a <a class="reference internal" href="../../glossary.html#term-string"><span class="xref std std-term">string</span></a>.</p>
 <p>We can use the keys to retrieve the values from the dictionary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -682,7 +683,7 @@ document.write(`
 </div>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
-<p>Use indexing to look at each of the items in the <code class="docutils literal notranslate"><span class="pre">my_books</span></code> variable. With your team, revise your sketch/data diagram to reflect how course materials are represented in this dataset.</p>
+<p>Use indexing to look at each of the items in the <code class="docutils literal notranslate"><span class="pre">my_books</span></code> variable below. With your team, revise your sketch/data diagram to reflect how course materials are represented in this dataset.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -704,7 +705,11 @@ document.write(`
 <h2>Questions for Discussion<a class="headerlink" href="#questions-for-discussion" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>We’re ultimately interested in the cost of course materials as reported by the bookstore. Where do the relevant data elements reside within the structure we have been exploring?</p></li>
-<li><p>Up to we’ve been looking at our data in terms of content and organization: thinking about what different elements represent, and how those elements relate to each other. Now take a few moments and look at the data in terms of <strong>syntax</strong>. With your team, make an inventory of the differents kinds of punctuation marks you see in the parts of the dataset you have examined, and discuss any patterns you notice in how punctuation is used.</p></li>
+<li><p>Up to we’ve been looking at our data in terms of content and organization: thinking about what different elements represent, and how those elements relate to each other. Now take a few moments and look at the data in terms of <strong>syntax</strong>.</p>
+<ul class="simple">
+<li><p>With your team, make an inventory of the differents kinds of punctuation marks you see in the parts of the dataset you have examined, and discuss any patterns you notice in how punctuation is used.</p></li>
+</ul>
+</li>
 </ol>
 </section>
 </section>

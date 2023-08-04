@@ -484,10 +484,10 @@ document.write(`
 <section id="lists-versus-dictionaries">
 <h3>Lists versus dictionaries<a class="headerlink" href="#lists-versus-dictionaries" title="Permalink to this heading">#</a></h3>
 <p>In the examples above, we were talking about lists of things. But <em>not all lists are created equal</em>.</p>
-<p>For instance, in the homework, you worked with two different lists:</p>
+<p>For instance, in the homework, you worked with two different examples of a <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a>:</p>
 <ol class="arabic simple">
 <li><p>A list of book prices, where each item represented the price of a book. Beyond the price, there was no other information about the book to be gleaned from that list.</p></li>
-<li><p>A list of Python strings describing courses. Each string contained three pieces of information:</p>
+<li><p>A list of courses. Each <a class="reference internal" href="../../glossary.html#term-string"><span class="xref std std-term">string</span></a> contained three pieces of information:</p>
 <ul class="simple">
 <li><p>a department code</p></li>
 <li><p>a course number</p></li>
@@ -531,7 +531,7 @@ document.write(`
 <li><p>Keys are usually (but not always) Python strings.</p></li>
 <li><p>Values can be strings, floats, integers, or any other valid Python data type.</p></li>
 <li><p>Note the commas at the end of each line. These separate key-value pairs. It’s not required to break the dictionary into multiple lines, but if you do, you must break after the comma.</p></li>
-<li><p>In the template, I assigned this dictionary of data about me to a variable called <code class="docutils literal notranslate"><span class="pre">dolsy</span></code>. Assign your dictionary to whatever variable name you like.</p></li>
+<li><p>In the template, I assigned this dictionary of data about me to a <a class="reference internal" href="../../glossary.html#term-variable"><span class="xref std std-term">variable</span></a> called <code class="docutils literal notranslate"><span class="pre">dolsy</span></code>. Assign your dictionary to whatever variable name you like.</p></li>
 </ul>
 </div>
 </section>
@@ -543,7 +543,7 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">dolsy</span><span class="p">[</span><span class="s1">&#39;email_address&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>Note that here we surround the key with <strong>square brackets</strong> rather than curly braces. The syntax is meant to remind you of how we access individual items in a list.</p>
+<p>Note that here we surround the key with <a class="reference internal" href="../../glossary.html#term-square-brackets"><span class="xref std std-term">square brackets</span></a> rather than curly braces. The syntax is meant to remind you of how we access individual items in a list.</p>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
 <p>Try printing a few of the values in your dictionary.</p>
@@ -559,14 +559,14 @@ document.write(`
 </section>
 <section id="tabular-data">
 <h2>Tabular data<a class="headerlink" href="#tabular-data" title="Permalink to this heading">#</a></h2>
-<p>A single dictionary is a good way to represent something in the real world – an <strong>object</strong> or an entity – that has multiple properties or <strong>attributes</strong>. Something like a course, a textbook, or yourself!</p>
-<p>The dictionary’s <strong>keys</strong> can help us organize the attributes by labels, just the way we might label the different elements of each entry in an addressbook: name, email address, phone number, etc.</p>
+<p>A single dictionary is a good way to represent something in the real world – like a person, a course, or a textbook – that has multiple properties or attributes.</p>
+<p>The dictionary’s keys can help us organize the attributes by labels, just the way we might label the different elements of each entry in an addressbook: name, email address, phone number, etc.</p>
 <p>You might also think of the dictionary keys as the column headings in a spreadsheet. In a spreadsheet, each row uses the same column headings, which allows us to do things like sort or filter the data by particular attributes. For example, if we covert our addressbook to an Excel file, assuming we have a column for email address, we can easily compute how many of our contacts have GW email addresses.</p>
 <p>We call such a data structure <strong>tabular</strong> because it is organized as a table, i.e., with rows and columns.</p>
 <section id="tabular-data-in-python">
 <h3>Tabular data in Python<a class="headerlink" href="#tabular-data-in-python" title="Permalink to this heading">#</a></h3>
 <p>How do we represent tabular data in Python?</p>
-<p>There are some very handy Python <strong>libraries</strong> for working with tables. But we can also handle tabular data with just the Python types you’ve already encountered.</p>
+<p>There are some very handy Python libraries for working with tables, <a class="reference external" href="https://pandas.pydata.org/">pandas</a> being one of the most popular. But we can also handle tabular data with just the Python types you’ve already encountered.</p>
 <p>One common approach, which we will work through together, is to create a <strong>list of dictionaries</strong>.</p>
 <ul class="simple">
 <li><p>On the analogy with a spreadsheet, each dictionary in the list would be another row of the table.</p></li>
@@ -596,7 +596,7 @@ document.write(`
 
 </pre></div>
 </div>
-<p>Note that because I’m putting <strong>variables</strong> in this list, not strings, I don’t use quotation marks. (I don’t want to create a list of names, but a list of dictionaries, each of which is represented by one of these variables.)</p>
+<p>Note that because I’m putting <strong>variables</strong> in this list, not strings, I don’t use quotation marks. (I don’t want to create a list of strings, but a list of dictionaries, each of which is represented by one of these variables.)</p>
 <p>Then <code class="docutils literal notranslate"><span class="pre">print()</span></code> your list to confirm that it contains the data about your team.</p>
 </div>
 <div class="cell docutils container">
@@ -612,15 +612,15 @@ document.write(`
 <p>Take a moment to congratulate yourself. You’ve just used Python to create a tabular dataset representing your team.</p>
 <p>We can even save this dataset to a file so that it can be re-used later!</p>
 <p>But first let’s add another piece of information to each team member’s record.</p>
-<p>In the example above, I retrieved my email adddress by writing <code class="docutils literal notranslate"><span class="pre">dolsy['email_address']</span></code>, where <code class="docutils literal notranslate"><span class="pre">'email_address'</span></code> is a key in the <code class="docutils literal notranslate"><span class="pre">dolsy</span></code> dictionary.</p>
+<p>In the example above, I retrieved my email adddress by writing <code class="docutils literal notranslate"><span class="pre">dolsy['email_address']</span></code>, where <code class="docutils literal notranslate"><span class="pre">'email_address'</span></code> is a <a class="reference internal" href="../../glossary.html#term-key"><span class="xref std std-term">key</span></a> in the <code class="docutils literal notranslate"><span class="pre">dolsy</span></code> dictionary.</p>
 <p>In a similar fashion, I can add a new key/value pair to my dictionary as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dolsy</span><span class="p">[</span><span class="s1">&#39;programming_languages&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>The foregoing code would add a list containing one item – the string <code class="docutils literal notranslate"><span class="pre">'Python'</span></code> – to the <code class="docutils literal notranslate"><span class="pre">dolsy</span></code> dictionary, associating it with the key <code class="docutils literal notranslate"><span class="pre">'programming</span> <span class="pre">_languages'</span></code>. I’m using a list since it’s conceivable that someone can know multiple programming languages.</p>
+<p>The foregoing code would add a <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a> containing one item – the string <code class="docutils literal notranslate"><span class="pre">'Python'</span></code> – to the <code class="docutils literal notranslate"><span class="pre">dolsy</span></code> dictionary, associating it with the key <code class="docutils literal notranslate"><span class="pre">'programming</span> <span class="pre">_languages'</span></code>. I’m using a list since it’s conceivable that someone can know multiple programming languages.</p>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
-<p>Write a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to add a <code class="docutils literal notranslate"><span class="pre">'programming_languages'</span></code> key, and the value <code class="docutils literal notranslate"><span class="pre">['Python']</span></code>, to each dictionary in your list.</p>
+<p>Write a <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> to add a <code class="docutils literal notranslate"><span class="pre">'programming_languages'</span></code> key, and the <a class="reference internal" href="../../glossary.html#term-value"><span class="xref std std-term">value</span></a> <code class="docutils literal notranslate"><span class="pre">['Python']</span></code>, to each dictionary in your list.</p>
 <p>Then print your list to confirm that the operation was successful.</p>
 <p>If you want additional help, consult this <a class="reference external" href="https://gwu-libraries.github.io/python-camp/parsons-problems/html/lessons-2-1-1.html">Parsons’ Problem</a>.</p>
 </div>
@@ -634,8 +634,8 @@ document.write(`
 </section>
 <section id="saving-a-list-of-dictionaries-in-json-format">
 <h3>Saving a list of dictionaries in JSON format<a class="headerlink" href="#saving-a-list-of-dictionaries-in-json-format" title="Permalink to this heading">#</a></h3>
-<p>Now let’s save our database to disk. We’ll use the <code class="docutils literal notranslate"><span class="pre">json</span></code> library and the <code class="docutils literal notranslate"><span class="pre">file</span></code> function as we did on Day 1 (to load the GW Bookstore dataset), except that this time we’ll be <strong>writing</strong> to the file, not reading from it.</p>
-<p>First we import the <code class="docutils literal notranslate"><span class="pre">json</span></code> library.</p>
+<p>Now let’s save our database to disk. We’ll use the <code class="docutils literal notranslate"><span class="pre">json</span></code> library and the <code class="docutils literal notranslate"><span class="pre">open</span></code> function as we did on Day 1 (to load the GW Bookstore dataset), except that this time we’ll be <strong>writing</strong> to the file, not reading from it.</p>
+<p>First we <a class="reference internal" href="../../glossary.html#term-import"><span class="xref std std-term">import</span></a> the <code class="docutils literal notranslate"><span class="pre">json</span></code> library.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
