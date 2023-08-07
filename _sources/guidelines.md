@@ -59,12 +59,6 @@ Your Python Camp facilitators will remind you to rotate the notetaking task at t
 
 It's not necessary to delegate a leader for your team, given the highly structured activities of Python Camp. But if the team would be more comfortable choosing one member to moderate the discussion and keep things on track, you're welcome to do so. You might also consider rotating this role, so that everyone has a chance to contribute in every way. 
 
-### Homework
-
-In addition to the in-class team activities, Python Camp requires you to work through several self-guided lessons for homework, including a handful of exercises that you will submit using the GitHub Classroom **autograder** to receive a score. The purpose of the homework is to introduce concepts, syntax, and techniques that you will use during the team activities, so it is important that everyone on the team complete the homework lessons to the best of their ability on the days they are assigned. 
-
-The homeworks are designed to be completed individually, but you are also free to collaborate on them (including those you submit for a score). If you collaborate on the autograded homework, be sure to submit your own notebook for autograding if you want to receive the Python Camp certificate of completion.
-
 ## How Can I Make the Most of This Experience?
 
 Following a few rules of thumb will help ensure that each team as well as the Python Camp cohort works effectively together, and that everyone has the chance to have a great learning experience. 
