@@ -7,3 +7,6 @@
 [submodule "homework-modules/python-camp-hw-4-gr"]
 	path = homework-modules/python-camp-hw-4-gr
 	url = https://github.com/gwu-libraries/python-camp-hw-4-gr.git
+[submodule "homework-modules/python-camp-hw-3-gr"]
+	path = homework-modules/python-camp-hw-3-gr
+	url = https://github.com/gwu-libraries/python-camp-hw-3-gr.git
