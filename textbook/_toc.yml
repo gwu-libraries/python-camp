@@ -29,7 +29,7 @@ parts:
   - file: notebooks/homework/HW_2_programming_techniques
     title: Programming Techniques
   - file: notebooks/homework/HW_2_GR
-    title: Graded Execise Day 2
+    title: "Graded Homework: Day 2"
 - caption: Day 3
   chapters:
   - file: notebooks/lessons/3_1_from_story_to_code
@@ -39,7 +39,7 @@ parts:
   - file: notebooks/homework/HW_3_error_stories
     title: Error Stories
   - file: notebooks/homework/HW_3_GR
-    title: Graded Execise Day 3
+    title: "Graded Homework: Day 3"
 - caption: Day 4
   chapters:
   - file: notebooks/lessons/4_1_modeling_the_world
@@ -47,7 +47,7 @@ parts:
 - caption: Final Homework
   chapters:
   - file: notebooks/homework/HW_4_GR
-    title: Graded Exercise Day 4
+    title: "Graded Homework: Day 4"
 - caption: Python Reference
   chapters:
   - file: glossary
