@@ -52,6 +52,8 @@ parts:
     title: "Graded Homework: Day 4"
 - caption: Python Reference
   chapters:
+  - files: keep_learning
+    title: Python Resources
   - file: glossary
     title: Glossary of Programming Terms
  
