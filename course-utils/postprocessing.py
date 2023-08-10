@@ -42,6 +42,15 @@ class Notebook:
         if 'celltoolbar' in self.nb_json['metadata']:
             del self.nb_json['metadata']['celltoolbar']
         return self
+    
+    def clear_outputs(self):
+        '''
+        Clears output on cells -- assuming the student notebooks should be clean of all outputs.
+        '''
+        for cell in self.nb_json['cells']:
+            if  cell['cell_type'] == 'code':
+                cell['outputs'] = []
+        return self
 
     def make_glossary_links(self):
         '''
@@ -151,7 +160,7 @@ def main(nb_input, nb_output):
         
         logger.info(f'Processing notebook {in_}; saving output to {out}.')
         nb = Notebook(in_)
-        nb.remove_directives().remove_tagged_cells().make_glossary_links().ensure_hidden().hide_tags().save_nb(out)
+        nb.remove_directives().remove_tagged_cells().make_glossary_links().ensure_hidden().clear_outputs().hide_tags().save_nb(out)
 
 if __name__ == '__main__':
     main()
