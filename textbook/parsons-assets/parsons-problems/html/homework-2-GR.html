@@ -27,19 +27,19 @@
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-1" draggable="true">
-                                    course_dict['course'] = course_info[1]
+                                    course_dict = {}
                                 </div>
                             </div>
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-2" draggable="true">
-                                    print(courses_db)
+                                    course_dict['dept'] = course_info[0]
                                 </div>
                             </div>
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-3" draggable="true">
-                                    courses = ['CHEM 1001 10', 'CHEM 1002, 10', 'CHEM 1002 11', 'BISC 1100 10']
+                                    for course in courses:
                                 </div>
                             </div>
                         
@@ -51,37 +51,37 @@
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-5" draggable="true">
-                                    course_dict['dept'] = course_info[0]
+                                    course_dict['course'] = course_info[1]
                                 </div>
                             </div>
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-6" draggable="true">
-                                    course_dict = {}
+                                    courses = ['CHEM 1001 10', 'CHEM 1002, 10', 'CHEM 1002 11', 'BISC 1100 10']
                                 </div>
                             </div>
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-7" draggable="true">
-                                    course_info = course.split()
+                                    print(courses_db)
                                 </div>
                             </div>
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-8" draggable="true">
-                                    courses_db = []
-                                </div>
-                            </div>
-                        
-                            <div class="parsons-ps">
-                                <div class="parsons-block" id="pb-9" draggable="true">
                                     course_dict['section'] = course_info[2]
                                 </div>
                             </div>
                         
                             <div class="parsons-ps">
+                                <div class="parsons-block" id="pb-9" draggable="true">
+                                    course_info = course.split()
+                                </div>
+                            </div>
+                        
+                            <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-10" draggable="true">
-                                    for course in courses:
+                                    courses_db = []
                                 </div>
                             </div>
                         
