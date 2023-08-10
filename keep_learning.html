@@ -401,6 +401,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-for-research">Python for Research</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-environments">Python Environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-python-jupyter-installation">Local Python/Jupyter Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-python-with-ide">Local Python with IDE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-notebooks-in-the-cloud">Python Notebooks in the Cloud</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -414,7 +420,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-resources-where-to-go-from-here">
 <h1>Python Resources &amp; Where to Go from Here<a class="headerlink" href="#python-resources-where-to-go-from-here" title="Permalink to this heading">#</a></h1>
-<p>There are many ways to sustain and deepen your engagement with programming and the Python language beyond Python Camp. We’ve included examples in various media below to suit a range of learning styles. But one of the best ways to leep learning is to find practical uses for Python (or programming more generally) in your daily life.</p>
+<p>There are many ways to sustain and deepen your engagement with programming and the Python language beyond Python Camp. We’ve included examples in various media below to suit a range of learning styles. For information on options for running Python on your own, see <a class="reference internal" href="#python-environments"><span class="std std-ref">Python Environments</span></a> below.</p>
+<p>One of the best ways to leep learning is to find practical uses for Python (or programming more generally) in your daily life.</p>
 <p>The following are just some of the many things you can do with Python. (The links provided are merely examples and not meant to be exhaustive).</p>
 <ul class="simple">
 <li><p>Automate workflows involving files, directories, etc., on your computer;</p></li>
@@ -428,7 +435,7 @@ document.write(`
 </ul>
 <p>It’s hard to learn a programming language without practice, and it can be hard to practice without a context and a goal. If you don’t find yourself in a context where you can work alongside others toward shared goals (e.g., a school assignment, a research project, a job), a good approach is to set a concrete, manageable goal for yourself: something you can achieve within a limited amount of time.</p>
 <p>For instance, if you’re new to programming and have just completed Python Camp, “building an AI chatbot from scratch” might be a bit too ambitious. Ask yourself, How can I scale it down to my capacity? Maybe you can implement a Python chatbot built by someone else. (One of the advantages of Python is its popularity and the openness of its ecosystem: if you can think of a programming project, there’s a good chance someone has tried it in Python and has shared the fruits of their efforts.) To stay with our example, once you get this chatbot working for yourself, maybe you can tweak the code to do something different. And as you progress, a great way to plug into a collaborative context is to contribute to open source projects: maybe the chatbot developer is accepting contributions to the codebase on GitHub, etc.</p>
-<p>Whatever path you take, may your journey be rewarding, and may it lead you places you had not expected to go!</p>
+<p>Whatever path you take, may your journey be rewarding, and may it lead you where you had not expected!</p>
 <section id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h2>
 <section id="books">
@@ -459,6 +466,31 @@ document.write(`
 <section id="python-for-research">
 <h3>Python for Research<a class="headerlink" href="#python-for-research" title="Permalink to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://datacarpentry.org/lessons/">Data Carpentry</a> curriculum makes available a range of material for learning about programming in the context of specific academic disciplines. Not all of the lessons focus on Python, but many do, and they are typically geared toward beginners. If you are wondering how Python might prove useful to your research, you might find some relevant examples here.</p>
+</section>
+</section>
+<section id="python-environments">
+<span id="id1"></span><h2>Python Environments<a class="headerlink" href="#python-environments" title="Permalink to this heading">#</a></h2>
+<p>As a participant in Python Camp, you’ve been using a hosted JupyterHub environment provided by GW Libraries and Academic Innovation. As you continue your Python journey, you’ll probably want a coding environment that provides more flexibility and/or computing power.</p>
+<p>The following are good options, depending on your use case.</p>
+<section id="local-python-jupyter-installation">
+<h3>Local Python/Jupyter Installation<a class="headerlink" href="#local-python-jupyter-installation" title="Permalink to this heading">#</a></h3>
+<p>If you like the notebook format we’ve used in Python Camp, you can install the same environment locally on your own computer. The <a class="reference external" href="https://www.anaconda.com/">Anaconda distribution</a> of Python is free for download, very popular, and comes with the Jupyter Notebook application. On Mac or Windows, just download and install, and then launch the <a class="reference external" href="https://docs.anaconda.com/free/navigator/">Navigator</a> to open the Notebook interface.</p>
+<p>In addition, the Anaconda distribution comes with wide variety of Python libraries useful for data analysis and visualization.</p>
+</section>
+<section id="local-python-with-ide">
+<h3>Local Python with IDE<a class="headerlink" href="#local-python-with-ide" title="Permalink to this heading">#</a></h3>
+<p>An integrated development environment (IDE) is a popular choice for those who are writing larger scripts or applications in Python. Most IDE’s do <em>not</em> use the notebook format by default, so instead of creating a document that contains both Python code and a record of its output (a <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file), the IDE user creates a file of just Python code (a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file), which can then be run as a standalone script.</p>
+<p>However, some IDE’s now support <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files as well, providing similar functionality to a Jupyter Notebook.</p>
+<p>There are several freely available IDE’s for use with Python. Microsoft’s Visual Studio Code (<a class="reference external" href="https://code.visualstudio.com/">VS Code</a>) offers a relatively intuitive interface, along with powerful tools for syntax checking, debugging, and more.</p>
+</section>
+<section id="python-notebooks-in-the-cloud">
+<h3>Python Notebooks in the Cloud<a class="headerlink" href="#python-notebooks-in-the-cloud" title="Permalink to this heading">#</a></h3>
+<p>If you prefer to work in the cloud, there are a few free options that provide a notebook-style interface alongside other functionality.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://colab.research.google.com/">Google Colab</a> offers a robust Python environment along with integration with Google Drive. Colab works well for projects involving data sources available on the web or smaller data files that can be uploaded to Drive, but it’s not ideal for larger datasets that can’t be shared. On the upside, it does offer free access to a GPU (graphics processing unit) for more intensive numeric computation (such as you might undertake in machine learning or deep learning projects). Particularly if your computer is not very powerful, Colab can be a good alternative to doing such computation locally.</p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com">Kaggle</a> aims to serve as an online community for AI and machine-learning development. In addition to datasets, courses, and coding competitions, it offers free access to Python and other languages in a notebook environment.</p></li>
+<li><p>A relatively new service, <a class="reference external" href="https://deepnote.com">Deepnote</a> provides cloud-hosted Python notebooks in a sleek interface. At the free tier, the functionality seems similar to Google Colab. (Paid options include the ability to integrate with external storage services and databases.)</p></li>
+</ul>
 </section>
 </section>
 </section>
@@ -534,6 +566,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#books">Books</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multimedia">Multimedia</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-for-research">Python for Research</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-environments">Python Environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-python-jupyter-installation">Local Python/Jupyter Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-python-with-ide">Local Python with IDE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-notebooks-in-the-cloud">Python Notebooks in the Cloud</a></li>
 </ul>
 </li>
 </ul>

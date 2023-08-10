@@ -1,6 +1,8 @@
 # Python Resources & Where to Go from Here
 
-There are many ways to sustain and deepen your engagement with programming and the Python language beyond Python Camp. We've included examples in various media below to suit a range of learning styles. But one of the best ways to leep learning is to find practical uses for Python (or programming more generally) in your daily life.
+There are many ways to sustain and deepen your engagement with programming and the Python language beyond Python Camp. We've included examples in various media below to suit a range of learning styles. For information on options for running Python on your own, see [](python-environments) below.
+
+One of the best ways to leep learning is to find practical uses for Python (or programming more generally) in your daily life.
 
 The following are just some of the many things you can do with Python. (The links provided are merely examples and not meant to be exhaustive).
 
@@ -17,7 +19,7 @@ It's hard to learn a programming language without practice, and it can be hard t
 
 For instance, if you're new to programming and have just completed Python Camp, "building an AI chatbot from scratch" might be a bit too ambitious. Ask yourself, How can I scale it down to my capacity? Maybe you can implement a Python chatbot built by someone else. (One of the advantages of Python is its popularity and the openness of its ecosystem: if you can think of a programming project, there's a good chance someone has tried it in Python and has shared the fruits of their efforts.) To stay with our example, once you get this chatbot working for yourself, maybe you can tweak the code to do something different. And as you progress, a great way to plug into a collaborative context is to contribute to open source projects: maybe the chatbot developer is accepting contributions to the codebase on GitHub, etc. 
 
-Whatever path you take, may your journey be rewarding, and may it lead you places you had not expected to go! 
+Whatever path you take, may your journey be rewarding, and may it lead you where you had not expected! 
 
 ## Resources
 
@@ -49,5 +51,33 @@ Additionally, there are some great open-source books available.
 
 The [Data Carpentry](https://datacarpentry.org/lessons/) curriculum makes available a range of material for learning about programming in the context of specific academic disciplines. Not all of the lessons focus on Python, but many do, and they are typically geared toward beginners. If you are wondering how Python might prove useful to your research, you might find some relevant examples here.
 
+(python-environments)=
+## Python Environments
 
+As a participant in Python Camp, you've been using a hosted JupyterHub environment provided by GW Libraries and Academic Innovation. As you continue your Python journey, you'll probably want a coding environment that provides more flexibility and/or computing power. 
 
+The following are good options, depending on your use case.
+
+### Local Python/Jupyter Installation
+
+If you like the notebook format we've used in Python Camp, you can install the same environment locally on your own computer. The [Anaconda distribution](https://www.anaconda.com/) of Python is free for download, very popular, and comes with the Jupyter Notebook application. On Mac or Windows, just download and install, and then launch the [Navigator](https://docs.anaconda.com/free/navigator/) to open the Notebook interface. 
+
+In addition, the Anaconda distribution comes with wide variety of Python libraries useful for data analysis and visualization. 
+
+### Local Python with IDE
+
+An integrated development environment (IDE) is a popular choice for those who are writing larger scripts or applications in Python. Most IDE's do _not_ use the notebook format by default, so instead of creating a document that contains both Python code and a record of its output (a `.ipynb` file), the IDE user creates a file of just Python code (a `.py` file), which can then be run as a standalone script. 
+
+However, some IDE's now support `.ipynb` files as well, providing similar functionality to a Jupyter Notebook. 
+
+There are several freely available IDE's for use with Python. Microsoft's Visual Studio Code ([VS Code](https://code.visualstudio.com/)) offers a relatively intuitive interface, along with powerful tools for syntax checking, debugging, and more.
+
+### Python Notebooks in the Cloud
+
+If you prefer to work in the cloud, there are a few free options that provide a notebook-style interface alongside other functionality.
+
+- [Google Colab](https://colab.research.google.com/) offers a robust Python environment along with integration with Google Drive. Colab works well for projects involving data sources available on the web or smaller data files that can be uploaded to Drive, but it's not ideal for larger datasets that can't be shared. On the upside, it does offer free access to a GPU (graphics processing unit) for more intensive numeric computation (such as you might undertake in machine learning or deep learning projects). Particularly if your computer is not very powerful, Colab can be a good alternative to doing such computation locally.
+
+- [Kaggle](https://www.kaggle.com) aims to serve as an online community for AI and machine-learning development. In addition to datasets, courses, and coding competitions, it offers free access to Python and other languages in a notebook environment. 
+
+- A relatively new service, [Deepnote](https://deepnote.com) provides cloud-hosted Python notebooks in a sleek interface. At the free tier, the functionality seems similar to Google Colab. (Paid options include the ability to integrate with external storage services and databases.)
