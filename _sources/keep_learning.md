@@ -21,7 +21,7 @@ For instance, if you're new to programming and have just completed Python Camp, 
 
 Whatever path you take, may your journey be rewarding, and may it lead you where you had not expected! 
 
-## Resources
+## Resources for Learning
 
 ### Books
 
@@ -50,6 +50,10 @@ Additionally, there are some great open-source books available.
 ### Python for Research
 
 The [Data Carpentry](https://datacarpentry.org/lessons/) curriculum makes available a range of material for learning about programming in the context of specific academic disciplines. Not all of the lessons focus on Python, but many do, and they are typically geared toward beginners. If you are wondering how Python might prove useful to your research, you might find some relevant examples here.
+
+### Workshops from GW Libraries & Academic Innovation
+
+Workshops for members of the GW community regularly cover Python and other programming topics. At the start of each semester, consult the [workshop schedule](https://library.gwu.edu/events) for details. 
 
 (python-environments)=
 ## Python Environments
