@@ -25,9 +25,9 @@ repository:
   path_to_book: _sources  # Optional path to your book, relative to the repository root
   branch: gh-pages  # Which branch of the repository should be used when creating links (optional)
 
-launch_buttons:
-  notebook_interface: "classic"
-  jupyterhub_url: "http://ec2-18-222-180-6.us-east-2.compute.amazonaws.com/jupyter/"
+#launch_buttons:
+  #notebook_interface: "classic"
+  #jupyterhub_url: "http://ec2-18-222-180-6.us-east-2.compute.amazonaws.com/jupyter/"
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
