@@ -40,14 +40,14 @@ function update_hw_modules() {
 function main() {
 
     echo "Building Parsons Problems"
-    python ./course-utils/parsons_builder.py
+    python ./course_utils/parsons_builder.py
 
     echo "Building book from scratch"
     jupyter-book clean textbook/
     jupyter-book build textbook/
 
     echo "Cleaning up notebook formatting"
-    python ./course-utils/postprocessing.py
+    python ./course_utils/postprocessing.py
 
     echo "Publishing to GH pages"
     ghp-import -n -p -f textbook/_build/html

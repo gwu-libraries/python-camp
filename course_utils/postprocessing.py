@@ -34,6 +34,20 @@ class Notebook:
         :param nb_file: str or Path to an ipynb file.
         '''
         self.nb_json = self.load_nb(nb_file)
+        self.data = self.nb_json['cells']
+
+    def __iter__(self):
+        # implements iteration protocol
+        self.index = -1
+        return self
+
+    def __next__(self):
+        # iterates through notebook cells
+        if self.index < len(self.data) - 1:
+            self.index += 1
+            return self
+        else:
+            raise StopIteration
     
     def hide_tags(self):
         ''''
@@ -47,9 +61,8 @@ class Notebook:
         '''
         Clears output on cells -- assuming the student notebooks should be clean of all outputs.
         '''
-        for cell in self.nb_json['cells']:
-            if  cell['cell_type'] == 'code':
-                cell['outputs'] = []
+        if self.data[self.index]['cell_type'] == 'code':
+            self.data[self.index]['outputs'] = []
         return self
 
     def make_glossary_links(self):
@@ -63,21 +76,30 @@ class Notebook:
             term = match_obj.group(1)
             return f'[{term}]({GLOSSARY_URL}{term.replace(" ", "-")})'
 
-        for cell in self.nb_json['cells']:
-            if cell['cell_type'] == 'markdown':
-                for i, line in enumerate(cell['source']):
-                    # Iterate over matches in line
-                    new_line = re.sub(TERM_PATTERN, term_expand, line)
-                    cell['source'][i] = new_line
+        if self.data[self.index]['cell_type'] == 'markdown':
+            for i, line in enumerate(self.data[self.index]['source']):
+                # Iterate over matches in line
+                new_line = re.sub(TERM_PATTERN, term_expand, line)
+                self.data[self.index]['source'][i] = new_line
         return self
     
     def ensure_hidden(self):
         '''
         Ensures that cells using the Exercise2 Jupyter Notebook extension are hidden by default. 
         '''
-        for cell in self.nb_json['cells']:
-            if 'solution2' in cell['metadata']:
-                cell['metadata']['solution2'] = 'hidden'
+        if 'solution2' in self.data[self.index]['metadata']:
+            self.data[self.index]['metadata']['solution2'] = 'hidden'
+        return self
+
+    def apply_hidden(self):
+        '''
+        Toggles the visibility of cells with the hide-cell tag.
+        '''
+        if 'hide-cell' in self.data[self.index]['metadata'].get('tags', []): 
+            self.data[self.index]['metadata']['jupyter'] = {'source_hidden': True}
+            if self.data[self.index]['cell_type'] == 'code':
+                # Add comment that will be visible on toggled cell
+                self.data[self.index]['source'].insert(0, '#Click to see the solution.\n')
         return self
 
     def remove_directives(self):
@@ -115,18 +137,15 @@ class Notebook:
         '''
         :param tags: should be a Python set of tags. Any cells with any of these tags will be removed from the output notebook.
         '''
-        output = []
-        for cell in self.nb_json['cells']:
-            cell_tags = cell['metadata'].get('tags', [])
-            if not (tags & set(cell_tags)):
-                output.append(deepcopy(cell))
-        self.nb_json['cells'] = output
+        self.data = [cell for cell in self.data 
+                     if not (tags & set(cell['metadata'].get('tags', [])))]
         return self      
 
     def save_nb(self, nb_file):
         '''
         Saves notebook json at provided path
         '''          
+        self.nb_json['cells'] = self.data
         with open(nb_file, 'w') as f:
             json.dump(self.nb_json, f)
         return self
@@ -160,7 +179,10 @@ def main(nb_input, nb_output):
         
         logger.info(f'Processing notebook {in_}; saving output to {out}.')
         nb = Notebook(in_)
-        nb.remove_directives().remove_tagged_cells().make_glossary_links().ensure_hidden().clear_outputs().hide_tags().save_nb(out)
+        nb.remove_tagged_cells()
+        for cell in nb:
+            cell.make_glossary_links().apply_hidden().clear_outputs()
+        nb.hide_tags().save_nb(out)
 
 if __name__ == '__main__':
     main()
