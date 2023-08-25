@@ -24,3 +24,18 @@ class TestPostProcessing(unittest.TestCase):
         cells_for_removal = [cell for cell in self.notebook.data if 'remove-cell' in cell['metadata'].get('tags', [])]
         self.assertEqual(cells_for_removal, [], 'cells tagged for removal not removed')
 
+    def testMyST2oMD(self):
+
+        self.notebook.myst_to_md()
+        self.assertEqual(self.notebook.data[3]['source'], 
+                         ["#### Try it out!\n", "\n", "Use `split()` on the `term` variable (defined above) and compare the output with that of `course.split()`. \n", "\n", "Can you tell how `split()` works? How does it know where to separate the string?\n", "\n"],
+                         'pure Markdown not created as expected')
+        self.assertEqual(self.notebook.data[4]['source'],
+                         ["<details>\n    <summary>Click for a Hint</summary>\n    <ul><li>Try changing the text between quotation marks to see how the output varies.</li><li>The name (left side of the equals sign) acts like a label for the value (right side of the equal sign -- here, the content between quotation marks).</li><li>What do you think <code>print</code> does when it is given the name <code>my_workshop</code>?</li></ul>\n</details>\n"],
+                         'HTML for hints not created as expected'
+                         )
+        self.assertEqual(self.notebook.data[2]['source'], 
+                         "<details>\n<summary>Click for a Solution</summary>\n<pre><code>\nmsg = 'This cell should be hidden'\nprint(msg)\n</code></pre>\n</details>\n",
+                         'HTML for code solutions not created as expected')
+        self.notebook.add_md_style()
+        assert self.notebook.data[0]['source'][0].startswith(r'%%html'), 'expected HTML magic in first cell'

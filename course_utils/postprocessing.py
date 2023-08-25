@@ -5,6 +5,9 @@ import click
 from pathlib import Path
 import logging
 from itertools import dropwhile
+from markdown_it.renderer import RendererHTML
+from myst_parser.config.main import MdParserConfig
+from myst_parser.parsers.mdit import create_md_parser
 
 logging.basicConfig()
 logger=logging.getLogger(__name__)
@@ -25,6 +28,37 @@ TAGS_TO_REMOVE = {'instructor', 'remove-cell'}
 # Pattern for Sphinx glossary directive
 TERM_PATTERN = re.compile(r'{term}`([A-Za-z ]+)`')
 GLOSSARY_URL = 'https://gwu-libraries.github.io/python-camp/glossary.html#term-'
+# HTML for hint directives (dropdowns)
+HINT_HTML = '''<details>
+    <summary>{title}</summary>
+    {content}
+</details>
+'''
+# HTML for hidden code 
+CODE_HTML = '''<details>
+<summary>Click for a Solution</summary>
+<pre><code>
+{code}
+</code></pre>
+</details>
+'''
+
+# HTML to style hidden cells in NB classic
+MD_STYLE = '''%%html
+<style>
+details {
+  border: 1px solid;   border-radius: 4px;   padding: 0.5em 0.5em 0; }
+summary {
+  font-weight: bold;   margin: -0.5em -0.5em 0;   padding: 0.5em; background-color: rgba(233,140,61,.2);}
+details[open] {
+  padding: 0.5em; }
+details[open] summary {
+  border-bottom: 1px solid;   margin-bottom: 0.5em; background-color: rgba(66,129,81, .2); }
+details li {
+  margin: 10px 0;
+}
+</style>
+'''
 
 class Notebook:
 
@@ -35,6 +69,8 @@ class Notebook:
         '''
         self.nb_json = self.load_nb(nb_file)
         self.data = self.nb_json['cells']
+         # Markdown parser for inner content when creating HTML directly
+        self.md = create_md_parser(MdParserConfig(), RendererHTML)
 
     def __iter__(self):
         # implements iteration protocol
@@ -101,12 +137,33 @@ class Notebook:
                 # Add comment that will be visible on toggled cell
                 self.data[self.index]['source'].insert(0, '#Click to see the solution.\n')
         return self
-
-    def remove_directives(self):
+    
+    def hide_for_classic(self, cell):
         '''
-        Removes MyST directives from the notebook's markdown cells. Assumes such directives are enclosed in four backticks (as opposed to three for code blocks.) Leaves the inner Markdown intact. In the case of the {image} directives, replaces the content with a standard inline image reference.
+        Replaces a hidden/collapsed code cell with an HTML/Markdown cell to hide the content on the "Classic" interface
+        '''
+        cell_source = cell['source']
+        # Remove leading comment
+        if cell_source[0].startswith('#'):
+            cell_source.pop(0)
+        cell_source = CODE_HTML.format(code=''.join(cell_source))
+        # Change cell type
+        cell['cell_type'] = 'markdown'
+        # Remove code-specific metadata
+        del cell['execution_count']
+        del cell['outputs']
+        cell['source'] = cell_source
+        return cell
+
+    def myst_to_md(self):
+        '''
+        Replaces MyST directives in notebook's markdown cells with regular Markdown/rendered HTML, to facilitate use in environments lacking the jupyterlab_myst plugin. 
         '''
         for i, cell in enumerate(self.nb_json['cells']):
+            # Check for hidden code cells and replace with HTML
+            if cell['cell_type'] == 'code' and ('hide-cell' in cell['metadata'].get('tags', [])):
+                self.nb_json['cells'][i] = self.hide_for_classic(cell)
+                continue
             # Assumes the directive encloses the entire cell, excluding any blank initial lines
             cell_content = list(dropwhile(lambda x: not x or x.isspace(), cell['source']))
             m = DIRECTIVE_PATTERN.match(cell_content[0])
@@ -124,13 +181,35 @@ class Notebook:
                     cell_content = [f'![{alt_text}]({image_url})']
                 # Other directive -- no label provided, but heading needed
                 case (directive, '') if DIRECTIVE_MAPPING.get(directive):
-                    cell_content[0] = '#' * HEADING_SUB_LEVEL + f' {DIRECTIVE_MAPPING[directive]}\n'
+                    # Check for dropdowns
+                    if cell_content[1] == ':class: dropdown\n':
+                        cell_title = f'Click for a {DIRECTIVE_MAPPING.get(directive)}'
+                        # Render the rest of the cell as HTML, removing blank lines first
+                        inner_content = [c for c in cell_content if not c.startswith('`' * DIRECTIVE_BACKTICKS) and not c.startswith(':class:') and not c.isspace()]
+                        # Remove blank lines from the resulting HTML
+                        inner_content = self.md.render(''.join(inner_content)).replace('\n', '')
+                        cell_content = [HINT_HTML.format(title=cell_title, content=inner_content) ]   
                 # No heading needed
                 case _:
                     cell_content.pop(0)
             # Remove closing backticks and any class statements
             cell_content = [c for c in cell_content if not c.startswith('`' * DIRECTIVE_BACKTICKS) and not c.startswith(':class:')]
             self.nb_json['cells'][i]['source'] = cell_content
+        return self
+    
+    def add_md_style(self):
+        '''
+        Adds an %%html block to the top of the notebook, allowing custom styles in classic/non-myst notebooks
+        '''
+        cell = {
+                "cell_type": "code",
+                "execution_count": 0,
+                "id": "md-style",
+                "metadata": {},
+                "outputs": [],
+                "source": [MD_STYLE]
+            }
+        self.data.insert(0, cell)
         return self
     
     def remove_tagged_cells(self, tags=TAGS_TO_REMOVE):
@@ -161,7 +240,8 @@ class Notebook:
 @click.command()
 @click.option('--nb-input', default='textbook/notebooks')
 @click.option('--nb-output', default='textbook/_build/html/_sources/notebooks')
-def main(nb_input, nb_output):
+@click.option('--nb-output-md', default='textbook/_build/html/_sources/notebooks')
+def main(nb_input, nb_output, nb_output_md):
     '''
     :param nb_input: path for reading a notebook or directory containing notebooks (may be nested)
     :param nb_output: path where processed notebooks will be saved
@@ -169,13 +249,20 @@ def main(nb_input, nb_output):
     root = Path(__file__).parents[1]
     nb_input = root / Path(nb_input)
     nb_output = root / Path(nb_output)
+    nb_output_md = root / Path(nb_output_md)
+    # Create folder for storing pure-Markdown notebooks, if it doesn't exist
+    if not nb_output_md.exists() and nb_output_md.is_dir:
+        nb_output_md.mkdir()
     if nb_input.is_file() and nb_input.suffix == '.ipynb':
-        nb_paths = [(nb_input, nb_output)]
+        nb_paths = [(nb_input, nb_output, nb_output_md)]
     else:
         glob = nb_input.rglob('*.ipynb')
         # Assumes output notebooks should follow the same directory structure as input notebooks, e.g., lessons and homework
-        nb_paths = [(p, nb_output / p.parts[-2] / p.name) for p in glob if p.parts[-2] != '.ipynb_checkpoints']
-    for in_, out in nb_paths:
+        nb_paths = [(p, 
+                     nb_output / p.parts[-2] / p.name, 
+                     nb_output_md / p.parts[-2] / f'{p.stem}-md{p.suffix}') # Add -md to end of non-MyST notebooks
+                     for p in glob if p.parts[-2] != '.ipynb_checkpoints']
+    for in_, out, md_out in nb_paths:
         
         logger.info(f'Processing notebook {in_}; saving output to {out}.')
         nb = Notebook(in_)
@@ -183,6 +270,8 @@ def main(nb_input, nb_output):
         for cell in nb:
             cell.make_glossary_links().apply_hidden().clear_outputs()
         nb.hide_tags().save_nb(out)
+        logger.info(f'Creating pure Markdown notebook at {md_out}.')
+        nb.myst_to_md().add_md_style().save_nb(md_out)
 
 if __name__ == '__main__':
     main()
