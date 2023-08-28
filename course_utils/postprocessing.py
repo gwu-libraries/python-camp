@@ -152,6 +152,9 @@ class Notebook:
         del cell['execution_count']
         del cell['outputs']
         cell['source'] = cell_source
+        # Unhide the cell in Notebook 7
+        if 'jupyter' in cell['metadata']:
+            cell['metadata']['jupyter']['source_hidden'] = False
         return cell
 
     def myst_to_md(self):
@@ -179,14 +182,14 @@ class Notebook:
                     alt_text = alt_tag[0].replace(':alt: ', '') if alt_tag else ''
                     cell_content = [f'![{alt_text}]({image_url})']
                 # Other directive -- no label provided, but heading needed
-                case (directive, '') if DIRECTIVE_MAPPING.get(directive):
+                case (directive, _) if DIRECTIVE_MAPPING.get(directive):
                     # Check for dropdowns
                     if cell_content[1] == ':class: dropdown\n':
                         cell_title = f'Click for a {DIRECTIVE_MAPPING.get(directive)}'
                         # Render the rest of the cell as HTML, removing blank lines first
                         inner_content = [c for c in cell_content if not c.startswith('`' * DIRECTIVE_BACKTICKS) and not c.startswith(':class:') and not c.isspace()]
                         # Remove blank lines from the resulting HTML
-                        inner_content = self.md.render(''.join(inner_content)).replace('\n', '')
+                        inner_content = self.md.render(''.join(inner_content))#.replace('\n\n', '')
                         cell_content = [HINT_HTML.format(title=cell_title, content=inner_content) ]   
                 # No heading needed
                 case _:

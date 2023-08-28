@@ -31,7 +31,7 @@ class TestPostProcessing(unittest.TestCase):
                          ["#### Try it out!\n", "\n", "Use `split()` on the `term` variable (defined above) and compare the output with that of `course.split()`. \n", "\n", "Can you tell how `split()` works? How does it know where to separate the string?\n", "\n"],
                          'pure Markdown not created as expected')
         self.assertEqual(self.notebook.data[4]['source'],
-                         ["<details>\n    <summary>Click for a Hint</summary>\n    <ul><li>Try changing the text between quotation marks to see how the output varies.</li><li>The name (left side of the equals sign) acts like a label for the value (right side of the equal sign -- here, the content between quotation marks).</li><li>What do you think <code>print</code> does when it is given the name <code>my_workshop</code>?</li></ul>\n</details>\n"],
+                         ["<details>\n    <summary>Click for a Hint</summary>\n    <ul>\n<li>Try changing the text between quotation marks to see how the output varies.</li>\n<li>The name (left side of the equals sign) acts like a label for the value (right side of the equal sign -- here, the content between quotation marks).</li>\n<li>What do you think <code>print</code> does when it is given the name <code>my_workshop</code>?</li>\n</ul>\n\n</details>\n"],
                          'HTML for hints not created as expected'
                          )
         self.assertEqual(self.notebook.data[2]['source'], 
