@@ -1,6 +1,5 @@
 import json
 import re
-from copy import deepcopy
 import click
 from pathlib import Path
 import logging

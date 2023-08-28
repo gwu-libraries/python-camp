@@ -153,6 +153,16 @@ async function runPyodide(codeLines, pyodidePromise) {
     }
 }
 
+async function runPyodideSetup(pyodidePromise) {
+    // Runs any setup code that should be executed in global scope, before the solution is executed
+    let setupCode = document.querySelector("#setup-code");
+    
+    if (setupCode){
+        let pyodide = await pyodidePromise;
+        await pyodide.runPython(setupCode.textContent);
+    }
+}
+
 function handlePyException(excProxy) {
     // Handles a dict returned from the Python reformat_exception function 
     function extractLineNo(tbArray) {
@@ -268,14 +278,16 @@ window.addEventListener("DOMContentLoaded", async () => {
       // button to trigger code execution
     const button = document.querySelector(".parsons-submit");
 
-    button.addEventListener("click", (event) => {
+    button.addEventListener("click", async (event) => {
         // clear output area before running new code
        clearOutput();
         let codeToRun = parseParsonsCode();
-        runPyodide(codeToRun, pyodidePromise);
+        await runPyodide(codeToRun, pyodidePromise);
     });
 
     document.querySelector(".parsons-reset").addEventListener("click", resetProblem);
+
+    await runPyodideSetup(pyodidePromise);
 
 });
 

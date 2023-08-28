@@ -1,5 +1,7 @@
+python_setup: |
+    courses = ['CHEM 1001 10', 'CHEM 1001 11', 'BISC 1111 10', 'BISC 2207 10', 'PSC 1001 10',
+           'PSC 1001 11', 'PSC 1001 12', 'ANTH 3808 10', 'AMST 2071 80']
 python_code: |
-    courses = ['CHEM 1001 10', 'BISC 1111 10', 'BISC 2207 10']
     depts = []
     for course in courses:
       course_info = course.split()

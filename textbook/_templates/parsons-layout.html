@@ -20,7 +20,21 @@
                 <li>Click the <strong>Reset</strong> button to clear the code space on the right and start over.</li>
         </header>
         <main>
-            <section id="python-input"">
+            <section id="python-setup">
+                {% if parsons.python_setup %}
+                    <h2>Problem Setup</h2>
+                    <div class="parsons-setup">
+                        <p>Assume that the following code has run already in this session.</p>
+                        <!-- <pre> blocks need to be left aligned in order to respect white space -->
+<pre><code id="setup-code">
+{% for line in parsons.python_setup %}
+{{ line }}
+{% endfor %}
+</code></pre>
+                    </div>
+                {% endif %}
+            </section>
+            <section id="python-input">
                 <h2>Compose your code here</h2>
                 <div class="parsons-container">
                     <div class="parsons-column-ps">

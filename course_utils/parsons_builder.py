@@ -38,7 +38,9 @@ def load_yaml(yaml_files):
                 yield None
             else:
                 # Strips leading/trailing whitespace from the code block and split on line breaks
-                parsons_dict['python_code'] = parsons_dict['python_code'].strip().split('\n')
+                for key in ('python_code', 'python_setup'):
+                    if key in parsons_dict:
+                        parsons_dict[key] = parsons_dict[key].strip().split('\n')
                 # Randomize code order
                 shuffle(parsons_dict['python_code'])
                 yield file, parsons_dict

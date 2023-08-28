@@ -1,10 +1,15 @@
 .problem-statement {
-    font-size: 22;
+    font-size: 22px;
 }
 
+.instructions, .parsons-setup {
+    font-size: 18px;
+}
 
-.instructions {
-    font-size: 18;
+.parsons-setup > pre  {
+    margin-left: 20px;
+    margin-top: -30px; /* Gets rid of excess white space at top of code block */
+
 }
 .parsons-container {
     display: grid;
