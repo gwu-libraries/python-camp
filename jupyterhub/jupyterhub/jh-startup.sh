@@ -7,4 +7,4 @@ do
     useradd -m -d /home/${user} -p $(openssl passwd password) ${user}
 done
 # Launch the hub
-#exec jupyterhub
+exec jupyterhub

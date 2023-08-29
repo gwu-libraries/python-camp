@@ -2,20 +2,14 @@ version: "3.8"
 services:
 
   jupyterhub:
-    image: python-camp/jupyterhub
+    image: laihub/test
     build: .
     ports:
-      - 8000:8000
+      - 8888:8888
     expose:
-      - "8000"
+      - "8888"
     volumes:
       - /opt/jupyterhub/jupyterhub:/srv/jupyterhub
-      - jupyterhub-data:/home
-    command: ["bash", "-c", "./jh-startup.sh"]
-    environment:
-      - VIRTUAL_HOST=ec2-18-222-180-6.us-east-2.compute.amazonaws.com
-      - VIRTUAL_PORT=8000
-      - TEST_USERS=jupytertest
 
   nginx-proxy:
     image: nginxproxy/nginx-proxy
@@ -23,6 +17,3 @@ services:
       - "80:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-
-volumes:
-  jupyterhub-data:
