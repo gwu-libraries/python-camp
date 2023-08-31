@@ -6,6 +6,7 @@ docutils==0.18.1
 ghp-import==2.1.0
 greenlet==2.0.2
 guzzle-sphinx-theme==0.7.11
+httpx==0.24.1
 imagesize==1.4.1
 importlib-metadata==6.7.0
 Jinja2==3.1.2

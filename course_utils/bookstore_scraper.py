@@ -5,7 +5,6 @@ from datetime import datetime
 from time import sleep
 import httpx
 from bs4 import BeautifulSoup
-from bs4 import BeautifulSoup
 from scraping_config import course_config, bkstr_config, bkstr_headers
 import logging
 import click
