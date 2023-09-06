@@ -526,7 +526,12 @@ document.write(`
 </div>
 </div>
 <p>Expand the cell below to see one possible way of documenting this code.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the counter </span>
 <span class="n">digital_count</span> <span class="o">=</span> <span class="mi">0</span>
@@ -543,6 +548,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 </section>
 <section id="i-2-using-the-python-documentation">
@@ -581,7 +587,8 @@ The code</p>
 </div>
 </div>
 </div>
-<div class="toggle docutils container">
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
 <p>The crucial line of the Python documentation for methods is the first, called the <strong>method signature</strong>. For <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> the method signature looks like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>

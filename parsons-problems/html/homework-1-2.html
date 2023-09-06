@@ -20,14 +20,30 @@
                 <li>Click the <strong>Reset</strong> button to clear the code space on the right and start over.</li>
         </header>
         <main>
-            <section id="python-input"">
+            <section id="python-setup">
+                
+                    <h2>Problem Setup</h2>
+                    <div class="parsons-setup">
+                        <p>Assume that the following code has run already in this session.</p>
+                        <!-- <pre> blocks need to be left aligned in order to respect white space -->
+<pre><code id="setup-code">
+
+courses = ['CHEM 1001 10', 'CHEM 1001 11', 'BISC 1111 10', 'BISC 2207 10', 'PSC 1001 10',
+
+       'PSC 1001 11', 'PSC 1001 12', 'ANTH 3808 10', 'AMST 2071 80']
+
+</code></pre>
+                    </div>
+                
+            </section>
+            <section id="python-input">
                 <h2>Compose your code here</h2>
                 <div class="parsons-container">
                     <div class="parsons-column-ps">
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-1" draggable="true">
-                                    course_info = course.split()
+                                    depts = []
                                 </div>
                             </div>
                         
@@ -39,25 +55,19 @@
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-3" draggable="true">
-                                    depts = []
+                                    course_info = course.split()
                                 </div>
                             </div>
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-4" draggable="true">
-                                    for course in courses:
+                                    print(depts)
                                 </div>
                             </div>
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-5" draggable="true">
-                                    courses = ['CHEM 1001 10', 'BISC 1111 10', 'BISC 2207 10']
-                                </div>
-                            </div>
-                        
-                            <div class="parsons-ps">
-                                <div class="parsons-block" id="pb-6" draggable="true">
-                                    print(depts)
+                                    for course in courses:
                                 </div>
                             </div>
                         
@@ -107,15 +117,6 @@
                                     <div class="parsons-ss" id="ss-5-1"></div>
                                 
                                     <div class="parsons-ss" id="ss-5-2"></div>
-                                
-                            </div>
-                        
-                            <div class="parsons-row-ss" id="ss-row-6">
-                                
-                                
-                                    <div class="parsons-ss" id="ss-6-1"></div>
-                                
-                                    <div class="parsons-ss" id="ss-6-2"></div>
                                 
                             </div>
                         
