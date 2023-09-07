@@ -1,5 +1,7 @@
 # Python Camp: Programming for Beginners
 
+**Brought to you by [GW Libraries & Academic Innovation](https://library.gwu.edu/)**
+
 ## What Is Python Camp?
 
 Python Camp is a non-credit, hands-on, intensive mini-course offered by GW Libraries and Academic Innovation (GW LAI) for the GW community. Python Camp introduces foundational programming practice using the Python language, with a focus on building skill through both team-based activities and self-guided exercises. The aim is to expose participants to the core concepts of programming, while providing a sufficient foundation in Python syntax and programming patterns to allow participants to build upon their learning in other contexts. 
@@ -51,6 +53,7 @@ Because demand is typically high and space is limited, we give priority to those
 
 To apply, please submit the {{ application_url }} by **{{ application_deadline }}**. Decisions will be announced within two weeks of the application deadline. 
 
+If Python Camp isn't right for you, or if we can't accommodate you this time, GW Libraries offers other opportunities to learn Python every semester. Check out our [events page](https://library.gwu.edu/events) for more info.
 
 ## Acknowledgments
 
