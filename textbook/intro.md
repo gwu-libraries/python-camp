@@ -1,6 +1,6 @@
 # Python Camp: Programming for Beginners
 
-**Brought to you by [GW Libraries & Academic Innovation](https://library.gwu.edu/)**
+Brought to you by **[GW Libraries & Academic Innovation](https://library.gwu.edu/)**
 
 ## What Is Python Camp?
 
