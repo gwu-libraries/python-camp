@@ -192,11 +192,11 @@ class BookstoreScraper:
         '''
         :param headers: should be a dict of request headers, mimicking those of a specific browser
         '''
-        response = response = httpx.post(self.base_url,
+        try:    
+            response = httpx.post(self.base_url,
                                 params=self.params,
                                 headers=headers,
                                 json=self.json_data)
-        try:
             resp_data = response.json()
             if 'blockScript' in resp_data:
                 raise CaptchaError
