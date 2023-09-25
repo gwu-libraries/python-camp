@@ -473,9 +473,17 @@ document.write(`
 <section id="the-dataset">
 <h2>The dataset<a class="headerlink" href="#the-dataset" title="Permalink to this heading">#</a></h2>
 <p>Over the next few days, we’ll be working together on a dataset containing information about textbooks assigned by courses at GW for the Summer 2023 semester.</p>
+<p>This dataset might lend itself to uses like the following:</p>
+<ul class="simple">
+<li><p>Identifying courses with particularly high-cost textbooks</p></li>
+<li><p>Calculating the average cost of textbooks by instructor, department, etc.</p></li>
+<li><p>Identifying the publishers that supply the majority of textbooks used at GW</p></li>
+<li><p>Identifying instructors who assign textbooks they themselves have authored</p></li>
+</ul>
+<p>As you work through this exercise, make a note of any additional uses you can imagine for this data. These notes will come in handy later!</p>
 <section id="source">
 <h3>Source<a class="headerlink" href="#source" title="Permalink to this heading">#</a></h3>
-<p>This dataset was obtained by scraping the <a class="reference external" href="https://www.bkstr.com/georgewashingtonstore/shop/textbooks-and-course-materials">GW Bookstore</a> website. Because <a class="reference external" href="https://library.gwu.edu/events/web-scraping-what-you-need-know-2023-10-03">web scraping</a> is a rather advanced topic, we won’t be covering that process in Python Camp.</p>
+<p>This dataset was obtained by scraping the <a class="reference external" href="https://www.bkstr.com/georgewashingtonstore/shop/textbooks-and-course-materials">GW Bookstore</a> website. Because <a class="reference external" href="https://learning.oreilly.com/library/view/web-scraping-with/9781098145347/">web scraping</a> is a rather advanced topic, we won’t be covering that process in Python Camp.</p>
 <p>The dataset was also pre-processed to simplify it somewhat (removing extraneous and redundant elements, etc.).</p>
 </section>
 <section id="format">
@@ -490,9 +498,14 @@ document.write(`
 </section>
 <section id="loading-the-data">
 <h3>Loading the data<a class="headerlink" href="#loading-the-data" title="Permalink to this heading">#</a></h3>
-<p>The code below will load data from an external file located in a directory called <code class="docutils literal notranslate"><span class="pre">data</span></code>. The directory is relative to the current directory (in which this notebook lives).</p>
+<p>The code below will fetch data from a URL and save it locally as a file before loading the data in your notebook.</p>
 <ol class="arabic simple">
-<li><p>We <a class="reference internal" href="../../glossary.html#term-import"><span class="xref std std-term">import</span></a> a Python module called <code class="docutils literal notranslate"><span class="pre">json</span></code>. A module is just some external Python code that provides a particular functionality. The <code class="docutils literal notranslate"><span class="pre">json</span></code> module allows us to convert data in JSON format to Python types. (More on types below).</p></li>
+<li><p>We <a class="reference internal" href="../../glossary.html#term-import"><span class="xref std std-term">import</span></a> a Python function called <code class="docutils literal notranslate"><span class="pre">urlretrieve</span></code> and a Python module called <code class="docutils literal notranslate"><span class="pre">json</span></code>. A module is just some external Python code that provides a particular functionality.</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">urlretrieve</span></code> function allows us to fetch data from a remote source and save a local copy.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">json</span></code> module allows us to convert data in JSON format to Python types. (More on types below).</p></li>
+</ul>
+</li>
 <li><p>We use the <code class="docutils literal notranslate"><span class="pre">open</span></code> function to open a file in a directory called <code class="docutils literal notranslate"><span class="pre">data</span></code>. The file is called <code class="docutils literal notranslate"><span class="pre">bookstore-data-summer-2023.json</span></code>, where the <code class="docutils literal notranslate"><span class="pre">.json</span></code> extension indicates that this is a JSON-formatted file. (The file extension is part of the filename, like <code class="docutils literal notranslate"><span class="pre">docx</span></code> for Word documents or <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code> for Excel spreadsheets.)</p></li>
 <li><p>The file is assigned to the temporary variable <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p></li>
 <li><p>We use the <code class="docutils literal notranslate"><span class="pre">json.load</span></code> <a class="reference internal" href="../../glossary.html#term-method"><span class="xref std std-term">method</span></a> to read the file (<code class="docutils literal notranslate"><span class="pre">f</span></code>). This method is specifically designed for JSON files; it won’t work if the file does not contain data in valid JSON format.</p></li>
@@ -500,8 +513,10 @@ document.write(`
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../../../data/bookstore-data-summer-2023.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlretrieve</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="n">urlretrieve</span><span class="p">(</span><span class="s1">&#39;https://go.gwu.edu/pythoncampdata&#39;</span><span class="p">,</span> <span class="s1">&#39;bookstore-data.json&#39;</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;bookstore-data.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">bkst_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
