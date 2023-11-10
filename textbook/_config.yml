@@ -37,9 +37,9 @@ html:
 
 parse:
   myst_substitutions:
-    application_url: "[application form](https://forms.gle/Ptim5wakpis7EBXw9)"  # Insert URL for Google Form here
-    application_deadline: September 7, 2023 # Deadline for form
-    current_semester: Fall 2023 
+    application_url: "[application form](https://forms.gle/RR5R1YrQp7Ldm6C96)"  # Insert URL for Google Form here
+    application_deadline: December 1, 2023 # Deadline for form
+    current_semester: December 2023 
     schedule: |
       :::{list-table} 
       :header-rows: 1
@@ -47,17 +47,17 @@ parse:
       * - Date
         - Day
         - Time
-      * - October 9, 2023
-        - Monday
-        - 1 pm - 5 pm
-      * - October 11, 2023
-        - Wednesday
-        - 1 pm - 5 pm
-      * - October 12, 2023
+      * - December 14, 2023
         - Thursday
         - 1 pm - 5 pm
-      * - October 13, 2023
+      * - December 15, 2023
         - Friday
+        - 1 pm - 5 pm
+      * - December 18, 2023
+        - Monday
+        - 1 pm - 5 pm
+      * - December 19, 2023
+        - Tuesday
         - 1 pm - 5 pm
       :::
   myst_enable_extensions:
