@@ -23,7 +23,7 @@ then Python Camp may be for you!
 
 Over the course of **four days**, participants will spend approximately **four hours a day** together, working in small teams on activities facilitated by Python Camp instructors. 
 
-In addition, participants will complete approximately **one to two hours** of self-guided homework lessons each day. These lessons are intended to be done individually and serve to prepare participants for the team-based learning on the following day. The homework includes a handful of shorter exercises to test participants' knowledge, which will be graded. 
+In addition, participants will complete approximately **one to three hours** of self-guided homework lessons each day. These lessons are intended to be done individually and serve to prepare participants for the team-based learning on the following day. The homework includes a handful of shorter exercises to test participants' knowledge, which will be graded. 
 
 Successful completion of these exercises, as well as attendance and participation during all four days of Python Camp, will confer a certificate of achievement. 
 

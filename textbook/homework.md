@@ -6,30 +6,26 @@ The homeworks are designed to be completed individually, but you are also free t
 
 ## Homework Format
 
-Each day's homework lesson consists of one or two parts. Please do the parts in order as linked from the daily schedule on the left panel of this screen.  
-  1. With the exception of Day 4, the first part consists of a Python motebook with documentation, examples of code, and exercises that ask you to write code yourself. Hints and/or hidden solutions are provided for the latter, but you are strongly encouraged to try each exercise on your own before looking at the solution. 
+Each day's homework lesson consists of a Python motebook with documentation, examples of code, and exercises that ask you to write code yourself. Hints and/or hidden solutions are provided for the latter, but you are strongly encouraged to try each exercise on your own before looking at the solution. 
      - Just as we did for the in-class activities, you should open each homework notebook in JupyterHub (using the rocket icon at the top of the screen) and execute the code cells in order as you read through the notebook. Any changes you make to the notebook in JupyterHub will be saved to your JupyterHub account. 
      - **Please try your best to complete these notebooks on the day they are assigned**; we'll build on the concepts and practices they introduce in our team activities on the following day.
-  2. With the exception of Day 1, the second part of each homework consists of a notebook with one or more exercises that you should complete and upload to GitHub Classroom. These notebooks are called "Graded Homework: Day ____" (followed by the day, either 2, 3, or 4). 
-     - You don't need to complete these exercises on the day they are assigned, though you may. 
-     - In addition to attendance for the duration of Python Camp, successful completion and submission of these notebooks is a requirement for the Python Camp Certificate of Completion.
-     - Please see the instructions for uploading graded notebooks below. 
+  2. You must submit the **final homework notebook** for grading in order to receive the Python Camp Certificate of Completion. The grading is done automatically on GitHub Classroom, and you will have an opportunity to ensure that your work is correct before submitting. Please see the instructions for submitting the graded notebook below. 
 
 ## Submitting Graded Notebooks
 
-We're using GitHub Classroom to track submission of these notebooks. Please read the following instructions carefully, and let us know if you have any questions.
+We're using GitHub Classroom to track submission of this notebook. Please read the following instructions carefully, and let us know if you have any questions.
 
-1. To complete each notebook, open it in JupyterHub (using the rocket icon in the upper left) and follow the instructions included with the notebook. 
+1. To complete the notebook, open it in JupyterHub (using the rocket icon in the upper left) and follow the instructions included with the notebook. 
 2. When you've successfully completed each exercise, the code cell in the `Tests` section should run without any errors or other output. If you see an `AssertionError`, it will indicate the part of your code that is not behaving as expected.
 3. WHen you've finished your work, don't forget to save your notebook in JupyterHub!
-4. Download your notebook from JupyterHub to your own computer, using the `File -> Download as -> Notebook` command from the menu at the top.
+4. Download your notebook from JupyterHub to your own computer, using the `File -> Download` command from the menu at the top.
 
     ````{image} img/homework/download-notebook.png
-    :alt: Download as notebook option from File menu
+    :alt: Dropdown menu showing download option from File menu
     :width: 500px
     :align: center
     ````
-5. Depending on your computer setup, the downloaded notebook may be located in your `Downloads` folder, on your desktop, or elsewhere. It should have the name `HW_n_GR.ipynb` (where `n` is the number of the homework day, e.g., 2, 3, or 4). If you have downloaded this file before, the latest version may have a different name. In this case, you should delete the old file and **rename the newly downloaded file** so that it has the same name as the original. 
+5. Depending on your computer setup, the downloaded notebook may be located in your `Downloads` folder, on your desktop, or elsewhere. It should have the name `HW_Final_GR.ipynb`. If you have downloaded this file before, the latest version may have a different name. In this case, you should delete the old file and **rename the newly downloaded file** so that it has the same name as the original. 
 5. In the Python Camp roster, copy the link in the column associated with this homework assignment and paste it into a new tab on your web browser.
 6. If you don't have a GitHub account, you'll need to create one. (GitHub is a widely used platform for sharing and collaborating on code.) You don't need to use the same email address on your GitHub account as you are using for Python Camp, so if you already have a GitHub account under a different email address, feel free to use that one.
 7. Once you've logged into GitHub, and if this is your first time submitting an assignment, you'll be asked to select your email address from the GitHub Classroom roster. **Please make sure you select the correct email address**. This will link your GitHub account to that email address in our GitHub Classroom instance. 
@@ -48,7 +44,7 @@ We're using GitHub Classroom to track submission of these notebooks. Please read
     :width: 500px
     :align: center
     ````
-11. You'll also see some files listed in your repo, including one with the name of the homework notebook you're submitting, e.g., `HW_GR_2.ipynb`. At this point, all you need to do is upload the new version of this notebook that you downloaded from JupyterHub in step 4. To upload the file, click the `Add file` button next to the green `Code` button at the top, and then select `Upload file`.
+11. You'll also see some files listed in your repo, including one with the name of the homework notebook you're submitting, e.g., `HW_Final_GR.ipynb`. At this point, all you need to do is upload the new version of this notebook that you downloaded from JupyterHub in step 4. To upload the file, click the `Add file` button next to the green `Code` button at the top, and then select `Upload file`.
 
     ````{image} img/homework/assignment-repo-2.png
     :alt: Screen showing the GitHub dropdown button to upload files.
