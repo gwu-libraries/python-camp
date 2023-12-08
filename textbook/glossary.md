@@ -358,6 +358,10 @@ list
 
     It's more common to use a {term}`dictionary` to represent complex data of multiple types, since each element in a dictionary has a {term}`key` that can be more descriptive. For example, if our dictionary has an `age` key, we might guess that this key will correspond to a numeric type, not a string. 
 
+list of dictionaries
+
+    A common approach to representing data that consist of multiple elements (like books or university courses or people in a class) where each element has more or less the same set of attributes. (For books, those attributes might be `title`, `author`,` publisher`, etc. For people, `name`, `age`, `email address`, etc.) Each element in the list is a dictionary with the same set of keys; only the values are different. 
+
 loop variable
 
     The {term}`variable` in a {term}`for loop` that assumes the value of each element in the {term}`collection` over which the loop runs. 

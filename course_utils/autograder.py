@@ -19,18 +19,26 @@ def extract_nb_code(nb_json):
     Expect each relevant metadata tag to follow the above format.
     '''
     code = []
+    ex_idx = 1
     for cell in nb_json['cells']:
         # Filter for code cells
         if cell['cell_type'] == 'code':
             # Filter for the right kind of metadata
             tags = [t for t in cell['metadata'].get('tags', [])
-                   if t.startswith('setup') or t.startswith('solution') or t.startswith('test-case')]
+                   if t.startswith('setup') or t.startswith('test-case')]
             if tags:
                 # Assume only one relevant tag per cell
                 tag_type, tag_idx = tags[0].split(':')
                 code.append({'code': cell['source'],
                              'type': tag_type,
                              'index': tag_idx})
+                if tag_type == 'test-case':
+                    # Increment at every test case
+                    ex_idx += 1
+            elif cell['source'][0].startswith('#Your code below'):
+                code.append({'code': cell['source'],
+                             'type': 'solution',
+                             'index': str(ex_idx)}) # This supports proper indexing of exercises without setup cells
     # Group code cells according to their index (so that the setup, solution and test code for each exercise will be in the same dict)
     groups =  [list(g) for k, g in groupby(code, lambda x: x['index'])]
     # Create one dict per exercise, containing setup, solution, and test code
