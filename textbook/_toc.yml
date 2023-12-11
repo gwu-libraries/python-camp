@@ -32,8 +32,8 @@ parts:
     title: Programming Techniques
 - caption: Day 3
   chapters:
-  - file: notebooks/lessons/2_2_querying_data
-      title: Querying Data
+  - file: notebooks/lessons/2_2_programming_with_data
+      title: Programming with Data
 - caption: Day 3 Homework
   chapters:
   - file: notebooks/homework/HW_3_error_stories

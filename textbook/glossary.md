@@ -155,7 +155,11 @@ comment
 
     We use comments to document our code for ourselves and for others.
 
+conditional logic
 
+    A general term for the set of operations that allow computers to behave differently based on different inputs or conditions. At the most fundamental level, all other mathematical operations in a computer (addition, multiplication, etc.) are implemented using combinations of {term}`Boolean operator`s implemented in electronic circuits. 
+
+    In higher-level languages like Python, when we speak of conditional logic, we're often referring to {term}`if statement`s. 
 
 curly braces
 
