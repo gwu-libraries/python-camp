@@ -33,7 +33,7 @@ parts:
 - caption: Day 3
   chapters:
   - file: notebooks/lessons/2_2_programming_with_data
-      title: Programming with Data
+    title: Programming with Data
 - caption: Day 3 Homework
   chapters:
   - file: notebooks/homework/HW_3_error_stories
@@ -43,6 +43,7 @@ parts:
   - file: notebooks/lessons/3_1_from_story_to_code
     title: From Story to Code
 - caption: Final Homework
+  chapters:
   - file: notebooks/homework/HW_Final_GR
     title: "Final Homework (Graded)"
 - caption: Python Reference
