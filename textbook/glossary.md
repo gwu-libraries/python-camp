@@ -161,6 +161,10 @@ conditional logic
 
     In higher-level languages like Python, when we speak of conditional logic, we're often referring to {term}`if statement`s. 
 
+CSV
+
+    An acronym for "comma-separated values," CSV is a data format compatible with spreadsheet applications like Excel. It is also a format widely used for storing tabular data: data structured in rows and columns. Unlike {term}`JSON`, CSV format does not generally work well with nested data. 
+
 curly braces
 
     Curly braces (`{}`) are used when defining a Python {term}`dictionary`. 
@@ -496,6 +500,10 @@ type
 
     Just as cooks choose the right appliance for the task at hand, so programmers choose the kind of `type` to use depending on goals and context. 
 
+Unicode
+
+    A system for representing characters from the world's many languages along with other symbols (mathematical symbols, emojis, etc.). Python handles Unicode by default, which means that you can use Python to work with text in languages other than English. See {term}`character` for more information. 
+
 value
 
     The word _value_ is ambiguous when talking about Python. On the one hand, we can talk about any occurence of data as a _value_, as when we say that in defining a {term}`variable`, the value goes on the right of the equals sign. 
@@ -519,10 +527,6 @@ variable
     we can refer to the variable `x` subsequently in our code in order to work with this number. Whenever we use `x` -- as in `print(x)` or `x = x*2` -- Python will retrieve the variable's value from memory and substitute it for the name `x`.
 
     In creating variables, we assign a name to a value with the single equals sign. The names goes on the left of the equals sign, the value on the right.
-
-Unicode
-
-    A system for representing characters from the world's many languages along with other symbols (mathematical symbols, emojis, etc.). Python handles Unicode by default, which means that you can use Python to work with text in languages other than English. See {term}`character` for more information. 
 
 white space
 
