@@ -441,6 +441,12 @@ return
 
     See {term}`function` for more information.
 
+set
+
+    A Python data type that is like a {term}`list` but that can contain only unique elements. Use the `set()` function to create a set from a list: `set([1,2,1,3,2,4,3,5])` returns `{1, 2, 3, 4, 5}`. (Note that the curly braces are used to delimit sets as well as dictionaries; unlike dictionaries, sets do not have key/value pairs, only single elements separated by commas.)
+
+    Only certain Python types can be used to create sets. You can't, for instance, convert a list of dictionaries into a set. Sets are mostly useful when dealing with numeric values and/or strings.
+
 slice
 
     A slice is a subset of a Python {term}`list` or {term}`string`. To create a slice, we use {term}`square brackets` around a pair of numbers separated by a {term}`colon`, where the first number is the position of the first element we want to include, and the last element is **one plus** the position of the last element to include. 
