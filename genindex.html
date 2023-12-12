@@ -161,7 +161,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/1_1_choreographing_code.html">Choreographing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/1_1_modeling_code.html">Modeling Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1-2</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/1_2_from_data_to_code.html">From Data to Code</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1 Homework</span></p>
@@ -171,29 +174,26 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/2_1_describing_the_team.html">Describing the Team</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/2_2_querying_data.html">Querying Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_2_programming_techniques.html">Programming Techniques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_2_GR.html">Graded Homework: Day 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Days 3-4</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/3_1_from_story_to_code.html">From Story to Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/2_2_programming_with_data.html">Programming with Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_3_error_stories.html">Error Stories</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_3_GR.html">Graded Homework: Day 3</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4 (SUPPLEMENTAL)</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/4_1_modeling_the_world.html">Modeling the World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/3_1_from_story_to_code.html">From Story to Code</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bonus Homework</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Homework</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_4_GR.html">Bonus Homework: Day 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_Final_GR.html">Final Homework (Graded)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Reference</span></p>
 <ul class="nav bd-sidenav">
@@ -354,6 +354,7 @@ document.write(`
  | <a href="#B"><strong>B</strong></a>
  | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#J"><strong>J</strong></a>
@@ -407,19 +408,25 @@ document.write(`
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-call"><strong>call</strong></a>
+</li>
       <li><a href="glossary.html#term-character"><strong>character</strong></a>
 </li>
       <li><a href="glossary.html#term-class"><strong>class</strong></a>
 </li>
       <li><a href="glossary.html#term-collection"><strong>collection</strong></a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-colon"><strong>colon</strong></a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-comma"><strong>comma</strong></a>
 </li>
       <li><a href="glossary.html#term-comment"><strong>comment</strong></a>
+</li>
+      <li><a href="glossary.html#term-conditional-logic"><strong>conditional logic</strong></a>
+</li>
+      <li><a href="glossary.html#term-CSV"><strong>CSV</strong></a>
 </li>
       <li><a href="glossary.html#term-curly-braces"><strong>curly braces</strong></a>
 </li>
@@ -431,11 +438,21 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-dictionary"><strong>dictionary</strong></a>
 </li>
+      <li><a href="glossary.html#term-documentation"><strong>documentation</strong></a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-dot-notation"><strong>dot notation</strong></a>
 </li>
       <li><a href="glossary.html#term-double-equals-sign"><strong>double equals sign</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-exception"><strong>exception</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -507,9 +524,11 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-library"><strong>library</strong></a>
 </li>
+      <li><a href="glossary.html#term-list"><strong>list</strong></a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="glossary.html#term-list"><strong>list</strong></a>
+      <li><a href="glossary.html#term-list-of-dictionaries"><strong>list of dictionaries</strong></a>
 </li>
       <li><a href="glossary.html#term-loop-variable"><strong>loop variable</strong></a>
 </li>
@@ -571,11 +590,15 @@ document.write(`
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-set"><strong>set</strong></a>
+</li>
       <li><a href="glossary.html#term-slice"><strong>slice</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-square-brackets"><strong>square brackets</strong></a>
+</li>
+      <li><a href="glossary.html#term-standard-library"><strong>standard library</strong></a>
 </li>
       <li><a href="glossary.html#term-string"><strong>string</strong></a>
 </li>
@@ -584,6 +607,10 @@ document.write(`
 
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-test"><strong>test</strong></a>
+</li>
+  </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-type"><strong>type</strong></a>
 </li>

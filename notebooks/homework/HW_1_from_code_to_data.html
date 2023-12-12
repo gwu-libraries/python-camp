@@ -164,7 +164,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../lessons/1_1_choreographing_code.html">Choreographing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lessons/1_1_modeling_code.html">Modeling Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1-2</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lessons/1_2_from_data_to_code.html">From Data to Code</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1 Homework</span></p>
@@ -174,29 +177,26 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lessons/2_1_describing_the_team.html">Describing the Team</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lessons/2_2_querying_data.html">Querying Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="HW_2_programming_techniques.html">Programming Techniques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HW_2_GR.html">Graded Homework: Day 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Days 3-4</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../lessons/3_1_from_story_to_code.html">From Story to Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lessons/2_2_programming_with_data.html">Programming with Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="HW_3_error_stories.html">Error Stories</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HW_3_GR.html">Graded Homework: Day 3</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4 (SUPPLEMENTAL)</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../lessons/4_1_modeling_the_world.html">Modeling the World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lessons/3_1_from_story_to_code.html">From Story to Code</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bonus Homework</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Homework</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="HW_4_GR.html">Bonus Homework: Day 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW_Final_GR.html">Final Homework (Graded)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Reference</span></p>
 <ul class="nav bd-sidenav">
@@ -437,10 +437,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-6-how-to-do-things-with-strings-splitting">I.6 How to do things with strings: Splitting</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-loops-and-lists">II. Loops and lists</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-strings-lists">II. Strings &amp; lists</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-accessing-items">II.1 Accessing items</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-doing-things-with-strings-lists">II.2 Doing things with strings &amp; lists</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-from-one-list-to-another">II.3 From one list to another</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up">Wrapping up</a></li>
@@ -463,7 +461,6 @@ document.write(`
 <li><p>To review the basic data types and syntactic patterns of Python.</p></li>
 <li><p>To build more complex structures out of these basic data types.</p></li>
 <li><p>To explore tools for cleaning and transforming data</p></li>
-<li><p>To use control structures to clean and transform data in an automated way</p></li>
 </ul>
 </section>
 <section id="agenda-instructions">
@@ -475,7 +472,6 @@ document.write(`
 <li><p>Working with text (strings) in Python</p></li>
 <li><p>Slicing and splitting strings to extract textual data</p></li>
 <li><p>Working with lists of numbers or strings</p></li>
-<li><p>Using loops to process data in lists</p></li>
 </ul>
 <p>If you have little or no prior programming experience, you may find this homework challenging. But please try to work through all the exercises, even if you lose the thread or can’t make sense of the provided sample solutions. Just make a note of where you got stuck: we will review the homework and address your questions tomorrow in class.</p>
 <div class="how-to admonition">
@@ -529,11 +525,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5497.25
-</pre></div>
-</div>
-</div>
 </details>
 </div>
 </section>
@@ -546,20 +537,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">num_students</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
 </pre></div>
 </div>
 </div>
@@ -661,7 +642,7 @@ document.write(`
 <td><p>Yes</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">$price</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">price$</span></code></p></td>
 <td><p>No</p></td>
 <td><p>Uses punctuation not allowed</p></td>
 </tr>
@@ -696,51 +677,14 @@ document.write(`
 <li><p>The department code occupies the first four (4) index positions. With strings, the first position is labeled <code class="docutils literal notranslate"><span class="pre">0</span></code>, not <code class="docutils literal notranslate"><span class="pre">1</span></code>, so the first 4 characters would fall in positions <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, and <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
 <li><p>The course number occupies four more positions, but we also have to account for the intervening space: <code class="docutils literal notranslate"><span class="pre">4</span></code> (the space), then <code class="docutils literal notranslate"><span class="pre">5</span></code>, <code class="docutils literal notranslate"><span class="pre">6</span></code>, <code class="docutils literal notranslate"><span class="pre">7</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>.</p></li>
 </ul>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p>0</p></th>
-<th class="head text-left"><p>1</p></th>
-<th class="head text-left"><p>2</p></th>
-<th class="head text-left"><p>3</p></th>
-<th class="head text-left"><p>4</p></th>
-<th class="head text-left"><p>5</p></th>
-<th class="head text-left"><p>6</p></th>
-<th class="head text-left"><p>7</p></th>
-<th class="head text-left"><p>8</p></th>
-<th class="head text-left"><p>9</p></th>
-<th class="head text-left"><p>10</p></th>
-<th class="head text-left"><p>11</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>C</p></td>
-<td class="text-left"><p>H</p></td>
-<td class="text-left"><p>E</p></td>
-<td class="text-left"><p>M</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p>1</p></td>
-<td class="text-left"><p>0</p></td>
-<td class="text-left"><p>0</p></td>
-<td class="text-left"><p>2</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p>1</p></td>
-<td class="text-left"><p>0</p></td>
-</tr>
-</tbody>
-</table>
-<p>We can use this information to <strong>slice</strong> our <code class="docutils literal notranslate"><span class="pre">course</span></code> variable as follows:</p>
+<a class="reference internal image-reference" href="https://gwu-libraries.github.io/python-camp/img/string-indexing-table.png"><img alt="Table showing the characters in the string &quot;CHEM 1002 10&quot; arranged in sequence on one row, with the numbers 0 through 11 on the row above." class="align-center" src="https://gwu-libraries.github.io/python-camp/img/string-indexing-table.png" style="width: 500px;" /></a>
+<p>We can use this information to <a class="reference internal" href="../../glossary.html#term-slice"><span class="xref std std-term">slice</span></a> our <code class="docutils literal notranslate"><span class="pre">course</span></code> variable as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dept_code</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>         <span class="c1"># Positions 0 through 3</span>
 <span class="n">course_num</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">9</span><span class="p">]</span>        <span class="c1"># Positions 5 through 8</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">dept_code</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">course_num</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CHEM
-1002
 </pre></div>
 </div>
 </div>
@@ -773,11 +717,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
 </details>
 </div>
 <p>Because it’s common to want to slice off the first part of a string and take the rest of it up to the end, we could actually write the above as follows, leaving off the number after the colon:</p>
@@ -793,46 +732,12 @@ document.write(`
 <p>Let’s say that we expect the term data to consist of the name for a particular semester – <code class="docutils literal notranslate"><span class="pre">Summer</span></code>, <code class="docutils literal notranslate"><span class="pre">Spring</span></code>, or <code class="docutils literal notranslate"><span class="pre">Fall</span></code> – plus a 4-digit year.</p>
 <p>Do you see the problem here? The name of the term can be either 4 characters long (<code class="docutils literal notranslate"><span class="pre">Fall</span></code>) or 6 (<code class="docutils literal notranslate"><span class="pre">Summer</span></code>, <code class="docutils literal notranslate"><span class="pre">Spring</span></code>).</p>
 <p>Fortunately, Python has us covered, because it lets us <em>count backwards</em> as well as forwards when slicing a string. We just use negative numbers! Since there’s no such number as <code class="docutils literal notranslate"><span class="pre">-0</span></code>, the last characer in a string has the position <code class="docutils literal notranslate"><span class="pre">-1</span></code>.</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>-11</p></th>
-<th class="head"><p>-10</p></th>
-<th class="head"><p>-9</p></th>
-<th class="head"><p>-8</p></th>
-<th class="head"><p>-7</p></th>
-<th class="head"><p>-6</p></th>
-<th class="head"><p>-5</p></th>
-<th class="head"><p>-4</p></th>
-<th class="head"><p>-3</p></th>
-<th class="head"><p>-2</p></th>
-<th class="head"><p>-1</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>S</p></td>
-<td><p>u</p></td>
-<td><p>m</p></td>
-<td><p>m</p></td>
-<td><p>e</p></td>
-<td><p>r</p></td>
-<td><p></p></td>
-<td><p>2</p></td>
-<td><p>0</p></td>
-<td><p>2</p></td>
-<td><p>3</p></td>
-</tr>
-</tbody>
-</table>
+<a class="reference internal image-reference" href="https://gwu-libraries.github.io/python-camp/img/string-negative-indexing-table.png"><img alt="Table showing the characters in the string &quot;Summer 2023&quot; arranged in sequence on one row, with the numbers -11 through -1 on the row above." class="align-center" src="https://gwu-libraries.github.io/python-camp/img/string-negative-indexing-table.png" style="width: 500px;" /></a>
 <p>To extract the last 4 characters (the year) from the <code class="docutils literal notranslate"><span class="pre">term</span></code> variable, we can use this slice:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">term_year</span> <span class="o">=</span> <span class="n">term</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">term_year</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023
 </pre></div>
 </div>
 </div>
@@ -846,25 +751,17 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Summer
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="i-6-how-to-do-things-with-strings-splitting">
 <h3>I.6 How to do things with strings: Splitting<a class="headerlink" href="#i-6-how-to-do-things-with-strings-splitting" title="Permalink to this heading">#</a></h3>
-<p>Strings in Python come with a lot of built-in functionality. One of the most useful is a <a class="reference internal" href="../../glossary.html#term-method"><span class="xref std std-term">method</span></a> caled <code class="docutils literal notranslate"><span class="pre">split()</span></code>.</p>
-<p>Take a look at what happens when we call the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method on our <code class="docutils literal notranslate"><span class="pre">course</span></code> variable.</p>
+<p>Strings in Python come with a lot of built-in functionality. One of the most useful is a string method caled <code class="docutils literal notranslate"><span class="pre">split()</span></code>.</p>
+<p>In Python, a <a class="reference internal" href="../../glossary.html#term-method"><span class="xref std std-term">method</span></a> is a set of predefined behaviors associated with a particular data type. We refer to <code class="docutils literal notranslate"><span class="pre">split()</span></code> as a “string method” because it’s available on anything that Python recognizes as a string.</p>
+<p>You can think of a method as an appliance attachment: a vaccuum cleaner and a kitchen stand mixer can both come with various attachments; the vaccuum attachments help you use your vaccuum better, and your mixer attachments expand the functionality of the mixer. The same can be said of Python methods: they help us make better use of their associated data types.</p>
+<p>Take a look at what happens when we <a class="reference internal" href="../../glossary.html#term-call"><span class="xref std std-term">call</span></a> the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method on our <code class="docutils literal notranslate"><span class="pre">course</span></code> variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">course</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;CHEM&#39;, &#39;1002&#39;, &#39;10&#39;]
 </pre></div>
 </div>
 </div>
@@ -872,11 +769,8 @@ document.write(`
 <p>Let’s pause here and note a few things:</p>
 <ol class="arabic simple">
 <li><p>There is a <strong>period</strong> (<code class="docutils literal notranslate"><span class="pre">.</span></code>) between <code class="docutils literal notranslate"><span class="pre">course</span></code> and <code class="docutils literal notranslate"><span class="pre">split()</span></code>. This indicates that the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method belongs to our <code class="docutils literal notranslate"><span class="pre">course</span></code> variable. We get access to this method whenever we use a string value.</p></li>
-</ol>
-<p>And we can call it on string values directly: <code class="docutils literal notranslate"><span class="pre">'CHEM</span> <span class="pre">1002</span> <span class="pre">10'.split()</span></code> produces the same output.</p>
-<ol class="arabic simple" start="2">
 <li><p>The <strong>parentheses</strong> after the word <code class="docutils literal notranslate"><span class="pre">split</span></code> are required. We’ve seen parentheses in calling the <code class="docutils literal notranslate"><span class="pre">print()</span></code> and <code class="docutils literal notranslate"><span class="pre">type()</span></code> functions, too. Here the parens are empty because we’re not providing any <a class="reference internal" href="../../glossary.html#term-arguments"><span class="xref std std-term">arguments</span></a> to <code class="docutils literal notranslate"><span class="pre">split()</span></code>. (Python knows what we want to split because of the period attaching the method to the <code class="docutils literal notranslate"><span class="pre">course</span></code> variable.)</p></li>
-<li><p>The output from <code class="docutils literal notranslate"><span class="pre">course.split()</span></code> is a <strong>list</strong> of three separate strings. A Python list is enclosed with <a class="reference internal" href="../../glossary.html#term-square-brackets"><span class="xref std std-term">square brackets</span></a> and contains items separated by <a class="reference internal" href="../../glossary.html#term-comma"><span class="xref std std-term">comma</span></a>s.</p></li>
+<li><p>The output from <code class="docutils literal notranslate"><span class="pre">course.split()</span></code> is a <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a> of three separate strings. A Python list is enclosed with <a class="reference internal" href="../../glossary.html#term-square-brackets"><span class="xref std std-term">square brackets</span></a> and contains items separated by <a class="reference internal" href="../../glossary.html#term-comma"><span class="xref std std-term">comma</span></a>s.</p></li>
 </ol>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
@@ -901,23 +795,18 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="ii-loops-and-lists">
-<h2>II. Loops and lists<a class="headerlink" href="#ii-loops-and-lists" title="Permalink to this heading">#</a></h2>
+<section id="ii-strings-lists">
+<h2>II. Strings &amp; lists<a class="headerlink" href="#ii-strings-lists" title="Permalink to this heading">#</a></h2>
 <p>We have seen that when we call the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method on a string, Python turns the string into a list of strings.</p>
 <p>With this conversion, we get some added structure. A string can hold any sequence of valid Unicode characters; a list can hold any sequence of <em>valid Python values</em>. Even other lists!</p>
 <p>In the team activity with the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> dataset, you encountered some ways to work with lists. The following reviews those and adds a few more.</p>
 <section id="ii-1-accessing-items">
 <h3>II.1 Accessing items<a class="headerlink" href="#ii-1-accessing-items" title="Permalink to this heading">#</a></h3>
-<p>We can use an <a class="reference internal" href="../../glossary.html#term-integer"><span class="xref std std-term">integer</span></a> inside square brackets to access the item at single position (<a class="reference internal" href="../../glossary.html#term-index"><span class="xref std std-term">index</span></a>) within a list.</p>
+<p>We can use an integer inside square brackets to access the item at single position (<a class="reference internal" href="../../glossary.html#term-index"><span class="xref std std-term">index</span></a>) within a list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">course_info</span> <span class="o">=</span> <span class="n">course</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">course_info</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CHEM
 </pre></div>
 </div>
 </div>
@@ -926,11 +815,6 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">course_info</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
 </pre></div>
 </div>
 </div>
@@ -959,235 +843,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;CHEM&#39;, &#39;1002&#39;]
-</pre></div>
-</div>
-</div>
 </details>
 </div>
 <div class="notes admonition">
 <p class="admonition-title">Notes</p>
 <p>If you didn’t get two items, remember that in slicing, the number on the left side of the colon represents the <a class="reference internal" href="../../glossary.html#term-index"><span class="xref std std-term">index</span></a> we want to start with, and the number on the right side represents the index <em>one after</em> the index we want to end with.</p>
-</div>
-</section>
-<section id="ii-2-doing-things-with-strings-lists">
-<h3>II.2 Doing things with strings &amp; lists<a class="headerlink" href="#ii-2-doing-things-with-strings-lists" title="Permalink to this heading">#</a></h3>
-<p>The real power of lists enters when we can use them to automate a lot of repetitive tasks.</p>
-<p>In “Choreographing Code,” we used what’s called a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to adjust a list of prices with sales tax. Here we’ll work up to the same task, step by step, but we’ll add a couple of enhancements.</p>
-<p>For this example, we’ll start with a list of strings representing book prices.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book_prices</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$55.99&#39;</span><span class="p">,</span> <span class="s1">&#39;$119.95&#39;</span><span class="p">,</span> <span class="s1">&#39;$13.95&#39;</span><span class="p">,</span> <span class="s1">&#39;$250.67&#39;</span><span class="p">,</span> <span class="s1">&#39;$99.99&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>First, let’s just print each price from the list on its own line.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">book_prices</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>$55.99
-$119.95
-$13.95
-$250.67
-$99.99
-</pre></div>
-</div>
-</div>
-</div>
-<div class="notes admonition">
-<p class="admonition-title">Notes</p>
-<ol class="arabic simple">
-<li><p>Our loop begins with the Python <a class="reference internal" href="../../glossary.html#term-keyword"><span class="xref std std-term">keyword</span></a> <code class="docutils literal notranslate"><span class="pre">for</span></code>. This is not a function – like <code class="docutils literal notranslate"><span class="pre">len()</span></code> or <code class="docutils literal notranslate"><span class="pre">print()</span></code> – but part of the Python syntax itself (like the quotation marks around strings or the square brackets around lists).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code> always goes with <code class="docutils literal notranslate"><span class="pre">in</span></code>; they make a pair.</p></li>
-<li><p>The variable <code class="docutils literal notranslate"><span class="pre">price</span></code>, immediately following <code class="docutils literal notranslate"><span class="pre">for</span></code>, is being created here. (It was not previously defined in our code.) Its role is to hold – in sequence – each item in the <a class="reference internal" href="../../glossary.html#term-collection"><span class="xref std std-term">collection</span></a> following <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">book_prices</span></code> <em>was</em> defined before the loop. The variable following <code class="docutils literal notranslate"><span class="pre">in</span></code> should always be some sort of collection type – a string, a list, a dictionary, etc. – or else a <a class="reference internal" href="../../glossary.html#term-function"><span class="xref std std-term">function</span></a> that returns a collection. We cannot write <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">10</span></code>, for instance, because the integer <code class="docutils literal notranslate"><span class="pre">10</span></code> is not a collection; it holds no items within itself. (For the same reason, we can’t take a slice of <code class="docutils literal notranslate"><span class="pre">10</span></code>).</p></li>
-<li><p>The first line of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ends in a <a class="reference internal" href="../../glossary.html#term-colon"><span class="xref std std-term">colon</span></a>, and the line or lines underneath it are <strong>indented</strong> (separated from the left margin by the same number of tabs or spaces). We call these indented lines in Python a <a class="reference internal" href="../../glossary.html#term-block"><span class="xref std std-term">block</span></a>.</p></li>
-</ol>
-</div>
-<div class="try-it-out admonition">
-<p class="admonition-title">Try it out!</p>
-<p>All of the prices follow the same format, beginning with the dollar sign. To calculate the sales tax, we need to multiply each price by a fixed percentage – let’s say 110%, or 1.1, to reflect a sales tax of 10% on the dollar.</p>
-<p>But as we saw above, we can’t perform math with strings, and <code class="docutils literal notranslate"><span class="pre">book_prices</span></code> is a list of strings. To convert our strings to numbers, we first need to remove the dollar sign from each price.</p>
-<p>Modify the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop above so that it prints each price <em>without</em> the dollar sign. For a hint, consult the example above where we created the variable <code class="docutils literal notranslate"><span class="pre">course_section</span></code>.</p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now check your answer by expanding the hidden solution cell below.</p>
-<div class="cell tag_hide-cell docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell content</span>
-<span class="expanded">Hide code cell content</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">book_prices</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">price</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-<div class="try-it-out admonition">
-<p class="admonition-title">Try it out!</p>
-<p>Now that we have extracted the numeric part of the string (the part after the dollar sign), we can <strong>convert</strong> this string to a float in order to do math with it.</p>
-<p>Modify the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop again to do the following:</p>
-<ol class="arabic">
-<li><p>Assign the slice of the price (without the dollar sign) to a new variable called <code class="docutils literal notranslate"><span class="pre">price_num</span></code>.</p></li>
-<li><p>Use the <code class="docutils literal notranslate"><span class="pre">float()</span></code> function to convert <code class="docutils literal notranslate"><span class="pre">price_num</span></code> to a float, and multiply the result by <code class="docutils literal notranslate"><span class="pre">1.1</span></code>.</p>
-<p>For instance, to convert the string <code class="docutils literal notranslate"><span class="pre">'1.5'</span></code> (notice the quotations marks!) to its float representation, we would write <code class="docutils literal notranslate"><span class="pre">float('1.5')</span></code>.</p>
-</li>
-<li><p>Assign the result of this calculation to <code class="docutils literal notranslate"><span class="pre">price_num</span></code> and print it.</p></li>
-</ol>
-<p>If the foregoing feels intimidating, try this <a class="reference external" href="https://gwu-libraries.github.io/python-camp/parsons-problems/html/homework-1-1.html">Parsons Problem</a> first. It allows you to focus on the logical order of the actions to be performed, rather than on the syntax of the commands.</p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now check your answer by expanding the hidden solution cell below.</p>
-<div class="cell tag_hide-cell docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell content</span>
-<span class="expanded">Hide code cell content</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">book_prices</span><span class="p">:</span>
-    <span class="n">price_num</span> <span class="o">=</span> <span class="n">price</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-    <span class="n">price_num</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">price_num</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">price_num</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61.589000000000006
-131.94500000000002
-15.345
-275.737
-109.989
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-</section>
-<section id="ii-3-from-one-list-to-another">
-<h3>II.3 From one list to another<a class="headerlink" href="#ii-3-from-one-list-to-another" title="Permalink to this heading">#</a></h3>
-<p>If you didn’t get the intended answer, don’t worry! You’ll get the hang of it. The most important thing for now is to understand that we used a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop because we wanted to repeat a certain set of actions for all the items in a list.</p>
-<p>For now, let’s add one enhancement to our loop: instead of just printing the new price (with the added sales tax), we’ll store it in a separate list.</p>
-<p>To do this, we need to use a <a class="reference internal" href="../../glossary.html#term-method"><span class="xref std std-term">method</span></a> of Python lists called <code class="docutils literal notranslate"><span class="pre">append()</span></code>. This method adds a new item to the end of a list.</p>
-<p>Much like the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method we used on strings, the <code class="docutils literal notranslate"><span class="pre">append()</span></code> method can be called from any Python list by writing the name of the list plus <code class="docutils literal notranslate"><span class="pre">.append(item)</span></code>, where <code class="docutils literal notranslate"><span class="pre">item</span></code> is the value we want to add to the list.</p>
-<p>See the code below and the explanation that follows.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prices_with_tax</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">book_prices</span><span class="p">:</span>
-    <span class="n">price_num</span> <span class="o">=</span> <span class="n">price</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-    <span class="n">price_num</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">price_num</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.1</span>
-    <span class="n">prices_with_tax</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">price_num</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">prices_with_tax</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[61.589000000000006, 131.94500000000002, 15.345, 275.737, 109.989]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="notes admonition">
-<p class="admonition-title">Notes</p>
-<p>This loop achieves the same thing as the previous, with this difference: the adjusted prices are now stored in the <code class="docutils literal notranslate"><span class="pre">prices_with_tax</span></code> variable, which is another list. This is a fairly common Python pattern; when using this pattern, here are a few rules of thumb to keep in mind:</p>
-<ol class="arabic simple">
-<li><p>We need to create the new list <em>outside</em> of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. The line <code class="docutils literal notranslate"><span class="pre">prices_with_tax</span> <span class="pre">=</span> <span class="pre">[]</span></code> creates a new variable that consists of an <strong>empty list</strong>.</p></li>
-<li><p>As before, we use the <a class="reference internal" href="../../glossary.html#term-loop-variable"><span class="xref std std-term">loop variable</span></a> <code class="docutils literal notranslate"><span class="pre">price</span></code> to work with each item in the <code class="docutils literal notranslate"><span class="pre">book_prices</span></code> list.</p></li>
-<li><p>The variable <code class="docutils literal notranslate"><span class="pre">price_num</span></code> is temporary, in the sense that, like the <code class="docutils literal notranslate"><span class="pre">price</span></code> loop variable, it will change (be reassigned to a new value) with every iteration of the loop.</p></li>
-<li><p>The line <code class="docutils literal notranslate"><span class="pre">prices_with_tax.append(price_num)</span></code> stores the value in <code class="docutils literal notranslate"><span class="pre">price_num</span></code> to our list. <strong>Without this step, we could not “save” the results of our calculations.</strong> It’s like performing a series of steps on a calculator: if you don’t write down your answer before moving onto the next problem, you will lose all your hard work!</p></li>
-<li><p>Steps 2, 3, and 4 are all indented underneath the line that kicks off the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Visually, this tells you that all of these steps happen on each iteration of the loop (once for every item in the <code class="docutils literal notranslate"><span class="pre">book_prices</span></code> lists.</p></li>
-<li><p>The line <code class="docutils literal notranslate"><span class="pre">print(prices_with_tax)</span></code> happens <em>outside</em> the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, so it’s not indented. That’s because we only want to print our new list when it’s finished, not every time we add a new item to it.</p></li>
-<li><p>Note that our <code class="docutils literal notranslate"><span class="pre">book_prices</span></code> list still holds the original strings: our code made a new, second list.</p></li>
-</ol>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">book_prices</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;$55.99&#39;, &#39;$119.95&#39;, &#39;$13.95&#39;, &#39;$250.67&#39;, &#39;$99.99&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="try-it-out admonition">
-<p class="admonition-title">Try it out!</p>
-<p>We have a list of strings that represent courses, where each string (as in the example above) consists of a department code, a course number, and a section number:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">courses</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CHEM 1001 10&#39;</span><span class="p">,</span> <span class="s1">&#39;CHEM 1001 11&#39;</span> <span class="o">...</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>Using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, transform this list into three separate lists: one to hold the department codes, one to hold the course numbers, and one to hold the section numbers.</p>
-<p>The cells below will get you started. For more help, check out this <a class="reference external" href="https://gwu-libraries.github.io/python-camp/parsons-problems/html/homework-1-2.html">Parsons Problem</a>.</p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">courses</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CHEM 1001 10&#39;</span><span class="p">,</span> <span class="s1">&#39;CHEM 1001 11&#39;</span><span class="p">,</span> <span class="s1">&#39;BISC 1111 10&#39;</span><span class="p">,</span> <span class="s1">&#39;BISC 2207 10&#39;</span><span class="p">,</span> <span class="s1">&#39;PSC 1001 10&#39;</span><span class="p">,</span>
-           <span class="s1">&#39;PSC 1001 11&#39;</span><span class="p">,</span> <span class="s1">&#39;PSC 1001 12&#39;</span><span class="p">,</span> <span class="s1">&#39;ANTH 3808 10&#39;</span><span class="p">,</span> <span class="s1">&#39;AMST 2071 80&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">depts</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">course_nums</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">sections</span> <span class="o">=</span> <span class="p">[]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now check your answer by expanding the hidden solution cell below.</p>
-<div class="cell tag_hide-cell docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell content</span>
-<span class="expanded">Hide code cell content</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">courses</span><span class="p">:</span>
-    <span class="n">course_info</span> <span class="o">=</span> <span class="n">course</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-    <span class="n">depts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course_info</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">course_nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course_info</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="n">sections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course_info</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">depts</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">course_nums</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sections</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
 </div>
 </section>
 </section>
@@ -1196,9 +856,8 @@ $99.99
 <p>Congratulations! This homework covered <em>a lot</em> of material. (Subsequent homework notebooks will not be as extensive.)</p>
 <ol class="arabic simple">
 <li><p>We learned about various Python <strong>types</strong>, which allow us to represent (computationally) raw data in various ways.</p></li>
-<li><p>We saw that different types have different uses – or we might say, different behaviors: we can do addition and multiplication with integers and floats, we can <strong>split</strong> and <strong>slice</strong> strings, we can <strong>append</strong> items to lists.</p></li>
+<li><p>We saw that different types have different uses – or we might say, different behaviors: we can do addition and multiplication with integers and floats, we can <strong>split</strong> and <strong>slice</strong> strings, and we can also slice lists.</p></li>
 <li><p>With <strong>integers</strong>, <strong>floats</strong>, <strong>strings</strong>, and <strong>lists</strong>, we can capture complex data using the tools of the Python language. In the team exercise <em>From Data to Code</em>, we saw how a dataset in the <a class="reference internal" href="../../glossary.html#term-JSON"><span class="xref std std-term">JSON</span></a> format translates into these Python types (along with one additional type, the <strong>dictionary</strong>, which you will meet in tomorrow’s activity.)</p></li>
-<li><p>And with <strong>for loops</strong>, we can <em>automate</em> actions that would otherwise be tedious, like calculating the sales tax of a (long) list of prices. And that’s one of the main reasons for learning to program: as the title of one popular book on Python puts it, <a class="reference external" href="https://wrlc-gwu.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma99185917215304107&amp;context=L&amp;vid=01WRLC_GWA:live&amp;lang=en&amp;search_scope=WRLC_P_MyInst_All&amp;adaptor=Local%20Search%20Engine&amp;tab=WRLC&amp;query=any,contains,automate%20the%20boring%20stuff">“to automate the boring stuff”</a>.</p></li>
 </ol>
 </section>
 </section>
@@ -1281,10 +940,8 @@ $99.99
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-6-how-to-do-things-with-strings-splitting">I.6 How to do things with strings: Splitting</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-loops-and-lists">II. Loops and lists</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-strings-lists">II. Strings &amp; lists</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-accessing-items">II.1 Accessing items</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-doing-things-with-strings-lists">II.2 Doing things with strings &amp; lists</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-from-one-list-to-another">II.3 From one list to another</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up">Wrapping up</a></li>

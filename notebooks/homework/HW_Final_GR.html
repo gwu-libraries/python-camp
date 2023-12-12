@@ -1,0 +1,811 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Python Camp: Final Homework &#8212; Python Camp: Programming for Beginners</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/python-camp.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/homework/HW_Final_GR';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python Resources &amp; Where to Go from Here" href="../../keep_learning.html" />
+    <link rel="prev" title="From Story to Code" href="../lessons/3_1_from_story_to_code.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/python-camp.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/python-camp.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Python Camp: Programming for Beginners
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preliminaries</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../guidelines.html">Collaborating on Code: Guidelines for a Good Experience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework.html">Homework for Python Camp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lessons/1_1_modeling_code.html">Modeling Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1-2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lessons/1_2_from_data_to_code.html">From Data to Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="HW_1_from_code_to_data.html">From Code to Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lessons/2_1_describing_the_team.html">Describing the Team</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="HW_2_programming_techniques.html">Programming Techniques</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lessons/2_2_programming_with_data.html">Programming with Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="HW_3_error_stories.html">Error Stories</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lessons/3_1_from_story_to_code.html">From Story to Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Homework</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Final Homework (Graded)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../keep_learning.html">Python Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary of Programming Terms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.lai.gwu.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/gwu-libraries/python-camp&urlpath=tree/python-camp/_sources/notebooks/homework/HW_Final_GR.ipynb&branch=gh-pages" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/gwu-libraries/python-camp" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/gwu-libraries/python-camp/issues/new?title=Issue%20on%20page%20%2Fnotebooks/homework/HW_Final_GR.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/homework/HW_Final_GR.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python Camp: Final Homework</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-1">Tests for Exercise 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-2">Tests for Exercise 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-3">Tests for Exercise 3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-4">Tests for Exercise 4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-your-homework">Submitting your homework</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="python-camp-final-homework">
+<h1>Python Camp: Final Homework<a class="headerlink" href="#python-camp-final-homework" title="Permalink to this heading">#</a></h1>
+<p>This notebook should be completed <em>after</em> the exercises in the <a class="reference internal" href="HW_2_programming_techniques.html"><span class="doc std std-doc">Programming Techniques</span></a> notebook.</p>
+<div class="admonition-how-to-approach-this-homework admonition">
+<p class="admonition-title">How to Approach This Homework</p>
+<p>Unlike the previous homework notebooks you completed, this notebook does not introduce new concepts or syntax. Instead, it offers you an opportunity to put into practice what you’ve learned throughout Python Camp. The exercises build toward a more complex solution, but we have tried to make each step explicit, so as to give you occasion to reflect on many of the concepts you have learned and how they fit together.</p>
+<p>It’s quite possible that you can find hints to the solutions of these exercises in previous Python Camp homeworks, in code you wrote during in-class activities, and/or by Googling or using ChatGPT. You’re welcome to use any and all sources of information to complete these exercises. You’re also encouraged to ask your Python-Camp colleagues and facilitators for help!</p>
+<p>At the same time, you might get the most out of these final exercises if you try to solve each one from memory before turning to other sources. Fluency in Python is like fluency in any other language: it comes with practice, and every mistake is itself instructive!</p>
+</div>
+<section id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h2>
+<p>Below you will find a series of exercises. For each exercise, do the following:</p>
+<ol class="arabic simple">
+<li><p>Run the first code cell under the exercise heading. This will execute some code needed to set up the problem.</p></li>
+<li><p>Reading the instructions and write code in the empty code cell (labeled with the comment <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">code</span> <span class="pre">here</span></code>). Run this code.</p></li>
+<li><p>Your code cell should include the comment line <code class="docutils literal notranslate"><span class="pre">#Your</span> <span class="pre">code</span> <span class="pre">below</span></code>. <strong>Please do not delete this comment</strong>, and if you accidentally delete the cell and have to recreate it, please insert that comment line at the top of the cell before entering your code.</p></li>
+<li><p>Assuming your code does not produce any errors, run the code in the cell below the <code class="docutils literal notranslate"><span class="pre">Tests</span></code> heading. Each line of this code consists of a Python <a class="reference internal" href="../../glossary.html#term-assert-statement"><span class="xref std std-term">assert statement</span></a>.</p>
+<ul class="simple">
+<li><p>If you see an <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>, don’t panic! The error is written so as to help you pinpoint the part of your code that’s not working as expected. After making a change in your code, re-run <strong>both</strong> the cell with your code and the cell with the tests. Repeat until you see no errors.</p></li>
+<li><p>If you run the cell with the test code and you see no output, congratulations! That means that your code has passed all the tests and works as expected. Go to step 5 to submit.</p></li>
+</ul>
+</li>
+<li><p>Submit your code by downloading this notebook from JupyterHub and uploading it to the GitHub repository for this assignment. See <a class="reference external" href="https://gwu-libraries.github.io/python-camp/homework.html">the documentation</a> for detailed instructions.</p></li>
+</ol>
+<div class="admonition-how-to-get-help admonition">
+<p class="admonition-title">How to Get Help</p>
+<p>If you get stuck on any of these exercises, don’t hesitate to ask for help! Asking for help is not only part of the learning process; it’s part of nearly every programmer’s professional practice.</p>
+<ul class="simple">
+<li><p>Post a question on the Python Camp Slack channel. Make sure you spell out both what you’re expecting your code to do, and what your code is actually doing. That way others can identify the problem right away. Including code snippets and/or screenshots from the notebook is usually a good idea.</p></li>
+<li><p>Email the facilitators (<a class="reference external" href="mailto:PYTHON_CAMP&#37;&#52;&#48;groups&#46;gwu&#46;edu">PYTHON_CAMP<span>&#64;</span>groups<span>&#46;</span>gwu<span>&#46;</span>edu</a>). We’re happy to schedule a time to meet, either in person or via Zoom, and walk through your questions together.</p></li>
+</ul>
+</div>
+</section>
+<section id="exercise-1">
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h2>
+<p>The following code creates a variable, <code class="docutils literal notranslate"><span class="pre">my_course</span></code>, from a string describing a GW course, with a course code, number, and section.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span> <span class="o">=</span> <span class="s1">&#39;WSTU 6566 10&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the cell below, write some Python code that creates three new variables, <code class="docutils literal notranslate"><span class="pre">my_dept_code</span></code>, <code class="docutils literal notranslate"><span class="pre">my_course_num</span></code>, and <code class="docutils literal notranslate"><span class="pre">my_section</span></code>. Assign to each of those variables the portions of the string corresponding, respectively, to the department code (<code class="docutils literal notranslate"><span class="pre">WSTU</span></code>), the course number (<code class="docutils literal notranslate"><span class="pre">6566</span></code>), and the section (<code class="docutils literal notranslate"><span class="pre">10</span></code>). All three elements should be strings.</p>
+<p>Note that it’s possible to accomplish this with a literal assignment, e.g., <code class="docutils literal notranslate"><span class="pre">my_dept_code</span> <span class="pre">=</span> <span class="pre">'WSTU'</span></code>, but doing so won’t help you solve the later problems that build on this one. Can you use one of Python’s string <a class="reference internal" href="../../glossary.html#term-method"><span class="xref std std-term">method</span></a>s to accomplish this?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code below</span>
+<span class="c1"># ---- Do not delete this cell! ---- </span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="tests-for-exercise-1">
+<h3>Tests for Exercise 1<a class="headerlink" href="#tests-for-exercise-1" title="Permalink to this heading">#</a></h3>
+<p>The cell below defines one or more tests that will be run to check your code.</p>
+<p>Once you have completed your answer, run the cell. If you see no output, then contratulations, your code has passed the tests!</p>
+<p>If, on the other hand, you see an <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>, it means that one of the tests has failed. Look at the error message for a hint as to where the problem lies.</p>
+<div class="cell tag_test-case:1 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">my_dept_code</span> <span class="o">==</span> <span class="s1">&#39;WSTU&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Variable my_dept_code has the wrong value. Should be &quot;WSTU&quot; but is &quot;</span><span class="si">{</span><span class="n">my_dept_code</span><span class="si">}</span><span class="s1">&quot;.&#39;</span>
+<span class="k">assert</span> <span class="n">my_course_num</span> <span class="o">==</span> <span class="s1">&#39;6566&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Variable my_course_num has the wrong value. Should be &quot;6566&quot; but is &quot;</span><span class="si">{</span><span class="n">my_course_num</span><span class="si">}</span><span class="s1">&quot;.&#39;</span>
+<span class="k">assert</span> <span class="n">my_section</span> <span class="o">==</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Variable my_section has the wrong value. Should be &quot;10&quot;, but is &quot;</span><span class="si">{</span><span class="n">my_section</span><span class="si">}</span><span class="s1">&quot;.&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercise-2">
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h2>
+<p>The following code reassigns the variable <code class="docutils literal notranslate"><span class="pre">my_course</span></code> to a new string with the same elements as above, except that here the name of the instructor follows the section number (separated by a space).</p>
+<div class="cell tag_setup:2 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span> <span class="o">=</span> <span class="s1">&#39;BSCI 1333 15 Thomson&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the cell below, write some Python code that will create a <a class="reference internal" href="../../glossary.html#term-dictionary"><span class="xref std std-term">dictionary</span></a> called <code class="docutils literal notranslate"><span class="pre">my_course_dict</span></code>.</p>
+<p>It should have the following keys:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dept_code</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">course_num</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instructor</span></code></p></li>
+</ul>
+<p>The keys should be assigned the appropriate values from the string <code class="docutils literal notranslate"><span class="pre">my_course</span></code> (as assigned in the cell above).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code below</span>
+<span class="c1"># ---- Do not delete this cell! -----</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="tests-for-exercise-2">
+<h3>Tests for Exercise 2<a class="headerlink" href="#tests-for-exercise-2" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_test-case:2 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dept_code&#39;</span><span class="p">,</span> <span class="s1">&#39;course_num&#39;</span><span class="p">,</span> <span class="s1">&#39;section&#39;</span><span class="p">,</span> <span class="s1">&#39;instructor&#39;</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;BSCI&#39;</span><span class="p">,</span> <span class="s1">&#39;1333&#39;</span><span class="p">,</span> <span class="s1">&#39;15&#39;</span><span class="p">,</span> <span class="s1">&#39;Thomson&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="s1">&#39;my_course_dict&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">my_course_dict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">),</span> <span class="s1">&#39;Variable my_course_dict has not been defined as a dictionary.&#39;</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">my_course_dict</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Key &quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">&quot; was not found in my_course_dict&#39;</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">my_course_dict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">v</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Value for my_course_dict[&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">&quot;] should be &quot;</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&quot;, not &quot;</span><span class="si">{</span><span class="n">my_course_dict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="si">}</span><span class="s1">&quot;.&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercise-3">
+<h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this heading">#</a></h2>
+<p>The following code defines a list of strings that represent courses. Each string consists of a department code, a course number, a section number, and an instructor’s name.</p>
+<div class="cell tag_setup:3 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">courses</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CHEM 1001 10 Mack&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;CHEM 1002, 10 Srinivasan&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;CHEM 1002 11 Mack&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;BISC 1100 10 Liu&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;BISC 1102 10 Thomson&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;PSC 2001 10 Wolters&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;PSC 2001 11 Rath&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;PSC 2001 12 Cho&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;WSTU 6999 10 Cho&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;WSTU 6999 11 Delaney&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the cell below, write some code that will transform the data in the <code class="docutils literal notranslate"><span class="pre">courses</span></code> list into a list of dictionaries. Each dictionary should be structured as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;dept_code&#39;</span><span class="p">:</span> <span class="s1">&#39;CHEM&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;course_num&#39;</span><span class="p">:</span> <span class="s1">&#39;1001&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;section&#39;</span><span class="p">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;instructor&#39;</span><span class="p">:</span> <span class="s1">&#39;Mack&#39;</span><span class="p">}</span> 
+</pre></div>
+</div>
+<p>In other words, each dictionary should have the same four keys, and there should be one dictionary for each of the courses in the <code class="docutils literal notranslate"><span class="pre">courses</span></code> list.</p>
+<p>Call this new list <code class="docutils literal notranslate"><span class="pre">courses_db</span></code> (for “courses database”).</p>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Make sure you create each course dictionary <strong>inside</strong> the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">courses</span><span class="p">:</span>
+    <span class="n">course_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>If you get stuck, try solving this <a class="reference external" href="https://gwu-libraries.github.io/python-camp/parsons-problems/html/homework-2-GR.html">Parsons Problem</a>, which will help you focus on the logic without worrying too much about the syntax.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code below</span>
+<span class="c1"># ---- Do not delete this cell! -----</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="tests-for-exercise-3">
+<h3>Tests for Exercise 3<a class="headerlink" href="#tests-for-exercise-3" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_test-case:3 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;dept_code&#39;</span><span class="p">,</span> <span class="s1">&#39;course_num&#39;</span><span class="p">,</span> <span class="s1">&#39;section&#39;</span><span class="p">,</span> <span class="s1">&#39;instructor&#39;</span><span class="p">}</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;CHEM&#39;</span><span class="p">,</span> <span class="s1">&#39;1001&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Mack&#39;</span><span class="p">}</span>
+<span class="k">assert</span> <span class="s1">&#39;courses_db&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">(),</span> <span class="s1">&#39;Variable courses_db is not defined&#39;</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">courses_db</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s1">&#39;Variable courses_db is not a list.&#39;</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">courses_db</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">dict</span><span class="p">),</span> <span class="s1">&#39;List courses_db does not contain a dictionary as its first element.&#39;</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">courses_db</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">courses</span><span class="p">),</span> <span class="s1">&#39;List courses_db is the wrong length.&#39;</span>
+<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">courses_db</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">==</span> <span class="n">keys</span><span class="p">,</span> <span class="s1">&#39;The first dictionary in courses_db does not have the right keys.&#39;</span>
+<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">courses_db</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">==</span> <span class="n">values</span><span class="p">,</span> <span class="s1">&#39;The first dictionary in courses_db does not have the right values.&#39;</span>
+<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">courses_db</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;WSTU&#39;</span><span class="p">,</span> <span class="s1">&#39;6999&#39;</span><span class="p">,</span> <span class="s1">&#39;11&#39;</span><span class="p">,</span> <span class="s1">&#39;Delaney&#39;</span><span class="p">},</span> <span class="s1">&#39;The last element of courses_db does not have the right values.&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercise-4">
+<h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this heading">#</a></h2>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">courses_db</span></code> variable defined in Exercise 3, write a function, <code class="docutils literal notranslate"><span class="pre">count_courses</span></code>, to count how many courses a given instructor is teaching. The function should accept an argument corresponding to an instructor’s name, and it should return the number of courses in <code class="docutils literal notranslate"><span class="pre">courses_db</span></code> associated with that name. If the instructor is not in the database, your function should return <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p>For instance, if <code class="docutils literal notranslate"><span class="pre">my_instructor</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;Liu&quot;</span></code>, your function would return <code class="docutils literal notranslate"><span class="pre">1</span></code>. If <code class="docutils literal notranslate"><span class="pre">my_instructor</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;Cho&quot;</span></code>, your function would return <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+<p>A skeleton for the function is defined in the cell below. Fill it in with your code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code below</span>
+<span class="c1"># ---- Do not delete this cell! -----</span>
+<span class="k">def</span> <span class="nf">count_courses</span><span class="p">(</span><span class="n">instructor_name</span><span class="p">):</span>
+    
+    <span class="k">return</span> <span class="n">course_count</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="tests-for-exercise-4">
+<h3>Tests for Exercise 4<a class="headerlink" href="#tests-for-exercise-4" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_test-case:4 docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">count_courses</span><span class="p">(</span><span class="s1">&#39;Rath&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Rath is teaching one course, but count_courses returns </span><span class="si">{</span><span class="n">count_courses</span><span class="p">(</span><span class="s2">&quot;Rath&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span>
+<span class="k">assert</span> <span class="n">count_courses</span><span class="p">(</span><span class="s1">&#39;Mack&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Mack is teaching two courses, but count_courses returns </span><span class="si">{</span><span class="n">count_courses</span><span class="p">(</span><span class="s2">&quot;Mack&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span>
+<span class="k">assert</span> <span class="n">count_courses</span><span class="p">(</span><span class="s1">&#39;Smith&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Smith is not teaching any courses, but count_courses returns </span><span class="si">{</span><span class="n">count_courses</span><span class="p">(</span><span class="s2">&quot;Smith&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="submitting-your-homework">
+<h2>Submitting your homework<a class="headerlink" href="#submitting-your-homework" title="Permalink to this heading">#</a></h2>
+<p>If you’ve run all 4 code cells under the <code class="docutils literal notranslate"><span class="pre">Tests</span></code> headings, and if you see no error, congratulations! That means you’ve successfully completed this homework and are ready to submit it.</p>
+<p>You will submit your homework via GitHub, which will simply run the same tests that you have run above, record any errors, and alert the Python Camp facilitators that you have made a submission.</p>
+<p>Submitting this homework notebook (with no errors in the code) and attendance for all four days of Python Camp satisfy the requirements to receive the certificate of completion.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/homework"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../lessons/3_1_from_story_to_code.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">From Story to Code</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../keep_learning.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python Resources &amp; Where to Go from Here</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-1">Tests for Exercise 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-2">Tests for Exercise 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-3">Tests for Exercise 3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-4">Tests for Exercise 4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-your-homework">Submitting your homework</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GW Libraries & Academic Innovation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

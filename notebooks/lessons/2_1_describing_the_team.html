@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/lessons/2_1_describing_the_team';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Querying Textbook Data" href="2_2_querying_data.html" />
+    <link rel="next" title="Programming Techniques" href="../homework/HW_2_programming_techniques.html" />
     <link rel="prev" title="From Code to Data" href="../homework/HW_1_from_code_to_data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -164,7 +164,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_1_choreographing_code.html">Choreographing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_1_modeling_code.html">Modeling Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1-2</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_2_from_data_to_code.html">From Data to Code</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1 Homework</span></p>
@@ -174,29 +177,26 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Describing the Team</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_2_querying_data.html">Querying Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_2_programming_techniques.html">Programming Techniques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../homework/HW_2_GR.html">Graded Homework: Day 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Days 3-4</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="3_1_from_story_to_code.html">From Story to Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_2_programming_with_data.html">Programming with Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_3_error_stories.html">Error Stories</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../homework/HW_3_GR.html">Graded Homework: Day 3</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4 (SUPPLEMENTAL)</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="4_1_modeling_the_world.html">Modeling the World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_1_from_story_to_code.html">From Story to Code</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bonus Homework</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Homework</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../homework/HW_4_GR.html">Bonus Homework: Day 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_Final_GR.html">Final Homework (Graded)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Reference</span></p>
 <ul class="nav bd-sidenav">
@@ -427,21 +427,23 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-data">Structured data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists-versus-dictionaries">Lists versus dictionaries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dictionary-to-describe-yourself">Creating a dictionary to describe yourself</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-structured-data">I. Structured data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-creating-a-list">I.1 Creating a list</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-lists-or-dictionaries">I.2 Lists or dictionaries?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-3-creating-a-dictionary-to-describe-yourself">I.3 Creating a dictionary to describe yourself</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-template">Dictionary template</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dictionaries">Using dictionaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-4-using-dictionaries">I.4 Using dictionaries</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-data">Tabular data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-data-in-python">Tabular data in Python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-dictionaries-in-a-list">Modifying dictionaries in a list</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-list-of-dictionaries-in-json-format">Saving a list of dictionaries in JSON format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-lists-and-dictionaries-together">II. Lists and dictionaries together</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-nesting-data">II.1 Nesting data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-working-with-nested-data">II.2 Working with nested data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-loops-lists-and-dictionaries">II.3 Loops, lists, and dictionaries</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-from-code-to-data">III. From Code to Data</a></li>
 </ul>
             </nav>
         </div>
@@ -463,8 +465,8 @@ document.write(`
 <li><p>To compose complex data structures and interact with them using loops</p></li>
 </ul>
 </section>
-<section id="structured-data">
-<h2>Structured data<a class="headerlink" href="#structured-data" title="Permalink to this heading">#</a></h2>
+<section id="i-structured-data">
+<h2>I. Structured data<a class="headerlink" href="#i-structured-data" title="Permalink to this heading">#</a></h2>
 <p>Like most programming languages, Python gives us various tools for organizing data, each of which involves certain tradeoffs.</p>
 <p>In <a class="reference external" href="https://gwu-libraries.github.io/python-camp/notebooks/homework/HW_1_from_code_to_data.html">the homework</a> you worked with the following data types:</p>
 <ul class="simple">
@@ -474,8 +476,8 @@ document.write(`
 </ul>
 <p>The real power of these tools lies in our ability to compose them together in order to reflect both the complexity of the data we’re working with, and our goals (or those of our end users).</p>
 <p>But it can be challenging to decide which Python types to use in a given circumstance. Before we dive into more code, take a few minutes to discuss the following questions with your team.</p>
-<div class="question admonition">
-<p class="admonition-title">Questions</p>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
 <ol class="arabic simple">
 <li><p>If you’re going to the store to buy groceries, how do you generally keep track of the items you need? What pieces of information are relevant to this task?</p></li>
 <li><p>What about keeping track of the courses you’re taking in a given semester?</p></li>
@@ -483,36 +485,55 @@ document.write(`
 <li><p>If you were going to record some information about the members of your team, what information would you capture? Make a list of fields that the team can agree on.</p></li>
 </ol>
 </div>
-<section id="lists-versus-dictionaries">
-<h3>Lists versus dictionaries<a class="headerlink" href="#lists-versus-dictionaries" title="Permalink to this heading">#</a></h3>
-<p>In the examples above, we were talking about lists of things. But <em>not all lists are created equal</em>.</p>
-<p>For instance, in the homework, you worked with two different examples of a <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a>:</p>
-<ol class="arabic simple">
-<li><p>A list of book prices, where each item represented the price of a book. Beyond the price, there was no other information about the book to be gleaned from that list.</p></li>
-<li><p>A list of courses. Each <a class="reference internal" href="../../glossary.html#term-string"><span class="xref std std-term">string</span></a> contained three pieces of information:</p>
-<ul class="simple">
-<li><p>a department code</p></li>
-<li><p>a course number</p></li>
-<li><p>and a section number.</p></li>
-</ul>
-</li>
-</ol>
-<p>You used the list of course strings to create three separate lists: one for the department codes, one for the course numbers, and one for the section numbers.</p>
-<p>But it would be handy if we could keep track of those three pieces of information in the same place (using a single data structure). Managing three lists would, in this case, be cumbersome, and if we were dealing with a large number of courses, potentially error prone.</p>
-<p>Let’s see how Python dictionaries can help!</p>
-</section>
-<section id="creating-a-dictionary-to-describe-yourself">
-<h3>Creating a dictionary to describe yourself<a class="headerlink" href="#creating-a-dictionary-to-describe-yourself" title="Permalink to this heading">#</a></h3>
-<p>In this activity, you’ll create a data structure to hold information about your team, and you’ll write Python code to update it.</p>
-<p>First, create a Python dictionary to hold information about yourself. Follow the template below, but feel free to use the fields that your team agreed upon in the first activity (Question 4 above).</p>
-<section id="dictionary-template">
-<h4>Dictionary template<a class="headerlink" href="#dictionary-template" title="Permalink to this heading">#</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dolsy</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Dolsy Smith&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;job_title&#39;</span><span class="p">:</span> <span class="s1">&#39;Software Developer/Librarian&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;gw_unit&#39;</span><span class="p">:</span> <span class="s1">&#39;GW Libraries &amp; Academic Innovation&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;email_address&#39;</span><span class="p">:</span> <span class="s1">&#39;dsmith@gwu.edu&#39;</span><span class="p">}</span>
+<section id="i-1-creating-a-list">
+<h3>I.1 Creating a list<a class="headerlink" href="#i-1-creating-a-list" title="Permalink to this heading">#</a></h3>
+<p>In the homework, you split a single string containing some course information into a list of three strings. For example, by executing the code <code class="docutils literal notranslate"><span class="pre">&quot;CHEM</span> <span class="pre">1001</span> <span class="pre">10&quot;.split()</span></code>, we get back the <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a> <code class="docutils literal notranslate"><span class="pre">[&quot;CHEM&quot;,</span> <span class="pre">&quot;1001&quot;,</span> <span class="pre">&quot;10&quot;]</span></code>. In Python, we can put any valid Python values, or variables pointing to those values, inside of a list.</p>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p>In the cell below, assign a variable called <code class="docutils literal notranslate"><span class="pre">my_team</span></code> to a new list containing the names of the members of your team.</p>
+<p>Then using that variable, print the first name in the list.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
 </pre></div>
 </div>
+</div>
+</div>
+</section>
+<section id="i-2-lists-or-dictionaries">
+<h3>I.2 Lists or dictionaries?<a class="headerlink" href="#i-2-lists-or-dictionaries" title="Permalink to this heading">#</a></h3>
+<p>The examples above used lists of strings to hold some information. But note the difference between the two kinds of lists. The list you created holds a list of names, e.g.,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_team</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span> <span class="s2">&quot;Emily&quot;</span><span class="p">,</span> <span class="s2">&quot;Marcus&quot;</span><span class="p">,</span> <span class="s2">&quot;Max&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In this list, each of the elements conveys the same <em>kind</em> of information; each element is a person’s name. On the other hand, the list we created by splitting the course string contains three different kinds of information:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CHEM&quot;</span><span class="p">,</span> <span class="s2">&quot;1001&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The first element is the department code, the second is the course number, and the third is the section number. But there’s nothing in the list itself that tells us which is which. We just have to remember that the department code comes first, followed by the course number and then the section number. For this kind of data, it would be great if we could label each element, such that instead of writing</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>to access the course number, we could write something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span><span class="p">[</span><span class="s2">&quot;course_num&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>As you might have guessed, Python has just the thing for this kind of situation. It’s called a <a class="reference internal" href="../../glossary.html#term-dictionary"><span class="xref std std-term">dictionary</span></a>.</p>
+</section>
+<section id="i-3-creating-a-dictionary-to-describe-yourself">
+<h3>I.3 Creating a dictionary to describe yourself<a class="headerlink" href="#i-3-creating-a-dictionary-to-describe-yourself" title="Permalink to this heading">#</a></h3>
+<p>In this activity, you’ll create a more complex data structure to hold information about your team, and you’ll write Python code to update it.</p>
+<p>First, create a Python dictionary to hold information about yourself. Follow the template below, but feel free to add any additional fields that your team agreed upon in the first activity (Question 4 above).</p>
+<section id="dictionary-template">
+<h4>Dictionary template<a class="headerlink" href="#dictionary-template" title="Permalink to this heading">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dolsy</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dolsy Smith&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;dsmith@gwu.edu&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;team_role&quot;</span><span class="p">:</span> <span class="s2">&quot;advocate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;years_at_gw&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Include your current role on your team, i.e., notetaker, reporter, or advocate.</p>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
 <p>Create your dictionary in the cell below and run the cell to make sure the code works.</p>
@@ -528,8 +549,8 @@ document.write(`
 <p class="admonition-title">Notes</p>
 <ul class="simple">
 <li><p>Note the curly braces (<code class="docutils literal notranslate"><span class="pre">{}</span></code>) at the start and end of the dictionary. Python uses square brackets for lists and curly braces for dictionaries.</p></li>
-<li><p>The field names – on the left side of the colon – are called <strong>keys</strong>.</p></li>
-<li><p>The data on the right side of the colon are called <strong>values</strong>.</p></li>
+<li><p>The values on the left side of the colons are called <strong>keys</strong>.</p></li>
+<li><p>The values on the right side of the colons are called <strong>values</strong>.</p></li>
 <li><p>Keys are usually (but not always) Python strings.</p></li>
 <li><p>Values can be strings, floats, integers, or any other valid Python data type.</p></li>
 <li><p>Note the commas at the end of each line. These separate key-value pairs. It’s not required to break the dictionary into multiple lines, but if you do, you must break after the comma.</p></li>
@@ -538,11 +559,12 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="using-dictionaries">
-<h3>Using dictionaries<a class="headerlink" href="#using-dictionaries" title="Permalink to this heading">#</a></h3>
-<p>If your dictionary was successfully created and assigned to a variable, you should be able to access the values by using their corresponding keys.</p>
-<p>For instance, to print my email address, I’d do the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">dolsy</span><span class="p">[</span><span class="s1">&#39;email_address&#39;</span><span class="p">])</span>
+<section id="i-4-using-dictionaries">
+<h3>I.4 Using dictionaries<a class="headerlink" href="#i-4-using-dictionaries" title="Permalink to this heading">#</a></h3>
+<p>If your dictionary was successfully created and assigned to a variable, you should be able to access the values by using their corresponding keys. Key are simply labels that point to values – like the labels on a file folder, for instance.</p>
+<p>Keys allow us to access information within dictionaries according to the label (the key) we have assigned to it. Think about a file cabinet full of folders: such a structure would be pretty hard to use if we had to remember the position of every folder. But by affixing labels, we can easily find the folder we want, as long as the label makes sense as a guide to the folder’s contents.</p>
+<p>The dictionary is a similar concept. To retrieve and print my email address from the <code class="docutils literal notranslate"><span class="pre">dolsy</span></code> dictionary created above, I write the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">dolsy</span><span class="p">[</span><span class="s2">&quot;email_address&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Note that here we surround the key with <a class="reference internal" href="../../glossary.html#term-square-brackets"><span class="xref std std-term">square brackets</span></a> rather than curly braces. The syntax is meant to remind you of how we access individual items in a list.</p>
@@ -557,22 +579,80 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Keys not only make it easy to access values in a dictionary. We can also use them to <strong>add new values</strong>. To add a key called <code class="docutils literal notranslate"><span class="pre">&quot;programming_languages&quot;</span></code> to my <code class="docutils literal notranslate"><span class="pre">dolsy</span></code> dictionary, I can write the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dolsy</span><span class="p">[</span><span class="s2">&quot;programming_languages&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+</pre></div>
+</div>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p>Add the <code class="docutils literal notranslate"><span class="pre">&quot;programming_languages&quot;</span></code> key to your dictionary. If you know more than one programming language, instead of assigning the key to a string, go ahead and assign it to a list of strings, e.g.,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="question admonition">
+<p class="admonition-title">For discussion</p>
+<p>The following table summarizes the key similarities and differences between lists and dictionaries in Python.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>List</p></th>
+<th class="head"><p>Dictionary</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Holds multiple values</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>Access values by position</p></td>
+<td><p>✓</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Access values by key (e.g, label)</p></td>
+<td><p></p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>Can retrieve multiple values by slicing</p></td>
+<td><p>✓</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Add new values by appending (adding to the end)</p></td>
+<td><p>✓</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Add new values by inserting a new key/value pair</p></td>
+<td><p></p></td>
+<td><p>✓</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Question</strong>: What kinds of data do you think are more suitable for storing in lists? What kinds might be better suited to dictionaries? Discuss with your team and record your answers.</p>
+</div>
 </section>
 </section>
-<section id="tabular-data">
-<h2>Tabular data<a class="headerlink" href="#tabular-data" title="Permalink to this heading">#</a></h2>
-<p>A single dictionary is a good way to represent something in the real world – like a person, a course, or a textbook – that has multiple properties or attributes.</p>
-<p>The dictionary’s keys can help us organize the attributes by labels, just the way we might label the different elements of each entry in an addressbook: name, email address, phone number, etc.</p>
-<p>You might also think of the dictionary keys as the column headings in a spreadsheet. In a spreadsheet, each row uses the same column headings, which allows us to do things like sort or filter the data by particular attributes. For example, if we covert our addressbook to an Excel file, assuming we have a column for email address, we can easily compute how many of our contacts have GW email addresses.</p>
-<p>We call such a data structure <strong>tabular</strong> because it is organized as a table, i.e., with rows and columns.</p>
-<section id="tabular-data-in-python">
-<h3>Tabular data in Python<a class="headerlink" href="#tabular-data-in-python" title="Permalink to this heading">#</a></h3>
-<p>How do we represent tabular data in Python?</p>
-<p>There are some very handy Python libraries for working with tables, <a class="reference external" href="https://pandas.pydata.org/">pandas</a> being one of the most popular. But we can also handle tabular data with just the Python types you’ve already encountered.</p>
-<p>One common approach, which we will work through together, is to create a <strong>list of dictionaries</strong>.</p>
+<section id="ii-lists-and-dictionaries-together">
+<h2>II. Lists and dictionaries together<a class="headerlink" href="#ii-lists-and-dictionaries-together" title="Permalink to this heading">#</a></h2>
+<p>We unlock the real power of a programming language like Python when we start to compose more complex structures out of the basic data types provided by the language. If lists and dictionaries in Python were mutually exclusive, we would quickly encounter the limits of those types.</p>
+<div class="notes admonition">
+<p class="admonition-title">A thought experiment</p>
+<p>Think about the few thousand courses taught every semester at GW.</p>
 <ul class="simple">
-<li><p>On the analogy with a spreadsheet, each dictionary in the list would be another row of the table.</p></li>
-<li><p>Each dictionary would have the same <strong>keys</strong> (with different <strong>values</strong>), corresponding to the data in the various columns of the spreadsheet.</p></li>
+<li><p>There are multiple pieces of information about each course that we might want to keep track of, like who’s teaching it, what department it belongs to, etc. That structure might lend itself to a dictionary.</p></li>
+<li><p>But dictionaries have an important constraint: <strong>each key in the dictionary must be unique</strong>.</p></li>
+<li><p>How would we structure this course data as a dictionary? What would we use for keys?</p></li>
+<li><p>Alternately, if we were to use a list, what would the data structure look like?</p></li>
+</ul>
+</div>
+<section id="ii-1-nesting-data">
+<h3>II.1 Nesting data<a class="headerlink" href="#ii-1-nesting-data" title="Permalink to this heading">#</a></h3>
+<p>There are many different ways to put lists and dictionaries together. When handling datasets like our list of courses,a common approach is to create a <a class="reference internal" href="../../glossary.html#term-list-of-dictionaries"><span class="xref std std-term">list of dictionaries</span></a>.</p>
+<p>You can think of this structure as similar to a spreadsheet.</p>
+<ul class="simple">
+<li><p>Each dictionary is like a single row of the spreadsheet.</p></li>
+<li><p>Each dictionary has the same <strong>keys</strong> but different <strong>values</strong>.</p></li>
+<li><p>The keys correspond to the column names in the spreadsheet.</p></li>
+<li><p>The values correspond to the data in the cells under those columns.</p></li>
 </ul>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
@@ -599,7 +679,10 @@ document.write(`
 </pre></div>
 </div>
 <p>Note that because I’m putting <strong>variables</strong> in this list, not strings, I don’t use quotation marks. (I don’t want to create a list of strings, but a list of dictionaries, each of which is represented by one of these variables.)</p>
-<p>Then <code class="docutils literal notranslate"><span class="pre">print()</span></code> your list to confirm that it contains the data about your team.</p>
+<p>To see the final result, run a code cell with just the name of your team variable in it, like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_team</span>
+</pre></div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -609,21 +692,81 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="modifying-dictionaries-in-a-list">
-<h3>Modifying dictionaries in a list<a class="headerlink" href="#modifying-dictionaries-in-a-list" title="Permalink to this heading">#</a></h3>
-<p>Take a moment to congratulate yourself. You’ve just used Python to create a tabular dataset representing your team.</p>
-<p>We can even save this dataset to a file so that it can be re-used later!</p>
-<p>But first let’s add another piece of information to each team member’s record.</p>
-<p>In the example above, I retrieved my email adddress by writing <code class="docutils literal notranslate"><span class="pre">dolsy['email_address']</span></code>, where <code class="docutils literal notranslate"><span class="pre">'email_address'</span></code> is a <a class="reference internal" href="../../glossary.html#term-key"><span class="xref std std-term">key</span></a> in the <code class="docutils literal notranslate"><span class="pre">dolsy</span></code> dictionary.</p>
-<p>In a similar fashion, I can add a new key/value pair to my dictionary as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dolsy</span><span class="p">[</span><span class="s1">&#39;programming_languages&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">]</span>
+<section id="ii-2-working-with-nested-data">
+<h3>II.2 Working with nested data<a class="headerlink" href="#ii-2-working-with-nested-data" title="Permalink to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">my_team</span></code> variable is a list of dictionaries, so it’s a nested data structure. But the outer layer is still a Python list, so it has all the list behaviors you learned about in the lessons and homework for Day 1.</p>
+<ol class="arabic simple">
+<li><p>We can access a single element (a dictionary) by <a class="reference internal" href="../../glossary.html#term-index"><span class="xref std std-term">index</span></a>:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_team</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>The foregoing code would add a <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a> containing one item – the string <code class="docutils literal notranslate"><span class="pre">'Python'</span></code> – to the <code class="docutils literal notranslate"><span class="pre">dolsy</span></code> dictionary, associating it with the key <code class="docutils literal notranslate"><span class="pre">'programming</span> <span class="pre">_languages'</span></code>. I’m using a list since it’s conceivable that someone can know multiple programming languages.</p>
+<ol class="arabic simple" start="2">
+<li><p>We can even access multiple elements by slicing:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_team</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>But what if we want to work with the values <strong>inside</strong> one of these dictionaries? We can do that, too.
+3. We can access a value by key from the first dictionary like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_team</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;email_address&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>And we can add or update a value using the same syntax:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_team</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;role&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;reporter&quot;</span>
+</pre></div>
+</div>
+<div class="admonition-try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p>Try updating a few of the keys in a few of the dictionaries in your team list. The diagram below might help you conceptualize the syntax you need.</p>
+</div>
+</section>
+<section id="ii-3-loops-lists-and-dictionaries">
+<h3>II.3 Loops, lists, and dictionaries<a class="headerlink" href="#ii-3-loops-lists-and-dictionaries" title="Permalink to this heading">#</a></h3>
+<p>What if we want to add the same value to all of the dictionaries in our list? Let’s say we want to add a “programming_languages” key to everyone on the team and assign it to “Python.”</p>
+<p>The following code might seem like it should work:</p>
+<p><code class="docutils literal notranslate"><span class="pre">my_team[&quot;programming_languages&quot;]</span> <span class="pre">=</span> <span class="pre">&quot;Python&quot;</span></code></p>
+<p>But it doesn’t. The variable <code class="docutils literal notranslate"><span class="pre">my_team</span></code> points to a list, and lists do not allow access by key, only by position. It doesn’t matter that <code class="docutils literal notranslate"><span class="pre">my_team</span></code> points to a list <strong>of dictionaries</strong>; Python doesn’t let us take that shortcut.</p>
+<p>So what do we do? We probably don’t want manually to add the same key/value to every dictionary in our list. The following <em>would</em> work, but it kind of defeats the point of programming:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_team</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;programming_languages&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="n">my_team</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;programming_languages&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="n">my_team</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s2">&quot;programming_languages&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="c1"># and so on</span>
+</pre></div>
+</div>
+<p>For-tunately, we can reach for one of the most powerful tools in the programmer’s toolkit, a tool that unlocks the superpower of the computer – its capacity for mindless iteration – with a humble, three-letter word.</p>
+<div class="notes admonition">
+<p class="admonition-title">Set it and for-get it</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is the most common looping construct in Python. It lets us loop over any collection – that is, any data type that can contain multiple elements – and work with each element in turn. Probably the most common use of the <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> is for looping over lists.</p>
+<p>In the code below, we use a for loop to print each team member’s email address.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">my_team</span><span class="p">:</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">member</span><span class="p">[</span><span class="s2">&quot;email_adress&quot;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">email</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notes admonition">
+<p class="admonition-title">Loop variables</p>
+<p>Note the variable <code class="docutils literal notranslate"><span class="pre">member</span></code> in the code immediately above. That’s not a variable we’ve used before. In creating your <code class="docutils literal notranslate"><span class="pre">my_team</span></code> list, you probably used other variables, like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_team</span> <span class="o">=</span> <span class="p">[</span><span class="n">dolsy</span><span class="p">,</span> <span class="n">marcus</span><span class="p">,</span> <span class="n">debbie</span><span class="p">,</span> <span class="n">alex</span><span class="p">]</span>
+
+</pre></div>
+</div>
+<p>A <a class="reference internal" href="../../glossary.html#term-loop-variable"><span class="xref std std-term">loop variable</span></a> is a special variable used in the context of a for loop. It’s job is to point to each element in the list (or other collection) sequentially.</p>
+<p>Imagine that your’re baking a cake that requires several ingredients, and you have a single measuring cup. You put each ingredient into the cup in order to measure it – the cup is like a loop variable, because it gets reused with each ingredient.</p>
+<p>The body of the for loop – the code underneath the line with <code class="docutils literal notranslate"><span class="pre">for</span></code>, the code that forms an <a class="reference internal" href="../../glossary.html#term-indented-block"><span class="xref std std-term">indented block</span></a> – will be executed as many times as there are elements in the list. Usually, the loop variable is used somehow within that indented block – as in the code above, where we use the <code class="docutils literal notranslate"><span class="pre">member</span></code> variable to access the value of the <code class="docutils literal notranslate"><span class="pre">&quot;email_address&quot;</span></code> key in each dictionary, and use the latter as an <span class="xref std std-term">argument</span> to <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
+</div>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
-<p>Write a <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> to add a <code class="docutils literal notranslate"><span class="pre">'programming_languages'</span></code> key, and the <a class="reference internal" href="../../glossary.html#term-value"><span class="xref std std-term">value</span></a> <code class="docutils literal notranslate"><span class="pre">['Python']</span></code>, to each dictionary in your list.</p>
-<p>Then print your list to confirm that the operation was successful.</p>
+<p>Write a for loop to add a <code class="docutils literal notranslate"><span class="pre">&quot;programming_languages&quot;</span></code> key, and the <a class="reference internal" href="../../glossary.html#term-value"><span class="xref std std-term">value</span></a> <code class="docutils literal notranslate"><span class="pre">[&quot;Python&quot;]</span></code>, to each dictionary in your <code class="docutils literal notranslate"><span class="pre">my_team</span></code> list.</p>
+<p>Enclose the string “Python” inside a list (by wrapping it in square brackets): that will let us add other languages later, should we need to.</p>
+<p>Then display your list to confirm that the operation was successful.</p>
 <p>If you want additional help, consult this <a class="reference external" href="https://gwu-libraries.github.io/python-camp/parsons-problems/html/lessons-2-1-1.html">Parsons’ Problem</a>.</p>
 </div>
 <div class="cell docutils container">
@@ -634,9 +777,11 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="saving-a-list-of-dictionaries-in-json-format">
-<h3>Saving a list of dictionaries in JSON format<a class="headerlink" href="#saving-a-list-of-dictionaries-in-json-format" title="Permalink to this heading">#</a></h3>
-<p>Now let’s save our database to disk. We’ll use the <code class="docutils literal notranslate"><span class="pre">json</span></code> module and the <code class="docutils literal notranslate"><span class="pre">open</span></code> function as we did on Day 1 (to load the GW Bookstore dataset), except that this time we’ll be <strong>writing</strong> to the file, not reading from it.</p>
+</section>
+<section id="iii-from-code-to-data">
+<h2>III. From Code to Data<a class="headerlink" href="#iii-from-code-to-data" title="Permalink to this heading">#</a></h2>
+<p>Congratulations! You’ve created a small dataset with information about your team. Now we’ll save this dataset to your JupyterHub account so that we can use it later.</p>
+<p>We’ll use the <code class="docutils literal notranslate"><span class="pre">json</span></code> module and the <code class="docutils literal notranslate"><span class="pre">open</span></code> function, just as we did in a previous lesson when loading the GW Bookstore dataset, except that this time we’ll be <strong>writing</strong> to the file, not reading from it.</p>
 <p>First we <a class="reference internal" href="../../glossary.html#term-import"><span class="xref std std-term">import</span></a> the <code class="docutils literal notranslate"><span class="pre">json</span></code> library.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -647,16 +792,52 @@ document.write(`
 </div>
 <p>Next we open the file for writing, and use the <code class="docutils literal notranslate"><span class="pre">json.dump()</span></code> method to write our list of dictionaries to the file.</p>
 <p>In the code below, I’ve used the variable <code class="docutils literal notranslate"><span class="pre">my_team</span></code> to refer to the list of dictionaries created above. If you named your list something different, use that name in place of <code class="docutils literal notranslate"><span class="pre">my_team</span></code>.</p>
-<p>Note that we’re saving the data to a file called <code class="docutils literal notranslate"><span class="pre">team-database.json</span></code>. The initial <code class="docutils literal notranslate"><span class="pre">./</span></code> indicates that this file will live in the same directory as this notebook.</p>
+<p>Note that we’re saving the data to a file called <code class="docutils literal notranslate"><span class="pre">team-dataset.json</span></code>. The initial <code class="docutils literal notranslate"><span class="pre">./</span></code> indicates that this file will live in the same directory as this notebook.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./team-database.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">my_team</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./team-dataset.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">my_team</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
+<div class="admonition-try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p>To confirm, look at the JSON file you just created in your browser.</p>
+<ol class="arabic simple">
+<li><p>Open a new tab.</p></li>
+<li><p>Copy the URL from this tab and paste it in the new tab.</p></li>
+<li><p>Remove the name of the notebook, <code class="docutils literal notranslate"><span class="pre">2_1_describing_the_team.ipynb</span></code>, and replace it with the name of the JSON file: <code class="docutils literal notranslate"><span class="pre">team-database.json</span></code>.</p></li>
+<li><p>You should see the data displayed in your browser, just as when we first looked at the bookstore dataset.</p></li>
+</ol>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Syntax review: Square brackets</p>
+<p>Square brackets (<code class="docutils literal notranslate"><span class="pre">[]</span></code>) are used in Python in a few different situations. Learning to distinguish among them will help you read and write Python more efficiently.</p>
+<p><strong>Lists</strong></p>
+<p>When square brackets stand by themselves, i.e., not attached to the name of a variable or to a string, they delimit a list. A list may contain:</p>
+<ul class="simple">
+<li><p>Zero elements: <code class="docutils literal notranslate"><span class="pre">[]</span></code></p></li>
+<li><p>One element: <code class="docutils literal notranslate"><span class="pre">[&quot;Python</span> <span class="pre">Camp&quot;]</span></code> (a list containing a single string)</p></li>
+<li><p>Multiple elements: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code> (a list containing three integers)</p></li>
+</ul>
+<p>When there are more than one element in a list, the elements are separated by commas. List elements may be any mix of Python data types: integers, floats, strings, even other lists!</p>
+<p>Think of the square brackets enclosing lists as the brackets that hold up a shelf. Like a shelf, a list allows us to arrange things sequentially (i.e., in order, one after the other) but provides no additional structure.</p>
+<p><strong>Indexing and slicing</strong></p>
+<p>Square brackets “attached” to a Python string or list are used for indexing or slicing. A single integer between brackets retrieves a single element (by position), and two integers, separated by a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>), retrieves multiple adjacent elements, e.g.,</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Python&quot;[1]</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">&quot;y&quot;</span></code>, because the index 1 corresponds to the second element. (Python indexing starts from 0.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Python</span> <span class="pre">Camp&quot;[0:6]</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">&quot;Python&quot;</span></code>, starting with the first element (index 0) and going <em>up to, but not including</em>, the 7th (the space). We could also write this as <code class="docutils literal notranslate"><span class="pre">&quot;Python</span> <span class="pre">Camp&quot;[:6]</span></code>, without the <code class="docutils literal notranslate"><span class="pre">0</span></code>, since we want a slice starting from the beginning of the string.</p></li>
+</ul>
+<p>The square brackets used for indexing/slicing are kind of like a window. They allow us to peek at one or more elements that are adjacent to one another.</p>
+<p><strong>Dictionary access</strong></p>
+<p>Square brackets “attached” to a Python dictionary should enclose a key to be found within the dictionary. Accessing a dictionary by key returns the value associated with that key. It’s not possible to retrieve values for more than one key at a time. We also use this notation to add keys and values to dictionaries.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">team_member[&quot;email_address&quot;]</span></code> retrieves the value associated with the <code class="docutils literal notranslate"><span class="pre">&quot;email_address&quot;</span></code> key in the <code class="docutils literal notranslate"><span class="pre">team_member</span></code> dictionary.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">team_member[&quot;programming_language&quot;]</span> <span class="pre">=</span> <span class="pre">&quot;Python&quot;</span></code> assigns the string <code class="docutils literal notranslate"><span class="pre">&quot;Python&quot;</span></code> to the key <code class="docutils literal notranslate"><span class="pre">&quot;programming_language&quot;</span></code>. If the key already exists, its value will be overwritten.</p></li>
+</ul>
+<p>Wth dictionaries, the square brackets might remind you of the tab at the top of a file folder to which you can affix a label.</p>
+</div>
 </section>
 </section>
 
@@ -701,11 +882,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="2_2_querying_data.html"
+       href="../homework/HW_2_programming_techniques.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Querying Textbook Data</p>
+        <p class="prev-next-title">Programming Techniques</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -728,21 +909,23 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-data">Structured data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists-versus-dictionaries">Lists versus dictionaries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dictionary-to-describe-yourself">Creating a dictionary to describe yourself</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-structured-data">I. Structured data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-creating-a-list">I.1 Creating a list</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-lists-or-dictionaries">I.2 Lists or dictionaries?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-3-creating-a-dictionary-to-describe-yourself">I.3 Creating a dictionary to describe yourself</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-template">Dictionary template</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dictionaries">Using dictionaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-4-using-dictionaries">I.4 Using dictionaries</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-data">Tabular data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabular-data-in-python">Tabular data in Python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-dictionaries-in-a-list">Modifying dictionaries in a list</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-list-of-dictionaries-in-json-format">Saving a list of dictionaries in JSON format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-lists-and-dictionaries-together">II. Lists and dictionaries together</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-nesting-data">II.1 Nesting data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-working-with-nested-data">II.2 Working with nested data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-loops-lists-and-dictionaries">II.3 Loops, lists, and dictionaries</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-from-code-to-data">III. From Code to Data</a></li>
 </ul>
   </nav></div>
 

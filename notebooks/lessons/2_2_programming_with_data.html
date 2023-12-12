@@ -1,0 +1,1033 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Programming with Data &#8212; Python Camp: Programming for Beginners</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/python-camp.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/lessons/2_2_programming_with_data';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Error Stories" href="../homework/HW_3_error_stories.html" />
+    <link rel="prev" title="Programming Techniques" href="../homework/HW_2_programming_techniques.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/python-camp.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/python-camp.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Python Camp: Programming for Beginners
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preliminaries</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../guidelines.html">Collaborating on Code: Guidelines for a Good Experience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework.html">Homework for Python Camp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_1_modeling_code.html">Modeling Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1-2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_2_from_data_to_code.html">From Data to Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_1_from_code_to_data.html">From Code to Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2_1_describing_the_team.html">Describing the Team</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_2_programming_techniques.html">Programming Techniques</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Programming with Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_3_error_stories.html">Error Stories</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3_1_from_story_to_code.html">From Story to Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_Final_GR.html">Final Homework (Graded)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../keep_learning.html">Python Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary of Programming Terms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.lai.gwu.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/gwu-libraries/python-camp&urlpath=tree/python-camp/_sources/notebooks/lessons/2_2_programming_with_data.ipynb&branch=gh-pages" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/gwu-libraries/python-camp" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/gwu-libraries/python-camp/issues/new?title=Issue%20on%20page%20%2Fnotebooks/lessons/2_2_programming_with_data.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/lessons/2_2_programming_with_data.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Programming with Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-what-if">I. What if?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-conditionals-boolean-values">I.1 Conditionals &amp; Boolean values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-if-statements">I.2 <code class="docutils literal notranslate"><span class="pre">if</span></code> statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iffy-operations">1.3 Iffy operations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-loops-conditionals">II. Loops &amp; conditionals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-counting-with-for-loops">II.1 Counting with for loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-counting-with-conditionals">II.2 Counting with conditionals</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-working-with-data">III. Working with data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-1-computing-averages">III.1 Computing averages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-2-finding-the-maximum-and-minimum">III.2 Finding the maximum and minimum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-3-restructuring-data">III.3 Restructuring Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap up</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="programming-with-data">
+<h1>Programming with Data<a class="headerlink" href="#programming-with-data" title="Permalink to this heading">#</a></h1>
+<section id="objectives">
+<h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>To use lists, loops, and conditionals to answer basic questions about a dataset</p></li>
+<li><p>To design data structures with specific purposes (use cases) in mind</p></li>
+</ul>
+<div class="notes admonition">
+<p class="admonition-title">Taking stock</p>
+<p>At this point, you’ve covered <em>almost</em> all the essential parts of the Python language. In particular, you have practiced</p>
+<ul class="simple">
+<li><p>Using integers, floats, and strings to represent numbers and text</p></li>
+<li><p>Creating lists to store multiple pieces of information</p></li>
+<li><p>Creating dictionaries to store information in a more structured way</p></li>
+<li><p>Using for loops to manipulate nested data structures</p></li>
+<li><p>Writing functions to organize code in a logical way and reduce redundancy</p></li>
+</ul>
+<p>With these tools, you have almost everything you need to write Python code for “real-world” situations, like analyzing a dataset.</p>
+<p>Today you’ll equip yourself with a couple more tools, and then you and your team will start to tackle some more complex problems with Python.</p>
+</div>
+<div class="notes admonition">
+<p class="admonition-title">A reminder</p>
+<p>But if you feel a little overwhelmed at this point, that’s to be expected! Learning a programming language, especially your first language, can be a long process, with periods of excitement alternating with periods of frustration.</p>
+<p>As we forge ahead today and tomorrow, please keep these two things in mind:</p>
+<ol class="arabic simple">
+<li><p>You should be proud of yourself for having made it this far!</p></li>
+<li><p>When you feel stuck, try to have compassion for yourself, take a deep breath, and even walk away for a bit if you need to.</p></li>
+</ol>
+<p>Human minds are not computers. When a computer program gets stuck, it means that something’s off – an error in the code, a hardware issue, an unexpected piece of data – and the program won’t work until the problem has been fixed (usually, by outside intervention). But when the human mind feels stuck, that is usually a sign that learning is happening. Today’s frustrations pave the way for tomorrow’s epiphanies.</p>
+<p>Learning means getting stuck, and sticking with it.</p>
+</div>
+</section>
+<section id="i-what-if">
+<h2>I. What if?<a class="headerlink" href="#i-what-if" title="Permalink to this heading">#</a></h2>
+<p>Programming is a powerful tool because it can respond to different situations, provided we can anticipate them. The real world is full of variation, and useful programs are those that account for some amount of variation. After all, it would hardly be efficient if we had to re-write our code from scratch whenever we encountered a new dataset, for instance, or if we had no way of dealing with different users’ preferences.</p>
+<p>Conversely, think of how frustrating it is to encounter an application or a website that doesn’t seem designed to let you do what it seems obvious that you should be able to do with it.</p>
+<p>At the core of the programmer’s ability to anticipate and cope with variable user preferences, data structures, and computing environments is <a class="reference internal" href="../../glossary.html#term-conditional-logic"><span class="xref std std-term">conditional logic</span></a>.</p>
+<section id="i-1-conditionals-boolean-values">
+<h3>I.1 Conditionals &amp; Boolean values<a class="headerlink" href="#i-1-conditionals-boolean-values" title="Permalink to this heading">#</a></h3>
+<p>In a very abstract sense, a computer is a machine for implementing binary logic. In binary logic, the only values allowed are <code class="docutils literal notranslate"><span class="pre">1</span></code>’s and <code class="docutils literal notranslate"><span class="pre">0</span></code>’s, which represent <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code>, respectively.</p>
+<p>Thus, at some level, <em>everything</em> we do in computation can be reduced to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> (from the computer’s perspective). But from a programmer’s perspective, this usually only matters in situations where we want the program to do different things based on certain conditions that may or may not obtain. These cases are called <a class="reference internal" href="../../glossary.html#term-Boolean-expression"><span class="xref std std-term">Boolean expression</span></a>s.</p>
+<p>For instance, we can tell Python to compare two numbers, using the standard operators you might remember from your math courses: greater than, less than, equal to, etc.</p>
+<p>Note that in Python, we represent equality by the <strong>double equals sign</strong> (<code class="docutils literal notranslate"><span class="pre">==</span></code>). A single equals sign is reserved for <a class="reference internal" href="../../glossary.html#term-variable"><span class="xref std std-term">variable</span></a> assignment.</p>
+<p>Running the code below should return <code class="docutils literal notranslate"><span class="pre">True</span></code>, which is one of two special Python values called <strong>Boolean values</strong> (so named because the binary logic that computers implement was invented by the mathematician George Boole).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book_price</span> <span class="o">=</span> <span class="mf">55.99</span> <span class="c1"># Assignment: single equals sign</span>
+<span class="n">book_price</span> <span class="o">&lt;</span> <span class="mi">60</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p>Write an expression with the <code class="docutils literal notranslate"><span class="pre">book_price</span></code> variable that returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="i-2-if-statements">
+<h3>I.2 <code class="docutils literal notranslate"><span class="pre">if</span></code> statements<a class="headerlink" href="#i-2-if-statements" title="Permalink to this heading">#</a></h3>
+<p>Usually, we want to do more than evaluate whether an expression (like <code class="docutils literal notranslate"><span class="pre">book_price</span> <span class="pre">&lt;</span> <span class="pre">60</span></code>) is <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. Usually, we want the program to <em>take some action</em> based on the outcome of that evaluation.</p>
+<p>For this, we use an <a class="reference internal" href="../../glossary.html#term-if-statement"><span class="xref std std-term">if statement</span></a>.</p>
+<p>To print a message if the value of the <code class="docutils literal notranslate"><span class="pre">book_price</span></code> variable is above a certain threshhold, we can write the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">book_price</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s an expensive textbook!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Running the code above produces no output, at least not if <code class="docutils literal notranslate"><span class="pre">book_price</span></code> is assigned as above (to the <a class="reference internal" href="../../glossary.html#term-float"><span class="xref std std-term">float</span></a> value <code class="docutils literal notranslate"><span class="pre">55.99</span></code>).</p>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p>Change the value of <code class="docutils literal notranslate"><span class="pre">book_price</span></code> in the preceding code cell so that the condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="iffy-operations">
+<h3>1.3 Iffy operations<a class="headerlink" href="#iffy-operations" title="Permalink to this heading">#</a></h3>
+<p>What if we want to check for books within a certain range of prices?</p>
+<p>We can use the <a class="reference internal" href="../../glossary.html#term-Boolean-operator"><span class="xref std std-term">Boolean operator</span></a> <code class="docutils literal notranslate"><span class="pre">and</span></code> to do this. The <code class="docutils literal notranslate"><span class="pre">and</span></code> keyword links two conditions: if both sub-conditions are <code class="docutils literal notranslate"><span class="pre">True</span></code>, then the whole condition (with the <code class="docutils literal notranslate"><span class="pre">and</span></code>) is also <code class="docutils literal notranslate"><span class="pre">True</span></code>. Otherwise, it is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>The other common Boolean operators are <code class="docutils literal notranslate"><span class="pre">or</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span></code>. <code class="docutils literal notranslate"><span class="pre">or</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>at least one</em> sub-condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>. <code class="docutils literal notranslate"><span class="pre">not</span></code> flips (inverts) a condition: so <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">True</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>The following truth table summarizes the basic results of using <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> with two variables, <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>. Assume both <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> refer to some Boolean expression, such as <code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">&lt;</span> <span class="pre">5</span></code> (which would be <code class="docutils literal notranslate"><span class="pre">True</span></code>) or <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">==</span> <span class="pre">2</span></code> (which would be <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>Operator</p></th>
+<th class="head"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>and</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>or</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>and</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>and</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>or</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>or</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>and</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>or</p></td>
+<td><p>False</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book_price</span> <span class="o">=</span> <span class="mf">55.99</span>
+<span class="k">if</span> <span class="n">book_price</span> <span class="o">&gt;=</span> <span class="mi">20</span> <span class="ow">and</span> <span class="n">book_price</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not too expensive&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the examples above, our code either performed an action or not, depending on a single condition. We can also specify multiple conditions, only one of which can be true. For example, if <code class="docutils literal notranslate"><span class="pre">book_price</span></code> is between <code class="docutils literal notranslate"><span class="pre">20</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>, the following code will print <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">too</span> <span class="pre">expensive</span></code>), but it will print other messages if <code class="docutils literal notranslate"><span class="pre">book_price</span></code> is less than <code class="docutils literal notranslate"><span class="pre">20</span></code> or greater than <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">book_price</span> <span class="o">&gt;=</span> <span class="mi">20</span> <span class="ow">and</span> <span class="n">book_price</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not too expensive&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">book_price</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s a relatively cheap textbook.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s an expensive textbook!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Not too expensive
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notes admonition">
+<p class="admonition-title">Notes</p>
+<p>Here are some rules of thumb for writing <code class="docutils literal notranslate"><span class="pre">if</span></code> statements in Python:</p>
+<ul class="simple">
+<li><p>You can have as many <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements as you want, provided they follow an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">else</span></code> statement is a catch-all: it will be executed if none of the preceding <code class="docutils literal notranslate"><span class="pre">if</span></code> or <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p>Otherwise, the <em>first</em> <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code> statement that is <code class="docutils literal notranslate"><span class="pre">True</span></code> will be executed, and <em>all the rest</em> will be ignored. In other words, if the conditions you’re testing for are not mutually exclusive, you should write the most specific test first.</p></li>
+<li><p>Each <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> statement ends with a colon and is followed by an indented <a class="reference internal" href="../../glossary.html#term-block"><span class="xref std std-term">block</span></a> of code. This is the same pattern we saw with <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p></li>
+</ul>
+</div>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p>Take another look at our <a class="reference external" href="https://go.gwu.edu/pythoncampdata">bookstore dataset</a> as JSON. As you might recall, some but not all courses have textbooks listed. Courses that lack textbooks have a <code class="docutils literal notranslate"><span class="pre">texts</span></code> key that points to an empty Python list (<code class="docutils literal notranslate"><span class="pre">[]</span></code>).</p>
+<p>How could you write an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement to determine whether a given course has any textbooks associated with it in our dataset?</p>
+<p>The first code cell below defines a variable <code class="docutils literal notranslate"><span class="pre">course</span></code> and assigns it to a dictionary for a course with textbooks. Run this code, then write some code in the cell below to check whether the <code class="docutils literal notranslate"><span class="pre">course</span></code> variable has any textbooks. <strong>Your code should print the price of the first textbook if any textbooks are listed. Otherwise, your code should print a message like <code class="docutils literal notranslate"><span class="pre">&quot;No</span> <span class="pre">textbooks</span> <span class="pre">found&quot;</span></code>.</strong></p>
+<p>Once you’ve written your code, run the third code cell below, which re-assigns the <code class="docutils literal notranslate"><span class="pre">course</span></code> variable to a dictionary for a course <strong>without</strong> textbooks. Re-run your code cell to make sure that your code works for both situations.</p>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>To find the length of a list, you can use the built-in <code class="docutils literal notranslate"><span class="pre">len()</span></code> function.</p>
+<p>The length of an empty list is 0, so <code class="docutils literal notranslate"><span class="pre">len([])</span> <span class="pre">==</span> <span class="pre">0</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">course</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;IAFF&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;course_num&quot;</span><span class="p">:</span> <span class="s2">&quot;1002&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;section&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;instructor&quot;</span><span class="p">:</span> <span class="s2">&quot;Adas&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;texts&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;International Affairs: Theories and Practice&quot;</span><span class="p">,</span>
+                       <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;Janice Witherspoon&quot;</span><span class="p">,</span>
+                       <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="s2">&quot;Addison/Wesley&quot;</span><span class="p">,</span>
+                       <span class="s2">&quot;price_display&quot;</span><span class="p">:</span> <span class="s2">&quot;$100.75&quot;</span><span class="p">}]}</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">course</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;IAFF&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;course_num&quot;</span><span class="p">:</span> <span class="s2">&quot;1001&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;section&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;instructor&quot;</span><span class="p">:</span> <span class="s2">&quot;Jaffrey&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;texts&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="ii-loops-conditionals">
+<h2>II. Loops &amp; conditionals<a class="headerlink" href="#ii-loops-conditionals" title="Permalink to this heading">#</a></h2>
+<section id="ii-1-counting-with-for-loops">
+<h3>II.1 Counting with for loops<a class="headerlink" href="#ii-1-counting-with-for-loops" title="Permalink to this heading">#</a></h3>
+<p>A very common use of a <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> in Python is to count, aggregate, or otherwise keep track of certain values when processing a list.</p>
+<p>We’ve seen a version of this pattern before: in the homework, you use a loop to convert some prices from strings to floats and then to adjust the price with sales tax. You collected the adjusted prices in a new list.</p>
+<p>In the example below, we’ll use this pattern to keep track of a single value. The value we’re tracking will simply be the number of items in the list.</p>
+<p>We’ll use our bookstore dataset, so the first step is to read the file into Python from disk.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlretrieve</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="n">urlretrieve</span><span class="p">(</span><span class="s1">&#39;https://go.gwu.edu/pythoncampdata&#39;</span><span class="p">,</span> <span class="s1">&#39;bookstore-data.json&#39;</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;bookstore-data.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">bkst_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="notes admonition">
+<p class="admonition-title">A recipe for counting</p>
+<p>To use this pattern, you usually have at least <em>three</em> variables to deal with:</p>
+<ol class="arabic simple">
+<li><p>The variable that holds your list (<code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>)</p></li>
+<li><p>A loop variable (<code class="docutils literal notranslate"><span class="pre">course</span></code> in the code below)</p></li>
+<li><p>A <strong>variable defined before the loop</strong> that will be used to track or accumulate values. Since this loop is just counting items, we’ll call this variable <code class="docutils literal notranslate"><span class="pre">counter</span></code>. We set <code class="docutils literal notranslate"><span class="pre">counter</span></code> initially to <code class="docutils literal notranslate"><span class="pre">0</span></code>, since before we run the loop, we haven’t counted any items.</p></li>
+</ol>
+<p>Note also that <code class="docutils literal notranslate"><span class="pre">counter</span> <span class="pre">+=</span> <span class="pre">1</span></code> is shorthand for <code class="docutils literal notranslate"><span class="pre">counter</span> <span class="pre">=</span> <span class="pre">counter</span> <span class="pre">+</span> <span class="pre">1</span></code>. Either way of writing that expression is fine.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Counter before loop&quot;</span><span class="p">,</span> <span class="n">counter</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Counter after loop&quot;</span><span class="p">,</span> <span class="n">counter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>After running the code above, discuss it with your team. Do you know of another way to accomplish the same thing?</p>
+<p>Hint: think about the built-in Python functions you’ve already encountered.</p>
+</div>
+</section>
+<section id="ii-2-counting-with-conditionals">
+<h3>II.2 Counting with conditionals<a class="headerlink" href="#ii-2-counting-with-conditionals" title="Permalink to this heading">#</a></h3>
+<p>Admittedly, there are more concise ways to calculate the length of a list than using the for loop and the <code class="docutils literal notranslate"><span class="pre">counter</span></code> variable above. But what if we wanted to count something a bit more complex?</p>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p>Building on the recipe above, can you write some code to count how many courses in our bookstore dataset <strong>have textbooks</strong>?</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="iii-working-with-data">
+<h2>III. Working with data<a class="headerlink" href="#iii-working-with-data" title="Permalink to this heading">#</a></h2>
+<p>Now you have seen how lists, loops, conditionals, and variables work together to allow us to perform non-trivial computations with data. The next step is to develop your programmer’s intuition by putting these tools into practice with more complex tasks.</p>
+<p>As a team, you should work through the exercises below. For each exercise, there’s a suggestion for a both a <strong>less challenging</strong> and a <strong>more challenging</strong> approach. <strong>Before starting each exercise, each team should discuss the approach they plan to take.</strong> If everyone in the group feels up to the more challenging version of the exercise, you’re welcome to skip the less challenging version. But if not everyone feels up to the former, we strongly recommend starting <strong>as a team</strong> with the less challenging approach. Extra practice never hurts!</p>
+<div class="notes admonition">
+<p class="admonition-title">A less challenging dataset</p>
+<p>Our bookstore dataset has a few thousand elements and a non-trivially nested structure. For a less challenging dataset, you can use the <strong>team dataset</strong> you produced during Day 2’s activity “Describing the Team.” Assuming you save that dataset to a JSON file on JupyterHub called <code class="docutils literal notranslate"><span class="pre">team-dataset.json</span></code>, the following code should open the file and store its contents in a variable called <code class="docutils literal notranslate"><span class="pre">my_team</span></code>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./team-dataset.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">my_team</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="iii-1-computing-averages">
+<h3>III.1 Computing averages<a class="headerlink" href="#iii-1-computing-averages" title="Permalink to this heading">#</a></h3>
+<p>We can compute an average by dividing some total quantity by the number of occurences of each quantity. For instance, let’s say we have A list <code class="docutils literal notranslate"><span class="pre">prices</span></code> defined as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prices</span> <span class="o">=</span> <span class="p">[</span><span class="mf">100.5</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mf">85.75</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">55</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>We can compute the average price like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">avg_price</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">sum()</span></code> function works only on numeric types (integers and floats).</p>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p><strong>Less Challenging</strong></p>
+<p>Each dictionary in your team dataset should include a key <code class="docutils literal notranslate"><span class="pre">&quot;years_at_gw&quot;</span></code>. Calculate the average number of years at GW for members of your team.</p>
+<p><strong>More Challenging</strong></p>
+<p>Calculate the average cost of a textbook in the bookstore dataset.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>For the <strong>less challenging</strong> version of the problem, you might this approach:</p>
+<ol class="arabic simple">
+<li><p>Define a variable called <code class="docutils literal notranslate"><span class="pre">total_years</span></code>.</p></li>
+<li><p>Use a <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> to iterate over the <code class="docutils literal notranslate"><span class="pre">my_team</span></code> list.</p></li>
+<li><p>For each <code class="docutils literal notranslate"><span class="pre">member</span></code> in <code class="docutils literal notranslate"><span class="pre">my_team</span></code> (assuming <code class="docutils literal notranslate"><span class="pre">member</span></code> is your <a class="reference internal" href="../../glossary.html#term-loop-variable"><span class="xref std std-term">loop variable</span></a>), add the value of <code class="docutils literal notranslate"><span class="pre">member[&quot;years_at_gw&quot;]</span></code> to the <code class="docutils literal notranslate"><span class="pre">total_years</span></code> variable.</p></li>
+<li><p>Outside the loop, divide the <code class="docutils literal notranslate"><span class="pre">total_years</span></code> variable by the length of the <code class="docutils literal notranslate"><span class="pre">my_team</span></code> list.</p></li>
+</ol>
+<p>For the more <strong>challenging version</strong>, a similar approach could work, with these differences:</p>
+<ul class="simple">
+<li><p>Each textbook’s price corresponds to the <code class="docutils literal notranslate"><span class="pre">&quot;price_display&quot;</span></code> <a class="reference internal" href="../../glossary.html#term-key"><span class="xref std std-term">key</span></a> of a <a class="reference internal" href="../../glossary.html#term-dictionary"><span class="xref std std-term">dictionary</span></a>. These dictionaries are stored in a list nested under the dictionary corresponding to each course.</p></li>
+<li><p>Because there are two levels of list – a list of courses, and under each course, a list of textbooks – you’ll probably want to use a nested for loop.</p></li>
+<li><p>Each price is stored as a string, so you’ll want to <strong>convert it to a float</strong> before doing any math with it.</p></li>
+<li><p>You’ll also need to keep track – perhaps in a separate variable – of the total number of textbooks. Note that <code class="docutils literal notranslate"><span class="pre">len(bkst_data)</span></code> will return the number of <strong>courses</strong>, not the number of textbooks.</p></li>
+</ul>
+</div>
+</section>
+<section id="iii-2-finding-the-maximum-and-minimum">
+<h3>III.2 Finding the maximum and minimum<a class="headerlink" href="#iii-2-finding-the-maximum-and-minimum" title="Permalink to this heading">#</a></h3>
+<p>For this exercise, feel free to reuse and modify the code you write for exercise III.1.</p>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p><strong>Less challenging</strong></p>
+<p>Use your team dataset to identify the team member with <strong>the longest name</strong> (the string containing the most characters).</p>
+<p><strong>More challenging</strong></p>
+<p>Identify the most expensive and/or the least expensive <strong>textbook</strong> in the bookstore dataset.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>This exercise is subtly different from the first. When finding the average, we were computing a single number. Here we want to find the <strong>data element</strong> that satisfies the criterion (e.g., max or minimum price, maximum length of name).</p>
+<p>The following considerations may prove important:</p>
+<ol class="arabic simple">
+<li><p>We’ll need to keep track of <strong>both</strong> the maximum (or minumum) value we’ve seen so far (e.g., price, name length), <strong>and</strong> the textbook or team member associated with that value. One way to do that is to define two variables <strong>outside</strong> of the for loop, for instance:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">max_price</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">most_expensive_textbook</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Inside</strong> the for loop – or the inner for loop, if you’re working with the textbook data – you may want to use an <a class="reference internal" href="../../glossary.html#term-if-statement"><span class="xref std std-term">if statement</span></a> to compare the current value to the maximum value you’ve seen so far, and to update the latter accordingly.</p></li>
+<li><p>You need to decide how to handle situations where there is more than one data element satisfying the maximum/minimum criterion. One option is to define the variable <code class="docutils literal notranslate"><span class="pre">most_expensive_textbook</span></code> (or <code class="docutils literal notranslate"><span class="pre">longest_name</span></code>) <strong>as a list</strong>, and then to use the list’s <strong>append()</strong> method to add a new element to it whenever one satisfies the criterion.</p></li>
+</ol>
+</div>
+</section>
+<section id="iii-3-restructuring-data">
+<h3>III.3 Restructuring Data<a class="headerlink" href="#iii-3-restructuring-data" title="Permalink to this heading">#</a></h3>
+<p>When working with data, sometimes we’re not trying to find a single answer, like the average price of textbooks or the most expensive textbook. Rather, we want to transform our dataset to make it more useful in answering multiple questions.</p>
+<p>In building your team dataset and analyzing the bookstore dataset, you’ve worked with lists of dictionaries, which is a fairly common data structure you’ll encounter in Python (and other languages). It’s probably the most intuitive way, for instance, to represent data from a spreadsheet or other tabular format.</p>
+<p>The only problem with a list in Python is that as the list grows longer, finding individual elements becomes less efficient. In such cases, it might be more useful to store the data in a dictionary. Even in a <strong>dictionary of dictionaries</strong>, if your data happens to be nested!</p>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p><strong>Less challenging</strong></p>
+<p>Convert the team dataset into a Python dictionary, where each <a class="reference internal" href="../../glossary.html#term-key"><span class="xref std std-term">key</span></a> is the team member’s name, and the associated <a class="reference internal" href="../../glossary.html#term-value"><span class="xref std std-term">value</span></a> is the information you’ve collected about that team member.</p>
+<p><strong>More challenging</strong></p>
+<p>Imagine that you’re managing the bookstore’s data, and you get a request from GW Libraries for a dataset they can use to look up books by ISBN. (The <a class="reference external" href="https://en.wikipedia.org/wiki/ISBN">ISBN</a> is the <em>International Standard Book Number</em>; most commercially books published today have an ISBN, which serves as the book’s unique identifier.</p>
+<p>Create a Python dictionary out of all the textbooks in the bookstore dataset, where the keys are ISBN’s, and the values contain the information about each book. If a book lacks an ISBN, you can leave it out of the dicionary.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>To visualize the transformation of the team dataset, the following visual model might be useful:</p>
+<a class="reference internal image-reference" href="https://gwu-libraries.github.io/python-camp/img/list-to-dict.png"><img alt="Diagram with two larger boxes, with three smaller nested inside each. Each smaller box contains labels and information asosciated with each label. The smaller nested boxes are labeled with numbers (0, 1, 2) in the first larger box, representing items in a list, and are labeled with names (Alex, Max, Josh) in the second, representing a dictionary. A large red arrow is pointing from the list box to the dictioanry box" class="align-center" src="https://gwu-libraries.github.io/python-camp/img/list-to-dict.png" style="width: 250px;" /></a>
+<p>You can accomplish this with a single for loop. For the bookstore dataset, the procedure is similar, but you will need to use a nested for loop (because textbooks are nested under courses).</p>
+</div>
+<p>Once you have created your new, dictionary-based dataset, you should be able to use it look up items by their identifier.</p>
+<p>For instance, if <code class="docutils literal notranslate"><span class="pre">my_team_dict</span></code> is a dictionary of information about your team, you should be able to write <code class="docutils literal notranslate"><span class="pre">my_team_dict[&quot;Alex&quot;]</span></code> to call up the information about a team member named Alex.</p>
+<p>And if <code class="docutils literal notranslate"><span class="pre">isbn_text_dict</span></code> is a dictionary of textbooks stored by ISBN, you should be able to enter something like <code class="docutils literal notranslate"><span class="pre">isbn_text_dict[&quot;9782370210371&quot;]</span></code> to retrieve the information about that particular book (<em>Regarde les Lumieres mon Amour</em>).</p>
+</section>
+<section id="wrap-up">
+<h3>Wrap up<a class="headerlink" href="#wrap-up" title="Permalink to this heading">#</a></h3>
+<p>Today you did the following:</p>
+<ul class="simple">
+<li><p>Used Python dictionaries to store and update data about your team.</p></li>
+<li><p>Used conditionals, for loops, and the “counter” pattern to answers basic questions about a dataset.</p></li>
+<li><p>Transformed the structure of a dataset to facilitate a different kind of access.</p></li>
+</ul>
+<p>In the homework tonight, you’ll practice some techniques for troubleshooting code when errors arise.</p>
+<p>And tomorrow, for the final day of Python Camp, you’ll work with your team to design and write some code from scratch to address a user story that your team comes up with.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../homework/HW_2_programming_techniques.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Programming Techniques</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../homework/HW_3_error_stories.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Error Stories</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-what-if">I. What if?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-conditionals-boolean-values">I.1 Conditionals &amp; Boolean values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-if-statements">I.2 <code class="docutils literal notranslate"><span class="pre">if</span></code> statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iffy-operations">1.3 Iffy operations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-loops-conditionals">II. Loops &amp; conditionals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-counting-with-for-loops">II.1 Counting with for loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-counting-with-conditionals">II.2 Counting with conditionals</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-working-with-data">III. Working with data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-1-computing-averages">III.1 Computing averages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-2-finding-the-maximum-and-minimum">III.2 Finding the maximum and minimum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-3-restructuring-data">III.3 Restructuring Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wrap-up">Wrap up</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GW Libraries & Academic Innovation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

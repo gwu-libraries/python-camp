@@ -164,7 +164,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/1_1_choreographing_code.html">Choreographing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/1_1_modeling_code.html">Modeling Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1-2</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/1_2_from_data_to_code.html">From Data to Code</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1 Homework</span></p>
@@ -174,29 +177,26 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/2_1_describing_the_team.html">Describing the Team</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/2_2_querying_data.html">Querying Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_2_programming_techniques.html">Programming Techniques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_2_GR.html">Graded Homework: Day 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Days 3-4</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/3_1_from_story_to_code.html">From Story to Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/2_2_programming_with_data.html">Programming with Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_3_error_stories.html">Error Stories</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_3_GR.html">Graded Homework: Day 3</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4 (SUPPLEMENTAL)</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/4_1_modeling_the_world.html">Modeling the World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/3_1_from_story_to_code.html">From Story to Code</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bonus Homework</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Homework</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_4_GR.html">Bonus Homework: Day 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_Final_GR.html">Final Homework (Graded)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Reference</span></p>
 <ul class="nav bd-sidenav">
@@ -398,11 +398,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-work-in-teams">Why Work in Teams?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-it-work">How Does It Work?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#everyone-participates">Everyone participates</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#team-roles">Team roles</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rotating-notetaker">Rotating notetaker</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#team-facilitator">Team facilitator</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#team-roles">Team roles</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-make-the-most-of-this-experience">How Can I Make the Most of This Experience?</a></li>
@@ -459,16 +455,24 @@ document.write(`
 </section>
 <section id="team-roles">
 <h3>Team roles<a class="headerlink" href="#team-roles" title="Permalink to this heading">#</a></h3>
-<section id="rotating-notetaker">
-<h4>Rotating notetaker<a class="headerlink" href="#rotating-notetaker" title="Permalink to this heading">#</a></h4>
-<p>For the prompts that ask you to write code, everyone should be doing so in parallel in their own notebooks, even when that involves some duplication of effort: the point of these team activities is not to demonstrate your efficiency but your shared understanding.</p>
-<p>For the prompts that involve planning, design and discussion, it will be useful to designate a single person as notetaker for that activity. <strong>Please do rotate the role between activities</strong> so that everyone on the team shares the responsibility. Taking notes is a useful way to reinforce your learning. But it can also prevent the notetaker from engaging fully in the discussion, so it’s important to distribute the task equitably.</p>
-<p>Your Python Camp facilitators will remind you to rotate the notetaking task at the start of each major team activity.</p>
-</section>
-<section id="team-facilitator">
-<h4>Team facilitator<a class="headerlink" href="#team-facilitator" title="Permalink to this heading">#</a></h4>
-<p>It’s not necessary to delegate a leader for your team, given the highly structured activities of Python Camp. But if the team would be more comfortable choosing one member to moderate the discussion and keep things on track, you’re welcome to do so. You might also consider rotating this role, so that everyone has a chance to contribute in every way.</p>
-</section>
+<p>To support a productive and equitable experience, each team will assign someone to each of the following roles. It is recommended that teams rotate these roles, perhaps at the start of each day, so that everyone gets to try out all the roles, even those they may feel less comfortable with.</p>
+<ul class="simple">
+<li><p><strong>Notetaker</strong>: Everyone on the team should write code during the hands-on exercises around which we have structured Python Camp. The notetaker, however, is responsible for <strong>documenting</strong> other aspects of the programming process. These include:</p>
+<ul>
+<li><p>Jotting down questions that arise while trying to solve a problem;</p></li>
+<li><p>Recording team decisions and documenting project plans;</p></li>
+<li><p>Taking notes on team discussions in response to discussion prompts.</p></li>
+</ul>
+</li>
+<li><p><strong>Reporter</strong>: The reporter is the team’s designated spokesperson. Everyone on the team should feel free to ask questions or share ideas with the larger group at any time. However, when teams are asked to share the outcome of group discussions, it helps to have someone delegated to this task. And rotating the reporter role gives everyone on the team a chance to share out.</p></li>
+<li><p><strong>Advocate</strong>: The advocate has a very important role: to make sure that everyone has a chance to contribute to the work of the team, and that no one is getting left behind. It’s perfectly okay – and probably inevitable – that members of the team will contribute in different ways. For instance, some people might have a better eye for detail, while others are more focused on the big picture. But here are some ways in which the advocate can help ensure equity and inclusion:</p>
+<ul>
+<li><p>During group discussions, if situations arise where one or two team members are doing all the talking, the advocate might say something like, “I see that we haven’t heard from __________ in a while. Let’s make space for anything they’d like to share.”</p></li>
+<li><p>During hands-on exercises/problem-solving, the advocate might check in with team members to see if they’re lost, feeling confused, or frustrated. In these situations, the advocate might suggest that the team take a pause to bring everyone up to speed, or the advocate might suggest flagging a Python Camp instructor to provide more guidance.</p></li>
+<li><p>The advocate can advocate for themselves as well other team members. But some people feel more comfortable advocating on behalf of others, which is why it’s especially useful to rotate this role.</p></li>
+</ul>
+</li>
+</ul>
 </section>
 </section>
 <section id="how-can-i-make-the-most-of-this-experience">
@@ -560,11 +564,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-work-in-teams">Why Work in Teams?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-it-work">How Does It Work?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#everyone-participates">Everyone participates</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#team-roles">Team roles</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rotating-notetaker">Rotating notetaker</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#team-facilitator">Team facilitator</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#team-roles">Team roles</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-make-the-most-of-this-experience">How Can I Make the Most of This Experience?</a></li>

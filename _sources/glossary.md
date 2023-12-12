@@ -96,6 +96,10 @@ Boolean value
         if x:
             print(2/x) 
 
+call
+
+    To call a method or function is to instruct Python to execute the function or method's predefined behavior. And a function or method is really just a kind of shortcut: instead of our having to type out the same code whenever we want to perform a certain task (like splitting a string, for instance), we call the function or method in which that behavior has been defined. It's sort of like using the address book on your phone: you can tap `Mom` in order to call or text Mom, instead of having to enter her number every time.
+
 character
 
     A character is the basic unit of a Python {term}`string`. In Python, characters are defined according to the [Unicode standard](https://home.unicode.org/) by default. Unicode characters comprise the following (and more):
@@ -151,7 +155,15 @@ comment
 
     We use comments to document our code for ourselves and for others.
 
+conditional logic
 
+    A general term for the set of operations that allow computers to behave differently based on different inputs or conditions. At the most fundamental level, all other mathematical operations in a computer (addition, multiplication, etc.) are implemented using combinations of {term}`Boolean operator`s implemented in electronic circuits. 
+
+    In higher-level languages like Python, when we speak of conditional logic, we're often referring to {term}`if statement`s. 
+
+CSV
+
+    An acronym for "comma-separated values," CSV is a data format compatible with spreadsheet applications like Excel. It is also a format widely used for storing tabular data: data structured in rows and columns. Unlike {term}`JSON`, CSV format does not generally work well with nested data. 
 
 curly braces
 
@@ -169,10 +181,17 @@ dictionary
 
         print(my_info['job_title'])     # Prints "Librarian"
 
+documentation
+
+    Human-readable text that explains how a program or a part of a program is intended to work and/or the rationale for a particular choice made by the programmer. Some documentation resides in separate files from the program itself; an example of this kind of documentation is found on Python docs [website](https://docs.python.org/3/). Other documentation is mixed in with the program code. Such documentation is usually offset by particular characters that tell the computer running this code to ignore the documentation itself. In Python, to include documentation within our code we either prefix a line with a hashtag (`#`) or enclose multiple lines within triple quotes (`'''`).
+
 dot notation
 
     When an {term}`instance` of a Python {term}`type` (or {term}`class`) has {term}`attributes` or {term}`method`s, we use dot notation to access the attributes/methods. For instance, a {term}`list` has an `append()` method, so for a given list `my_list`, we can write `my_list.append(3)` (to add the integer `3` to the end of the list).
 
+exception
+
+    An error message in Python arising from a problem in the logic of the code or its inputs. As opposed to a syntax error, which will always cause code to fail, an exception is Python's way of saying, "this code might run, EXCEPT not in this case." 
 
 double equals sign
 
@@ -347,6 +366,10 @@ list
 
     It's more common to use a {term}`dictionary` to represent complex data of multiple types, since each element in a dictionary has a {term}`key` that can be more descriptive. For example, if our dictionary has an `age` key, we might guess that this key will correspond to a numeric type, not a string. 
 
+list of dictionaries
+
+    A common approach to representing data that consist of multiple elements (like books or university courses or people in a class) where each element has more or less the same set of attributes. (For books, those attributes might be `title`, `author`,` publisher`, etc. For people, `name`, `age`, `email address`, etc.) Each element in the list is a dictionary with the same set of keys; only the values are different. 
+
 loop variable
 
     The {term}`variable` in a {term}`for loop` that assumes the value of each element in the {term}`collection` over which the loop runs. 
@@ -418,6 +441,12 @@ return
 
     See {term}`function` for more information.
 
+set
+
+    A Python data type that is like a {term}`list` but that can contain only unique elements. Use the `set()` function to create a set from a list: `set([1,2,1,3,2,4,3,5])` returns `{1, 2, 3, 4, 5}`. (Note that the curly braces are used to delimit sets as well as dictionaries; unlike dictionaries, sets do not have key/value pairs, only single elements separated by commas.)
+
+    Only certain Python types can be used to create sets. You can't, for instance, convert a list of dictionaries into a set. Sets are mostly useful when dealing with numeric values and/or strings.
+
 slice
 
     A slice is a subset of a Python {term}`list` or {term}`string`. To create a slice, we use {term}`square brackets` around a pair of numbers separated by a {term}`colon`, where the first number is the position of the first element we want to include, and the last element is **one plus** the position of the last element to include. 
@@ -442,6 +471,11 @@ square brackets
         - In creating a {term}`slice` of a string or list: `my_list[0:2]`
         - In accessing the value in a dictionary by its {term}`key`: `print(my_dict['name'])` prints the value associated with the key `name` in `my_dict`.
 
+
+standard library
+
+    The set of functions, data types, methods, and other tools that are available with the basic installation of Python.
+
 string
 
     A basic Python {term}`type` comprising a {term}`collection` of {term}`character`s. We can create a sting by enclosing any text (really, anything you can type on your keyboard) between quotation marks. 
@@ -449,6 +483,10 @@ string
     Like elements in {term}`list`s, we can access characters within string by their {term}`index`. We can also create {term}`slice`s of strings. 
 
     Strings have {term}`method`s, such as `split()`. See the [Python documentation](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str) for a complete list.
+
+test
+
+    A test in the context of programming is typically some code designed to check the functionality of other code. For instance, when developing an application, programmers will typically write multiple tests that can be used to confirm that various parts of the application work as intended. This approach is particularly helpful when the application goes through multiple development cycles, receiving bug fixes and enhancements. In such situations, having a suite of tests ensures that changes to one part of the application don't break other parts of the application. 
 
 type
 
@@ -467,6 +505,10 @@ type
     I like to think of a Python type as a kitchen appliance. Each applicance has attachments specially designed to enable it do certain things. A food processor might have a grater attachment, which I can use to shred carrots. I can't shred carrots in a stand mixer, because a stand mixer doesn't have the right attachment. But I can beat eggs or knead flour in a stand mixer, which might be hard or impossible to do in a food processor. 
 
     Just as cooks choose the right appliance for the task at hand, so programmers choose the kind of `type` to use depending on goals and context. 
+
+Unicode
+
+    A system for representing characters from the world's many languages along with other symbols (mathematical symbols, emojis, etc.). Python handles Unicode by default, which means that you can use Python to work with text in languages other than English. See {term}`character` for more information. 
 
 value
 
@@ -491,10 +533,6 @@ variable
     we can refer to the variable `x` subsequently in our code in order to work with this number. Whenever we use `x` -- as in `print(x)` or `x = x*2` -- Python will retrieve the variable's value from memory and substitute it for the name `x`.
 
     In creating variables, we assign a name to a value with the single equals sign. The names goes on the left of the equals sign, the value on the right.
-
-Unicode
-
-    A system for representing characters from the world's many languages along with other symbols (mathematical symbols, emojis, etc.). Python handles Unicode by default, which means that you can use Python to work with text in languages other than English. See {term}`character` for more information. 
 
 white space
 

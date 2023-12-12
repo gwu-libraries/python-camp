@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'homework';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Choreographing Code" href="notebooks/lessons/1_1_choreographing_code.html" />
+    <link rel="next" title="Modeling Code" href="notebooks/lessons/1_1_modeling_code.html" />
     <link rel="prev" title="Collaborating on Code: Guidelines for a Good Experience" href="guidelines.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -164,7 +164,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/1_1_choreographing_code.html">Choreographing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/1_1_modeling_code.html">Modeling Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1-2</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/1_2_from_data_to_code.html">From Data to Code</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1 Homework</span></p>
@@ -174,29 +177,26 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/2_1_describing_the_team.html">Describing the Team</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/2_2_querying_data.html">Querying Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_2_programming_techniques.html">Programming Techniques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_2_GR.html">Graded Homework: Day 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Days 3-4</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/3_1_from_story_to_code.html">From Story to Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/2_2_programming_with_data.html">Programming with Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_3_error_stories.html">Error Stories</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_3_GR.html">Graded Homework: Day 3</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4 (SUPPLEMENTAL)</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/4_1_modeling_the_world.html">Modeling the World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/lessons/3_1_from_story_to_code.html">From Story to Code</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bonus Homework</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Homework</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_4_GR.html">Bonus Homework: Day 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/homework/HW_Final_GR.html">Final Homework (Graded)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Reference</span></p>
 <ul class="nav bd-sidenav">
@@ -414,34 +414,22 @@ document.write(`
 <p>The homeworks are designed to be completed individually, but you are also free to collaborate on them (including those you submit for a score). If you collaborate on the autograded homework, be sure to submit your own notebook for autograding if you want to receive the Python Camp certificate of completion.</p>
 <section id="homework-format">
 <h2>Homework Format<a class="headerlink" href="#homework-format" title="Permalink to this heading">#</a></h2>
-<p>Each day’s homework lesson consists of one or two parts. Please do the parts in order as linked from the daily schedule on the left panel of this screen.</p>
-<ol class="arabic simple">
-<li><p>With the exception of Day 4, the first part consists of a Python motebook with documentation, examples of code, and exercises that ask you to write code yourself. Hints and/or hidden solutions are provided for the latter, but you are strongly encouraged to try each exercise on your own before looking at the solution.</p>
-<ul class="simple">
-<li><p>Just as we did for the in-class activities, you should open each homework notebook in JupyterHub (using the rocket icon at the top of the screen) and execute the code cells in order as you read through the notebook. Any changes you make to the notebook in JupyterHub will be saved to your JupyterHub account.</p></li>
-<li><p><strong>Please try your best to complete these notebooks on the day they are assigned</strong>; we’ll build on the concepts and practices they introduce in our team activities on the following day.</p></li>
-</ul>
-</li>
-<li><p>With the exception of Day 1, the second part of each homework consists of a notebook with one or more exercises that you should complete and upload to GitHub Classroom. These notebooks are called “Graded Homework: Day ____” (followed by the day, either 2, 3, or 4).</p>
-<ul class="simple">
-<li><p>You don’t need to complete these exercises on the day they are assigned, though you may.</p></li>
-<li><p>In addition to attendance for the duration of Python Camp, successful completion and submission of these notebooks is a requirement for the Python Camp Certificate of Completion.</p></li>
-<li><p>Please see the instructions for uploading graded notebooks below.</p></li>
-</ul>
-</li>
-</ol>
+<p>Each day’s homework lesson consists of a Python motebook with documentation, examples of code, and exercises that ask you to write code yourself. Hints and/or hidden solutions are provided for the latter, but you are strongly encouraged to try each exercise on your own before looking at the solution.
+- Just as we did for the in-class activities, you should open each homework notebook in JupyterHub (using the rocket icon at the top of the screen) and execute the code cells in order as you read through the notebook. Any changes you make to the notebook in JupyterHub will be saved to your JupyterHub account.
+- <strong>Please try your best to complete these notebooks on the day they are assigned</strong>; we’ll build on the concepts and practices they introduce in our team activities on the following day.
+2. You must submit the <strong>final homework notebook</strong> for grading in order to receive the Python Camp Certificate of Completion. The grading is done automatically on GitHub Classroom, and you will have an opportunity to ensure that your work is correct before submitting. Please see the instructions for submitting the graded notebook below.</p>
 </section>
 <section id="submitting-graded-notebooks">
 <h2>Submitting Graded Notebooks<a class="headerlink" href="#submitting-graded-notebooks" title="Permalink to this heading">#</a></h2>
-<p>We’re using GitHub Classroom to track submission of these notebooks. Please read the following instructions carefully, and let us know if you have any questions.</p>
+<p>We’re using GitHub Classroom to track submission of this notebook. Please read the following instructions carefully, and let us know if you have any questions.</p>
 <ol class="arabic">
-<li><p>To complete each notebook, open it in JupyterHub (using the rocket icon in the upper left) and follow the instructions included with the notebook.</p></li>
+<li><p>To complete the notebook, open it in JupyterHub (using the rocket icon in the upper left) and follow the instructions included with the notebook.</p></li>
 <li><p>When you’ve successfully completed each exercise, the code cell in the <code class="docutils literal notranslate"><span class="pre">Tests</span></code> section should run without any errors or other output. If you see an <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>, it will indicate the part of your code that is not behaving as expected.</p></li>
 <li><p>WHen you’ve finished your work, don’t forget to save your notebook in JupyterHub!</p></li>
-<li><p>Download your notebook from JupyterHub to your own computer, using the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Download</span> <span class="pre">as</span> <span class="pre">-&gt;</span> <span class="pre">Notebook</span></code> command from the menu at the top.</p>
-<a class="reference internal image-reference" href="img/homework/download-notebook.png"><img alt="Download as notebook option from File menu" class="align-center" src="img/homework/download-notebook.png" style="width: 500px;" /></a>
+<li><p>Download your notebook from JupyterHub to your own computer, using the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Download</span></code> command from the menu at the top.</p>
+<a class="reference internal image-reference" href="img/homework/download-notebook.png"><img alt="Dropdown menu showing download option from File menu" class="align-center" src="img/homework/download-notebook.png" style="width: 500px;" /></a>
 </li>
-<li><p>Depending on your computer setup, the downloaded notebook may be located in your <code class="docutils literal notranslate"><span class="pre">Downloads</span></code> folder, on your desktop, or elsewhere. It should have the name <code class="docutils literal notranslate"><span class="pre">HW_n_GR.ipynb</span></code> (where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of the homework day, e.g., 2, 3, or 4). If you have downloaded this file before, the latest version may have a different name. In this case, you should delete the old file and <strong>rename the newly downloaded file</strong> so that it has the same name as the original.</p></li>
+<li><p>Depending on your computer setup, the downloaded notebook may be located in your <code class="docutils literal notranslate"><span class="pre">Downloads</span></code> folder, on your desktop, or elsewhere. It should have the name <code class="docutils literal notranslate"><span class="pre">HW_Final_GR.ipynb</span></code>. If you have downloaded this file before, the latest version may have a different name. In this case, you should delete the old file and <strong>rename the newly downloaded file</strong> so that it has the same name as the original.</p></li>
 <li><p>In the Python Camp roster, copy the link in the column associated with this homework assignment and paste it into a new tab on your web browser.</p></li>
 <li><p>If you don’t have a GitHub account, you’ll need to create one. (GitHub is a widely used platform for sharing and collaborating on code.) You don’t need to use the same email address on your GitHub account as you are using for Python Camp, so if you already have a GitHub account under a different email address, feel free to use that one.</p></li>
 <li><p>Once you’ve logged into GitHub, and if this is your first time submitting an assignment, you’ll be asked to select your email address from the GitHub Classroom roster. <strong>Please make sure you select the correct email address</strong>. This will link your GitHub account to that email address in our GitHub Classroom instance.</p></li>
@@ -452,7 +440,7 @@ document.write(`
 <li><p>When you visit the link, you should see a screen like that below. This is a GitHub repo. The title of the repo should indicate the name of the assignment you’re submitting and your GitHub username.</p>
 <a class="reference internal image-reference" href="img/homework/assignment-repo-1.png"><img alt="Screen showing a new GitHub repo for the assignment." class="align-center" src="img/homework/assignment-repo-1.png" style="width: 500px;" /></a>
 </li>
-<li><p>You’ll also see some files listed in your repo, including one with the name of the homework notebook you’re submitting, e.g., <code class="docutils literal notranslate"><span class="pre">HW_GR_2.ipynb</span></code>. At this point, all you need to do is upload the new version of this notebook that you downloaded from JupyterHub in step 4. To upload the file, click the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">file</span></code> button next to the green <code class="docutils literal notranslate"><span class="pre">Code</span></code> button at the top, and then select <code class="docutils literal notranslate"><span class="pre">Upload</span> <span class="pre">file</span></code>.</p>
+<li><p>You’ll also see some files listed in your repo, including one with the name of the homework notebook you’re submitting, e.g., <code class="docutils literal notranslate"><span class="pre">HW_Final_GR.ipynb</span></code>. At this point, all you need to do is upload the new version of this notebook that you downloaded from JupyterHub in step 4. To upload the file, click the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">file</span></code> button next to the green <code class="docutils literal notranslate"><span class="pre">Code</span></code> button at the top, and then select <code class="docutils literal notranslate"><span class="pre">Upload</span> <span class="pre">file</span></code>.</p>
 <a class="reference internal image-reference" href="img/homework/assignment-repo-2.png"><img alt="Screen showing the GitHub dropdown button to upload files." class="align-center" src="img/homework/assignment-repo-2.png" style="width: 500px;" /></a>
 </li>
 <li><p>Drag the notebook file from its location on your computer into the provided space (or click <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">files</span></code> and select the file from the file navigator). <strong>Make sure the file has the exact same name as in the list of files on the previous GitHub repo screen.</strong></p></li>
@@ -507,11 +495,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="notebooks/lessons/1_1_choreographing_code.html"
+       href="notebooks/lessons/1_1_modeling_code.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Choreographing Code</p>
+        <p class="prev-next-title">Modeling Code</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

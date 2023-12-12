@@ -47,17 +47,18 @@ But whatever method(s) you choose, **please ensure that everyone on the team has
 
 ### Team roles
 
-#### Rotating notetaker
+To support a productive and equitable experience, each team will assign someone to each of the following roles. It is recommended that teams rotate these roles, perhaps at the start of each day, so that everyone gets to try out all the roles, even those they may feel less comfortable with.
 
-For the prompts that ask you to write code, everyone should be doing so in parallel in their own notebooks, even when that involves some duplication of effort: the point of these team activities is not to demonstrate your efficiency but your shared understanding.
+- **Notetaker**: Everyone on the team should write code during the hands-on exercises around which we have structured Python Camp. The notetaker, however, is responsible for **documenting** other aspects of the programming process. These include:
+   - Jotting down questions that arise while trying to solve a problem;
+   - Recording team decisions and documenting project plans;
+   - Taking notes on team discussions in response to discussion prompts.
+- **Reporter**: The reporter is the team's designated spokesperson. Everyone on the team should feel free to ask questions or share ideas with the larger group at any time. However, when teams are asked to share the outcome of group discussions, it helps to have someone delegated to this task. And rotating the reporter role gives everyone on the team a chance to share out.
+- **Advocate**: The advocate has a very important role: to make sure that everyone has a chance to contribute to the work of the team, and that no one is getting left behind. It's perfectly okay -- and probably inevitable -- that members of the team will contribute in different ways. For instance, some people might have a better eye for detail, while others are more focused on the big picture. But here are some ways in which the advocate can help ensure equity and inclusion:
+   - During group discussions, if situations arise where one or two team members are doing all the talking, the advocate might say something like, "I see that we haven't heard from __________ in a while. Let's make space for anything they'd like to share."
+   - During hands-on exercises/problem-solving, the advocate might check in with team members to see if they're lost, feeling confused, or frustrated. In these situations, the advocate might suggest that the team take a pause to bring everyone up to speed, or the advocate might suggest flagging a Python Camp instructor to provide more guidance. 
+   - The advocate can advocate for themselves as well other team members. But some people feel more comfortable advocating on behalf of others, which is why it's especially useful to rotate this role.
 
-For the prompts that involve planning, design and discussion, it will be useful to designate a single person as notetaker for that activity. **Please do rotate the role between activities** so that everyone on the team shares the responsibility. Taking notes is a useful way to reinforce your learning. But it can also prevent the notetaker from engaging fully in the discussion, so it's important to distribute the task equitably. 
-
-Your Python Camp facilitators will remind you to rotate the notetaking task at the start of each major team activity.
-
-#### Team facilitator
-
-It's not necessary to delegate a leader for your team, given the highly structured activities of Python Camp. But if the team would be more comfortable choosing one member to moderate the discussion and keep things on track, you're welcome to do so. You might also consider rotating this role, so that everyone has a chance to contribute in every way. 
 
 ## How Can I Make the Most of This Experience?
 

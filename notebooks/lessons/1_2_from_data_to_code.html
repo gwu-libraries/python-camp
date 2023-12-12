@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="From Code to Data" href="../homework/HW_1_from_code_to_data.html" />
-    <link rel="prev" title="Choreographing Code" href="1_1_choreographing_code.html" />
+    <link rel="prev" title="Modeling Code" href="1_1_modeling_code.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -163,8 +163,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../homework.html">Homework for Python Camp</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_1_modeling_code.html">Modeling Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1-2</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_1_choreographing_code.html">Choreographing Code</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">From Data to Code</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1 Homework</span></p>
@@ -174,29 +177,26 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="2_1_describing_the_team.html">Describing the Team</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_2_querying_data.html">Querying Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_2_programming_techniques.html">Programming Techniques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../homework/HW_2_GR.html">Graded Homework: Day 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Days 3-4</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="3_1_from_story_to_code.html">From Story to Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_2_programming_with_data.html">Programming with Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_3_error_stories.html">Error Stories</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../homework/HW_3_GR.html">Graded Homework: Day 3</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4 (SUPPLEMENTAL)</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="4_1_modeling_the_world.html">Modeling the World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_1_from_story_to_code.html">From Story to Code</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bonus Homework</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Homework</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../homework/HW_4_GR.html">Bonus Homework: Day 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_Final_GR.html">Final Homework (Graded)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Reference</span></p>
 <ul class="nav bd-sidenav">
@@ -428,15 +428,17 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dataset">The dataset</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source">Source</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#format">Format</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-getting-to-know-your-data">I. Getting to Know Your Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-data-have-structure">I.1 Data have structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-data-have-a-format">I.2 Data have a format</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-lists">Navigating lists</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-nested-data">Navigating nested data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-discussion">Questions for Discussion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-working-with-data-in-code">II. Working with Data in Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-loading-the-dataset">II.1 Loading the dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-navigating-lists">II.2 Navigating lists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-navigating-nested-data">II.3 Navigating nested data</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -462,54 +464,99 @@ document.write(`
 <h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h2>
 <p>The following notebook has cells containing Python code for interacting with an external data file.</p>
 <ol class="arabic simple">
-<li><p>Before you begin, each team should designate a note taker to record answers to the questions for discussion (see below).</p></li>
-<li><p>Read the section below, <code class="docutils literal notranslate"><span class="pre">Introducing</span> <span class="pre">the</span> <span class="pre">dataset</span></code>, and as a team, record any questions you have about it.</p></li>
+<li><p>Before you begin, each team should assign the following roles:</p>
+<ul class="simple">
+<li><p>Notetaker (records the outcome of team discussions)</p></li>
+<li><p>Reporter (speaks for the team when sharing out)</p></li>
+<li><p>Advocate (makes sure everyone has a chance to contribute)</p></li>
+</ul>
+</li>
+<li><p>Read the section below, <span class="xref myst">Getting to Know Your Data</span>, and as a team, do the exercises marked <code class="docutils literal notranslate"><span class="pre">Try</span> <span class="pre">it</span> <span class="pre">out!</span></code></p></li>
+<li><p>After we pause for sharing out from the teams, you’ll work through the code in the notebook as a team.</p>
+<ul class="simple">
 <li><p>Run each cell of code in this notebook (by pressing <code class="docutils literal notranslate"><span class="pre">Control</span></code> + <code class="docutils literal notranslate"><span class="pre">Enter</span></code> on a PC,  <code class="docutils literal notranslate"><span class="pre">Command</span></code> + <code class="docutils literal notranslate"><span class="pre">Return</span></code> on a Mac). The output of running the code will appear below the cell.</p></li>
 <li><p>Each cell is accompanied by annotations, and in some cases, questions for discussion. Discuss your responses to these questions with your team. The note taker should brielfy document the conversation (including any further questions or points of confusion that arise).</p></li>
 <li><p>Blank cells labeled <code class="docutils literal notranslate"><span class="pre">Try</span> <span class="pre">it</span> <span class="pre">out!</span></code> invite you to write your own code based on the provided examples. Run your code and discuss the output with your team.</p></li>
+</ul>
+</li>
 <li><p>Once everyone has worked through the notebook, we’ll review the questions and your responses in the larger group.</p></li>
 </ol>
 </section>
-<section id="the-dataset">
-<h2>The dataset<a class="headerlink" href="#the-dataset" title="Permalink to this heading">#</a></h2>
-<p>Over the next few days, we’ll be working together on a dataset containing information about textbooks assigned by courses at GW for the Summer 2023 semester.</p>
-<p>This dataset might lend itself to uses like the following:</p>
+<section id="i-getting-to-know-your-data">
+<h2>I. Getting to Know Your Data<a class="headerlink" href="#i-getting-to-know-your-data" title="Permalink to this heading">#</a></h2>
+<section id="i-1-data-have-structure">
+<h3>I.1 Data have structure<a class="headerlink" href="#i-1-data-have-structure" title="Permalink to this heading">#</a></h3>
+<div class="notes admonition">
+<p class="admonition-title">About the Data</p>
+<p>Over the next few days, we’ll be working together on a dataset containing information about textbooks assigned by courses at GW for the Fall 2023 semester.</p>
+<p>Textbooks are linked from GW’s <a class="reference external" href="https://my.gwu.edu/mod/pws/subjects.cfm?campId=1&amp;termId=202303">Schedule of Classes</a>. (Note that we’re using data for courses taught on the Foggy Bottom campus only.)</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Find</span> <span class="pre">Books</span></code> link under each course entry (see image below) leads to a page on the website of the GW Campus Store which contains a listing of textbooks for the course, along with the price of each book (through the GW Campus Store).</p>
+</div>
+<a class="reference internal image-reference" href="https://gwu-libraries.github.io/python-camp/img/schedule-of-classes.png"><img alt="Screenshot of a row from the GW Schedule of Classes table, showing information for the course Consuming Asian America. The link with text &quot;Find Books&quot; is highlighted by a red box." class="align-center" src="https://gwu-libraries.github.io/python-camp/img/schedule-of-classes.png" style="width: 500px;" /></a>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<ol class="arabic simple">
+<li><p>Take a moment to look at the <a class="reference external" href="https://my.gwu.edu/mod/pws/subjects.cfm?campId=1&amp;termId=202303">Schedule of Classes</a> and the linked textbook data.</p></li>
+<li><p>As a team, discuss possible uses for data about courses and textbooks. Who are the potential users, and what purposes might they have for these data? Make notes on your answers. (We call these scenarios <em>user stories</em>.)</p></li>
+<li><p>After generating a few user stories, discuss how you might organize such a dataset. Try not to focus too much on how the data is presented on the GW or GW Campus Store websites. Rather, given your user stories, and using what you know about courses and textbooks at GW, consider the following questions:</p>
 <ul class="simple">
-<li><p>Identifying courses with particularly high-cost textbooks</p></li>
-<li><p>Calculating the average cost of textbooks by instructor, department, etc.</p></li>
-<li><p>Identifying the publishers that supply the majority of textbooks used at GW</p></li>
-<li><p>Identifying instructors who assign textbooks they themselves have authored</p></li>
+<li><p>What data elements would be useful to capture?</p></li>
+<li><p>How do those data elements relate to each other? (For example, a course might have multiple sections, and each section might have a separate instructor.)</p></li>
+<li><p>How would you structure (organize) a dataset so as to capture those relationships?</p></li>
 </ul>
-<p>As you work through this exercise, make a note of any additional uses you can imagine for this data. These notes will come in handy later!</p>
-<section id="source">
-<h3>Source<a class="headerlink" href="#source" title="Permalink to this heading">#</a></h3>
+</li>
+<li><p>Make a drawing that models the data structure your team discussed in answer to the previous questions.</p></li>
+</ol>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">For the curious</p>
 <p>This dataset was obtained by scraping the <a class="reference external" href="https://www.bkstr.com/georgewashingtonstore/shop/textbooks-and-course-materials">GW Bookstore</a> website. Because <a class="reference external" href="https://learning.oreilly.com/library/view/web-scraping-with/9781098145347/">web scraping</a> is a rather advanced topic, we won’t be covering that process in Python Camp.</p>
-<p>The dataset was also pre-processed to simplify it somewhat (removing extraneous and redundant elements, etc.).</p>
+<p>The dataset was also pre-processed to simplify it somewhat (removing extraneous and redundant elements, etc.).
+assign textbooks they themselves have authored</p>
+</div>
 </section>
-<section id="format">
-<h3>Format<a class="headerlink" href="#format" title="Permalink to this heading">#</a></h3>
-<p>The dataset is in <a class="reference internal" href="../../glossary.html#term-JSON"><span class="xref std std-term">JSON</span></a> format. JSON (usually pronounced <em>jay-sawn</em>) is a common format for sharing data on the web. It’s not as concise or human-readable as some formats (e.g., CSV, which is often used for sharing tabular data). But it has a few advantages that make it popular with programmers:</p>
+<section id="i-2-data-have-a-format">
+<h3>I.2 Data have a format<a class="headerlink" href="#i-2-data-have-a-format" title="Permalink to this heading">#</a></h3>
+<p>When we talk about <em>data structure</em>, we mean <em>how the elements of a dataset relate to each other</em>. The structure describes something about the world, about that part of the world to which the data refer.</p>
+<p>The <em>data format</em>, on the other hand, is how the dataset is represented by the computer. The same format can be used to represent many different kinds of data structures, just as data with a given structure can be represented in many different formats. (As an analogy, think about music: a Baroque fugue and a blues song have very different musical structures, but both can be recorded as an MP3, which in this case is the data format.)</p>
+<p>The dataset we’re using is in <a class="reference internal" href="../../glossary.html#term-JSON"><span class="xref std std-term">JSON</span></a> format. JSON (usually pronounced <em>jay-sawn</em>) is a common format for sharing data on the web. It’s not as concise or human-readable as some formats (e.g., CSV, which is often used for sharing tabular data). But it has a few advantages that make it popular with programmers:</p>
 <ul class="simple">
 <li><p>JSON data can be deeply nested, reflecting hierarchical relationships between data elements.</p></li>
 <li><p>The JSON format comprises structures that map well onto the most common data structures used by modern programming languages.</p></li>
 <li><p>The JSON syntax has a lot in common with languages like Python.</p></li>
 </ul>
 <p>We’ll explore these three aspects of JSON today.</p>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p>Open the <a class="reference external" href="https://go.gwu.edu/pythoncampdata">GW bookstore dataset</a> in your browser. As a team, discuss the following questions:</p>
+<ol class="arabic simple">
+<li><p>What do you notice about the structure of this dataset? How are the various elements related to one another?</p></li>
+<li><p>How does it compare to the model you drew in the previous exercise?</p></li>
+<li><p>What data elements seem to be always present throughout the dataset?</p></li>
+<li><p>Are there elements that appear only sometimes? If so, make a list of those.</p></li>
+<li><p>Which elements might be useful for the user stories you developed in the first exercise?</p></li>
+<li><p>Do you see any elements that suggest user stories you hadn’t thought of?</p></li>
+</ol>
+<p>Now draw the structure of this dataset, based on what you’ve observed.</p>
+</div>
 </section>
-<section id="loading-the-data">
-<h3>Loading the data<a class="headerlink" href="#loading-the-data" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="ii-working-with-data-in-code">
+<h2>II. Working with Data in Code<a class="headerlink" href="#ii-working-with-data-in-code" title="Permalink to this heading">#</a></h2>
+<section id="ii-1-loading-the-dataset">
+<h3>II.1 Loading the dataset<a class="headerlink" href="#ii-1-loading-the-dataset" title="Permalink to this heading">#</a></h3>
 <p>The code below will fetch data from a URL and save it locally as a file before loading the data in your notebook.</p>
 <ol class="arabic simple">
-<li><p>We <a class="reference internal" href="../../glossary.html#term-import"><span class="xref std std-term">import</span></a> a Python function called <code class="docutils literal notranslate"><span class="pre">urlretrieve</span></code> and a Python module called <code class="docutils literal notranslate"><span class="pre">json</span></code>. A module is just some external Python code that provides a particular functionality.</p>
+<li><p>We <a class="reference internal" href="../../glossary.html#term-import"><span class="xref std std-term">import</span></a> a Python function called <code class="docutils literal notranslate"><span class="pre">urlretrieve</span></code> and a Python <a class="reference internal" href="../../glossary.html#term-module"><span class="xref std std-term">module</span></a> called <code class="docutils literal notranslate"><span class="pre">json</span></code>.</p>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">urlretrieve</span></code> function allows us to fetch data from a remote source and save a local copy.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">json</span></code> module allows us to convert data in JSON format to Python types. (More on types below).</p></li>
 </ul>
 </li>
-<li><p>We use the <code class="docutils literal notranslate"><span class="pre">open</span></code> function to open a file in a directory called <code class="docutils literal notranslate"><span class="pre">data</span></code>. The file is called <code class="docutils literal notranslate"><span class="pre">bookstore-data-summer-2023.json</span></code>, where the <code class="docutils literal notranslate"><span class="pre">.json</span></code> extension indicates that this is a JSON-formatted file. (The file extension is part of the filename, like <code class="docutils literal notranslate"><span class="pre">docx</span></code> for Word documents or <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code> for Excel spreadsheets.)</p></li>
+<li><p>We use the <code class="docutils literal notranslate"><span class="pre">open</span></code> <a class="reference internal" href="../../glossary.html#term-function"><span class="xref std std-term">function</span></a> to open the file for reading. The file is called <code class="docutils literal notranslate"><span class="pre">bookstore-data.json</span></code>, where the <code class="docutils literal notranslate"><span class="pre">.json</span></code> extension indicates that this is a JSON-formatted file. (The file extension is part of the filename, like <code class="docutils literal notranslate"><span class="pre">docx</span></code> for Word documents or <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code> for Excel spreadsheets.)</p></li>
 <li><p>The file is assigned to the temporary variable <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p></li>
 <li><p>We use the <code class="docutils literal notranslate"><span class="pre">json.load</span></code> <a class="reference internal" href="../../glossary.html#term-method"><span class="xref std std-term">method</span></a> to read the file (<code class="docutils literal notranslate"><span class="pre">f</span></code>). This method is specifically designed for JSON files; it won’t work if the file does not contain data in valid JSON format.</p></li>
-<li><p>The contents of the file, as processed by <code class="docutils literal notranslate"><span class="pre">json.load</span></code>, are assigned to a new variable, <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>.</p></li>
+<li><p>The contents of the file, as processed by <code class="docutils literal notranslate"><span class="pre">json.load</span></code>, are assigned to a new <a class="reference internal" href="../../glossary.html#term-variable"><span class="xref std std-term">variable</span></a>, <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -523,9 +570,8 @@ document.write(`
 </div>
 </div>
 </section>
-</section>
-<section id="navigating-lists">
-<h2>Navigating lists<a class="headerlink" href="#navigating-lists" title="Permalink to this heading">#</a></h2>
+<section id="ii-2-navigating-lists">
+<h3>II.2 Navigating lists<a class="headerlink" href="#ii-2-navigating-lists" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">type</span></code> <a class="reference internal" href="../../glossary.html#term-function"><span class="xref std std-term">function</span></a> provides as output information about the value associated with the variable <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>. It tells us the name of the Python data structure that characterizes this value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -533,37 +579,22 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
-</pre></div>
-</div>
-</div>
 </div>
 <div class="question admonition">
 <p class="admonition-title">Question</p>
-<p>You have encountered a Python <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a> before. What was the name of the variable that held a list in the “Choreographing Code” exercise?</p>
+<p>You have encountered a Python <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a> before. What was the name of the variable that held a list in the <a class="reference external" href="https://gwu-libraries.github.io/python-camp/notebooks/lessons/1_1_modeling_code.html">Modeling Code</a> exercise?</p>
 </div>
 <div class="notes admonition">
 <p class="admonition-title">Notes</p>
 <ul class="simple">
 <li><p>Going forward, when referring to functions and their output, we will say that the function <strong>returns</strong> something.</p></li>
-<li><p>Every Python value has a defined <a class="reference internal" href="../../glossary.html#term-type"><span class="xref std std-term">type</span></a>.</p></li>
-<li><p>When we use the word <a class="reference internal" href="../../glossary.html#term-variable"><span class="xref std std-term">variable</span></a>, we’re generally referring to the combination of a name and a value. The name points to the value, which is located somewhere in memory. When we say, “the variable <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> is a list,” we mean that the value to which the name <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> points is represented in Python as a list.</p></li>
+<li><p>Every Python value has a defined type.</p></li>
+<li><p>When we use the word <strong>variable</strong>, we’re generally referring to the combination of a name and a value. The name points to the value, which is located somewhere in memory. When we say, “the variable <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> is a list,” we mean that the value to which the name <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> points is represented in Python as a list.</p></li>
 </ul>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bkst_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;department&#39;: &#39;ACA&#39;,
- &#39;course&#39;: &#39;6203&#39;,
- &#39;section&#39;: &#39;10&#39;,
- &#39;instructor&#39;: &#39;Alexander Wild&#39;,
- &#39;term_name&#39;: &#39;Summer 2023&#39;,
- &#39;texts&#39;: []}
 </pre></div>
 </div>
 </div>
@@ -580,16 +611,9 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="question admonition">
-<p class="admonition-title">Questions</p>
-<ul class="simple">
-<li><p>What data elements do you see that might prove useful to our project (identifying courses with high- and low-cost textbooks)?</p></li>
-<li><p>What data elements do you have questions about?</p></li>
-</ul>
-</div>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
-<p>For an example of course with assigned textbooks, look at the element in the 100th position in the list (at index 99).</p>
+<p>For an example of course with assigned textbooks, look at the element in the 2nd position in the list (at index <code class="docutils literal notranslate"><span class="pre">[1]</span></code>).</p>
 <p>Note any additional data elements that might be useful, as well as any that you have questions about.</p>
 </div>
 <div class="cell docutils container">
@@ -600,8 +624,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="navigating-nested-data">
-<h2>Navigating nested data<a class="headerlink" href="#navigating-nested-data" title="Permalink to this heading">#</a></h2>
+<section id="ii-3-navigating-nested-data">
+<h3>II.3 Navigating nested data<a class="headerlink" href="#ii-3-navigating-nested-data" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">len()</span></code> function returns the length of a list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -609,25 +633,16 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1250
-</pre></div>
 </div>
-</div>
-</div>
-<p>There are 1,250 top-level elements in <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>. But each element contains other elements nested within it.</p>
-<p>Here we assign one of those elements – the element in the 100th position – to a new variable, <code class="docutils literal notranslate"><span class="pre">my_course</span></code>.</p>
+<p>There are 4,970 top-level elements in <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code>. But each element contains other elements nested within it.</p>
+<p>Here we assign one of those elements – the element in the 2nd position – to a new variable, <code class="docutils literal notranslate"><span class="pre">my_course</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span> <span class="o">=</span> <span class="n">bkst_data</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_course</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span> <span class="o">=</span> <span class="n">bkst_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">my_course</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="question admonition">
-<p class="admonition-title">Question</p>
-<p>Look back at how we initially defined this dataset. In terms of that definition, what does each top-level element in the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> list represent?</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -637,18 +652,13 @@ document.write(`
 </div>
 </div>
 <p>A single course is represented as a Python <a class="reference internal" href="../../glossary.html#term-dictionary"><span class="xref std std-term">dictionary</span></a> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) within the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> list.</p>
-<p>As we saw in the previous activity, dictionaries allow us to store data in fields, similar to a database. The elements on the left-hand side of the colons are called <strong>keys</strong>, and the elements on the right-hand side of the colons are called <strong>values</strong>.</p>
+<p>Dictionaries allow us to store data in fields, similar to a database. The elements on the left-hand side of the colons are called <strong>keys</strong>, and the elements on the right-hand side of the colons are called <strong>values</strong>.</p>
 <p>Here the keys are strings; anything enclosed in quotation marks in Python is a <a class="reference internal" href="../../glossary.html#term-string"><span class="xref std std-term">string</span></a>.</p>
 <p>We can use the keys to retrieve the values from the dictionary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_dept</span> <span class="o">=</span> <span class="n">my_course</span><span class="p">[</span><span class="s1">&#39;department&#39;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_dept</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CHEM
+<span class="n">my_dept</span>
 </pre></div>
 </div>
 </div>
@@ -675,37 +685,22 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
-</pre></div>
 </div>
-</div>
-</div>
-<p>This particular course/section has 7 entries under the <code class="docutils literal notranslate"><span class="pre">texts</span></code> heading.</p>
+<p>This particular course/section has three entries under the <code class="docutils literal notranslate"><span class="pre">texts</span></code> heading.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">my_course</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
-</pre></div>
-</div>
-</div>
-</div>
-<div class="question admonition">
-<p class="admonition-title">Question</p>
-<p>At this point, we have drilled down a few levels into our dataset, and things might be starting to look rather complicated. Take a moment with your team to sketch on paper the structure of our dataset so far. Draw it in whatever way feels most intuitive to you (without worrying about Python data types for the moment).</p>
 </div>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
-<p>Use indexing to look at each of the items in the <code class="docutils literal notranslate"><span class="pre">my_books</span></code> variable below. With your team, revise your sketch/data diagram to reflect how course materials are represented in this dataset.</p>
+<p>Use indexing to look at each of the items in the <code class="docutils literal notranslate"><span class="pre">my_books</span></code> variable below.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_books</span> <span class="o">=</span> <span class="n">my_course</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">]</span>
-<span class="n">my_books</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -717,17 +712,26 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section id="questions-for-discussion">
-<h2>Questions for Discussion<a class="headerlink" href="#questions-for-discussion" title="Permalink to this heading">#</a></h2>
+<div class="notes admonition">
+<p class="admonition-title">A note on nested data</p>
+<p>Working with nested data can be a headache. Unfortunately, because of how databases tend to store data, there’s a lot of it out there! Here’s a rule of thumb that can help: when working with nested data, always try to keep track of the level at which you’re working. Variables can be useful for this purpose.</p>
 <ol class="arabic simple">
-<li><p>We’re ultimately interested in the cost of course materials as reported by the bookstore. Where do the relevant data elements reside within the structure we have been exploring?</p></li>
-<li><p>Up to we’ve been looking at our data in terms of content and organization: thinking about what different elements represent, and how those elements relate to each other. Now take a few moments and look at the data in terms of <strong>syntax</strong>.</p>
-<ul class="simple">
-<li><p>With your team, make an inventory of the differents kinds of punctuation marks you see in the parts of the dataset you have examined, and discuss any patterns you notice in how punctuation is used.</p></li>
-</ul>
-</li>
+<li><p>For instance, in the code above, the variable <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> holds a list of courses.</p></li>
+<li><p>We point to a single course (the second) using the variable <code class="docutils literal notranslate"><span class="pre">my_course</span></code>. If we wanted to point to a different course, we could simply reassign the variable, e.g., <code class="docutils literal notranslate"><span class="pre">my_course</span> <span class="pre">=</span> <span class="pre">bkst_data[100]</span></code>. After running that bit of code, <code class="docutils literal notranslate"><span class="pre">my_course</span></code> would point to the 101st course in the list.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">my_books</span></code> variable points to the list of textbooks associated with the course in <code class="docutils literal notranslate"><span class="pre">my_course</span></code> (either the second course or whatever other course we assigned to it).</p></li>
 </ol>
+<p>If you find visual analogies useful, think of our dataset as follows:</p>
+<ul class="simple">
+<li><p>As a file cabinet, where each course corresponds to a separate drawer, and within each drawer, there is a folder containing sheets of paper about textbooks. (The folder may be empty.)</p></li>
+<li><p>As a series of nesting dolls, or boxes inside boxes.</p></li>
+<li><p>Or if you’re a Marvel fan, as the multiverse, wherein each universe may or may not have its own version of your favorite superheroes.</p></li>
+</ul>
+</div>
+<div class="notes admonition">
+<p class="admonition-title">A note on variable names</p>
+<p>Note that it’s purely a matter of convention that <code class="docutils literal notranslate"><span class="pre">my_course</span></code> uses the singular noun (“course”) because it’s pointing to a single course, and that <code class="docutils literal notranslate"><span class="pre">my_books</span></code> uses the plural (“books”) because it’s pointing to a list. These are helpful hints for the programmer, but they mean nothing to Python. We could name our variables <code class="docutils literal notranslate"><span class="pre">spiderman</span></code> and <code class="docutils literal notranslate"><span class="pre">doctor_strange</span></code>, if we wanted to, and they would work just as well (though <em>we</em> might be more prone to make mistakes!).</p>
+</div>
+</section>
 </section>
 </section>
 
@@ -763,12 +767,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="1_1_choreographing_code.html"
+       href="1_1_modeling_code.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Choreographing Code</p>
+        <p class="prev-next-title">Modeling Code</p>
       </div>
     </a>
     <a class="right-next"
@@ -800,15 +804,17 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dataset">The dataset</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source">Source</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#format">Format</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data">Loading the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-getting-to-know-your-data">I. Getting to Know Your Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-1-data-have-structure">I.1 Data have structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-2-data-have-a-format">I.2 Data have a format</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-lists">Navigating lists</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-nested-data">Navigating nested data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-discussion">Questions for Discussion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-working-with-data-in-code">II. Working with Data in Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-loading-the-dataset">II.1 Loading the dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-navigating-lists">II.2 Navigating lists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-3-navigating-nested-data">II.3 Navigating nested data</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

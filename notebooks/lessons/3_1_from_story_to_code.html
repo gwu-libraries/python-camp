@@ -65,8 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/lessons/3_1_from_story_to_code';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Error Stories" href="../homework/HW_3_error_stories.html" />
-    <link rel="prev" title="Graded Homework: Day 2" href="../homework/HW_2_GR.html" />
+    <link rel="next" title="Python Camp: Final Homework" href="../homework/HW_Final_GR.html" />
+    <link rel="prev" title="Error Stories" href="../homework/HW_3_error_stories.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -164,7 +164,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_1_choreographing_code.html">Choreographing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_1_modeling_code.html">Modeling Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1-2</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_2_from_data_to_code.html">From Data to Code</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1 Homework</span></p>
@@ -174,29 +177,26 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="2_1_describing_the_team.html">Describing the Team</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_2_querying_data.html">Querying Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_2_programming_techniques.html">Programming Techniques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../homework/HW_2_GR.html">Graded Homework: Day 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Days 3-4</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">From Story to Code</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="2_2_programming_with_data.html">Programming with Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3 Homework</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_3_error_stories.html">Error Stories</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../homework/HW_3_GR.html">Graded Homework: Day 3</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4 (SUPPLEMENTAL)</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="4_1_modeling_the_world.html">Modeling the World</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">From Story to Code</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bonus Homework</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Homework</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../homework/HW_4_GR.html">Bonus Homework: Day 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_Final_GR.html">Final Homework (Graded)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Reference</span></p>
 <ul class="nav bd-sidenav">
@@ -485,19 +485,26 @@ document.write(`
 <h2>II. Coding Your Story<a class="headerlink" href="#ii-coding-your-story" title="Permalink to this heading">#</a></h2>
 <section id="ii-1-planning">
 <h3>II.1 Planning<a class="headerlink" href="#ii-1-planning" title="Permalink to this heading">#</a></h3>
-<p>Your team’s task now is to select a user story and start implementing it in code.</p>
+<p>Your team’s task now is to select a user story and implement it in Python code.</p>
+<div class="admonition-choose-your-own-adventure admonition">
+<p class="admonition-title">Choose your own adventure</p>
 <p>Choose a user story that your team wrote, or that was written by another team.</p>
-<p>Alternately, pick one of the following to implement:</p>
-<ul class="simple">
+<p>Alternately, pick one of the following to implement. The prompts below are arranged in increasing order of difficulty. If up to this point, your team has worked mainly with the smaller, team-based dataset, you might want to start with the first of these user stories, which will get you working with the more complex bookstore dataset but in a more manageable way.</p>
+<p>If you worked through yesterday’s challenges on the bookstore dataset and feel fairly comfortable with it, feel free to pick one of the more advanced prompts, or to work on your own user story.</p>
+<p><strong>Prompts</strong></p>
+<ol class="arabic simple">
+<li><p>As a librarian, I would like to have a dataset of textbooks arranged by publisher, so that I can look up a publisher by name and see a list of their textbooks in use at GW.</p></li>
 <li><p>As a student, I want to see summary statistics about textbook cost by department, so that I can know what to expect from various possible majors: e.g, average textbook cost, most expensive textbook, least expensive textbook, etc.</p></li>
-<li><p>As a librarian, I want to enter an ISBN (the unique 10- or 13-digit number publishers use to identify their books) and see which courses at GW require that text, so that I can anticipate demand on library reserves.</p></li>
-</ul>
+<li><p>As a bookstore manager, my inventory would be a lot easier to work with if I had it in a spreadsheet. I want to have a <a class="reference internal" href="../../glossary.html#term-CSV"><span class="xref std std-term">CSV</span></a> file of the bookstore dataset, so that I may open it in Excel or Sheets and filter by elements like department code, course number, textbook publisher, etc.</p></li>
+<li><p>As a writer for the GW Hatchet, I am writing a story about textbook affordability, and I’d like to know how many textbooks for the Fall 2023 semester have been placed on course reserve with the GW Libraries. I have obtained a <a class="reference external" href="https://raw.githubusercontent.com/gwu-libraries/python-camp/gh-pages/data/reserves-data-fall-2023.csv">dataset of course reserves</a> from the Libraries, which includes the ISBNs of books on reserve.</p></li>
+</ol>
 <p>Once your team has agreed upon a user story, work together to develop a plan for implementation. The questions below can help you get started.</p>
+</div>
 <div class="question admonition">
 <p class="admonition-title">Questions</p>
 <ol class="arabic simple">
 <li><p>Is there more than one way to interpret this user story? If so, the team should document the different interpretations but then choose one to work with.</p></li>
-<li><p>What tools and techniques can we apply to this problem? (Think about the Python data and control structures you’ve encountered so far: lists, dictionaries, <code class="docutils literal notranslate"><span class="pre">for</span></code> loops, and conditionals.)</p></li>
+<li><p>What tools and techniques can we apply to this problem? (Think about the Python data and control structures you’ve encountered so far: lists, dictionaries, for loops, functions, and conditionals.)</p></li>
 <li><p>What challenges might arise during implementation? Since this user story concerns our bookstore dataset, are there aspects of that dataset that might pose problems?</p></li>
 <li><p>What would a <strong>minimal implementation</strong> look like that would satisfy this user story?</p></li>
 </ol>
@@ -535,53 +542,69 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="notes admonition">
-<p class="admonition-title">Implementation Notes</p>
-<p>If your team chose either of the user stories provided above, the following may help.</p>
-<ul>
-<li><p>This task involves transforming one complex data structure into another. You’ll need to use <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a>s.</p></li>
-<li><p>To associate one discrete piece of information (a department code, or an ISBN) with other pieces of information, a <strong>nested dictionary</strong> can be useful. In a nested dictionary, each <a class="reference internal" href="../../glossary.html#term-key"><span class="xref std std-term">key</span></a> is associated with something other than a single <a class="reference internal" href="../../glossary.html#term-value"><span class="xref std std-term">value</span></a> (like a string or a float).</p>
-<ul class="simple">
-<li><p>This could be a <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a>.</p></li>
-<li><p>Or another dictionary.</p></li>
-<li><p>Or even another nested dictionary!</p></li>
-</ul>
-</li>
-<li><p>Keep in mind that you can’t <a class="reference internal" href="../../glossary.html#term-append"><span class="xref std std-term">append</span></a> to a list (or update a dictionary) that doesn’t exist. So your code will have to handle those cases where a given key has not been encountered before.</p>
-<ul class="simple">
-<li><p>To test whether a key exists in a dictionary, we can use Python’s <code class="docutils literal notranslate"><span class="pre">in</span></code> keyword in the context of a <a class="reference internal" href="../../glossary.html#term-Boolean-expression"><span class="xref std std-term">Boolean expression</span></a>:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;name&#39;</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="p">:</span>    <span class="c1"># &#39;name&#39; may or may not be a key in my_dict</span>
-    <span class="p">[</span><span class="n">do</span> <span class="n">something</span><span class="p">]</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="p">[</span><span class="n">do</span> <span class="n">something</span> <span class="k">else</span><span class="p">]</span>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Reading and writing CSV files</p>
+<p>Python includes a special <a class="reference internal" href="../../glossary.html#term-module"><span class="xref std std-term">module</span></a> for working with <a class="reference internal" href="../../glossary.html#term-CSV"><span class="xref std std-term">CSV</span></a> files. Like the <code class="docutils literal notranslate"><span class="pre">json</span></code> module that we’ve used up to now, we need to import the CSV module before we can use it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 </pre></div>
 </div>
-</li>
-</ul>
-</div>
-<div class="notes admonition">
-<p class="admonition-title">More Implementation Notes</p>
-<p>An analogy might help illustrate the last point. Imagine you and a friend are packing up your kitchen prior to a move. Your friend (acting here like a Python <code class="docutils literal notranslate"><span class="pre">for</span></code> loop) is handing you one item after another from the kitchen. You’re putting the items in boxes. You want to keep like things in the same box: plates in one box, glasses in another, utensils in a third, etc.</p>
-<ol class="arabic simple">
-<li><p>Your friend hands you a glass: there’s already a “Glasses” box, so in it goes.</p></li>
-<li><p>Your friend hands you a saucepan. You don’t yet have a saucepan box, so you need to create one before you can pack the saucepan.</p></li>
-</ol>
-</div>
-<div class="admonition-even-more-implementation-notes admonition">
-<p class="admonition-title">Even More Implementation Notes</p>
-<p>A final hint: you don’t have to do everything all at once (inside the same <code class="docutils literal notranslate"><span class="pre">for</span></code> loop).</p>
-<p>For example, if you’re computing averages, it might easier to use two separate loops:</p>
-<ol class="arabic simple">
-<li><p>In the first loop, collect all the quantities to be averaged, using lists. If you’re using a dictionary as your outer data structure, you can associate each list with a different key.</p></li>
-<li><p>In a second loop – after the first loop is finished – you can loop over the dictionary from step 1, finding the average of the quantities in each list.</p></li>
-<li><p>To loop over a dictionary, you can use the following pattern:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># The loop variable holds each key in the dictionary in sequence</span>
-<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="p">:</span>    
-     <span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>  <span class="c1"># Prints the value associated with each key</span>
+<p><strong>Reading from CSV</strong></p>
+<p>To read from a CSV file on the web (which will normally have the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> extension), we save a copy locally first, open the file, and then read in the data line by line. The code below, which saves the contents of a CSV file of course-reserves data to a variable called <code class="docutils literal notranslate"><span class="pre">reserves</span></code>, is a little more complex than the code for reading a JSON file, primarily because we have to read from the file in a loop.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">urlretrieve</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/gwu-libraries/python-camp/gh-pages/data/reserves-data-fall-2023.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;reserves-data.csv&#39;</span><span class="p">)</span>
+<span class="n">reserves</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;reserves_data.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="n">reserves</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>The <code class="docutils literal notranslate"><span class="pre">csv.DictReader</span></code> object will create a Python dictionary from every row in the CSV file, where the dictionary keys are the column headings, and the values are the data in that row. (This assumes that the first row of the CSV file contains column headings, which may not always be the case.)</p>
+<p><strong>Writing (saving) to CSV</strong></p>
+<p>To save data in CSV format, we perform a similar process. When using <code class="docutils literal notranslate"><span class="pre">csv.DictWriter</span></code>, as below, our dataset needs to consist of a list of dictionaries, where every dictionary has the same keys. These are passed to the <code class="docutils literal notranslate"><span class="pre">fieldnames</span></code> argument of the <code class="docutils literal notranslate"><span class="pre">writeheader()</span></code> method to create the header row.</p>
+<p>In the example below, we save a Python list called <code class="docutils literal notranslate"><span class="pre">bkst_data_csv</span></code> to a CSV file called <code class="docutils literal notranslate"><span class="pre">bookstore-data.csv</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;bookstore-data.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">fieldnames</span> <span class="o">=</span> <span class="n">bkst_data_csv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">DictWriter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fieldnames</span><span class="p">)</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">bkst_data_csv</span><span class="p">:</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">rpw</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Comparing lists</p>
+<p>Two lists in Python, even if they contain nested elements, are considered equal only if they are <strong>exact duplicates</strong> of one another. As a minimal example, the following code produces the result <code class="docutils literal notranslate"><span class="pre">False</span></code> because <code class="docutils literal notranslate"><span class="pre">l1</span></code> and <code class="docutils literal notranslate"><span class="pre">l2</span></code> have the same elements but in different order.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">l1</span> <span class="o">==</span> <span class="n">l2</span>  <span class="c1"># This is False</span>
+</pre></div>
+</div>
+<p>Often when comparing lists, what we want to know is not, “Are these lists equal according to Python?” but rather, “Do these lists have the same elements?” or “Which elements are present in both lists?”</p>
+<p>Below is an example of a function that answers the second question:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_overlap</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
+    <span class="n">overlap</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">l1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">l2</span><span class="p">:</span>
+            <span class="n">overlap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">overlap</span>
+</pre></div>
+</div>
+<p>We could use this function like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="c1"># This will print the list [2, 4]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">find_overlap</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that this approach works best when the two lists contain numeric values or strings as their top-level elements.</p>
+<p>In fact, when that’s the case, we can take an even more expeditious approach, using a Python data type we haven’t seen so far: the <a class="reference internal" href="../../glossary.html#term-set"><span class="xref std std-term">set</span></a>.</p>
+<p>Let’s say we have two lists of ISBN’s. Both are lists of strings. The following code finds the overlap between those two lists, returning a set of unique elements that are in both lists.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unique_isbns</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">isbn1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">isbn2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Read more about Python sets in the <a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#set-types-set-frozenset">documentation</a></p>
 </div>
 </section>
 </section>
@@ -619,20 +642,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../homework/HW_2_GR.html"
+       href="../homework/HW_3_error_stories.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Graded Homework: Day 2</p>
+        <p class="prev-next-title">Error Stories</p>
       </div>
     </a>
     <a class="right-next"
-       href="../homework/HW_3_error_stories.html"
+       href="../homework/HW_Final_GR.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Error Stories</p>
+        <p class="prev-next-title">Python Camp: Final Homework</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
