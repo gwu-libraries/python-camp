@@ -3,7 +3,7 @@
         "department": "BME",
         "course_num": "3825",
         "section": "10",
-        "instructor": "Hyung Sok Choe",
+        "instructor": "Hyung Choe",
         "term_name": "Fall 2023",
         "texts": []
     },
@@ -54,6 +54,14 @@
                 "item_type": "print"
             }
         ]
+    }, 
+    {
+        "department": "AMST",
+        "course_num": "3301W",
+        "section": "10",
+        "instructor": null,
+        "term_name": "Fall 2023",
+        "texts": []
     },
     {
         "department": "CHEM",
@@ -528,14 +536,6 @@
                 "item_type": "digital"
             }
         ]
-    },
-    {
-        "department": "AMST",
-        "course_num": "3301W",
-        "section": "10",
-        "instructor": null,
-        "term_name": "Fall 2023",
-        "texts": []
     },
     {
         "department": "HIST",

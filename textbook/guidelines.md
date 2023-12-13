@@ -1,12 +1,12 @@
 # Collaborating on Code: Guidelines for a Good Experience
 
-Python Camp takes a team-based approach to teaching and learning. Python Camp instructors work as a team and represent a range of coding experience, from folks who have written code almost daily for years, to folks to who do so more sporadically, to folks who only recently embarked on their coding journeys. 
+Python Camp takes a team-based approach to teaching and learning. Python Camp facilitators work as a team and represent a range of coding experience, from folks who have written code almost daily for years, to folks to who do so more sporadically, to folks who only recently embarked on their coding journeys. 
 
 As a Python Camp participant, you'll also be asked to work in a team. This document outlines the rationale for our team-based approach and offers guidelines and suggestions for making the most of this experience.
 
 ## Why Work in Teams?
 
-Over the years of teaching Python Camp, we've found that the most effective environments are those where the learners interact not only with the instructors but with each other: asking a neighbor or friend for help with the lesson, talking through an exercise together, or even just sharing their goals for learning Python and their broader academic interests. In order to cultivate this kind of interaction, we have restructured Python Camp around a series of team-based, in-class activities. 
+Over the years of teaching Python Camp, we've found that the most effective environments are those where the learners interact not only with the facilitators but with each other: asking a neighbor or friend for help with the lesson, talking through an exercise together, or even just sharing their goals for learning Python and their broader academic interests. In order to cultivate this kind of interaction, we have restructured Python Camp around a series of team-based, in-class activities. 
 
 Moreover, we believe that working in teams fosters the following outcomes:
 
@@ -41,7 +41,7 @@ For the last two kinds of prompt, teams should feel free to explore different st
   - For instance, a team of four _may_ prefer to work on the larger coding problems in pairs, to facilitate sharing screens. 
   - Or the team may decide to give everyone a chance to try the problem individually before comparing their proposed solutions. 
 
-Finding what works best for your team is part of the process of teamwork. And your Python Camp instructors/facilitators are there to help! 
+Finding what works best for your team is part of the process of teamwork. And your Python Camp facilitators are there to help! 
 
 But whatever method(s) you choose, **please ensure that everyone on the team has a chance to enter the team's solution into their own notebook.** Besides practicing Python syntax, by keeping your notebook up to date you will create a useful artefact you can refer to later. 
 
@@ -56,7 +56,7 @@ To support a productive and equitable experience, each team will assign someone 
 - **Reporter**: The reporter is the team's designated spokesperson. Everyone on the team should feel free to ask questions or share ideas with the larger group at any time. However, when teams are asked to share the outcome of group discussions, it helps to have someone delegated to this task. And rotating the reporter role gives everyone on the team a chance to share out.
 - **Advocate**: The advocate has a very important role: to make sure that everyone has a chance to contribute to the work of the team, and that no one is getting left behind. It's perfectly okay -- and probably inevitable -- that members of the team will contribute in different ways. For instance, some people might have a better eye for detail, while others are more focused on the big picture. But here are some ways in which the advocate can help ensure equity and inclusion:
    - During group discussions, if situations arise where one or two team members are doing all the talking, the advocate might say something like, "I see that we haven't heard from __________ in a while. Let's make space for anything they'd like to share."
-   - During hands-on exercises/problem-solving, the advocate might check in with team members to see if they're lost, feeling confused, or frustrated. In these situations, the advocate might suggest that the team take a pause to bring everyone up to speed, or the advocate might suggest flagging a Python Camp instructor to provide more guidance. 
+   - During hands-on exercises/problem-solving, the advocate might check in with team members to see if they're lost, feeling confused, or frustrated. In these situations, the advocate might suggest that the team take a pause to bring everyone up to speed, or the advocate might suggest flagging a Python Camp facilitator to provide more guidance. 
    - The advocate can advocate for themselves as well other team members. But some people feel more comfortable advocating on behalf of others, which is why it's especially useful to rotate this role.
 
 

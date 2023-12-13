@@ -17,7 +17,7 @@ We're using GitHub Classroom to track submission of this notebook. Please read t
 
 1. To complete the notebook, open it in JupyterHub (using the rocket icon in the upper left) and follow the instructions included with the notebook. 
 2. When you've successfully completed each exercise, the code cell in the `Tests` section should run without any errors or other output. If you see an `AssertionError`, it will indicate the part of your code that is not behaving as expected.
-3. WHen you've finished your work, don't forget to save your notebook in JupyterHub!
+3. When you've finished your work, don't forget to save your notebook in JupyterHub!
 4. Download your notebook from JupyterHub to your own computer, using the `File -> Download` command from the menu at the top.
 
     ````{image} img/homework/download-notebook.png
@@ -29,7 +29,7 @@ We're using GitHub Classroom to track submission of this notebook. Please read t
 5. In the Python Camp roster, copy the link in the column associated with this homework assignment and paste it into a new tab on your web browser.
 6. If you don't have a GitHub account, you'll need to create one. (GitHub is a widely used platform for sharing and collaborating on code.) You don't need to use the same email address on your GitHub account as you are using for Python Camp, so if you already have a GitHub account under a different email address, feel free to use that one.
 7. Once you've logged into GitHub, and if this is your first time submitting an assignment, you'll be asked to select your email address from the GitHub Classroom roster. **Please make sure you select the correct email address**. This will link your GitHub account to that email address in our GitHub Classroom instance. 
-8. At this point, you should see a screen asking you to "Accept" the assignment in GitHub Classroom. Accepting the assignment will create a new GitHub repository under your GitHub account; that repository is where you'll submit your completed notebook for grading.
+8. At this point, you should see a screen asking you to `Accept the assignment` in GitHub Classroom. Accepting the assignment will create a new GitHub repository under your GitHub account; that repository is where you'll submit your completed notebook for grading.
 
     ````{image} img/homework/accept-assignment.png
     :alt: Screen showing a GitHub message with the assignment name and a green button to accept the assignment.
@@ -52,7 +52,7 @@ We're using GitHub Classroom to track submission of this notebook. Please read t
     :align: center
     ````
 12. Drag the notebook file from its location on your computer into the provided space (or click `Choose files` and select the file from the file navigator). **Make sure the file has the exact same name as in the list of files on the previous GitHub repo screen.**
-13. Click the green `Commit` button at the bottom of the screen to complete the upload.
+13. Click the green `Commit Changes` button at the bottom of the screen to complete the upload.
 
     ````{image} img/homework/assignment-repo-3.png
     :alt: GitHub screen with a green button that reads "Commit."

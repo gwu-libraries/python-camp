@@ -284,7 +284,7 @@ indented block
 
 index
 
-    The position of an element in a {term}`list` or a {term}`character` in a {term}`string`. We can use the index to extract a single element/character, or we can use a range of indices to extract a {term}`slice` (a subset of the string or list). 
+    The position of an element in a {term}`list`, or of a {term}`character` in a {term}`string`. We can use the index to extract a single element/character, or we can use a range of indices to extract a {term}`slice` (a subset of the string or list). 
 
     Indices in Python start at `0` (meaning, the first element or character is considered to have an index of 0, not 1) and increase from left to right. 
 
@@ -462,6 +462,12 @@ slice
     If `my_list` has 5 elements in total, then
 
     `my_list[3:5]` is the same as `my_list[3:]`. 
+
+source code
+
+    Refers to the code (in Python or any other language) of which a piece of software (application, library, module, or script) consists. The Python community is very committed to [open source](https://en.wikipedia.org/wiki/Open_source) software; this commitment, coupled with the nature of the Python language itself, means that for virtually any Python {term}`library` that you might use, it's possible to inspect the source code to see how it was written. This fact can be very useful, especially for libraries lacking good documentation.
+
+    The [source code](https://github.com/python/cpython) for the core of the Python language is also open source. However,  a lot of it is implemented in C (or another low-level language, depending on the flavor of Python).
 
 square brackets
 
