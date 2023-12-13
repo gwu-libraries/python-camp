@@ -477,21 +477,21 @@ document.write(`
 <p>The real power of these tools lies in our ability to compose them together in order to reflect both the complexity of the data we’re working with, and our goals (or those of our end users).</p>
 <p>But it can be challenging to decide which Python types to use in a given circumstance. Before we dive into more code, take a few minutes to discuss the following questions with your team.</p>
 <div class="try-it-out admonition">
-<p class="admonition-title">Try it out!</p>
+<p class="admonition-title">For discussion</p>
 <ol class="arabic simple">
 <li><p>If you’re going to the store to buy groceries, how do you generally keep track of the items you need? What pieces of information are relevant to this task?</p></li>
 <li><p>What about keeping track of the courses you’re taking in a given semester?</p></li>
 <li><p>Many of us now rely on our phones to store our contacts (friends, family, etc.). What if you had to give up your phone for a month – how would you organize your contacts? What would that look like?</p></li>
-<li><p>If you were going to record some information about the members of your team, what information would you capture? Make a list of fields that the team can agree on.</p></li>
+<li><p>If you were going to record some information about the members of your team, what information would you capture? <strong>Make a list of fields that the team can agree on.</strong></p></li>
 </ol>
 </div>
 <section id="i-1-creating-a-list">
 <h3>I.1 Creating a list<a class="headerlink" href="#i-1-creating-a-list" title="Permalink to this heading">#</a></h3>
-<p>In the homework, you split a single string containing some course information into a list of three strings. For example, by executing the code <code class="docutils literal notranslate"><span class="pre">&quot;CHEM</span> <span class="pre">1001</span> <span class="pre">10&quot;.split()</span></code>, we get back the <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a> <code class="docutils literal notranslate"><span class="pre">[&quot;CHEM&quot;,</span> <span class="pre">&quot;1001&quot;,</span> <span class="pre">&quot;10&quot;]</span></code>. In Python, we can put any valid Python values, or variables pointing to those values, inside of a list.</p>
+<p>In the homework, you split a single string containing some course information into a list of three strings. For example, by executing the code <code class="docutils literal notranslate"><span class="pre">&quot;CHEM</span> <span class="pre">1001</span> <span class="pre">10&quot;.split()</span></code>, we get back the list <code class="docutils literal notranslate"><span class="pre">[&quot;CHEM&quot;,</span> <span class="pre">&quot;1001&quot;,</span> <span class="pre">&quot;10&quot;]</span></code>. In Python, we can put any valid Python values, or variables pointing to those values, inside of a list.</p>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
 <p>In the cell below, assign a variable called <code class="docutils literal notranslate"><span class="pre">my_team</span></code> to a new list containing the names of the members of your team.</p>
-<p>Then using that variable, print the first name in the list.</p>
+<p>Then using that variable, print <strong>the first name</strong> in the list.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -549,12 +549,12 @@ document.write(`
 <p class="admonition-title">Notes</p>
 <ul class="simple">
 <li><p>Note the curly braces (<code class="docutils literal notranslate"><span class="pre">{}</span></code>) at the start and end of the dictionary. Python uses square brackets for lists and curly braces for dictionaries.</p></li>
-<li><p>The values on the left side of the colons are called <strong>keys</strong>.</p></li>
-<li><p>The values on the right side of the colons are called <strong>values</strong>.</p></li>
+<li><p>The values on the left side of the colons are called <a class="reference internal" href="../../glossary.html#term-key"><span class="xref std std-term">key</span></a>s.</p></li>
+<li><p>The values on the right side of the colons are called <a class="reference internal" href="../../glossary.html#term-value"><span class="xref std std-term">value</span></a>s.</p></li>
 <li><p>Keys are usually (but not always) Python strings.</p></li>
 <li><p>Values can be strings, floats, integers, or any other valid Python data type.</p></li>
 <li><p>Note the commas at the end of each line. These separate key-value pairs. It’s not required to break the dictionary into multiple lines, but if you do, you must break after the comma.</p></li>
-<li><p>In the template, I assigned this dictionary of data about me to a <a class="reference internal" href="../../glossary.html#term-variable"><span class="xref std std-term">variable</span></a> called <code class="docutils literal notranslate"><span class="pre">dolsy</span></code>. Assign your dictionary to whatever variable name you like.</p></li>
+<li><p>In the template, I assigned this dictionary of data about me to a variable called <code class="docutils literal notranslate"><span class="pre">dolsy</span></code>. Assign your dictionary to whatever variable name you like.</p></li>
 </ul>
 </div>
 </section>
@@ -643,10 +643,11 @@ document.write(`
 <li><p>How would we structure this course data as a dictionary? What would we use for keys?</p></li>
 <li><p>Alternately, if we were to use a list, what would the data structure look like?</p></li>
 </ul>
+<p>Discuss your thoughts with your team.</p>
 </div>
 <section id="ii-1-nesting-data">
 <h3>II.1 Nesting data<a class="headerlink" href="#ii-1-nesting-data" title="Permalink to this heading">#</a></h3>
-<p>There are many different ways to put lists and dictionaries together. When handling datasets like our list of courses,a common approach is to create a <a class="reference internal" href="../../glossary.html#term-list-of-dictionaries"><span class="xref std std-term">list of dictionaries</span></a>.</p>
+<p>There are many different ways to put lists and dictionaries together. When handling datasets like our list of courses, a common approach is to create a <a class="reference internal" href="../../glossary.html#term-list-of-dictionaries"><span class="xref std std-term">list of dictionaries</span></a>.</p>
 <p>You can think of this structure as similar to a spreadsheet.</p>
 <ul class="simple">
 <li><p>Each dictionary is like a single row of the spreadsheet.</p></li>
@@ -707,8 +708,9 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_team</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>But what if we want to work with the values <strong>inside</strong> one of these dictionaries? We can do that, too.
-3. We can access a value by key from the first dictionary like so:</p>
+<ol class="arabic simple" start="3">
+<li><p>But what if we want to work with the values <strong>inside</strong> one of these dictionaries? We can access a value by key from the first dictionary like so:</p></li>
+</ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_team</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;email_address&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -728,7 +730,7 @@ document.write(`
 <p>What if we want to add the same value to all of the dictionaries in our list? Let’s say we want to add a “programming_languages” key to everyone on the team and assign it to “Python.”</p>
 <p>The following code might seem like it should work:</p>
 <p><code class="docutils literal notranslate"><span class="pre">my_team[&quot;programming_languages&quot;]</span> <span class="pre">=</span> <span class="pre">&quot;Python&quot;</span></code></p>
-<p>But it doesn’t. The variable <code class="docutils literal notranslate"><span class="pre">my_team</span></code> points to a list, and lists do not allow access by key, only by position. It doesn’t matter that <code class="docutils literal notranslate"><span class="pre">my_team</span></code> points to a list <strong>of dictionaries</strong>; Python doesn’t let us take that shortcut.</p>
+<p>But it doesn’t. The variable <code class="docutils literal notranslate"><span class="pre">my_team</span></code> points to a list, and lists do not allow access by key, only by position. It doesn’t matter that <code class="docutils literal notranslate"><span class="pre">my_team</span></code> points to a list <em>of dictionaries</em>; Python doesn’t let us take that shortcut.</p>
 <p>So what do we do? We probably don’t want manually to add the same key/value to every dictionary in our list. The following <em>would</em> work, but it kind of defeats the point of programming:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_team</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;programming_languages&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
 <span class="n">my_team</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;programming_languages&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
@@ -739,7 +741,7 @@ document.write(`
 <p>For-tunately, we can reach for one of the most powerful tools in the programmer’s toolkit, a tool that unlocks the superpower of the computer – its capacity for mindless iteration – with a humble, three-letter word.</p>
 <div class="notes admonition">
 <p class="admonition-title">Set it and for-get it</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is the most common looping construct in Python. It lets us loop over any collection – that is, any data type that can contain multiple elements – and work with each element in turn. Probably the most common use of the <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> is for looping over lists.</p>
+<p>The <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> is the most common looping construct in Python. It lets us loop over any collection – that is, any data type that can contain multiple elements – and work with each element in turn. Probably the most common use of the for loop is for looping over lists.</p>
 <p>In the code below, we use a for loop to print each team member’s email address.</p>
 </div>
 <div class="cell docutils container">
@@ -803,13 +805,18 @@ document.write(`
 </div>
 <div class="admonition-try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
-<p>To confirm, look at the JSON file you just created in your browser.</p>
+<p>To confirm, look at the <a class="reference internal" href="../../glossary.html#term-JSON"><span class="xref std std-term">JSON</span></a> file you just created in your browser.</p>
+<p><strong>Note</strong>: This will only work if you are using JupyterHub. If you’re using Google Colab or another coding environment, please ask a facilitator for help with this step.</p>
 <ol class="arabic simple">
 <li><p>Open a new tab.</p></li>
 <li><p>Copy the URL from this tab and paste it in the new tab.</p></li>
-<li><p>Remove the name of the notebook, <code class="docutils literal notranslate"><span class="pre">2_1_describing_the_team.ipynb</span></code>, and replace it with the name of the JSON file: <code class="docutils literal notranslate"><span class="pre">team-database.json</span></code>.</p></li>
+<li><p>Remove the name of the notebook, <code class="docutils literal notranslate"><span class="pre">2_1_describing_the_team.ipynb</span></code>, and replace it with the name of the JSON file: <code class="docutils literal notranslate"><span class="pre">team-dataset.json</span></code>.</p></li>
 <li><p>You should see the data displayed in your browser, just as when we first looked at the bookstore dataset.</p></li>
 </ol>
+</div>
+<div class="try-it-out admonition">
+<p class="admonition-title">One more thing</p>
+<p>We’re going to re-use these team datasets on Day 3. To prepare for that, your team’s reporter should copy the data from the JSON as displayed in your browser and paste it into the Python Camp <a class="reference external" href="https://docs.google.com/document/d/1QeKJNlFn-FJGnmhULs7MwHQVa-sRjNgG8sHDhLcomsU/edit">shared notes document</a>.</p>
 </div>
 <div class="note admonition">
 <p class="admonition-title">Syntax review: Square brackets</p>

@@ -466,7 +466,7 @@ document.write(`
 <section id="agenda-instructions">
 <h2>Agenda &amp; Instructions<a class="headerlink" href="#agenda-instructions" title="Permalink to this heading">#</a></h2>
 <p>This notebook is intended for you to work through independently, in order to review and clarify the concepts introduced on Python Camp Day 1, and to lay the groundwork for the activities on Python Camp Day 2. However, feel free to collaborate with others in working through it. It is also intended to serve as a resource you can return to review as necessary.</p>
-<p>In this homework, you will cover most of the fundamental tools of the Python programming language that you need to work with data. You’ve already encountered these tools in today’s team activities: <em>Choreographing Code</em> and <em>From Data to Code</em>. But these homework exercises will unpack their syntax and explain how to use them. Along the way, you’ll cover the following concepts:</p>
+<p>In this homework, you will cover most of the fundamental tools of the Python programming language that you need to work with data. You’ve already encountered these tools in today’s team activities: <em>Modeling Code</em> and <em>From Data to Code</em>. But these homework exercises will unpack their syntax and explain how to use them. Along the way, you’ll cover the following concepts:</p>
 <ul class="simple">
 <li><p>Working with numbers in Python</p></li>
 <li><p>Working with text (strings) in Python</p></li>
@@ -530,7 +530,7 @@ document.write(`
 </section>
 <section id="i-2-flavors-of-numbers">
 <h3>I.2 Flavors of numbers<a class="headerlink" href="#i-2-flavors-of-numbers" title="Permalink to this heading">#</a></h3>
-<p>In Python, numbers come in two main flavors: <strong>integers</strong> and <strong>floats</strong>. We can use Python’s <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to expose the <a class="reference internal" href="../../glossary.html#term-type"><span class="xref std std-term">type</span></a> of any value or <a class="reference internal" href="../../glossary.html#term-variable"><span class="xref std std-term">variable</span></a>.</p>
+<p>In Python, numbers come in two main flavors: integers and floats. We can use Python’s <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to expose the <a class="reference internal" href="../../glossary.html#term-type"><span class="xref std std-term">type</span></a> of any value or <a class="reference internal" href="../../glossary.html#term-variable"><span class="xref std std-term">variable</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">book_price</span><span class="p">)</span>
@@ -545,7 +545,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>A <strong>float</strong> is any number that contains a decimal point. An <strong>integer</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) is what we call a whole number.</p>
+<p>A <a class="reference internal" href="../../glossary.html#term-float"><span class="xref std std-term">float</span></a> is any number that contains a decimal point. An <a class="reference internal" href="../../glossary.html#term-integer"><span class="xref std std-term">integer</span></a> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) is what we call a whole number.</p>
 <p>Unlike some programming languages, Python handles the conversion between these two types automatically.</p>
 <div class="question admonition">
 <p class="admonition-title">Question</p>
@@ -581,10 +581,10 @@ document.write(`
 </div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> informs us that we can’t perform multiplication in this instance because <code class="docutils literal notranslate"><span class="pre">book_price</span></code> is not of the right <a class="reference internal" href="../../glossary.html#term-type"><span class="xref std std-term">type</span></a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> informs us that we can’t perform multiplication in this instance because <code class="docutils literal notranslate"><span class="pre">book_price</span></code> is not of the right type.</p>
 <div class="notes admonition">
 <p class="admonition-title">Notes</p>
-<p>We saw prices represented this way – <code class="docutils literal notranslate"><span class="pre">&quot;$99.95&quot;</span></code> – in the bookstore dataset. The quotation marks indicate that this value is a <strong>string</strong>. As far as Python is concerned, <em>anything</em> between quotation marks is a string.</p>
+<p>We saw prices represented this way – <code class="docutils literal notranslate"><span class="pre">&quot;$99.95&quot;</span></code> – in the bookstore dataset. The quotation marks indicate that this value is a <a class="reference internal" href="../../glossary.html#term-string"><span class="xref std std-term">string</span></a>. As far as Python is concerned, <em>anything</em> between quotation marks is a string.</p>
 <p>You can think of the quotation marks as a container: whatever you put into the container will be treated as an instance of the <code class="docutils literal notranslate"><span class="pre">str</span></code> type.</p>
 <p>You can use either <strong>single</strong> (<code class="docutils literal notranslate"><span class="pre">''</span></code>) or <strong>double</strong> (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) quotation marks: Python doesn’t care. But in any given string, the quotation marks must match: a string that starts with a double quote and ends with a single quote will produce an error.</p>
 </div>
@@ -660,8 +660,8 @@ document.write(`
 <section id="i-5-how-to-do-things-with-strings-slicing">
 <h3>I.5 How to do things with strings: Slicing<a class="headerlink" href="#i-5-how-to-do-things-with-strings-slicing" title="Permalink to this heading">#</a></h3>
 <p>When working with textual data, keep in mind that Python <em>doesn’t know anything</em> about the meaning of what’s inside the quotes. It has no concept of words, punctuation, etc. – all the stuff that we as humans rely on to communicate effectively (elements of so-called <em>natural languages</em>).</p>
-<p>A Python string is just a <strong>collection</strong> of <strong>characters</strong>. Imagine spelling out words in Scrabble, or with wooden alphabet blocks.</p>
-<p>That said, Python strings are also suprisingly flexible. Python provides a lot of tools to make working with them easy, starting with the fact that each character in the string has a well-defined position, which we call the <strong>index</strong>. We can use the indices of characters to extract information from parts of a string.</p>
+<p>A Python string is just a <a class="reference internal" href="../../glossary.html#term-collection"><span class="xref std std-term">collection</span></a> of <a class="reference internal" href="../../glossary.html#term-character"><span class="xref std std-term">character</span></a>s. Imagine spelling out words in Scrabble, or with wooden alphabet blocks.</p>
+<p>That said, Python strings are also suprisingly flexible. Python provides a lot of tools to make working with them easy, starting with the fact that each character in the string has a well-defined position, which we call the <a class="reference internal" href="../../glossary.html#term-index"><span class="xref std std-term">index</span></a>. We can use the indices of characters to extract information from parts of a string.</p>
 <p>The following code defines two string variables that hold information about a course and a term.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -729,8 +729,8 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">term</span> <span class="o">=</span> <span class="s1">&#39;Summer 2023&#39;</span>
 </pre></div>
 </div>
-<p>Let’s say that we expect the term data to consist of the name for a particular semester – <code class="docutils literal notranslate"><span class="pre">Summer</span></code>, <code class="docutils literal notranslate"><span class="pre">Spring</span></code>, or <code class="docutils literal notranslate"><span class="pre">Fall</span></code> – plus a 4-digit year.</p>
-<p>Do you see the problem here? The name of the term can be either 4 characters long (<code class="docutils literal notranslate"><span class="pre">Fall</span></code>) or 6 (<code class="docutils literal notranslate"><span class="pre">Summer</span></code>, <code class="docutils literal notranslate"><span class="pre">Spring</span></code>).</p>
+<p>Let’s say that we expect the term data to consist of the name for a particular semester – Summer, Spring, or Fall – plus a 4-digit year.</p>
+<p>Do you see the problem here? The name of the term can be either 4 characters long (<code class="docutils literal notranslate"><span class="pre">&quot;Fall&quot;</span></code>) or 6 (<code class="docutils literal notranslate"><span class="pre">&quot;Summer&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Spring&quot;</span></code>).</p>
 <p>Fortunately, Python has us covered, because it lets us <em>count backwards</em> as well as forwards when slicing a string. We just use negative numbers! Since there’s no such number as <code class="docutils literal notranslate"><span class="pre">-0</span></code>, the last characer in a string has the position <code class="docutils literal notranslate"><span class="pre">-1</span></code>.</p>
 <a class="reference internal image-reference" href="https://gwu-libraries.github.io/python-camp/img/string-negative-indexing-table.png"><img alt="Table showing the characters in the string &quot;Summer 2023&quot; arranged in sequence on one row, with the numbers -11 through -1 on the row above." class="align-center" src="https://gwu-libraries.github.io/python-camp/img/string-negative-indexing-table.png" style="width: 500px;" /></a>
 <p>To extract the last 4 characters (the year) from the <code class="docutils literal notranslate"><span class="pre">term</span></code> variable, we can use this slice:</p>
@@ -742,7 +742,6 @@ document.write(`
 </div>
 </div>
 </div>
-<p>The colon with no number after it means “slice up to and <em>including</em> the end of the string.” It’s useful in cases where we don’t know (in advance) how long the string will actually be. (In this case, with our three different terms, the string could be either 9 or 11 characters long.)</p>
 <p>We can also mix negative and positive positions in slicing. To start from the first character and slice <strong>up to</strong> (but not including) the fifth character from the end, we could use the following slice:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -789,7 +788,7 @@ document.write(`
 <p class="admonition-title">Hint</p>
 <p>If you ran the code <code class="docutils literal notranslate"><span class="pre">term.split()</span></code>, you should have gotten output like this:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['Summer',</span> <span class="pre">'2023']</span></code></p>
-<p>As you might have guessed, <code class="docutils literal notranslate"><span class="pre">split()</span></code> separates a string on the <strong>white space</strong> (which can be a regular space, a tab, or a line break).</p>
+<p>As you might have guessed, <code class="docutils literal notranslate"><span class="pre">split()</span></code> separates a string on the <a class="reference internal" href="../../glossary.html#term-white-space"><span class="xref std std-term">white space</span></a> (which can be a regular space, a tab, or a line break).</p>
 <p>If you imagine a string as a six-pack of some canned beverage, the spaces are like the plastic rings holding the six-pack together. When we call <code class="docutils literal notranslate"><span class="pre">split()</span></code> on the string, that’s like pulling each can out of the six-pack and discarding the plastic rings: you are left with six individual cans (a list of strings without spaces).</p>
 <p>You can use <code class="docutils literal notranslate"><span class="pre">split()</span></code> with other characters, too. We’ll see some examples later.</p>
 </div>
@@ -853,7 +852,7 @@ document.write(`
 </section>
 <section id="wrapping-up">
 <h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this heading">#</a></h2>
-<p>Congratulations! This homework covered <em>a lot</em> of material. (Subsequent homework notebooks will not be as extensive.)</p>
+<p>Congratulations! This homework covered <em>a lot</em> of material.</p>
 <ol class="arabic simple">
 <li><p>We learned about various Python <strong>types</strong>, which allow us to represent (computationally) raw data in various ways.</p></li>
 <li><p>We saw that different types have different uses – or we might say, different behaviors: we can do addition and multiplication with integers and floats, we can <strong>split</strong> and <strong>slice</strong> strings, and we can also slice lists.</p></li>

@@ -483,7 +483,6 @@ document.write(`
 <li><p>(Hidden) solutions to these exercises follow the blank cells; click the toggle bar to expand the solution to compare with your approach.</p></li>
 <li><p>Some prompts include alternative exercises (Parsons Problems) that will be linked from the prompt. These alternatives may help clarify concepts (especially if you find yourself struggling to keep up with all the syntax).</p></li>
 <li><p>Optional annotations (labeled <code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">the</span> <span class="pre">curious...</span></code>) provide additional explanation and/or context for those who want them. Feel free to skip these sections if you like. As a beginner, it’s important to maintain a balanced cognitive load: taking in too much information all at once can impede your progress toward understanding. This balance looks different for everyone, but we have tried to keep the main content focused on a few key concepts, tools, and techniques, while providing that additional context for those who might benefit from it.</p></li>
-<li><p>Follow the instructions at the end to complete and submit a short, autograded assignment to test your knowledge. (You may submit the assignment as many times as you like.)</p></li>
 </ol>
 </div>
 </section>
@@ -599,7 +598,7 @@ document.write(`
 </div>
 <ul class="simple">
 <li><p>As mentioned above, the <code class="docutils literal notranslate"><span class="pre">str</span></code> here refers to any Python value of type string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). In other words, you can call the <code class="docutils literal notranslate"><span class="pre">split</span></code> method on anything between single or double quotes, or on any variable that has been assigned to a value surrounded by single or double quotes.</p></li>
-<li><p>The part between <a class="reference internal" href="../../glossary.html#term-parentheses"><span class="xref std std-term">parentheses</span></a> defines the method’s <strong>arguments</strong>.</p></li>
+<li><p>The part between <a class="reference internal" href="../../glossary.html#term-parentheses"><span class="xref std std-term">parentheses</span></a> defines the method’s <a class="reference internal" href="../../glossary.html#term-arguments"><span class="xref std std-term">arguments</span></a>.</p></li>
 <li><p>Each argument is given a <strong>default value</strong>, meaning that (in this case), these arguments are optional.</p>
 <ul>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">sep</span></code> argument defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
@@ -611,22 +610,22 @@ document.write(`
 <blockquote>
 <div><p>If sep is not specified or is None, a different splitting algorithm is applied: runs of consecutive whitespace are regarded as a single separator, and the result will contain no empty strings at the start or end if the string has leading or trailing whitespace.</p>
 </div></blockquote>
-<p>That’s a little dense, but basically, it describes the behavior we’ve seen when using <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> (with nothing between the parentheses): the string is split on the white space.</p>
+<p>That’s a little dense, but basically, it describes the behavior we’ve seen when using <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> (with nothing between the parentheses): the string is split on the <a class="reference internal" href="../../glossary.html#term-white-space"><span class="xref std std-term">white space</span></a>.</p>
 <p>To split on something else, we need to provide a value for the <code class="docutils literal notranslate"><span class="pre">sep</span></code> argument. We can do that in one of two ways:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;RENTAL_NEW&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;RENTAL_NEW&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;RENTAL_NEW&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;RENTAL_NEW&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Either of those will yield the result we want: <code class="docutils literal notranslate"><span class="pre">['RENTAL',</span> <span class="pre">'NEW']</span></code>. Note that the underscore character is <em>enclosed in quotation marks</em> when passing it as an argument to <code class="docutils literal notranslate"><span class="pre">str.split()</span></code>.</p>
+<p>Either of those will yield the result we want: <code class="docutils literal notranslate"><span class="pre">[&quot;RENTAL&quot;,</span> <span class="pre">&quot;NEW&quot;]</span></code>. Note that the underscore character is <em>enclosed in quotation marks</em> when passing it as an argument to <code class="docutils literal notranslate"><span class="pre">str.split()</span></code>.</p>
 </div>
 </section>
 </section>
 <section id="ii-debugging">
 <h2>II. Debugging<a class="headerlink" href="#ii-debugging" title="Permalink to this heading">#</a></h2>
-<p><strong>Debugging</strong> is the process of troubleshooting errors in code.</p>
+<p>Debugging is the process of troubleshooting errors in code.</p>
 <p>Apart from syntax errors, the frequency of which will decrease as you become more comfortable with Python’s syntactic rules, most errors in Python arise from a mismatch between the logic of the code, and the structure of the data or environment on which the code is being run.</p>
 <p>A common source of errors lies in inconsistencies or unexpected elements within a dataset. In the code below, we’ll attempt to modify our bookstore data by separating the name in the <code class="docutils literal notranslate"><span class="pre">instructor</span></code> field into a first name and last name. (That could make it easier to look up a given course by instructor, for instance.)</p>
 <p>Note that as written, this code will not run without error.</p>
@@ -635,10 +634,10 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop over courses in the dataset</span>
 <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
     <span class="c1"># Split each instructor name on white space</span>
-    <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
     <span class="c1"># Assign each part of the name to a new key in the dictionary course</span>
-    <span class="n">course</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
-    <span class="n">course</span><span class="p">[</span><span class="s1">&#39;last_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
+    <span class="n">course</span><span class="p">[</span><span class="s2">&quot;first_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
+    <span class="n">course</span><span class="p">[</span><span class="s2">&quot;last_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
 </pre></div>
 </div>
 </div>
@@ -651,16 +650,16 @@ document.write(`
 </pre></div>
 </div>
 <p>Note also the green arrow pointing to the line of code that reads</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> tells that something went wrong with the call to the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method. The phrase <code class="docutils literal notranslate"><span class="pre">'NoneType</span> <span class="pre">object'</span></code> may seem opaque. But recall what we’ve learned about the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method: that it’s <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str.split">defined</a> to work with strings. That’s the meaning of the “str” when we write it as <code class="docutils literal notranslate"><span class="pre">str.split()</span></code>: it tells us that Python <em>strings</em> have access to this method. Other Python types do not.</p>
-<p>An <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> occurs when we try to use a method on a type that doesn’t “have” that method. But the important thing is to find out when and why the value of <code class="docutils literal notranslate"><span class="pre">course['instructor']</span></code> might <em>not</em> be a string.</p>
+<p>An <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> occurs when we try to use a method on a type that doesn’t “have” that method. But the important thing is to find out when and why the value of <code class="docutils literal notranslate"><span class="pre">course[&quot;instructor&quot;]</span></code> might <em>not</em> be a string.</p>
 </div>
 <section id="ii-1-debugging-with-print">
 <h3>II.1 Debugging with <code class="docutils literal notranslate"><span class="pre">print()</span></code><a class="headerlink" href="#ii-1-debugging-with-print" title="Permalink to this heading">#</a></h3>
 <p>One of the best ways to debug code is also one of the simplest: using the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function.</p>
-<p>If we know that an error is ocurring inside a <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a>, but we don’t know what data element triggered the error, we can take advantage of the fact that the loop will be <strong>interrupted</strong> when the error occurs.</p>
+<p>If we know that an error is ocurring inside a <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a>, but we don’t know what data element triggered the error, we can take advantage of the fact that the loop will stop as soon as the error occurs.</p>
 <p>By using <code class="docutils literal notranslate"><span class="pre">print()</span></code> to display the element we’re interested in each time through the loop, we can observe where the loop stops: if we’ve put our <code class="docutils literal notranslate"><span class="pre">print()</span></code> in the right place, the last value printed should be one that triggered the error.</p>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
@@ -678,12 +677,12 @@ document.write(`
 <p>One approach is as follows: to print the value of the <code class="docutils literal notranslate"><span class="pre">'instructor'</span></code> key each time through the loop.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop over courses in the dataset</span>
 <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">course</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">])</span>
     <span class="c1"># Split each instructor name on white space</span>
-    <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
     <span class="c1"># Assign each part of the name to a new key in the dictionary course</span>
-    <span class="n">course</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
-    <span class="n">course</span><span class="p">[</span><span class="s1">&#39;last_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
+    <span class="n">course</span><span class="p">[</span><span class="s2">&quot;first_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
+    <span class="n">course</span><span class="p">[</span><span class="s2">&quot;last_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
 </pre></div>
 </div>
 <p>Doing so reveals that the last value printed before the error is not a name but <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
@@ -693,8 +692,8 @@ document.write(`
 </section>
 <section id="ii-2-preventing-errors-with-if">
 <h3>II.2 Preventing errors with <code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#ii-2-preventing-errors-with-if" title="Permalink to this heading">#</a></h3>
-<p>There are more sophisticated ways of handling errors in Python, but one of the most straightforward is to include an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement to check for the condition that causes the error.</p>
-<p>In this case, the error is caused when <code class="docutils literal notranslate"><span class="pre">course['instructor']</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>. Python provides a concise way to check whether a value is <code class="docutils literal notranslate"><span class="pre">None</span></code>. We can simply write <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">value_to_test:</span></code>, where <code class="docutils literal notranslate"><span class="pre">value_to_test</span></code> is a variable or other name that may or may not be null.</p>
+<p>There are more sophisticated ways of handling errors in Python, but one of the most straightforward is to include an <a class="reference internal" href="../../glossary.html#term-if-statement"><span class="xref std std-term">if statement</span></a> to check for the condition that causes the error.</p>
+<p>In this case, the error is caused when <code class="docutils literal notranslate"><span class="pre">course[&quot;instructor&quot;]</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>. Python provides a concise way to check whether a value is <code class="docutils literal notranslate"><span class="pre">None</span></code>. We can simply write <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">value_to_test:</span></code>, where <code class="docutils literal notranslate"><span class="pre">value_to_test</span></code> is a variable or other name that may or may not be null.</p>
 <p>In the code below, we’ve incorporated this check into our code.</p>
 <p>Note that the code <em>still</em> fails, but this time we get a different error.</p>
 <div class="cell docutils container">
@@ -702,12 +701,12 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop over courses in the dataset</span>
 <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
     <span class="c1"># Check for null values</span>
-    <span class="k">if</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]:</span>
         <span class="c1"># Split each instructor name on white space</span>
-        <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
         <span class="c1"># Assign each part of the name to a new key in the dictionary course</span>
-        <span class="n">course</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
-        <span class="n">course</span><span class="p">[</span><span class="s1">&#39;last_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
+        <span class="n">course</span><span class="p">[</span><span class="s2">&quot;first_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
+        <span class="n">course</span><span class="p">[</span><span class="s2">&quot;last_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
 </pre></div>
 </div>
 </div>
@@ -726,10 +725,10 @@ document.write(`
 <div class="dropdown admonition hint">
 <p class="admonition-title">Hint</p>
 <p>The line</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>expects a string for the value of <code class="docutils literal notranslate"><span class="pre">course['instructor']</span></code>that follows a familiar pattern:  <code class="docutils literal notranslate"><span class="pre">'first_name</span> <span class="pre">last_name'</span></code>, where white space separates the first and last name.</p>
+<p>expects a string for the value of <code class="docutils literal notranslate"><span class="pre">course[&quot;instructor&quot;]</span></code>that follows a familiar pattern:  <code class="docutils literal notranslate"><span class="pre">&quot;first_name</span> <span class="pre">last_name&quot;</span></code>, where white space separates the first and last name.</p>
 <p>In other words, this code works only if the result of the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method is a list with two elements. And <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> will produce a list with two elements <em>only if</em> the string has a <em>single</em> instance of white space.</p>
 </div>
 <div class="try-it-out admonition">
@@ -754,13 +753,13 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop over courses in the dataset</span>
 <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
     <span class="c1"># Check for null values</span>
-    <span class="k">if</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]:</span>
         <span class="c1"># Split each instructor name on white space</span>
         <span class="c1"># Only split on the first occurence of white space</span>
-        <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="c1"># Assign each part of the name to a new key in the dictionary course</span>
-        <span class="n">course</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
-        <span class="n">course</span><span class="p">[</span><span class="s1">&#39;last_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
+        <span class="n">course</span><span class="p">[</span><span class="s2">&quot;first_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
+        <span class="n">course</span><span class="p">[</span><span class="s2">&quot;last_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
 </pre></div>
 </div>
 </div>
@@ -769,7 +768,7 @@ document.write(`
 <div class="notes admonition">
 <p class="admonition-title">Notes</p>
 <p>Note that the code in the provided solution runs without errors, but it doesn’t necessarily solve the problem posed by the instructors’ names in our dataset.</p>
-<p>This code will handle names where the <em>last name</em> (surname) contains spaces. But where a middle name or middle initial is given, or where the <em>first name</em> (the given name) contains spaces, it will assign the wrong values to the <code class="docutils literal notranslate"><span class="pre">'last_name'</span></code> key.</p>
+<p>This code will handle names where the <em>last name</em> (surname) contains spaces. But where a middle name or middle initial is given, or where the <em>first name</em> (the given name) contains spaces, it will assign the wrong values to the <code class="docutils literal notranslate"><span class="pre">&quot;last_name&quot;</span></code> key.</p>
 <p>This fact illustrates an important point.</p>
 <blockquote>
 <div><p>Code that runs without errors is not necessarily code that works as intended.</p>
@@ -784,12 +783,12 @@ document.write(`
 <p>In what follows, we’ll write a test for our name-parsing code above. You’ll see tests of this sort in the final, submitted homework for Python Camp.</p>
 <section id="ii-1-writing-testable-code">
 <h3>II.1 Writing testable code<a class="headerlink" href="#ii-1-writing-testable-code" title="Permalink to this heading">#</a></h3>
-<p>Code tends to be easier to test when it’s organized into discrete units. Writing <strong>functions</strong> is a great way to organize code in units that can be easily tested. (Functions also make our code more readable and easier to modify in response to new user stories, new datasets, etc.)</p>
+<p>Code tends to be easier to test when it’s organized into discrete units. Writing <a class="reference internal" href="../../glossary.html#term-function"><span class="xref std std-term">function</span></a>s is a great way to organize code in units that can be easily tested. (Functions also make our code more readable and easier to modify in response to new user stories, new datasets, etc.)</p>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
 <p>The following cell contains the function signature (the <code class="docutils literal notranslate"><span class="pre">def</span></code> line) and the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement for a function called <code class="docutils literal notranslate"><span class="pre">extract_instructor_names</span></code>.</p>
-<p>This function takes as argument a single dictionary, checks for the presence of a key called <code class="docutils literal notranslate"><span class="pre">instructor</span></code>, and if the latter is present, adds <code class="docutils literal notranslate"><span class="pre">first_name</span></code> and <code class="docutils literal notranslate"><span class="pre">last_name</span></code> entries to the dictionary.</p>
-<p>The function should do the same thing as the body of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop above, but without the loop: in other words, we want to be able to use our function to process a single course (not a list of courses).</p>
+<p>This function takes as argument a single dictionary, checks for the presence of a key called <code class="docutils literal notranslate"><span class="pre">&quot;instructor&quot;</span></code>, and if the latter is present, adds <code class="docutils literal notranslate"><span class="pre">&quot;first_name&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;last_name&quot;</span></code> entries to the dictionary.</p>
+<p>The function should do the same thing as the body of the for loop above, but without the loop: in other words, we want to be able to use our function to process a single course (not a list of courses).</p>
 <p>See if you can fill out the body of the function below.</p>
 </div>
 <div class="cell docutils container">
@@ -817,11 +816,11 @@ document.write(`
     <span class="c1"># Given a dictionary with an &#39;instructor&#39; entry, </span>
     <span class="c1"># splits the associated string into two parts</span>
     <span class="c1"># and assigns them as separate entries to the dictionary</span>
-    <span class="k">if</span> <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">]:</span>
-        <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;instructor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">course_dict</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]:</span>
+        <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course_dict</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="c1"># Assign each part of the name to a new key in the dictionary course</span>
-        <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
-        <span class="n">course_dict</span><span class="p">[</span><span class="s1">&#39;last_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
+        <span class="n">course_dict</span><span class="p">[</span><span class="s2">&quot;first_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
+        <span class="n">course_dict</span><span class="p">[</span><span class="s2">&quot;last_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
     
     <span class="k">return</span> <span class="n">course_dict</span>
 </pre></div>
@@ -851,27 +850,27 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define some test data</span>
-<span class="n">test_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;instructor&#39;</span><span class="p">:</span> <span class="s1">&#39;Dolsy Smith&#39;</span><span class="p">}</span>
+<span class="n">test_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;instructor&quot;</span><span class="p">:</span> <span class="s2">&quot;Dolsy Smith&quot;</span><span class="p">}</span>
 <span class="c1"># Obtain a result by running the function</span>
 <span class="n">test_result</span> <span class="o">=</span> <span class="n">extract_instructor_names</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span>
 <span class="c1"># Test the result against a condition</span>
-<span class="k">assert</span> <span class="n">test_result</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Dolsy&#39;</span><span class="p">,</span> <span class="s1">&#39;first_name should be &quot;Dolsy&quot;&#39;</span>
-<span class="k">assert</span> <span class="n">test_result</span><span class="p">[</span><span class="s1">&#39;last_name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Smith&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name should be &quot;Smith&quot;&#39;</span>
+<span class="k">assert</span> <span class="n">test_result</span><span class="p">[</span><span class="s2">&quot;first_name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Dolsy&quot;</span><span class="p">,</span> <span class="s2">&quot;first_name should be &#39;Dolsy&#39;&quot;</span>
+<span class="k">assert</span> <span class="n">test_result</span><span class="p">[</span><span class="s2">&quot;last_name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span> <span class="s2">&quot;last_name should be &#39;Smith&#39;&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>Here’s another test, to make sure our function works when the value for <code class="docutils literal notranslate"><span class="pre">instructor</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<p>Note that our test data is not an example of a full course as represented in the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> dataset. Our function only deals with the value of the <code class="docutils literal notranslate"><span class="pre">instructor</span></code> key, so that’s the only key our <code class="docutils literal notranslate"><span class="pre">test_data</span></code> dictionary needs to contain. (We could add other keys, like <code class="docutils literal notranslate"><span class="pre">department</span></code> and <code class="docutils literal notranslate"><span class="pre">course</span></code> and <code class="docutils literal notranslate"><span class="pre">section</span></code>, but in this case they would not add anything to the test.)</p>
+<p>Note that our test data is not an example of a full course as represented in the <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> dataset. Our function only deals with the value of the <code class="docutils literal notranslate"><span class="pre">&quot;instructor&quot;</span></code> key, so that’s the only key our <code class="docutils literal notranslate"><span class="pre">test_data</span></code> dictionary needs to contain. (We could add other keys, like <code class="docutils literal notranslate"><span class="pre">&quot;department&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;course_num&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;section&quot;</span></code>, but in this case they would not add anything to the test.)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define some test data</span>
-<span class="n">test_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;instructor&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+<span class="n">test_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;instructor&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
 <span class="c1"># Obtain a result by running the function</span>
 <span class="n">test_result</span> <span class="o">=</span> <span class="n">extract_instructor_names</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span>
 <span class="c1"># Test the result against a condition</span>
-<span class="k">assert</span> <span class="s1">&#39;first_name&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">test_result</span><span class="p">,</span> <span class="s1">&#39;first_name should not be present&#39;</span>
-<span class="k">assert</span> <span class="s1">&#39;last_name&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">test_result</span><span class="p">,</span> <span class="s1">&#39;last_name should not be present&#39;</span>
+<span class="k">assert</span> <span class="s2">&quot;first_name&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">test_result</span><span class="p">,</span> <span class="s1">&#39;first_name should not be present&#39;</span>
+<span class="k">assert</span> <span class="s2">&quot;last_name&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">test_result</span><span class="p">,</span> <span class="s1">&#39;last_name should not be present&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -880,7 +879,7 @@ document.write(`
 </section>
 <section id="wrap-up">
 <h2>Wrap up<a class="headerlink" href="#wrap-up" title="Permalink to this heading">#</a></h2>
-<p>In this homework, you practiced debugging errors with the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, and you used <code class="docutils literal notranslate"><span class="pre">if</span></code> statements to avert possible errors due to inconsistencies in the data. Finally, you worked with the <code class="docutils literal notranslate"><span class="pre">assert</span></code> keyword to construct tests for code (to ensure that your code is working as expected).</p>
+<p>In this homework, you practiced debugging errors with the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, and you used if statements to avert possible errors due to inconsistencies in the data. Finally, you worked with the <code class="docutils literal notranslate"><span class="pre">assert</span></code> keyword to construct tests for code (to ensure that your code is working as expected).</p>
 </section>
 </section>
 

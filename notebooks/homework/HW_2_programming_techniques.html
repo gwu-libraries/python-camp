@@ -463,7 +463,7 @@ document.write(`
 </section>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>The Python language offers many other tools and techniques to make code more robust, reusable, and efficient. One way to think about these tools and techniques is that they help us write <em>programs</em> as opposed to writing code, a <strong>program</strong> being some code that is designed for use by different users in different contexts. Even if you are the only user of your code, applying these programming techniques can make your work more productive and your code more effective.</p>
+<p>The Python language offers many other tools and techniques to make code more robust, reusable, and efficient. One way to think about these tools and techniques is that they help us write <em>programs</em> as opposed to writing code, a program being some code that is designed for use by different users in different contexts. Even if you are the only user of your code, applying these programming techniques can make your work more productive and your code more effective.</p>
 <p>This notebook is intended for you to work through independently, in order to review and clarify the concepts introduced on Python Camp Day 2, and to lay the groundwork for the activities on Python Camp Day 3. However, feel free to collaborate with others in working through it. It is also intended to serve as a resource you can return to review as necessary.</p>
 <div class="how-to admonition">
 <p class="admonition-title">How to Use this Notebook</p>
@@ -473,7 +473,6 @@ document.write(`
 <li><p>(Hidden) solutions to these exercises follow the blank cells; click the toggle bar to expand the solution to compare with your approach.</p></li>
 <li><p>Some prompts include alternative exercises (Parsons Problems) that will be linked from the prompt. These alternatives may help clarify concepts (especially if you find yourself struggling to keep up with all the syntax).</p></li>
 <li><p>Optional annotations (labeled <code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">the</span> <span class="pre">curious...</span></code>) provide additional explanation and/or context for those who want them. Feel free to skip these sections if you like. As a beginner, it’s important to maintain a balanced cognitive load: taking in too much information all at once can impede your progress toward understanding. This balance looks different for everyone, but we have tried to keep the main content focused on a few key concepts, tools, and techniques, while providing that additional context for those who might benefit from it.</p></li>
-<li><p>Follow the instructions at the end to complete and submit a short, autograded assignment to test your knowledge. (You may submit the assignment as many times as you like.)</p></li>
 </ol>
 </div>
 </section>
@@ -506,7 +505,7 @@ document.write(`
 <li><p>Our loop begins with the Python <a class="reference internal" href="../../glossary.html#term-keyword"><span class="xref std std-term">keyword</span></a> <code class="docutils literal notranslate"><span class="pre">for</span></code>. This is not a function – like <code class="docutils literal notranslate"><span class="pre">len()</span></code> or <code class="docutils literal notranslate"><span class="pre">print()</span></code> – but part of the Python syntax itself (like the quotation marks around strings or the square brackets around lists).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">for</span></code> always goes with <code class="docutils literal notranslate"><span class="pre">in</span></code>; they make a pair.</p></li>
 <li><p>The variable <code class="docutils literal notranslate"><span class="pre">price</span></code>, immediately following <code class="docutils literal notranslate"><span class="pre">for</span></code>, is being created here. (It was not previously defined in our code.) Its role is to hold – in sequence – each item in the <a class="reference internal" href="../../glossary.html#term-collection"><span class="xref std std-term">collection</span></a> following <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">book_prices</span></code> <em>was</em> defined before the loop. The variable following <code class="docutils literal notranslate"><span class="pre">in</span></code> should always be some sort of collection type – a string, a list, a dictionary, etc. – or else a <a class="reference internal" href="../../glossary.html#term-function"><span class="xref std std-term">function</span></a> that returns a collection. We cannot write <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">10</span></code>, for instance, because the integer <code class="docutils literal notranslate"><span class="pre">10</span></code> is not a collection; it holds no items within itself. (For the same reason, we can’t take a slice of <code class="docutils literal notranslate"><span class="pre">10</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">book_prices</span></code> <em>was</em> defined before the loop. The variable following <code class="docutils literal notranslate"><span class="pre">in</span></code> should always be some sort of collection type – a string, a list, a dictionary, etc. – or else a <a class="reference internal" href="../../glossary.html#term-function"><span class="xref std std-term">function</span></a> that returns a collection. We cannot write <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">10</span></code>, for instance, because the integer <code class="docutils literal notranslate"><span class="pre">10</span></code> is not a collection; it holds no items within itself. (For the same reason, we can’t take a slice of <code class="docutils literal notranslate"><span class="pre">10</span></code>.)</p></li>
 <li><p>The first line of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ends in a <a class="reference internal" href="../../glossary.html#term-colon"><span class="xref std std-term">colon</span></a>, and the line or lines underneath it are <strong>indented</strong> (separated from the left margin by the same number of tabs or spaces). We call these indented lines in Python a <a class="reference internal" href="../../glossary.html#term-block"><span class="xref std std-term">block</span></a>.</p></li>
 </ol>
 </div>
@@ -545,12 +544,12 @@ document.write(`
 </div>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
-<p>Now that we have extracted the numeric part of the string (the part after the dollar sign), we can <strong>convert</strong> this string to a float in order to do math with it.</p>
-<p>Modify the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop again to do the following:</p>
+<p>Now that we have extracted the numeric part of the string (the part after the dollar sign), we can convert this string to a float in order to do math with it.</p>
+<p>Modify the for loop again to do the following:</p>
 <ol class="arabic">
 <li><p>Assign the slice of the price (without the dollar sign) to a new variable called <code class="docutils literal notranslate"><span class="pre">price_num</span></code>.</p></li>
 <li><p>Use the <code class="docutils literal notranslate"><span class="pre">float()</span></code> function to convert <code class="docutils literal notranslate"><span class="pre">price_num</span></code> to a float, and multiply the result by <code class="docutils literal notranslate"><span class="pre">1.1</span></code>.</p>
-<p>For instance, to convert the string <code class="docutils literal notranslate"><span class="pre">'1.5'</span></code> (notice the quotations marks!) to its float representation, we would write <code class="docutils literal notranslate"><span class="pre">float('1.5')</span></code>.</p>
+<p>For instance, to convert the string <code class="docutils literal notranslate"><span class="pre">&quot;1.5&quot;</span></code> (notice the quotations marks!) to its float representation, we would write <code class="docutils literal notranslate"><span class="pre">float(&quot;1.5&quot;)</span></code>.</p>
 </li>
 <li><p>Assign the result of this calculation to <code class="docutils literal notranslate"><span class="pre">price_num</span></code> and print it.</p></li>
 </ol>
@@ -583,7 +582,7 @@ document.write(`
 </section>
 <section id="ii-2-from-one-list-to-another">
 <h3>II.2 From one list to another<a class="headerlink" href="#ii-2-from-one-list-to-another" title="Permalink to this heading">#</a></h3>
-<p>If you didn’t get the intended answer, don’t worry! You’ll get the hang of it. The most important thing for now is to understand that we used a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop because we wanted to repeat a certain set of actions for all the items in a list.</p>
+<p>If you didn’t get the intended answer, don’t worry! You’ll get the hang of it. The most important thing for now is to understand that we used a for loop because we wanted to repeat a certain set of actions for all the items in a list.</p>
 <p>For now, let’s add one enhancement to our loop: instead of just printing the new price (with the added sales tax), we’ll store it in a separate list.</p>
 <p>To do this, we need to use a <a class="reference internal" href="../../glossary.html#term-method"><span class="xref std std-term">method</span></a> of Python lists called <code class="docutils literal notranslate"><span class="pre">append()</span></code>. This method adds a new item to the end of a list.</p>
 <p>Much like the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method we used on strings, the <code class="docutils literal notranslate"><span class="pre">append()</span></code> method can be called from any Python list by writing the name of the list plus <code class="docutils literal notranslate"><span class="pre">.append(item)</span></code>, where <code class="docutils literal notranslate"><span class="pre">item</span></code> is the value we want to add to the list.</p>
@@ -604,12 +603,12 @@ document.write(`
 <p class="admonition-title">Notes</p>
 <p>This loop achieves the same thing as the previous, with this difference: the adjusted prices are now stored in the <code class="docutils literal notranslate"><span class="pre">prices_with_tax</span></code> variable, which is another list. This is a fairly common Python pattern; when using this pattern, here are a few rules of thumb to keep in mind:</p>
 <ol class="arabic simple">
-<li><p>We need to create the new list <em>outside</em> of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. The line <code class="docutils literal notranslate"><span class="pre">prices_with_tax</span> <span class="pre">=</span> <span class="pre">[]</span></code> creates a new variable that consists of an <strong>empty list</strong>.</p></li>
+<li><p>We need to create the new list <em>outside</em> of the loop. The line <code class="docutils literal notranslate"><span class="pre">prices_with_tax</span> <span class="pre">=</span> <span class="pre">[]</span></code> creates a new variable that consists of an <strong>empty list</strong>.</p></li>
 <li><p>As before, we use the <a class="reference internal" href="../../glossary.html#term-loop-variable"><span class="xref std std-term">loop variable</span></a> <code class="docutils literal notranslate"><span class="pre">price</span></code> to work with each item in the <code class="docutils literal notranslate"><span class="pre">book_prices</span></code> list.</p></li>
 <li><p>The variable <code class="docutils literal notranslate"><span class="pre">price_num</span></code> is temporary, in the sense that, like the <code class="docutils literal notranslate"><span class="pre">price</span></code> loop variable, it will change (be reassigned to a new value) with every iteration of the loop.</p></li>
 <li><p>The line <code class="docutils literal notranslate"><span class="pre">prices_with_tax.append(price_num)</span></code> stores the value in <code class="docutils literal notranslate"><span class="pre">price_num</span></code> to our list. <strong>Without this step, we could not “save” the results of our calculations.</strong> It’s like performing a series of steps on a calculator: if you don’t write down your answer before moving onto the next problem, you will lose all your hard work!</p></li>
-<li><p>Steps 2, 3, and 4 are all indented underneath the line that kicks off the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Visually, this tells you that all of these steps happen on each iteration of the loop (once for every item in the <code class="docutils literal notranslate"><span class="pre">book_prices</span></code> lists.</p></li>
-<li><p>The line <code class="docutils literal notranslate"><span class="pre">print(prices_with_tax)</span></code> happens <em>outside</em> the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, so it’s not indented. That’s because we only want to print our new list when it’s finished, not every time we add a new item to it.</p></li>
+<li><p>Steps 2, 3, and 4 are all indented underneath the line that kicks off the for loop. Visually, this tells you that all of these steps happen on each iteration of the loop (once for every item in the <code class="docutils literal notranslate"><span class="pre">book_prices</span></code> lists.</p></li>
+<li><p>The line <code class="docutils literal notranslate"><span class="pre">print(prices_with_tax)</span></code> is <strong>not</strong> indented, meaning that it will be executed <strong>after</strong> the for loop completes. That’s because we only want to print our new list when it’s finished, not every time we add a new item to it.</p></li>
 <li><p>Note that our <code class="docutils literal notranslate"><span class="pre">book_prices</span></code> list still holds the original strings: our code made a new, second list.</p></li>
 </ol>
 </div>
@@ -626,7 +625,12 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">courses</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CHEM 1001 10&#39;</span><span class="p">,</span> <span class="s1">&#39;CHEM 1001 11&#39;</span> <span class="o">...</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, transform this list into three separate lists: one to hold the department codes, one to hold the course numbers, and one to hold the section numbers.</p>
+<p>Using a for loop, transform this list into three separate lists:</p>
+<ul class="simple">
+<li><p>one to hold the department codes,</p></li>
+<li><p>one to hold the course numbers,</p></li>
+<li><p>and one to hold the section numbers.</p></li>
+</ul>
 <p>The cells below will get you started. For more help, check out this <a class="reference external" href="https://gwu-libraries.github.io/python-camp/parsons-problems/html/homework-1-2.html">Parsons Problem</a>.</p>
 </div>
 <div class="cell docutils container">
@@ -682,19 +686,20 @@ document.write(`
 <div class="dropdown admonition hint">
 <p class="admonition-title">Hint</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code>: Displays one or more values on the screen</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code>: Displays one or more values on the screen.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type()</span></code>: Returns the data type of a value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">len()</span></code>: Returns the length (as an integer) of a list or string.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">float()</span></code>: Converts a string or integer to a float.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">open()</span></code>: Opens a file for reading or writing.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">str.split()</span></code>: A string method, it returns a list of strings derived by separating a string on some character (whitespace by default).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str.split()</span></code>: A string method, it returns a list of strings derived by separating a string on some character (<a class="reference internal" href="../../glossary.html#term-white-space"><span class="xref std std-term">white space</span></a> by default).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">list.append()</span></code>: A list method, adds an element to the end of a list.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">json.load()</span></code>, <code class="docutils literal notranslate"><span class="pre">json.dump()</span></code>: Methods defined in the <code class="docutils literal notranslate"><span class="pre">json</span></code> Python module, which format Python data types for storage in the <a class="reference internal" href="../../glossary.html#term-JSON"><span class="xref std std-term">JSON</span></a> format.</p></li>
 </ul>
 </div>
-<p>Functions and methods may feel pretty inscrutable. Unlike lists and dictionaries, we can’t “look inside” them to see what they consist of, the way we examined <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> to determine its structure. (We <em>can</em> read the source code for functions and methods, but unless you know what you’re looking for, that’s not always helpful.)</p>
+<p>Functions and methods may feel pretty inscrutable. Unlike lists and dictionaries, we can’t “look inside” them to see what they consist of, the way we examined <code class="docutils literal notranslate"><span class="pre">bkst_data</span></code> to determine its structure. (We <em>can</em> read the <a class="reference internal" href="../../glossary.html#term-source-code"><span class="xref std std-term">source code</span></a> for functions and methods, but unless you know what you’re looking for, that’s not always helpful.)</p>
 <p>But in what follows, we’ll demystify functions a bit by writing our own.</p>
-<p>A function (or a method) is just a way of <em>encapsulating</em> code. It’s like a shortcut on your computer: in many apps, you can type <code class="docutils literal notranslate"><span class="pre">Ctrl+S</span></code> (or <code class="docutils literal notranslate"><span class="pre">Cmd+S</span></code>) in order to save the current document, page, etc. Those keystrokes are shorthand for the series of operations involved in doing a save.</p>
+<p>A function (or a method) is just a way of <em>encapsulating</em> code. It’s like a shortcut on your computer (e.g., like hitting <code class="docutils literal notranslate"><span class="pre">Ctrl+S</span></code> or <code class="docutils literal notranslate"><span class="pre">Cmd+S</span></code> in order to save the current document, etc.). Functions make it easier to do the same thing multiple times without having to repeat yourself.</p>
+<p>They can also help make your code more legible and easier to reason about.</p>
 <section id="ii-1-defining-vs-calling-functions">
 <h3>II.1 Defining vs. calling functions<a class="headerlink" href="#ii-1-defining-vs-calling-functions" title="Permalink to this heading">#</a></h3>
 <p>Below is a simple Python function that prints a message to the screen.</p>
@@ -708,15 +713,15 @@ document.write(`
 </div>
 <div class="notes admonition">
 <p class="admonition-title">Notes</p>
-<p>When you run the above cell, you shouldn’t see any output. That’s because <strong>defining a function</strong> and using the function are two separate operations.</p>
+<p>When you run the above cell, you shouldn’t see any output. That’s because <strong>defining</strong> a function and using the function are two separate operations.</p>
 <p>Let’s unpack our function definition, piece by piece:</p>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">def</span></code> <a class="reference internal" href="../../glossary.html#term-keyword"><span class="xref std std-term">keyword</span></a> tells Python that we’re defining a function.</p></li>
 <li><p>We have to give our function a name, following the same rules as for Python variable names (only letters, numbers, and underscores; must begin with a letter).</p></li>
 <li><p>As with variables, our function names should be unique. We <em>don’t</em> want to give a function the same name as an existing Python function. For instance, calling this function <code class="docutils literal notranslate"><span class="pre">print</span></code> would overwrite the built-in Python <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, which would mean that we could no longer use the latter.</p></li>
-<li><p>Immediately after the function name, we need <strong>parentheses</strong>. Here the parentheses are empty because this function takes no <strong>arguments</strong>. We’ll look at arguments later.</p></li>
-<li><p>Then there’s a <strong>colon</strong>, followed by an indented <a class="reference internal" href="../../glossary.html#term-block"><span class="xref std std-term">block</span></a> (as in the <code class="docutils literal notranslate"><span class="pre">for</span></code> statements you wrote today).</p></li>
-<li><p>The code in the indented block is the <strong>body</strong> of the function. The function body is what will be executed when we <strong>call</strong> the function</p></li>
+<li><p>Immediately after the function name, we need <a class="reference internal" href="../../glossary.html#term-parentheses"><span class="xref std std-term">parentheses</span></a>. Here the parentheses are empty because this function takes no <a class="reference internal" href="../../glossary.html#term-arguments"><span class="xref std std-term">arguments</span></a>. We’ll look at arguments later.</p></li>
+<li><p>Then there’s a <a class="reference internal" href="../../glossary.html#term-colon"><span class="xref std std-term">colon</span></a> (<code class="docutils literal notranslate"><span class="pre">:</span></code>), followed by an indented <a class="reference internal" href="../../glossary.html#term-block"><span class="xref std std-term">block</span></a> (as in the for loops you wrote today).</p></li>
+<li><p>The code in the indented block is the body of the function. The function body is what will be executed when we <a class="reference internal" href="../../glossary.html#term-call"><span class="xref std std-term">call</span></a> the function</p></li>
 </ul>
 </div>
 <div class="cell docutils container">
@@ -726,7 +731,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>In the cell above, we <strong>call</strong>ed the <code class="docutils literal notranslate"><span class="pre">print_message()</span></code> function. Calling a function, like defining a function, requires the parentheses, even when there are no arguments. The presence of the parentheses lets Python know that it should execute the code within the body of the function.</p>
+<p>In the cell above, we called the <code class="docutils literal notranslate"><span class="pre">print_message()</span></code> function. Calling a function, like defining a function, requires the parentheses, even when there are no arguments. The presence of the parentheses lets Python know that it should execute the code within the body of the function.</p>
 </section>
 <section id="ii-2-arguments-and-return-values">
 <h3>II.2 Arguments and return values<a class="headerlink" href="#ii-2-arguments-and-return-values" title="Permalink to this heading">#</a></h3>
@@ -759,8 +764,8 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<p>The <strong>arguments</strong> in the function definition are variables that hold the input. These variables are used within the body of the function (in the block of code that comes after the <code class="docutils literal notranslate"><span class="pre">def</span></code> line).</p>
-<p>In order to produce output, a function will usually <strong>return</strong> a value, using the <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword. <code class="docutils literal notranslate"><span class="pre">return</span></code> will usually start the last line of the function.</p>
+<p>The <a class="reference internal" href="../../glossary.html#term-arguments"><span class="xref std std-term">arguments</span></a> in the function definition are variables that hold the input. These variables are used within the body of the function (in the block of code that comes after the <code class="docutils literal notranslate"><span class="pre">def</span></code> line).</p>
+<p>In order to produce output, a function will usually <a class="reference internal" href="../../glossary.html#term-return"><span class="xref std std-term">return</span></a> a value, using the <code class="docutils literal notranslate"><span class="pre">return</span></code> keyword. <code class="docutils literal notranslate"><span class="pre">return</span></code> will usually start the last line of the function.</p>
 <p>For instance, the function below calculates sales tax on a given price.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -788,9 +793,9 @@ document.write(`
 <div class="notes admonition">
 <p class="admonition-title">Notes</p>
 <ul class="simple">
-<li><p>In the code above, we called <code class="docutils literal notranslate"><span class="pre">add_sales_tax</span></code> inside a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, passing it the <a class="reference internal" href="../../glossary.html#term-loop-variable"><span class="xref std std-term">loop variable</span></a> <code class="docutils literal notranslate"><span class="pre">p</span></code> in parentheses.</p></li>
+<li><p>In the code above, we called <code class="docutils literal notranslate"><span class="pre">add_sales_tax</span></code> inside a for loop, passing it the <a class="reference internal" href="../../glossary.html#term-loop-variable"><span class="xref std std-term">loop variable</span></a> <code class="docutils literal notranslate"><span class="pre">p</span></code> in parentheses.</p></li>
 <li><p>During the execution of the function, the value of <code class="docutils literal notranslate"><span class="pre">p</span></code> is copied into to the <code class="docutils literal notranslate"><span class="pre">price</span></code> variable (which is internal to the function).</p></li>
-<li><p>We are calling <code class="docutils literal notranslate"><span class="pre">add_sales_tax()</span></code> <em>inside</em> our loop, and assigning the result to the ‘price_with_tax<code class="docutils literal notranslate"><span class="pre">variable.</span> <span class="pre">Like</span> <span class="pre">the</span> <span class="pre">loop</span> <span class="pre">variable</span></code>p<code class="docutils literal notranslate"><span class="pre">,</span> </code>price_with_tax` receives a new value on each iteration of the loop.</p></li>
+<li><p>We are calling <code class="docutils literal notranslate"><span class="pre">add_sales_tax()</span></code> <em>inside</em> our loop, and assigning the result to the <code class="docutils literal notranslate"><span class="pre">price_with_tax</span></code> variable. Like the loop variable   <code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">price_with_tax</span></code> receives a new value on each iteration of the loop.</p></li>
 </ul>
 </div>
 <div class="try-it-out admonition">
@@ -842,7 +847,7 @@ document.write(`
 <h2>III. Errors &amp; Exceptions<a class="headerlink" href="#iii-errors-exceptions" title="Permalink to this heading">#</a></h2>
 <p>Errors can be jarring. For many of us, error messages on the computer inspire frustration, even anger. They may even make us feel misunderstood, or else that we lack understanding, that we just don’t “get” it.</p>
 <p>Learning to program (in virtually any language) involves learning how to deal with errors. There’s no such thing as a piece of software without “bugs,” if only because for any given piece of software, someone can find a way to use it for which it was not intended.</p>
-<p>In the example above, we didn’t design the function specifically to work for strings with commas, and indeed, it doesn’t. The <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> – technically, this kind of error is called an <strong>exception</strong> – means simply that the Python interpreter encountered a kind of value it didn’t expect and doesn’t know what to do with.</p>
+<p>In the example above, we didn’t design the function specifically to work for strings with commas, and indeed, it doesn’t. The <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> – technically, this kind of error is called an <a class="reference internal" href="../../glossary.html#term-exception"><span class="xref std std-term">exception</span></a> – means simply that the Python interpreter encountered a kind of value it didn’t expect and doesn’t know what to do with.</p>
 <p>Such errors/exceptions are valuable (no pun intended) to the programmer; they tell us where the bugs are (or might be) in our programs. Python even provides mechanisms for checking for errors proactively, so that our code doesn’t grind to a halt whenever it encounters one.</p>
 <p>On Days 3 and 4, we’ll work more with errors and exceptions, and we’ll learn about an approach to writing code that uses errors to guide development.</p>
 <div class="dropdown admonition">

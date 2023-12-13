@@ -474,7 +474,7 @@ document.write(`
 <p>In other cases, the only user of your code might be you! But it’s still good practice to document your intentions, and writing user stories can help you identify specific aspects or features of the code (developers call these <em>requirements</em>) that you need to target in order to meet your needs.</p>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
-<p>With you team, develop at least one user story about our bookstore dataset. The users in your story can be whoever you like, but it should be something that can be addressed using the dataset we worked with on Days 1 and 2.</p>
+<p>With you team, develop at least one user story about our bookstore dataset. The users in your story can be whoever you like, but it should be something that can be addressed using the dataset we worked with on Days 1, 2 and 3.</p>
 <p>Don’t worry about details of implementation at this point: just focus on the who, what, and why, following the template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">As</span> <span class="n">a</span> <span class="n">___________</span><span class="p">,</span> <span class="n">I</span> <span class="n">want</span> <span class="n">to</span> <span class="n">_____________________</span><span class="p">,</span> <span class="n">so</span> <span class="n">that</span> <span class="n">____________________</span><span class="o">.</span>
 </pre></div>
@@ -488,15 +488,15 @@ document.write(`
 <p>Your team’s task now is to select a user story and implement it in Python code.</p>
 <div class="admonition-choose-your-own-adventure admonition">
 <p class="admonition-title">Choose your own adventure</p>
-<p>Choose a user story that your team wrote, or that was written by another team.</p>
-<p>Alternately, pick one of the following to implement. The prompts below are arranged in increasing order of difficulty. If up to this point, your team has worked mainly with the smaller, team-based dataset, you might want to start with the first of these user stories, which will get you working with the more complex bookstore dataset but in a more manageable way.</p>
+<p>Choose a user story that your team wrote, or one that was written by another team.</p>
+<p>Alternately, pick one of the following user stories to implement. The prompts below are arranged in order of increasing difficulty. If up to this point, your team has worked mainly with the smaller, team-based dataset, you might want to start with the first of these user stories, which will get you working with the more complex bookstore dataset but in a more manageable way.</p>
 <p>If you worked through yesterday’s challenges on the bookstore dataset and feel fairly comfortable with it, feel free to pick one of the more advanced prompts, or to work on your own user story.</p>
 <p><strong>Prompts</strong></p>
 <ol class="arabic simple">
 <li><p>As a librarian, I would like to have a dataset of textbooks arranged by publisher, so that I can look up a publisher by name and see a list of their textbooks in use at GW.</p></li>
 <li><p>As a student, I want to see summary statistics about textbook cost by department, so that I can know what to expect from various possible majors: e.g, average textbook cost, most expensive textbook, least expensive textbook, etc.</p></li>
-<li><p>As a bookstore manager, my inventory would be a lot easier to work with if I had it in a spreadsheet. I want to have a <a class="reference internal" href="../../glossary.html#term-CSV"><span class="xref std std-term">CSV</span></a> file of the bookstore dataset, so that I may open it in Excel or Sheets and filter by elements like department code, course number, textbook publisher, etc.</p></li>
-<li><p>As a writer for the GW Hatchet, I am writing a story about textbook affordability, and I’d like to know how many textbooks for the Fall 2023 semester have been placed on course reserve with the GW Libraries. I have obtained a <a class="reference external" href="https://raw.githubusercontent.com/gwu-libraries/python-camp/gh-pages/data/reserves-data-fall-2023.csv">dataset of course reserves</a> from the Libraries, which includes the ISBNs of books on reserve.</p></li>
+<li><p>As a bookstore manager, my inventory would be a lot easier to work with if I had it in a spreadsheet. I want to have a <a class="reference internal" href="../../glossary.html#term-CSV"><span class="xref std std-term">CSV</span></a> file of the bookstore dataset, so that I can open it in Excel or Sheets and filter by elements like department code, course number, textbook publisher, etc.</p></li>
+<li><p>As a writer for the <em>GW Hatchet</em>, I am writing a story about textbook affordability, and I’d like to know how many textbooks for the Fall 2023 semester have been placed on course reserve with the GW Libraries. I have obtained a <a class="reference external" href="https://raw.githubusercontent.com/gwu-libraries/python-camp/gh-pages/data/reserves-data-fall-2023.csv">dataset of course reserves</a> from the Libraries, which includes the ISBNs of books on reserve.</p></li>
 </ol>
 <p>Once your team has agreed upon a user story, work together to develop a plan for implementation. The questions below can help you get started.</p>
 </div>
@@ -506,7 +506,7 @@ document.write(`
 <li><p>Is there more than one way to interpret this user story? If so, the team should document the different interpretations but then choose one to work with.</p></li>
 <li><p>What tools and techniques can we apply to this problem? (Think about the Python data and control structures you’ve encountered so far: lists, dictionaries, for loops, functions, and conditionals.)</p></li>
 <li><p>What challenges might arise during implementation? Since this user story concerns our bookstore dataset, are there aspects of that dataset that might pose problems?</p></li>
-<li><p>What would a <strong>minimal implementation</strong> look like that would satisfy this user story?</p></li>
+<li><p>What would a minimal implementation look like that would satisfy this user story?</p></li>
 </ol>
 <p>For example, if my user story is about students’ looking up courses to identify required texts, I might start thinking about a website with a search feature, a browse feature, etc. But a <em>minimal</em> implementation might be a Python <a class="reference internal" href="../../glossary.html#term-dictionary"><span class="xref std std-term">dictionary</span></a>. Why? Because a Python dictionary is a data structure that can associate data with certain keys (like course identifiers).</p>
 <ol class="arabic simple" start="5">
@@ -550,10 +550,10 @@ document.write(`
 </pre></div>
 </div>
 <p><strong>Reading from CSV</strong></p>
-<p>To read from a CSV file on the web (which will normally have the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> extension), we save a copy locally first, open the file, and then read in the data line by line. The code below, which saves the contents of a CSV file of course-reserves data to a variable called <code class="docutils literal notranslate"><span class="pre">reserves</span></code>, is a little more complex than the code for reading a JSON file, primarily because we have to read from the file in a loop.</p>
+<p>To read from a CSV file on the web (which will normally have the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> extension), we save a copy locally first, open the file, and then read in the data line by line. The code below, which stores the contents of a CSV file of course-reserves data in a variable called <code class="docutils literal notranslate"><span class="pre">reserves</span></code>, is a little more complex than the code for reading a JSON file, primarily because we have to read from the file in a loop.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">urlretrieve</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/gwu-libraries/python-camp/gh-pages/data/reserves-data-fall-2023.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;reserves-data.csv&#39;</span><span class="p">)</span>
 <span class="n">reserves</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;reserves_data.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;reserves-data.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
         <span class="n">reserves</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
@@ -561,14 +561,14 @@ document.write(`
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">csv.DictReader</span></code> object will create a Python dictionary from every row in the CSV file, where the dictionary keys are the column headings, and the values are the data in that row. (This assumes that the first row of the CSV file contains column headings, which may not always be the case.)</p>
 <p><strong>Writing (saving) to CSV</strong></p>
-<p>To save data in CSV format, we perform a similar process. When using <code class="docutils literal notranslate"><span class="pre">csv.DictWriter</span></code>, as below, our dataset needs to consist of a list of dictionaries, where every dictionary has the same keys. These are passed to the <code class="docutils literal notranslate"><span class="pre">fieldnames</span></code> argument of the <code class="docutils literal notranslate"><span class="pre">writeheader()</span></code> method to create the header row.</p>
+<p>To save data in CSV format, we perform a similar process. When using <code class="docutils literal notranslate"><span class="pre">csv.DictWriter</span></code>, as below, our dataset needs to consist of a list of dictionaries, where every dictionary has the same keys. A list of this keys constitutes the <code class="docutils literal notranslate"><span class="pre">fieldnames</span></code> argument of the <code class="docutils literal notranslate"><span class="pre">writeheader()</span></code> method, which we call to create the header row.</p>
 <p>In the example below, we save a Python list called <code class="docutils literal notranslate"><span class="pre">bkst_data_csv</span></code> to a CSV file called <code class="docutils literal notranslate"><span class="pre">bookstore-data.csv</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;bookstore-data.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">fieldnames</span> <span class="o">=</span> <span class="n">bkst_data_csv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
     <span class="n">writer</span> <span class="o">=</span> <span class="n">DictWriter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fieldnames</span><span class="p">)</span>
     <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">bkst_data_csv</span><span class="p">:</span>
-        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">rpw</span><span class="p">)</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -595,7 +595,7 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
 <span class="c1"># This will print the list [2, 4]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">find_overlap</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">find_overlap</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Note that this approach works best when the two lists contain numeric values or strings as their top-level elements.</p>

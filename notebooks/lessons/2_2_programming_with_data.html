@@ -434,7 +434,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-loops-conditionals">II. Loops &amp; conditionals</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-counting-with-for-loops">II.1 Counting with for loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-counting-with-loops">II.1 Counting with loops</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-counting-with-conditionals">II.2 Counting with conditionals</a></li>
 </ul>
 </li>
@@ -500,7 +500,7 @@ document.write(`
 <p>Thus, at some level, <em>everything</em> we do in computation can be reduced to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> (from the computer’s perspective). But from a programmer’s perspective, this usually only matters in situations where we want the program to do different things based on certain conditions that may or may not obtain. These cases are called <a class="reference internal" href="../../glossary.html#term-Boolean-expression"><span class="xref std std-term">Boolean expression</span></a>s.</p>
 <p>For instance, we can tell Python to compare two numbers, using the standard operators you might remember from your math courses: greater than, less than, equal to, etc.</p>
 <p>Note that in Python, we represent equality by the <strong>double equals sign</strong> (<code class="docutils literal notranslate"><span class="pre">==</span></code>). A single equals sign is reserved for <a class="reference internal" href="../../glossary.html#term-variable"><span class="xref std std-term">variable</span></a> assignment.</p>
-<p>Running the code below should return <code class="docutils literal notranslate"><span class="pre">True</span></code>, which is one of two special Python values called <strong>Boolean values</strong> (so named because the binary logic that computers implement was invented by the mathematician George Boole).</p>
+<p>Running the code below should return <code class="docutils literal notranslate"><span class="pre">True</span></code>, which is one of two special Python values called <a class="reference internal" href="../../glossary.html#term-Boolean-value"><span class="xref std std-term">Boolean value</span></a>s (so named because the binary logic that computers implement was invented by the mathematician George Boole).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book_price</span> <span class="o">=</span> <span class="mf">55.99</span> <span class="c1"># Assignment: single equals sign</span>
@@ -530,7 +530,7 @@ document.write(`
 <h3>I.2 <code class="docutils literal notranslate"><span class="pre">if</span></code> statements<a class="headerlink" href="#i-2-if-statements" title="Permalink to this heading">#</a></h3>
 <p>Usually, we want to do more than evaluate whether an expression (like <code class="docutils literal notranslate"><span class="pre">book_price</span> <span class="pre">&lt;</span> <span class="pre">60</span></code>) is <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. Usually, we want the program to <em>take some action</em> based on the outcome of that evaluation.</p>
 <p>For this, we use an <a class="reference internal" href="../../glossary.html#term-if-statement"><span class="xref std std-term">if statement</span></a>.</p>
-<p>To print a message if the value of the <code class="docutils literal notranslate"><span class="pre">book_price</span></code> variable is above a certain threshhold, we can write the following:</p>
+<p>To print a message <strong>if</strong> the value of the <code class="docutils literal notranslate"><span class="pre">book_price</span></code> variable is above a certain threshhold, we can write the following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">book_price</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
@@ -694,8 +694,8 @@ document.write(`
 </section>
 <section id="ii-loops-conditionals">
 <h2>II. Loops &amp; conditionals<a class="headerlink" href="#ii-loops-conditionals" title="Permalink to this heading">#</a></h2>
-<section id="ii-1-counting-with-for-loops">
-<h3>II.1 Counting with for loops<a class="headerlink" href="#ii-1-counting-with-for-loops" title="Permalink to this heading">#</a></h3>
+<section id="ii-1-counting-with-loops">
+<h3>II.1 Counting with loops<a class="headerlink" href="#ii-1-counting-with-loops" title="Permalink to this heading">#</a></h3>
 <p>A very common use of a <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> in Python is to count, aggregate, or otherwise keep track of certain values when processing a list.</p>
 <p>We’ve seen a version of this pattern before: in the homework, you use a loop to convert some prices from strings to floats and then to adjust the price with sales tax. You collected the adjusted prices in a new list.</p>
 <p>In the example below, we’ll use this pattern to keep track of a single value. The value we’re tracking will simply be the number of items in the list.</p>
@@ -760,7 +760,7 @@ document.write(`
 <p>As a team, you should work through the exercises below. For each exercise, there’s a suggestion for a both a <strong>less challenging</strong> and a <strong>more challenging</strong> approach. <strong>Before starting each exercise, each team should discuss the approach they plan to take.</strong> If everyone in the group feels up to the more challenging version of the exercise, you’re welcome to skip the less challenging version. But if not everyone feels up to the former, we strongly recommend starting <strong>as a team</strong> with the less challenging approach. Extra practice never hurts!</p>
 <div class="notes admonition">
 <p class="admonition-title">A less challenging dataset</p>
-<p>Our bookstore dataset has a few thousand elements and a non-trivially nested structure. For a less challenging dataset, you can use the <strong>team dataset</strong> you produced during Day 2’s activity “Describing the Team.” Assuming you save that dataset to a JSON file on JupyterHub called <code class="docutils literal notranslate"><span class="pre">team-dataset.json</span></code>, the following code should open the file and store its contents in a variable called <code class="docutils literal notranslate"><span class="pre">my_team</span></code>.</p>
+<p>Our bookstore dataset has a few thousand elements and a non-trivially nested structure. For a less challenging dataset, you can use the <strong>team dataset</strong> you produced during Day 2’s activity “Describing the Team.” Assuming you saved that dataset to a JSON file on JupyterHub called <code class="docutils literal notranslate"><span class="pre">team-dataset.json</span></code>, the following code should open the file and store its contents in a variable called <code class="docutils literal notranslate"><span class="pre">my_team</span></code>.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -772,7 +772,7 @@ document.write(`
 </div>
 <section id="iii-1-computing-averages">
 <h3>III.1 Computing averages<a class="headerlink" href="#iii-1-computing-averages" title="Permalink to this heading">#</a></h3>
-<p>We can compute an average by dividing some total quantity by the number of occurences of each quantity. For instance, let’s say we have A list <code class="docutils literal notranslate"><span class="pre">prices</span></code> defined as follows:</p>
+<p>We can compute an average by dividing some total quantity by the number of occurences of each quantity. For instance, let’s say we have a list <code class="docutils literal notranslate"><span class="pre">prices</span></code> defined as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prices</span> <span class="o">=</span> <span class="p">[</span><span class="mf">100.5</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mf">85.75</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">55</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -797,7 +797,7 @@ document.write(`
 </div>
 <div class="dropdown admonition hint">
 <p class="admonition-title">Hint</p>
-<p>For the <strong>less challenging</strong> version of the problem, you might this approach:</p>
+<p>For the <strong>less challenging</strong> version of the problem, you might take this approach:</p>
 <ol class="arabic simple">
 <li><p>Define a variable called <code class="docutils literal notranslate"><span class="pre">total_years</span></code>.</p></li>
 <li><p>Use a <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> to iterate over the <code class="docutils literal notranslate"><span class="pre">my_team</span></code> list.</p></li>
@@ -857,7 +857,7 @@ document.write(`
 <p><strong>Less challenging</strong></p>
 <p>Convert the team dataset into a Python dictionary, where each <a class="reference internal" href="../../glossary.html#term-key"><span class="xref std std-term">key</span></a> is the team member’s name, and the associated <a class="reference internal" href="../../glossary.html#term-value"><span class="xref std std-term">value</span></a> is the information you’ve collected about that team member.</p>
 <p><strong>More challenging</strong></p>
-<p>Imagine that you’re managing the bookstore’s data, and you get a request from GW Libraries for a dataset they can use to look up books by ISBN. (The <a class="reference external" href="https://en.wikipedia.org/wiki/ISBN">ISBN</a> is the <em>International Standard Book Number</em>; most commercially books published today have an ISBN, which serves as the book’s unique identifier.</p>
+<p>Imagine that you’re managing the bookstore’s data, and you get a request from GW Libraries for a dataset they can use to look up books by ISBN. (The <a class="reference external" href="https://en.wikipedia.org/wiki/ISBN">ISBN</a> is the <em>International Standard Book Number</em>; most commercially books published today have an ISBN, which serves as the book’s unique identifier.)</p>
 <p>Create a Python dictionary out of all the textbooks in the bookstore dataset, where the keys are ISBN’s, and the values contain the information about each book. If a book lacks an ISBN, you can leave it out of the dicionary.</p>
 </div>
 <div class="cell docutils container">
@@ -867,7 +867,7 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="dropdown admonition hint">
+<div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>To visualize the transformation of the team dataset, the following visual model might be useful:</p>
 <a class="reference internal image-reference" href="https://gwu-libraries.github.io/python-camp/img/list-to-dict.png"><img alt="Diagram with two larger boxes, with three smaller nested inside each. Each smaller box contains labels and information asosciated with each label. The smaller nested boxes are labeled with numbers (0, 1, 2) in the first larger box, representing items in a list, and are labeled with names (Alex, Max, Josh) in the second, representing a dictionary. A large red arrow is pointing from the list box to the dictioanry box" class="align-center" src="https://gwu-libraries.github.io/python-camp/img/list-to-dict.png" style="width: 250px;" /></a>
@@ -966,7 +966,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-loops-conditionals">II. Loops &amp; conditionals</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-counting-with-for-loops">II.1 Counting with for loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-1-counting-with-loops">II.1 Counting with loops</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-2-counting-with-conditionals">II.2 Counting with conditionals</a></li>
 </ul>
 </li>
