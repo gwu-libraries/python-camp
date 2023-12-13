@@ -59,17 +59,18 @@ class HomeWorkTest(unittest.TestCase):
         self.hw_code = extract_nb_code(homework_nb)
 
     def test_homework(self):
+        test_vars = {}
         for i, ex in enumerate(self.hw_code):
             with self.subTest(exercise=i+1):
-               # Pass this as the "locals" param to the first two exec statements to store variables set by the code
-               test_vars = {}
-               # Run setup code, if it exists
-               exec(ex.get('setup', ''), None, test_vars)
-               # Run solution code
-               exec(ex['solution'], None, test_vars)
-               # Run test code as assertion
-               # Pass our local vars dict as globals so that it can be accessed at compile time by exec()
-               exec(ex['test-case'], test_vars)
+                # Pass this as the "locals" param to the first two exec statements to store variables set by the code
+                # Run setup code, if it exists
+                exec(ex.get('setup', ''), None, test_vars)
+                # Run solution code
+                exec(ex['solution'], None, test_vars)
+                # Run test code as assertion
+                # Pass our local vars dict as globals so that it can be accessed at compile time by exec()
+                exec(ex['test-case'], test_vars)
+
 
 
 if __name__ == '__main__':
