@@ -468,7 +468,7 @@ document.write(`
 <h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h2>
 <p>Below you will find a series of exercises. For each exercise, do the following:</p>
 <ol class="arabic simple">
-<li><p>Run the first code cell under the exercise heading. This will execute some code needed to set up the problem.</p></li>
+<li><p><strong>Run the first code cell under the exercise heading</strong>. This will execute some code needed to set up the problem.</p></li>
 <li><p>Reading the instructions and write code in the empty code cell (labeled with the comment <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">code</span> <span class="pre">here</span></code>). Run this code.</p></li>
 <li><p>Your code cell should include the comment line <code class="docutils literal notranslate"><span class="pre">#Your</span> <span class="pre">code</span> <span class="pre">below</span></code>. <strong>Please do not delete this comment</strong>, and if you accidentally delete the cell and have to recreate it, please insert that comment line at the top of the cell before entering your code.</p></li>
 <li><p>Assuming your code does not produce any errors, run the code in the cell below the <code class="docutils literal notranslate"><span class="pre">Tests</span></code> heading. Each line of this code consists of a Python <a class="reference internal" href="../../glossary.html#term-assert-statement"><span class="xref std std-term">assert statement</span></a>.</p>
@@ -491,7 +491,7 @@ document.write(`
 <section id="exercise-1">
 <h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h2>
 <p>The following code creates a variable, <code class="docutils literal notranslate"><span class="pre">my_course</span></code>, from a string describing a GW course, with a course code, number, and section.</p>
-<div class="cell docutils container">
+<div class="cell tag_setup:1 docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_course</span> <span class="o">=</span> <span class="s1">&#39;WSTU 6566 10&#39;</span>
 </pre></div>
@@ -642,7 +642,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code below</span>
 <span class="c1"># ---- Do not delete this cell! -----</span>
-<span class="k">def</span> <span class="nf">count_courses</span><span class="p">(</span><span class="n">instructor_name</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">count_courses</span><span class="p">(</span><span class="n">instructor_name</span><span class="p">,</span> <span class="n">courses_db</span><span class="p">):</span>
     
     <span class="k">return</span> <span class="n">course_count</span>
 </pre></div>
@@ -653,9 +653,9 @@ document.write(`
 <h3>Tests for Exercise 4<a class="headerlink" href="#tests-for-exercise-4" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_test-case:4 docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">count_courses</span><span class="p">(</span><span class="s1">&#39;Rath&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Rath is teaching one course, but count_courses returns </span><span class="si">{</span><span class="n">count_courses</span><span class="p">(</span><span class="s2">&quot;Rath&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span>
-<span class="k">assert</span> <span class="n">count_courses</span><span class="p">(</span><span class="s1">&#39;Mack&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Mack is teaching two courses, but count_courses returns </span><span class="si">{</span><span class="n">count_courses</span><span class="p">(</span><span class="s2">&quot;Mack&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span>
-<span class="k">assert</span> <span class="n">count_courses</span><span class="p">(</span><span class="s1">&#39;Smith&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Smith is not teaching any courses, but count_courses returns </span><span class="si">{</span><span class="n">count_courses</span><span class="p">(</span><span class="s2">&quot;Smith&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">count_courses</span><span class="p">(</span><span class="s1">&#39;Rath&#39;</span><span class="p">,</span> <span class="n">courses_db</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Rath is teaching one course, but count_courses returns </span><span class="si">{</span><span class="n">count_courses</span><span class="p">(</span><span class="s2">&quot;Rath&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span>
+<span class="k">assert</span> <span class="n">count_courses</span><span class="p">(</span><span class="s1">&#39;Mack&#39;</span><span class="p">,</span> <span class="n">courses_db</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Mack is teaching two courses, but count_courses returns </span><span class="si">{</span><span class="n">count_courses</span><span class="p">(</span><span class="s2">&quot;Mack&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span>
+<span class="k">assert</span> <span class="n">count_courses</span><span class="p">(</span><span class="s1">&#39;Smith&#39;</span><span class="p">,</span> <span class="n">courses_db</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Smith is not teaching any courses, but count_courses returns </span><span class="si">{</span><span class="n">count_courses</span><span class="p">(</span><span class="s2">&quot;Smith&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span>
 </pre></div>
 </div>
 </div>
