@@ -770,6 +770,16 @@ document.write(`
 </div>
 </div>
 </div>
+<div class="admonition-can-t-find-your-team-data admonition">
+<p class="admonition-title">Can’t find your team data?</p>
+<p>If the code above shows a <code class="docutils literal notranslate"><span class="pre">FileNotFound</span></code> error, you can use a prepared dataset that has more or less the same structure as your team dataset (with randomly generated names).</p>
+<p>Copy the code below into a new code cell and run it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">urlretrieve</span><span class="p">(</span><span class="s1">&#39;https://go.gwu.edu/pythoncampdata2&#39;</span><span class="p">,</span> <span class="s1">&#39;team-dataset-prepared.json&#39;</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;team-dataset-prepared.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">my_team</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <section id="iii-1-computing-averages">
 <h3>III.1 Computing averages<a class="headerlink" href="#iii-1-computing-averages" title="Permalink to this heading">#</a></h3>
 <p>We can compute an average by dividing some total quantity by the number of occurences of each quantity. For instance, let’s say we have a list <code class="docutils literal notranslate"><span class="pre">prices</span></code> defined as follows:</p>
