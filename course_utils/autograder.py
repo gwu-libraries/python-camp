@@ -35,7 +35,7 @@ def extract_nb_code(nb_json):
                 if tag_type == 'test-case':
                     # Increment at every test case
                     ex_idx += 1
-            elif cell['source'][0].startswith('#Your code below'):
+            elif cell['source'] and cell['source'][0].startswith('#Your code below'):
                 code.append({'code': cell['source'],
                              'type': 'solution',
                              'index': str(ex_idx)}) # This supports proper indexing of exercises without setup cells
