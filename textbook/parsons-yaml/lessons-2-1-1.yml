@@ -1,5 +1,6 @@
-python_code: |
+python_setup: |
     team = [{'name': 'Alex', 'state': 'DC'}, {'name': 'Marcus', 'state': 'VA'}]
+python_code: |
     for person in team:
       person['programming_languages'] = ['Python']
     print(team)

@@ -1,5 +1,6 @@
-python_code: |
+python_setup: | 
     book_prices = ['$55.99', '$119.95', '$13.95']
+python_code: |
     for price in book_prices:
         price_num = price[1:]
         price_num = float(price_num) * 1.1
