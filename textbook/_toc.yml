@@ -46,6 +46,10 @@ parts:
   chapters:
   - file: notebooks/homework/HW_Final_GR
     title: "Final Homework (Graded)"
+- caption: Extra Practice
+  chapters:
+  - file: notebooks/homework/python_extra_practice
+    title: Supplemental Exercises
 - caption: Python Reference
   chapters:
   - file: keep_learning
