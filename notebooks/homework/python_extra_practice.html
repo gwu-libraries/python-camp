@@ -1,0 +1,1811 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Extra Practice for Python Camp &#8212; Python Camp: Programming for Beginners</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/python-camp.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/homework/python_extra_practice';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python Resources &amp; Where to Go from Here" href="../../keep_learning.html" />
+    <link rel="prev" title="Python Camp: Final Homework" href="HW_Final_GR.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/python-camp.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/python-camp.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Python Camp: Programming for Beginners
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preliminaries</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../guidelines.html">Collaborating on Code: Guidelines for a Good Experience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework.html">Homework for Python Camp</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lessons/1_1_modeling_code.html">Modeling Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1-2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lessons/1_2_from_data_to_code.html">From Data to Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 1 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="HW_1_from_code_to_data.html">From Code to Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lessons/2_1_describing_the_team.html">Describing the Team</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 2 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="HW_2_programming_techniques.html">Programming Techniques</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lessons/2_2_programming_with_data.html">Programming with Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 3 Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="HW_3_error_stories.html">Error Stories</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Day 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lessons/3_1_from_story_to_code.html">From Story to Code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="HW_Final_GR.html">Final Homework (Graded)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra Practice</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Supplemental Exercises</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../keep_learning.html">Python Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary of Programming Terms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.lai.gwu.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/gwu-libraries/python-camp&urlpath=tree/python-camp/_sources/notebooks/homework/python_extra_practice.ipynb&branch=gh-pages" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/gwu-libraries/python-camp" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/gwu-libraries/python-camp/issues/new?title=Issue%20on%20page%20%2Fnotebooks/homework/python_extra_practice.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/homework/python_extra_practice.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Extra Practice for Python Camp</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda-instructions">Agenda &amp; Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integers-floats-strings">Integers, floats &amp; strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-strings-1">Working with strings (1)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-strings-and-lists">Working with strings (and lists)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-lists">Working with lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-dictionaries">Working with dictionaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops-lists-summarizing-a-list">Loops &amp; lists: Summarizing a list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops-lists-transforming-a-list">Loops &amp; lists: Transforming a list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-data-1-loops-lists-dictionaries">Nested data 1: Loops, lists, &amp; dictionaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-data-2-creating-a-list-of-dictionaries">Nested data 2: Creating a list of dictionaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-data-3-loops-and-conditionals">Nested data 3: Loops and conditionals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops-conditionals-categorizing-data">Loops &amp; conditionals: Categorizing data</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="extra-practice-for-python-camp">
+<h1>Extra Practice for Python Camp<a class="headerlink" href="#extra-practice-for-python-camp" title="Permalink to this heading">#</a></h1>
+<section id="agenda-instructions">
+<h2>Agenda &amp; Instructions<a class="headerlink" href="#agenda-instructions" title="Permalink to this heading">#</a></h2>
+<p>This notebook provides a series of exercises designed as extra practice for the material covered in the daily lessons and the homework. You are by no means required to work through these exercises, but doing so may prove helpful in a couple of situations:</p>
+<ul class="simple">
+<li><p>If you want to review a particular concept in order to solidify your understanding.</p></li>
+<li><p>If you want to build more “muscle memory” by writing code beyond the opportunities provided by the group activities and homework.</p></li>
+</ul>
+<p>The exercises below are arranged by concept, largely following the order in which the concepts were presented in the course materials. The code in each section is self-contained, so feel free to jump around and/or pick only certain sections to do.</p>
+<p>Answers to the challenges in each section are provided in a collapsed (Hint) cell at the bottom of the section.</p>
+<div class="how-to admonition">
+<p class="admonition-title">How to Use this Notebook</p>
+<ol class="arabic simple">
+<li><p>Read the documentation above each cell containing code and run the cell (<code class="docutils literal notranslate"><span class="pre">Ctrl+Enter</span></code> or <code class="docutils literal notranslate"><span class="pre">Cmd+Return</span></code>) to view the output.</p></li>
+<li><p>Follow the prompts labeled <code class="docutils literal notranslate"><span class="pre">Try</span> <span class="pre">it</span> <span class="pre">out!</span></code> that ask you to write your own code in the provided blank cells.</p></li>
+<li><p>(Hidden) solutions to these exercises follow the blank cells; click the toggle bar to expand the solution to compare with your approach.</p></li>
+<li><p>Some prompts include alternative exercises (Parsons Problems) that will be linked from the prompt. These alternatives may help clarify concepts (especially if you find yourself struggling to keep up with all the syntax).</p></li>
+<li><p>Optional annotations (labeled <code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">the</span> <span class="pre">curious...</span></code>) provide additional explanation and/or context for those who want them. Feel free to skip these sections if you like. As a beginner, it’s important to maintain a balanced cognitive load: taking in too much information all at once can impede your progress toward understanding. This balance looks different for everyone, but we have tried to keep the main content focused on a few key concepts, tools, and techniques, while providing that additional context for those who might benefit from it.</p></li>
+</ol>
+</div>
+</section>
+<section id="integers-floats-strings">
+<h2>Integers, floats &amp; strings<a class="headerlink" href="#integers-floats-strings" title="Permalink to this heading">#</a></h2>
+<p>Li X. is a graduate student working in a bioinformatics lab, and he is learning how to process protein and DNA sequences using Python. His first task is to compute the lengths of various sequences, three examples of which are given below. Write some code to compute the length of each of these sequences.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq1</span> <span class="o">=</span> <span class="s2">&quot;LYLIFGAWAGMVGTALSLLIRAELGQPGTLLGDDQIYNVIVTAHAFVMIFFMVMPIMIGGFGNWLVPLMIGAPDMAFPRMNNMSFWLLPPSFLLLLASSTVEAGAGTGWTVYPPLAGNLAHAGASVDLAIFSLHLAGVSSILGAINFITTAINMKPPTLSQYQTPLFVWSVLITAVLLLLSLPVLAAGITMLLTDRNLNTTFFDPAGGGDPVLYQHLFWFFGHPEVYILIL&quot;</span>
+<span class="n">seq2</span> <span class="o">=</span> <span class="s2">&quot;VGTALXLLIRAELXQPGALLGDDQIYNVVVTAHAFVMIFFMVMPIMIGGFGNWLVPLMIGAPDMAFPRMNNMSFWLLPPSFLLLMASSTVEAGAGTGWTVYPPLAGNLAHAGASVDLAIFSLHLAGISSILGAINFITTAINMKPPALSQYQTPLFVWSVLITAVLLLLSLPVLAAGITMLLTDRNLNTTFFDPAGGGDPVLYQHLFWFFGHPEVYILIL&quot;</span>
+<span class="n">seq3</span> <span class="o">=</span> <span class="s2">&quot;WAGMVGTALSLLIRAELGQPGALLGDDQIYNVVXTAHAFVMIFFMVMPIMIGGFGNWLVPLMIGAPDMAFPRMNNMSFWLLPPSFLLLMASSTVEAGVGTGWTVYPPLAGNLAHAGASVDLAIFSLHLAGISSILGAINFITTAINMKPPALSQYQTPLFVWSVLITAVLLLLSLPVLAAGITMLLTDRNLNTTFFDPAGGGDPVLYQHLFWFFGHPEVYILIL&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now Li needs to find the average length of a collection of sequences, <code class="docutils literal notranslate"><span class="pre">seq1</span></code> through <code class="docutils literal notranslate"><span class="pre">seq3</span></code> above, in addition to the following two sequences. Write some code to find the average length of all five sequences.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq4</span> <span class="o">=</span> <span class="s2">&quot;VGTALSLLIRAELGQPGTLLGDDQIYNVIVTAHAFVMIFFMVMPVMIGGFGNWLVPLMIGAPDMAFPRMNNMSFWLLPPSFLLLLASSTVEAGAGTGWTVYPPLAGNLAHAGASVDLAIFSLHLAGVSSILGAINFITTAINMKPPALSQYQTPLFVWSVLITAVLLLLSLPVLAAGITMLLTDRNLNTTFFDPAGGGDPVLYQHLFWFFGHPEVYILIL&quot;</span>
+<span class="n">seq5</span> <span class="o">=</span> <span class="s2">&quot;LYLIFGAWAGMVGTALSLLIRAELGQPGALLGDDQVYNVVVTAHAFVMIFFMVMPIMIGGFGNWLVPLMIGAPDMAFPRMNNMSFWLLPPSFLLLLASSTVEAGVGTGWTVYPPLAGNLAHAGASVDLAIFSLHLAGISSILGAINFITTAINMKPPALSQYQTPLFVWSVLITAVLLLLSLPVLAAGITMLLTDRNLNTTFFDPAGGGDPVLYQHLFWFFGHPEVYILIX&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The lab director is pleased with Li’s progress and gives him another task. The lab is trying out some new software, and this software requires that each sequence used as input be prefixed with a number representing the length of the sequence, followed by a space. So for <code class="docutils literal notranslate"><span class="pre">seq1</span></code> above, the input would look as follows (the sequence has been abbreviated for display purposes):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">231</span> <span class="n">LYLIFGAWAGMVGTALSLL</span><span class="o">....</span>
+</pre></div>
+</div>
+<p>Write some code to add the sequence length (and a space) to the beginning of each of the sequences given above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>So far Li really likes working with Python; he can see how it will make his work in the lab a lot more efficient. One thing that confuses him, however, is that whole numbers in Python are represented sometimes as one-place decimals, e.g., <code class="docutils literal notranslate"><span class="pre">30.0</span></code>, and sometimes without the decimal part, e.g., <code class="docutils literal notranslate"><span class="pre">30</span></code>. Surely Python isn’t being arbitary? Comparing the output of the following two lines of code, what can you tell about the kinds of situations in which the decimal part appears when dealing with whole numbers?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">seq1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">seq2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Solutions</p>
+<p><strong>Finding the length of strings</strong></p>
+<p>Li’s sequences are represented as Python <a class="reference internal" href="../../glossary.html#term-string"><span class="xref std std-term">string</span></a>s – we can tell because each sequence is surrounded by quotation marks (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>). In Python, a string has a length, which we can find by using the built-in <code class="docutils literal notranslate"><span class="pre">len()</span></code> <a class="reference internal" href="../../glossary.html#term-function"><span class="xref std std-term">function</span></a>. To find the length of the string represented by the variable <code class="docutils literal notranslate"><span class="pre">seq1</span></code>, we write</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">seq1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To find the average of all five sequences, we add up the lengths of each sequence and divide by the total number of sequences (5). Note the use of parentheses in the code below, which ensures that the addition happens before the division. (Python’s order of operations is similar to what you’d expect from a calculator.)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">avg_length</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">seq1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq3</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq4</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq5</span><span class="p">))</span> <span class="o">/</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<p><strong>Concatenating strings</strong></p>
+<p>To prefix the length of the sequence to the sequence itself, we need to make a new string. In Python, we can join two strings together – called concatenation – by using the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator. Note that in the context of strings, the <code class="docutils literal notranslate"><span class="pre">+</span></code> does not do numeric addition, it does concatenation. In other words,  <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></code> produces <code class="docutils literal notranslate"><span class="pre">3</span></code> (addition), but <code class="docutils literal notranslate"><span class="pre">&quot;1&quot;</span> <span class="pre">+</span> <span class="pre">&quot;2&quot;</span></code> produces <code class="docutils literal notranslate"><span class="pre">&quot;12&quot;</span></code> (concatenation), because the quotation marks around the digits in the second example tell Python to treat them as strings, not numbers.</p>
+<p>As a result, the following code will produce a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">new_seq1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq1</span><span class="p">)</span> <span class="o">+</span> <span class="n">seq1</span>
+</pre></div>
+</div>
+<p>Here we asked Python to “add” an integer (the result of <code class="docutils literal notranslate"><span class="pre">len(seq1)</span></code>) to a string (the value of <code class="docutils literal notranslate"><span class="pre">seq1</span></code>), which is an undefined operation in Python. To remedy the error, we need to make sure that the values on both sides of the plus sign are strings. We can use the built-in <code class="docutils literal notranslate"><span class="pre">str()</span></code> function to convert the integer result of <code class="docutils literal notranslate"><span class="pre">len()</span></code> to a string. While we’re at it, we also concatenate a single space (between quotation marks) as required in the instructions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">new_seq1</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">seq1</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">seq1</span>
+</pre></div>
+</div>
+<p><strong>Floats vs. integers</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">len(seq1)</span></code> returns <code class="docutils literal notranslate"><span class="pre">231</span></code> (no decimal part) because the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function is defined always to return a value of type <a class="reference internal" href="../../glossary.html#term-integer"><span class="xref std std-term">integer</span></a>. That makes sense; nothing in Python that has a length (e.g., a string, a list) is ever going to have a fractional length.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">len(seq2)</span> <span class="pre">/</span> <span class="pre">10</span></code> returns <code class="docutils literal notranslate"><span class="pre">22.0</span></code>, which is mathematically a whole number, but here it is given a one-place decimal representation because division in Python (the <code class="docutils literal notranslate"><span class="pre">/</span></code> operator) is defined always to return a value of type <a class="reference internal" href="../../glossary.html#term-float"><span class="xref std std-term">float</span></a>. Division returns a float even in cases where the result <em>could be</em> represented as an integer (as in this case). Python behaves this way in order to provide consistency: as a programmer, you can rely on the division operator always to return the same data type. Generally speaking, integers and floats in Python are interoperable, meaning that you can mix both freely in most types of calculation.</p></li>
+<li><p>If for some reason you need to convert a float to an integer, you can use the <code class="docutils literal notranslate"><span class="pre">int()</span></code> function: e.g. <code class="docutils literal notranslate"><span class="pre">int(len(seq2)</span> <span class="pre">/</span> <span class="pre">10)</span></code> returns <code class="docutils literal notranslate"><span class="pre">22</span></code> (no decimal part).</p></li>
+</ul>
+</div>
+</section>
+<section id="working-with-strings-1">
+<h2>Working with strings (1)<a class="headerlink" href="#working-with-strings-1" title="Permalink to this heading">#</a></h2>
+<p>Alia M. is a social scientist working with data on residential housing patterns. She has a large datafile of residential properties in the United States, consisting of street addresses and some information about the type of housing at each address. For each row in the datafile, the first part consists of a <a class="reference internal" href="../../glossary.html#term-string"><span class="xref std std-term">string</span></a> that represents the property’s street address, including city, state abbreviation, and zip code. The address is preceded by a seven-digit unique identifier. One such string is given below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">address1</span> <span class="o">=</span> <span class="s2">&quot;AGF5670 2123 N. 3rd St., St. Cloud, MN 56301&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alia’s first task is to extract the unique identifier (<code class="docutils literal notranslate"><span class="pre">AGF5670</span></code> in the example above) from each string. How can she use a string <a class="reference internal" href="../../glossary.html#term-slice"><span class="xref std std-term">slice</span></a> to accomplish this task? Write some code that extracts the identifier from the string stored in the <code class="docutils literal notranslate"><span class="pre">address1</span></code> variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next Alia would like to extract the five-digit zip code from the address string. (The zip code is <code class="docutils literal notranslate"><span class="pre">56301</span></code> in the example provided.) What code can she use to do that? (Assume that all zip codes in the datafile consist of five digits.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Great work! This code is really going to make Alia’s life easier – no more manual data entry for her! The next challenge, as you might guess, is to extract the US postal code for the state. Assume that the addresses in this datafile all have a two-letter abbreviation (<code class="docutils literal notranslate"><span class="pre">MN</span></code>, for Minnesota, in the example above).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, Alia needs to extract the street address itself, together with the city name: e.g., <code class="docutils literal notranslate"><span class="pre">2123</span> <span class="pre">N.</span> <span class="pre">3rd</span> <span class="pre">St.,</span> <span class="pre">St.</span> <span class="pre">Cloud</span></code>. The length of this portion of the address varies throughout the datafile, so ideally, your code would work for any string fitting the above pattern, regardless of length.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To make sure your code works properly on addresses of different lengths, try extracting the different parts of <code class="docutils literal notranslate"><span class="pre">address2</span></code> below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">address2</span> <span class="o">=</span> <span class="s2">&quot;WGA9753 412 Mockingbird Lane, Crowley, LA 70506&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Solutions</p>
+<p>There are other ways to accomplish Alia’s tasks, but all of the above can be done using slicing. How can we determine that? Looking at the example given, and assuming that the rest of the datafile is consistent, we have the following pattern:</p>
+<div class="math notranslate nohighlight">
+\[
+\underbrace{\text{AGF5670}}_\text{7}\text{ 2123 N. 3rd St., St. Cloud, }\underbrace{\text{MN}}_\text{2}\text{ }\underbrace{\text{56301}}_\text{5}
+\]</div>
+<p>Alia wants to subdivide the string into four elements, three of which have a fixed length: the identifier, the state abbreviation, and the zip code. Only the street address and city are variable, and if we treat the latter as a single element, we can construct slices for all four elements using what we know about the lengths of the first three, together with negative indexing.</p>
+<p>The table below shows the lengths of each element along with the indices for slicing (taking into account the white space between identifier, address, state, and zip code):</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Element</p></th>
+<th class="head"><p>Length</p></th>
+<th class="head"><p>Slice From</p></th>
+<th class="head"><p>Slice To</p></th>
+<th class="head"><p>Slice Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>identifier</p></td>
+<td><p>7 characters</p></td>
+<td><p>0</p></td>
+<td><p>7</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;AGF5670&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>street address &amp; city</p></td>
+<td><p>varies</p></td>
+<td><p>8</p></td>
+<td><p>-9</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;2123</span> <span class="pre">N.</span> <span class="pre">3rd</span> <span class="pre">St.,</span> <span class="pre">St.</span> <span class="pre">Cloud,&quot;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>state abbreviation</p></td>
+<td><p>2 characters</p></td>
+<td><p>-8</p></td>
+<td><p>-6</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;MN&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>zip code</p></td>
+<td><p>5 characters</p></td>
+<td><p>-5</p></td>
+<td><p>-</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;56301&quot;</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li><p>To extract the <strong>identifier</strong>, we write: <code class="docutils literal notranslate"><span class="pre">address1[0:7]</span></code> or <code class="docutils literal notranslate"><span class="pre">address1[:7]</span></code>. (These expressions are equivalent.)</p></li>
+<li><p>To extract the <strong>zip code</strong>, we count back five characters from the end, starting with <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which yields <code class="docutils literal notranslate"><span class="pre">address1[-5:]</span></code>. Note that we leave off the second number in the slice (after the colon) because we want to take a slice <em>including</em> the last character.</p></li>
+<li><p>To extract the <strong>state abbreviation</strong>, we count back again from the end to the <code class="docutils literal notranslate"><span class="pre">-8</span></code> position (the <code class="docutils literal notranslate"><span class="pre">M</span></code>) and add 2 to get our slice: <code class="docutils literal notranslate"><span class="pre">address1[-8:-6]</span></code>.</p></li>
+<li><p>To extract the remaining part of the address, we start from the second position <em>after</em> the end of the 7-digit identifier (to account for the white space, which we don’t want in our slice), and we take <em>up to</em> (but <em>not</em> including) the 9th character from the end (the space before the state code): <code class="docutils literal notranslate"><span class="pre">address1[8:-9]</span></code>.</p></li>
+</ol>
+<p>We could use slightly different code for step 4 in order to exclude the comma after the city name (<code class="docutils literal notranslate"><span class="pre">&quot;St.</span> <span class="pre">Cloud&quot;</span></code>), i.e., <code class="docutils literal notranslate"><span class="pre">address1[8:-10]</span></code>.</p>
+<p><strong>N.b.</strong> We could have also accomplished these tasks using Python’s <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> method instead of slicing. See the next section for details.</p>
+</div>
+</section>
+<section id="working-with-strings-and-lists">
+<h2>Working with strings (and lists)<a class="headerlink" href="#working-with-strings-and-lists" title="Permalink to this heading">#</a></h2>
+<p>Social scientist Alia has some additional data points in her file that she wishes to extract. These data consist of two alphanumeric codes and a four-digit year. The first element indicates the type of dwelling, the second indicates whether the property is a rental or occupant-owned, and the third indicates the year in which the property was built. The following example shows the string for a single-family rental property built in 1986.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">address_info1</span> <span class="o">=</span> <span class="s2">&quot;SF,R,1986&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alia is feeling pretty confident about Python string slicing, so her first approach is to write three <a class="reference internal" href="../../glossary.html#term-slice"><span class="xref std std-term">slice</span></a> expressions to extract the information between the commas in the string above. Can you write those expressions below, assigning each part of the string (without the commas) to a new variable?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alia is pleased with herself until she realizes that not all of the codes in the datafile are of the same length. The code in the first position can be either “SF” (single-family), “MF” (multi-family), or “Mixed” (for properties with a mix of residential and commercial spaces). Likewise, the second code can be either “R” (rental), “O” (owned), or “n/a” (a null value, used when the information was not available).</p>
+<p>Since two of the three elements in this string are of variable lengths, it’s not easy to write slice expressions that will extract all three elements. Fortunately, Alia has learned about the <a class="reference external" href="https://docs.python.org/3.3/library/stdtypes.html#str.split">str.split()</a> method. Write some code that will split the <code class="docutils literal notranslate"><span class="pre">address_info1</span></code> string into three parts, and assign each part to a new variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now verify that your approach works for strings with elements of different lengths: <code class="docutils literal notranslate"><span class="pre">address_info2</span></code> and <code class="docutils literal notranslate"><span class="pre">address_info3</span></code> below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">address_info2</span> <span class="o">=</span>  <span class="s2">&quot;MF,n/a,1996&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">address_info3</span> <span class="o">=</span> <span class="s2">&quot;Multi,R,2007&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>“That slice method is pretty cool!” Alia thinks. She wonders whether it would be a good idea to split the address strings as well (see the introduction to <span class="xref myst">Working with Strings (1)</span>), instead of slicing them.</p>
+<p>Given the <code class="docutils literal notranslate"><span class="pre">address1</span></code> variable below, what happens if you split it on the <a class="reference internal" href="../../glossary.html#term-white-space"><span class="xref std std-term">white space</span></a>? Do you think this would be a good approach for separating out the elements of the string: the 7-digit identifier, the street address and city name (of variable length), the two-letter state abbreviation, and the five-digit zip code? Why or why not?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">address1</span> <span class="o">=</span> <span class="s2">&quot;AGF5670 2123 N. 3rd St., St. Cloud, MN 56301&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using the result of splitting <code class="docutils literal notranslate"><span class="pre">address1</span></code>, can you extract the identifier, state abbreviation, and zip code?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Bonus</strong> Now Alia is having trouble working with the street address and city name in the result of splitting <code class="docutils literal notranslate"><span class="pre">address1</span></code>. A colleague mentioned the <a class="reference external" href="https://docs.python.org/3.3/library/stdtypes.html#str.join">str.join()</a> method, which does the inverse operation of <code class="docutils literal notranslate"><span class="pre">str.split()</span></code>.</p>
+<p>Can you use list slicing and the <code class="docutils literal notranslate"><span class="pre">join</span></code> method to produce a single string corresponding to the street address and city name in <code class="docutils literal notranslate"><span class="pre">address1</span></code>, starting from the result of splitting the latter?</p>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Solutions</p>
+<p>Since the three elements in the <code class="docutils literal notranslate"><span class="pre">address_info</span></code> strings are separated by commas, we can use the <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> method with its optional first argument, <code class="docutils literal notranslate"><span class="pre">sep</span></code>. Note that the Python <a class="reference external" href="https://docs.python.org/3.3/library/stdtypes.html#str.split">documentation</a> tells us the following:</p>
+<blockquote>
+<div><p>If <code class="docutils literal notranslate"><span class="pre">sep</span></code> is not specified or is <code class="docutils literal notranslate"><span class="pre">None</span></code>, a different splitting algorithm is applied: runs of consecutive whitespace are regarded as a single separator, and the result will contain no empty strings at the start or end if the string has leading or trailing whitespace.</p>
+</div></blockquote>
+<p>In other words, if we write <code class="docutils literal notranslate"><span class="pre">address_info1.split()</span></code> with nothing between parentheses, the <code class="docutils literal notranslate"><span class="pre">sep</span></code> argument will be <code class="docutils literal notranslate"><span class="pre">None</span></code> by default, which means that the string will be split on <a class="reference internal" href="../../glossary.html#term-white-space"><span class="xref std std-term">white space</span></a>, with any number of consecutive spaces being treated as a single instance (a single separator). That’s the default behavior, but we can modify this by providing a single argument to <code class="docutils literal notranslate"><span class="pre">split</span></code> for the separator, either with or without the argument name:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">address_info1</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">address_info1</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>work equally well, giving the <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a> <code class="docutils literal notranslate"><span class="pre">[&quot;SF&quot;,</span> <span class="pre">&quot;R&quot;,</span> <span class="pre">&quot;1986&quot;]</span></code> as the result.</p>
+<p>The same approach works also for <code class="docutils literal notranslate"><span class="pre">address_info2</span></code> and <code class="docutils literal notranslate"><span class="pre">address_info3</span></code>. In each case, we can access the individual elements by <a class="reference internal" href="../../glossary.html#term-index"><span class="xref std std-term">index</span></a>ing into the list returned by <code class="docutils literal notranslate"><span class="pre">split</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result1</span> <span class="o">=</span> <span class="n">address_info1</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">property_type1</span> <span class="o">=</span> <span class="n">result1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">rent_or_owned1</span> <span class="o">=</span> <span class="n">result1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">year_built1</span> <span class="o">=</span> <span class="n">result1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Assuming that the strings with this information always have <em>two and only two</em> commas, the <code class="docutils literal notranslate"><span class="pre">split</span></code> method will always return a three-element list.</p>
+<p>We could take the same approach with the <code class="docutils literal notranslate"><span class="pre">address1</span></code> string (<code class="docutils literal notranslate"><span class="pre">&quot;AGF5670</span> <span class="pre">2123</span> <span class="pre">N.</span> <span class="pre">3rd</span> <span class="pre">St.,</span> <span class="pre">St.</span> <span class="pre">Cloud,</span> <span class="pre">MN</span> <span class="pre">56301&quot;</span></code>), splitting this time on the whitespace (the default):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">address_parts1</span> <span class="o">=</span> <span class="n">address1</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Now <code class="docutils literal notranslate"><span class="pre">address_parts1</span></code> will be the following list: <code class="docutils literal notranslate"><span class="pre">['AGF5670',</span> <span class="pre">'2123',</span> <span class="pre">'N.',</span> <span class="pre">'3rd',</span> <span class="pre">'St.,',</span> <span class="pre">'St.',</span> <span class="pre">'Cloud,',</span> <span class="pre">'MN',</span> <span class="pre">'56301']</span></code></p>
+<p>Assuming the strings in Alia’s datafile are consistently formed, we could extract the identifer, state abbreviation, and zip code as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">identifier1</span> <span class="o">=</span> <span class="n">address_parts1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">state_abbreviation1</span> <span class="o">=</span> <span class="n">address_parts1</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">zip_code1</span> <span class="o">=</span> <span class="n">address_parts1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Extracting the street adddress and city proves more difficult, however. In our example, each part of the street address (<code class="docutils literal notranslate"><span class="pre">&quot;2123</span> <span class="pre">N.</span> <span class="pre">3rd</span> <span class="pre">St.,&quot;</span></code>) is separated by white space, as are the two parts of the city name (<code class="docutils literal notranslate"><span class="pre">&quot;St.</span> <span class="pre">Cloud,&quot;</span></code>). This situation poses two problems for using the <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> method:</p>
+<ul class="simple">
+<li><p>It’s not going to be terribly useful – at least, not for Alia’s purposes – to treat the parts of the street address or city name as different elements. For instance, the “N.” and the “St.” in “N. 3rd St.” don’t really mean anything on their own, and the same goes for “St.” and “Cloud” in “St. Cloud.”</p></li>
+<li><p>Different addresses and cities will involve different amounts of white space. Consider “3150 Elm St.” or “Roanoke.”</p></li>
+</ul>
+<p>To to extract the address/city name element from our original address string using split, we could take the following approach:</p>
+<ol class="arabic simple">
+<li><p>Split the originl string on white space, producing a list.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">address_parts1</span> <span class="o">=</span> <span class="n">address1</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Take a slice <em>of the resulting list</em> (not the original string) in order to get the elements between the first (the identifier) and the second-to-last (the state abbreviation).</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">street_address1</span> <span class="o">=</span> <span class="n">address_parts1</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Note that <code class="docutils literal notranslate"><span class="pre">street_address1</span></code> is also a list. (Slicing a string returns a string; slicing a list returns a list.) We can use this list with the <code class="docutils literal notranslate"><span class="pre">str.join</span></code> method, which takes as its argument a list and returns a string that consists of each element in the list separated by whatever string the method is called on. The following code creates a new string out of the street address/city name elements by gluing them together (so to speak) with white space:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">street_and_city1</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">street_address1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this case, splitting isn’t necessarily a better approach to Alia’s first problem than slicing. But the larger point is that there are almost always more ways than one of solving a problem with Python. In this case, which approach you choose might come down to your preferences as a programmer.</p>
+</div>
+</section>
+<section id="working-with-lists">
+<h2>Working with lists<a class="headerlink" href="#working-with-lists" title="Permalink to this heading">#</a></h2>
+<p>Priya J.’s office at the university has surveyed students about the need for additional resources and support for learning programming languages. Having recently learned about Python herself, Priya would like to use it to analyze the survey results. She has managed to load the survey data from a <a class="reference internal" href="../../glossary.html#term-CSV"><span class="xref std std-term">CSV</span></a> file using Python. Each row of the survey responses is a Python <a class="reference internal" href="../../glossary.html#term-list"><span class="xref std std-term">list</span></a>.</p>
+<p>One such list is shown below. The elements, in order from left to right, comprise the following data points:</p>
+<ul class="simple">
+<li><p>Respondent’s email address</p></li>
+<li><p>Department code (of the respondent’s major or field of study)</p></li>
+<li><p>Respondent’s status (undergraduate or graduate student)</p></li>
+<li><p>Respondent’s degree (BA, MA, PhD, etc.)</p></li>
+<li><p>Respondent’s expected year of graduation</p></li>
+<li><p>A string representing one or more programming languages the respondent has studied, separated by commas</p></li>
+<li><p>Five numbers corresponding to Likert-scale responses to a series of questions (each response being a number between 1 and 10)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;george.washington@gwu.edu&quot;</span><span class="p">,</span> <span class="s2">&quot;Engl&quot;</span><span class="p">,</span> <span class="s2">&quot;UND&quot;</span><span class="p">,</span> <span class="s2">&quot;BA&quot;</span><span class="p">,</span> <span class="mi">2025</span><span class="p">,</span> <span class="s2">&quot;Python,R&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>From Python Camp, Priya knows that she can use indexing to access individual elements in a list, but she’s a little fuzzy on the details. Can you help her out? In the cells below, write some code to access the following elements:</p>
+<ul class="simple">
+<li><p>The respondent’s email address</p></li>
+<li><p>The respondent’s status (<code class="docutils literal notranslate"><span class="pre">&quot;UND&quot;</span></code> in the example provided)</p></li>
+<li><p>The respondent’s expected year of graduation</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Priya needs to perform some data cleanup on the responses, as well as a preliminary analysis. First, she wants to anonymize the results, replacing each email address with a unique, random identifier. The standard Python installation includes a handy library for generating such identifiers called <a class="reference external" href="https://docs.python.org/3/library/uuid.html">uuid</a>. In the following code, Priya imports the <code class="docutils literal notranslate"><span class="pre">uuid1()</span></code> function, which will generate a single identifier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">uuid</span> <span class="kn">import</span> <span class="n">uuid1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the cell below, write some code that assigns the result of calling the <code class="docutils literal notranslate"><span class="pre">uuid()</span></code> function to the <em>first</em> position in the <code class="docutils literal notranslate"><span class="pre">response1</span></code> list, replacing the email address.</p>
+<p>If your code works as intended the <code class="docutils literal notranslate"><span class="pre">response1</span></code> list should look something like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">UUID</span><span class="p">(</span><span class="s1">&#39;ed603b16-a8c7-11ee-90be-ee5daa8b5d7a&#39;</span><span class="p">),</span> <span class="s1">&#39;Engl&#39;</span><span class="p">,</span> <span class="s1">&#39;UND&#39;</span><span class="p">,</span> <span class="s1">&#39;BA&#39;</span><span class="p">,</span> <span class="mi">2025</span><span class="p">,</span> <span class="s1">&#39;Python,R&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Priya notices that the values for the possible department codes (the second element in the <code class="docutils literal notranslate"><span class="pre">response1</span></code> list) were not coded consistently on the survey form. Some of them are given in uppercase (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;Engl&quot;</span></code>), while some are given in title case (<code class="docutils literal notranslate"><span class="pre">&quot;CHEM&quot;</span></code>). To fix this problem, Priya decides to use the <code class="docutils literal notranslate"><span class="pre">str.upper()</span></code> method to convert every department code to uppercase.</p>
+<p>Write some code to replace the second element of the <code class="docutils literal notranslate"><span class="pre">response1</span></code> list, which is a string, with its uppercase version, using the <code class="docutils literal notranslate"><span class="pre">.upper()</span></code> method available on the string. (For example, if <code class="docutils literal notranslate"><span class="pre">dept1</span></code> is a variable holding a string, <code class="docutils literal notranslate"><span class="pre">dept1.upper()</span></code> will return a new string composed of converting the original string to uppercase.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now onto some analysis. Priya would like compute the average of the five response scores (the last five elements of the list) and add this value to the end of the list. That way, each row of responses will contain its average score as its final element.</p>
+<p>Create a new variable, <code class="docutils literal notranslate"><span class="pre">average1</span></code>, and assign it to the average of the five scores in <code class="docutils literal notranslate"><span class="pre">response1</span></code>. Hint: Priya has learned about the <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum">sum()</a> function, which takes as its argument a list of numbers and returns their sum. To find the average score, divide the sum of scores by the number of scores (5).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Bonus</strong>. Now Priya needs to add the value in <code class="docutils literal notranslate"><span class="pre">average1</span></code> to the end of the list. She remembers learning about the <code class="docutils literal notranslate"><span class="pre">list.append()</span></code> method; when called with an argument on a Python list, <code class="docutils literal notranslate"><span class="pre">.append()</span></code> will add its argument to the end of the list. When Priya runs the following code, it produces no errors.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">response1</span> <span class="o">=</span> <span class="n">response1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">average1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>But then when she runs <code class="docutils literal notranslate"><span class="pre">print(response1)</span></code>, instead of displaying her list with the average included, she gets <code class="docutils literal notranslate"><span class="pre">None</span></code>. What happened to her list?</p>
+<p>Can you tell what went wrong? How <em>should</em> Priya append <code class="docutils literal notranslate"><span class="pre">average1</span></code> to the <code class="docutils literal notranslate"><span class="pre">response1</span></code> list?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Solutions</p>
+<p><strong>List indices</strong></p>
+<p>We can use the following code to access the values in the 1st, 3rd, and 5th positions in the <code class="docutils literal notranslate"><span class="pre">response1</span></code> list. Remember that in Python, indexing starts at <code class="docutils literal notranslate"><span class="pre">0</span></code>, not <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">email1</span> <span class="o">=</span> <span class="n">response1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">status1</span> <span class="o">=</span> <span class="n">response1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">grad_year1</span> <span class="o">=</span> <span class="n">response1</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Replacing an element in a list</strong></p>
+<p>To replace the the email address with a random indentifier, we can use indexing, too. The code below replaces whatever is in the 1st position with the result of calling the function <code class="docutils literal notranslate"><span class="pre">uuid1()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">response1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">uuid1</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The same logic holds for replacing the department code (position 2) with its uppercase variant. Note that we can call the <code class="docutils literal notranslate"><span class="pre">str.upper()</span></code> method directly on <code class="docutils literal notranslate"><span class="pre">response1[1]</span></code> because we know that the expression <code class="docutils literal notranslate"><span class="pre">response1[1]</span></code> will return a value of type string (<code class="docutils literal notranslate"><span class="pre">str</span></code>), and every string in Python has access to the <code class="docutils literal notranslate"><span class="pre">.upper()</span></code> method.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">response1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">response1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Slicing a list</strong></p>
+<p>The most efficient way to sum over the five scores in the <code class="docutils literal notranslate"><span class="pre">response1</span></code> list is to access the scores with a <a class="reference internal" href="../../glossary.html#term-slice"><span class="xref std std-term">slice</span></a>. Slicing works for lists as well as strings; just as the slice of a string returns a string, the slice of a list returns a list. We can even use negative indexing. The slice syntax <code class="docutils literal notranslate"><span class="pre">[-5:]</span></code> means “starting with the 5th element from the end, return the elements up to <strong>and including</strong> the last element in the list.”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">average1</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">response1</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:])</span> <span class="o">/</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<p><strong>Appending to a list</strong></p>
+<p>Priya’s confusion stems from the fact that strings and lists, while both <a class="reference internal" href="../../glossary.html#term-collection"><span class="xref std std-term">collection</span></a>s in Python, behave differently when using the methods associated with each. Whenever we modify a string in Python, <strong>we get back a new string</strong> (i.e., an entirely new sequence of characters in memory).</p>
+<p>So if the variable <code class="docutils literal notranslate"><span class="pre">dept1</span></code> holds a string, in order to make <code class="docutils literal notranslate"><span class="pre">dept1</span></code> uppercase, we have to assign the result of the <code class="docutils literal notranslate"><span class="pre">str.upper()</span></code> method back to the variable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dept1</span> <span class="o">=</span> <span class="n">dept1</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Or if we’re applying the method directly to a string in a list, we assign the result back to that element:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">response1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">response1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Lists, on the other hand, <strong>are modified in place</strong> in Python. In other words, modifying a list – e.g., by adding an element to the end – will transform the original list in memory, instead of creating an entirely new list. (This is done to conserve memory; since Python lists can contain any combination of valid data types, they can get quite large, depending on the program, and it wouldn’t be optimally efficient to have multiple copies of such lists sitting around in memory.)</p>
+<p>The upshot is that to append to the <code class="docutils literal notranslate"><span class="pre">response1</span></code> list, we use the following code, which calls the <code class="docutils literal notranslate"><span class="pre">.append()</span></code> method <strong>without reassigning the result to the original list</strong>. (Note the absence of the equals sign).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">response1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">average1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="working-with-dictionaries">
+<h2>Working with dictionaries<a class="headerlink" href="#working-with-dictionaries" title="Permalink to this heading">#</a></h2>
+<p>Priya has tried a different method of loading the survey responses from the CSV file, such that each row of responses is now a Python <a class="reference internal" href="../../glossary.html#term-dictionary"><span class="xref std std-term">dictionary</span></a>. The following cell defines one such dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r1_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;martha.washington@gwu.edu&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;BISC&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;GRAD&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;degree&quot;</span><span class="p">:</span> <span class="s2">&quot;PhD&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2028</span><span class="p">,</span> 
+             <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="s2">&quot;Python,R,C++&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;q1&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> 
+             <span class="s2">&quot;q2&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> 
+             <span class="s2">&quot;q3&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> 
+             <span class="s2">&quot;q4&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> 
+             <span class="s2">&quot;q5&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the cell below, write some code to access the values associated with the <code class="docutils literal notranslate"><span class="pre">&quot;degree&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;languages&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;q1&quot;</span></code> keys. Assign each value to a new variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">&quot;languages&quot;</span></code> <a class="reference internal" href="../../glossary.html#term-key"><span class="xref std std-term">key</span></a> is associated with a string representing one or more languages studied by the respondent. (If the respondent has studied no programming languages, the string “n/a” is used as a null value.) When multiple languages are present, they are separated by commas. Priya would like to convert this string to a list.</p>
+<p>Write some code to <code class="docutils literal notranslate"><span class="pre">split()</span></code> the <a class="reference internal" href="../../glossary.html#term-value"><span class="xref std std-term">value</span></a> of the <code class="docutils literal notranslate"><span class="pre">&quot;languages&quot;</span></code> key in <code class="docutils literal notranslate"><span class="pre">r1_dict</span></code> on the commas, and assign the result back to the same key.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Previously, Priya calculated the average of all five question scores and appended the result to the end of the list that represented the survey response. Since she’s using a dictionary now, she can add the average as its own key.</p>
+<p>Write some code to calculate the average of the values associated with <code class="docutils literal notranslate"><span class="pre">&quot;q1&quot;</span></code> through <code class="docutils literal notranslate"><span class="pre">&quot;q5&quot;</span></code> and add that result to the <code class="docutils literal notranslate"><span class="pre">r1_dict</span></code> dictionary, using a key called <code class="docutils literal notranslate"><span class="pre">&quot;average_score&quot;</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Solutions</p>
+<p><strong>Accessing values by key</strong></p>
+<p>With lists we access individual elements by providing the index (as an integer) between square brackets (<code class="docutils literal notranslate"><span class="pre">[]</span></code>). Access to dictionary elements follows a similar pattern, except that the element between brackets is the dictionary key (usually, but not always, a string).</p>
+<p>To access the values for the <code class="docutils literal notranslate"><span class="pre">&quot;degree&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;languages&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;q1&quot;</span></code> keys, we can write the following. Note the use of quotation marks around the keys inside brackets: that is important, because the keys are strings.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">degree1</span> <span class="o">=</span> <span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;degree&quot;</span><span class="p">]</span>
+<span class="n">languages1</span> <span class="o">=</span> <span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;languages&quot;</span><span class="p">]</span>
+<span class="n">q1_1</span> <span class="o">=</span> <span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;q1&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Updating values by keys</strong></p>
+<p>Updating works the same as access. Note that if we want to update the value associated with a key, we put the expression with the key on <strong>the left side</strong> of the equals sign.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;languages&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;languages&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">l</span>
+</pre></div>
+</div>
+<p>In the code above, the first line retrieves the value of the <code class="docutils literal notranslate"><span class="pre">&quot;languages&quot;</span></code> key, splits the string on the commas, and then assigns the result to the temporary variable <code class="docutils literal notranslate"><span class="pre">l</span></code>. We could also write this code in one line, as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;languages&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;languages&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Conceptually, this code is similar to the code for reassigning a variable, e.g. <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">+</span> <span class="pre">1</span></code>.</p>
+<p><strong>Adding new keys and values</strong></p>
+<p>Adding a new key &amp; value uses the same syntax as updating the value of an existing key. Because dictionaries do not have a syntax analogous to slicing a list, in order to calculate the average of the respondent’s survey scores, we have to access each value separately:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">average1</span> <span class="o">=</span> <span class="p">(</span><span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;q1&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;q2&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;q3&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;q4&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;q5&quot;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">5</span>
+<span class="n">r1_dict</span><span class="p">[</span><span class="s2">&quot;average_score&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">average1</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="loops-lists-summarizing-a-list">
+<h2>Loops &amp; lists: Summarizing a list<a class="headerlink" href="#loops-lists-summarizing-a-list" title="Permalink to this heading">#</a></h2>
+<p>In <span class="xref myst">Integers, Floats, &amp; Strings</span>, bioinformatics student Li calculated the average length of a number of protein sequences, where each sequence was represented by a separate Python string variable (<code class="docutils literal notranslate"><span class="pre">seq1</span></code>, <code class="docutils literal notranslate"><span class="pre">seq2</span></code>, <code class="docutils literal notranslate"><span class="pre">seq3</span></code>, etc.). Li’s colleague pointed out that this approach will become cumbersome when dealing with large amounts of data: typically, the number of sequences to be analyzed runs to the hundreds or thousands, so it’s not feasible to create a separate variable to hold the string representing each sequence.</p>
+<p>Instead, Li’s colleague proposes that he use a Python list to hold the sequences (a list of strings), and a <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> to do the calculation. After a little research, Li understands that he can use the loop to add up the lengths of all the sequences in the list, and he can divide the total length (of sequences) by the length of the list itself (the number of sequences).</p>
+<p>The following code defines such a list of sequences:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sequences</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;FQTWEEFSRAAEKLYLADPMKVRVVLKYRHVDGNLCIKVTDDLVCLVYRTDQAQDVKKIEKF&quot;</span><span class="p">,</span> 
+            <span class="s2">&quot;KYRTWEEFTRAAEKLYQADPMKVRVVLKYRHCDGNLCIKVTDDVVCLLYRTDQAQDVKKIEKFHSQLMRLME LKVTDNKECLKFKTDQAQEAKKMEKLNNIFFTLM&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;EEYQTWEEFARAAEKLYLTDPMKVRVVLKYRHCDGNLCMKVTDDAVCLQYKTDQAQDVKKVEKLHGK&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;MYQVWEEFSRAVEKLYLTDPMKVRVVLKYRHCDGNLCIKVTDNSVCLQYKTDQAQDVK&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;EEFSRAVEKLYLTDPMKVRVVLKYRHCDGNLCIKVTDNSVVSYEMRLFGVQKDNFALEHSLL&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SWEEFAKAAEVLYLEDPMKCRMCTKYRHVDHKLVVKLTDNHTVLKYVTDMAQDVKKIEKLTTLLMR&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;FTNWEEFAKAAERLHSANPEKCRFVTKYNHTKGELVLKLTDDVVCLQYSTNQLQDVKKLEKLSSTLLRSI&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SWEEFVERSVQLFRGDPNATRYVMKYRHCEGKLVLKVTDDRECLKFKTDQAQDAKKMEKLNNIFF&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SWDEFVDRSVQLFRADPESTRYVMKYRHCDGKLVLKVTDNKECLKFKTDQAQEAKKMEKLNNIFFTLM&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;KNWEDFEIAAENMYMANPQNCRYTMKYVHSKGHILLKMSDNVKCVQYRAENMPDLKK&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;FDSWDEFVSKSVELFRNHPDTTRYVVKYRHCEGKLVLKVTDNHECLKFKTDQAQDAKKMEK&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that in the list above, a single variable – <code class="docutils literal notranslate"><span class="pre">sequences</span></code> – is defined to hold the entire list of strings. To access each string in the list, we can either use indexing (see <span class="xref myst">Working with Lists</span>, or we can write a loop.</p>
+<p>The <a class="reference internal" href="../../glossary.html#term-loop-variable"><span class="xref std std-term">loop variable</span></a> in a for loop gives us access to each element in the list in order. For example, in the code below, the <code class="docutils literal notranslate"><span class="pre">seq</span></code> variable would first get assigned the string beginning with <code class="docutils literal notranslate"><span class="pre">FQTWEEF</span></code>, then the string beginning with <code class="docutils literal notranslate"><span class="pre">KYRTWEEF</span></code>, and so on, for every string in the list:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>For loops are a very powerful construct for dealing with a large amount of data that needs to be processed in the same way.</p>
+<p>In this case, the task is to add up the lengths of all the sequences. Li realizes that <em>in addition to the loop variable</em>, he’ll need to use another variable to keep track of the running total of lengths. Such a variable is defined below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_length</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Write a loop for Li that will add the length of each string in <code class="docutils literal notranslate"><span class="pre">sequences</span></code> to the <code class="docutils literal notranslate"><span class="pre">total_length</span></code> variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now using <code class="docutils literal notranslate"><span class="pre">total_length</span></code>, find the average length of sequences in the list. (Hint: you can find the number of elements in a list by taking its length.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Bonus</strong> Can you modify the loop code from above in order to find the length of the longest sequence in the <code class="docutils literal notranslate"><span class="pre">sequences</span></code> list? Hint: Python has a built-in <code class="docutils literal notranslate"><span class="pre">max()</span></code> function that, when given two arguments, will return the larger of the two: e.g., <code class="docutils literal notranslate"><span class="pre">max(1,</span> <span class="pre">2)</span></code> returns <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Solutions</p>
+<p><strong>Summing over a list</strong></p>
+<p>Since we have already defined <code class="docutils literal notranslate"><span class="pre">total_length</span></code> by assigning it to <code class="docutils literal notranslate"><span class="pre">0</span></code>, to add up all the lengths, we just need to increment <code class="docutils literal notranslate"><span class="pre">total_length</span></code> <em>inside</em> the body of the loop. Each time, add the length of the current list element, which we can find by applying the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function to the loop variable (<code class="docutils literal notranslate"><span class="pre">seq</span></code> in the code below):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">:</span>
+    <span class="n">total_length</span> <span class="o">=</span> <span class="n">total_length</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that the line incrementing <code class="docutils literal notranslate"><span class="pre">total_length</span></code> is indented, since we want it to be executed once per element in <code class="docutils literal notranslate"><span class="pre">sequences</span></code>.</p>
+<p>To find the average length, we then divide <code class="docutils literal notranslate"><span class="pre">total_length</span></code> by the length of <code class="docutils literal notranslate"><span class="pre">sequences</span></code> itself:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">average_length</span> <span class="o">=</span> <span class="n">total_length</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequences</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The latter line of code should be executed <em>after the loop is finished</em>, so we don’t indent it. In terms of the logic of our code, it’s important to observe that <code class="docutils literal notranslate"><span class="pre">len(seq)</span></code> (inside the loop) and <code class="docutils literal notranslate"><span class="pre">len(sequences)</span></code> represent two very different things: the first represents the length of each string (one after the other, in order, as the loop executes); the second represents the length of the list itself, i.e., the <em>number</em> of strings (sequences) within it.</p>
+<p><strong>Finding the max length</strong></p>
+<p>To find the length of the longest sequence, we can use the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">:</span>
+    <span class="n">max_length</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">),</span> <span class="n">max_length</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The pattern is quite similar to what we used above. The only difference is that instead of reassigning <code class="docutils literal notranslate"><span class="pre">total_length</span></code> to itself plus the length of the current sequence, we reassign <code class="docutils literal notranslate"><span class="pre">max_length</span></code> to the result of comparing the previous value of <code class="docutils literal notranslate"><span class="pre">max_length</span></code> and the length of the current sequence. The following table shows the values of <code class="docutils literal notranslate"><span class="pre">max_length</span></code> and <code class="docutils literal notranslate"><span class="pre">len(seq)</span></code> for the first few iterations of our loop:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Iteration</p></th>
+<th class="head"><p>Previous value of <code class="docutils literal notranslate"><span class="pre">max_length</span></code></p></th>
+<th class="head"><p>Value of <code class="docutils literal notranslate"><span class="pre">len(seq)</span></code></p></th>
+<th class="head"><p>New value of <code class="docutils literal notranslate"><span class="pre">max_length</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1st</p></td>
+<td><p>0</p></td>
+<td><p>62</p></td>
+<td><p>62</p></td>
+</tr>
+<tr class="row-odd"><td><p>2nd</p></td>
+<td><p>62</p></td>
+<td><p>107</p></td>
+<td><p>107</p></td>
+</tr>
+<tr class="row-even"><td><p>3rd</p></td>
+<td><p>107</p></td>
+<td><p>67</p></td>
+<td><p>107</p></td>
+</tr>
+</tbody>
+</table>
+<p>Stepping through a loop like this is a good way to get a handle on what actually happens when the loop is run.</p>
+</div>
+</section>
+<section id="loops-lists-transforming-a-list">
+<h2>Loops &amp; lists: Transforming a list<a class="headerlink" href="#loops-lists-transforming-a-list" title="Permalink to this heading">#</a></h2>
+<p>Social scientist Alia would like to extract the seven-digit unique identifiers from a list of addresses, where each address is a string starting with the identifer.</p>
+<p>The following code defines such a list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">addresses</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;UP63659 93 North 9th Street, Brooklyn, NY 11211&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;LH06225 380 Westminster St, Providence, RI 02903&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;AJ30648 177 Main Street, Littleton, MA 03561&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;QL46276 202 Harlow St, Bangor, ME 04401&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;QQ72122 46 Front Street, Waterville, ME 04901&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;PY84657 22 Sussex St, Hackensack, NJ 07601&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;CJ55552 75 Oak Street, Patchogue, NY 11772&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;FU76399 1 Clinton Ave, Albany, NY 12207&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ZK38387 7242 Route 9, Plattsburgh, NY 12901&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;JF67659 520 5th Ave, Mckeesport, NY 15132&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;KJ13496 122 W 3rd Street, Greensburg, NY 15601&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;HW78470 901 University Dr, State College, PA 16801&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;PL44372 240 W 3rd St, Williamsport, PA 17701&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;NJ95036 41 N 4th St, Allentown, PA 18102&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alia knows that she can extract the identifier from each string by using a slice, such that if the variable <code class="docutils literal notranslate"><span class="pre">addr</span></code> holds the string <code class="docutils literal notranslate"><span class="pre">&quot;UP63659</span> <span class="pre">93</span> <span class="pre">North</span> <span class="pre">9th</span> <span class="pre">Street,</span> <span class="pre">Brooklyn,</span> <span class="pre">11211&quot;</span></code>, then the expression <code class="docutils literal notranslate"><span class="pre">addr[:7]</span></code> will give the string <code class="docutils literal notranslate"><span class="pre">&quot;UP63659&quot;</span></code>.</p>
+<p>How can Alia write a <a class="reference internal" href="../../glossary.html#term-for-loop"><span class="xref std std-term">for loop</span></a> to perform this slice for every string in the <code class="docutils literal notranslate"><span class="pre">addresses</span></code> list, storing the results (the identifiers) in a separate list called <code class="docutils literal notranslate"><span class="pre">identifiers</span></code>?</p>
+<p>(She knows that the first step is to define the new <code class="docutils literal notranslate"><span class="pre">identifiers</span></code> list, which is empty to start with.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">identifiers</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(She also knows that she needs to use the <code class="docutils literal notranslate"><span class="pre">.append()</span></code> method, which is available on any Python list, to add each identifer to the <code class="docutils literal notranslate"><span class="pre">identifiers</span></code> list.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Solution</p>
+<p>The goal here is to transform one list of strings (those representing complete street addresses, along with unique identifiers) into a new list, which will contains strings representing only the identifiers from the original list.</p>
+<p>This is a common pattern, similar to the patterns used in <span class="xref myst">Summarizing a list</span>, except that where previously we were computing a single value (a total or maximum amount), here we’re populating a list of values derived from the original list.</p>
+<p>Code to accomplish this (assuming that <code class="docutils literal notranslate"><span class="pre">identifiers</span></code> has first been defined as an empty list, as above) might look as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">addr</span> <span class="ow">in</span> <span class="n">addresses</span><span class="p">:</span>
+    <span class="n">unique_id</span> <span class="o">=</span> <span class="n">addr</span><span class="p">[:</span><span class="mi">7</span><span class="p">]</span>
+    <span class="n">identifiers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">unique_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Alternately, skipping the intermediate variable assignment, we can write</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">addr</span> <span class="ow">in</span> <span class="n">addresses</span><span class="p">:</span>
+    <span class="n">identifiers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">addr</span><span class="p">[:</span><span class="mi">7</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The crucial bit is the indentation of the line(s) after <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">addr</span> <span class="pre">in</span> <span class="pre">addresses:</span></code> – as elsewhere in Python, the <a class="reference internal" href="../../glossary.html#term-white-space"><span class="xref std std-term">white space</span></a> designates the code that should be run <em>inside</em> the loop (i.e., the code to be repeated). Thus, we are taking the same slice (of the first seven characters) from every string (<code class="docutils literal notranslate"><span class="pre">addr</span></code>) in <code class="docutils literal notranslate"><span class="pre">addresses</span></code>, and then adding the result of each slice to the <code class="docutils literal notranslate"><span class="pre">identifiers</span></code> list.</p>
+</div>
+</section>
+<section id="nested-data-1-loops-lists-dictionaries">
+<h2>Nested data 1: Loops, lists, &amp; dictionaries<a class="headerlink" href="#nested-data-1-loops-lists-dictionaries" title="Permalink to this heading">#</a></h2>
+<p>Data analyst Priya needs to calculate the average response score for each of five questions on her survey of GW students and programming support. As described in <span class="xref myst">Working with Dictionaries</span>, Priya has loaded a datafile using Python such that each survey response is represented by a <a class="reference internal" href="../../glossary.html#term-dictionary"><span class="xref std std-term">dictionary</span></a>. The complete set of responses is represented by a list of dictionaries, with each dictionary having the same <a class="reference internal" href="../../glossary.html#term-key"><span class="xref std std-term">key</span></a>s but different <a class="reference internal" href="../../glossary.html#term-value"><span class="xref std std-term">value</span></a>s. A sample of the dataset is shown below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">responses</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27a20f28-ab40-11ee-ac72-acde48001122&quot;</span><span class="p">,</span>  <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;GEOG&quot;</span><span class="p">,</span>  <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;GRAD&quot;</span><span class="p">,</span>  <span class="s2">&quot;degree&quot;</span><span class="p">:</span> <span class="s2">&quot;MA&quot;</span><span class="p">,</span>  <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2025</span><span class="p">,</span>  <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="s2">&quot;Python,R&quot;</span><span class="p">,</span>  <span class="s2">&quot;q1&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="s2">&quot;q2&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>  <span class="s2">&quot;q3&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s2">&quot;q4&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s2">&quot;q5&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27a2100e-ab40-11ee-ac72-acde48001122&quot;</span><span class="p">,</span>  <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;GEOG&quot;</span><span class="p">,</span>  <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;UND&quot;</span><span class="p">,</span>  <span class="s2">&quot;degree&quot;</span><span class="p">:</span> <span class="s2">&quot;BA&quot;</span><span class="p">,</span>  <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2026</span><span class="p">,</span>  <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span>  <span class="s2">&quot;q1&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s2">&quot;q2&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="s2">&quot;q3&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s2">&quot;q4&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>  <span class="s2">&quot;q5&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27a21068-ab40-11ee-ac72-acde48001122&quot;</span><span class="p">,</span>  <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;CHEM&quot;</span><span class="p">,</span>  <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;GRAD&quot;</span><span class="p">,</span>  <span class="s2">&quot;degree&quot;</span><span class="p">:</span> <span class="s2">&quot;PhD&quot;</span><span class="p">,</span>  <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2025</span><span class="p">,</span>  <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="s2">&quot;Python,R,C++&quot;</span><span class="p">,</span>  <span class="s2">&quot;q1&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="s2">&quot;q2&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="s2">&quot;q3&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="s2">&quot;q4&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="s2">&quot;q5&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27a210a4-ab40-11ee-ac72-acde48001122&quot;</span><span class="p">,</span>  <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;ECON&quot;</span><span class="p">,</span>  <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;UND&quot;</span><span class="p">,</span>  <span class="s2">&quot;degree&quot;</span><span class="p">:</span> <span class="s2">&quot;BA&quot;</span><span class="p">,</span>  <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2024</span><span class="p">,</span>  <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span>  <span class="s2">&quot;q1&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="s2">&quot;q2&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="s2">&quot;q3&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>  <span class="s2">&quot;q4&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="s2">&quot;q5&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;27a210e0-ab40-11ee-ac72-acde48001122&quot;</span><span class="p">,</span>  <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;PSYC&quot;</span><span class="p">,</span>  <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;UND&quot;</span><span class="p">,</span>  <span class="s2">&quot;degree&quot;</span><span class="p">:</span> <span class="s2">&quot;BA&quot;</span><span class="p">,</span>  <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2028</span><span class="p">,</span>  <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span>  <span class="s2">&quot;q1&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s2">&quot;q2&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s2">&quot;q3&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="s2">&quot;q4&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>  <span class="s2">&quot;q5&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For each response, the numeric scores for the five questions are stored under the keys <code class="docutils literal notranslate"><span class="pre">&quot;q1&quot;</span></code> through <code class="docutils literal notranslate"><span class="pre">&quot;q5&quot;</span></code>. Can you write some code to calculate the average score for each question, across all five responses in the <code class="docutils literal notranslate"><span class="pre">responses</span></code> list?</p>
+<p><strong>Hint</strong>: you’ll need to use a for loop, combined with one or more variables, defined outside the loop, to store the running totals for each question’s scores.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Priya is interested in possible correlations between respondents’ answers to the five survey questions and the number of programming languages the respondents have studied.</p>
+<p>The response data include, for each respondent, a string that consists of one or more programming languages, separated by commas. Priya knows that by using the <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> method with an argument of <code class="docutils literal notranslate"><span class="pre">&quot;,&quot;</span></code>(see <span class="xref myst">Working with Dictionaries</span>), she can obtain a list of programming languages for each respondent, and she reasons that by taking the length of that list, she can obtain an integer representing the number of languages reported by that respondent.</p>
+<p>Can you write some code to add a <code class="docutils literal notranslate"><span class="pre">&quot;num_languages&quot;</span></code> key to each dictionary in the <code class="docutils literal notranslate"><span class="pre">responses</span></code> list, where the value of the key corresponds to the number of languages listed under the <code class="docutils literal notranslate"><span class="pre">&quot;languages&quot;</span></code> key?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Bonus</strong>: If you find that your code for computing the averages seems rather redundant, with multiple lines doing almost the same thing, can you identify any ways to reduce the redunancy? (Shorter code is necessarily better code, but situations where code gets repetitive do tend to multiply opportunities for programmer error.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Solutions</p>
+<p><strong>Accessing values in a list of dictionaries</strong></p>
+<p>To compute the average score for each of the five survey questions, a logical plan might look like the following:</p>
+<ol class="arabic simple">
+<li><p>Define five variables to hold the total scores for the five questions.</p></li>
+<li><p>Loop through the list of responses.</p></li>
+<li><p>For each response, access the value in each of the question keys (<code class="docutils literal notranslate"><span class="pre">&quot;q1&quot;</span></code> through <code class="docutils literal notranslate"><span class="pre">&quot;q5&quot;</span></code>) and add it to the appropriate variable.</p></li>
+<li><p>Outside the loop, divide each response total by the number of responses.</p></li>
+</ol>
+<p>Here is some code to implement this plan:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">q1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">q3</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">q4</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">q5</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">responses</span><span class="p">:</span>
+    <span class="n">q1</span> <span class="o">=</span> <span class="n">q1</span> <span class="o">+</span> <span class="n">resp</span><span class="p">[</span><span class="s2">&quot;q1&quot;</span><span class="p">]</span>
+    <span class="n">q2</span> <span class="o">=</span> <span class="n">q2</span> <span class="o">+</span> <span class="n">resp</span><span class="p">[</span><span class="s2">&quot;q2&quot;</span><span class="p">]</span>
+    <span class="n">q3</span> <span class="o">=</span> <span class="n">q3</span> <span class="o">+</span> <span class="n">resp</span><span class="p">[</span><span class="s2">&quot;q3&quot;</span><span class="p">]</span>
+    <span class="n">q4</span> <span class="o">=</span> <span class="n">q4</span> <span class="o">+</span> <span class="n">resp</span><span class="p">[</span><span class="s2">&quot;q4&quot;</span><span class="p">]</span>
+    <span class="n">q5</span> <span class="o">=</span> <span class="n">q5</span> <span class="o">+</span> <span class="n">resp</span><span class="p">[</span><span class="s2">&quot;q5&quot;</span><span class="p">]</span>
+    
+<span class="n">q1_avg</span> <span class="o">=</span> <span class="n">q1</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">responses</span><span class="p">)</span>
+<span class="n">q2_avg</span> <span class="o">=</span> <span class="n">q2</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">responses</span><span class="p">)</span>
+<span class="n">q3_avg</span> <span class="o">=</span> <span class="n">q3</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">responses</span><span class="p">)</span>
+<span class="n">q4_avg</span> <span class="o">=</span> <span class="n">q4</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">responses</span><span class="p">)</span>
+<span class="n">q5_avg</span> <span class="o">=</span> <span class="n">q5</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">responses</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Whenever you’re working with for loops, it’s a good idea to pay close attention to the indentation. THe five lines indented under the line <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">resp</span> <span class="pre">in</span> <span class="pre">responses:</span></code> will be executed once for each response in the list. This pattern allows us to tally up the total for each question. The lines beginning with <code class="docutils literal notranslate"><span class="pre">q1_avg</span></code>, etc., are <em>not</em> indented; these lines will each run only once, after we have finished adding up the totals. (Feel free to use as many blank lines as you like in order to make your code readable; in most situations, blank lines are ignored by the Python interpreter.)</p>
+<p><strong>Adding values to dictionaries in a list</strong></p>
+<p>To add the number of languages to the data for each respondent, we also need to use a loop. The logical plan for this task is a bit more straightforward: for each response, (1) we need to access the value stored under the <code class="docutils literal notranslate"><span class="pre">&quot;languages&quot;</span></code> key, which we expect to be a Python string; (2) then we need to split that string on the commas, (3) take the length of the resulting list, (4) and store the result under a <code class="docutils literal notranslate"><span class="pre">&quot;num_languages&quot;</span></code> key in that response dictionary:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">responses</span><span class="p">:</span>
+    <span class="n">languages</span> <span class="o">=</span> <span class="n">resp</span><span class="p">[</span><span class="s2">&quot;languages&quot;</span><span class="p">]</span>
+    <span class="n">resp</span><span class="p">[</span><span class="s2">&quot;num_languages&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">languages</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The code provided does steps 2, 3, and 4 in the same line, but you could also code those as separate lines. The crucial parts are that we’re retrieving the value from the <code class="docutils literal notranslate"><span class="pre">&quot;languages&quot;</span></code> key (<code class="docutils literal notranslate"><span class="pre">resp[&quot;languages&quot;]</span></code> is on the right side of an equals sign), doing something to that value, and saving the result under the <code class="docutils literal notranslate"><span class="pre">&quot;num_languages&quot;</span></code> key (<code class="docutils literal notranslate"><span class="pre">resp[&quot;num_languages&quot;]</span></code> is on the left side of an equals sign).</p>
+<p>And don’t forget the quotation marks around <code class="docutils literal notranslate"><span class="pre">&quot;languages&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;num_languages&quot;</span></code> when using them as dictionary keys – the dictionary keys are strings, and here we’re providing their literal string values.</p>
+<p><strong>Bonus</strong></p>
+<p>To reduce repetition when finding the average scores, we can use a dictionary to store the running totals instead of separate variables.
+For instance, we could define a <code class="docutils literal notranslate"><span class="pre">total_scores</span></code> dictionary, with a key for each question, and we could initialize them all to 0:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">total_scores</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;q1&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> 
+                <span class="s2">&quot;q2&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;q3&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;q4&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;q5&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Then, inside the for loop that gives us each response, to avoid having to type <code class="docutils literal notranslate"><span class="pre">total_scores[&quot;q1&quot;]</span></code>, <code class="docutils literal notranslate"><span class="pre">total_scores[&quot;q2&quot;]</span></code>, etc., we can take advantage of the fact that looping over a <em>dictionary</em> in Python returns the dictionary keys. Then the rest of logical plan would look like this:</p>
+<ol class="arabic simple">
+<li><p>Loop over the list of response.</p></li>
+<li><p>For each response, <em>loop over the keys</em> in the <code class="docutils literal notranslate"><span class="pre">total_scores</span></code> dictionary. (We do this <em>inside</em> the first loop.)</p></li>
+<li><p>For each key from <code class="docutils literal notranslate"><span class="pre">total_scores</span></code>, increment its value in <code class="docutils literal notranslate"><span class="pre">total_scores</span></code> with the value of the same key in the current response dictionary.</p></li>
+<li><p>To find the averages, loop over the <code class="docutils literal notranslate"><span class="pre">total_scores</span></code> dictionary again (after the loop over the responses is done), dividing the value for each key by the length of <code class="docutils literal notranslate"><span class="pre">responses</span></code>.</p></li>
+</ol>
+<p>The following code implements our plan:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">responses</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">total_scores</span><span class="p">:</span>
+        <span class="n">total_scores</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_scores</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="o">+</span> <span class="n">resp</span><span class="p">[</span><span class="n">q</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">total_scores</span><span class="p">:</span>
+    <span class="n">total_scores</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_scores</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">responses</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that this code is less repetitive than our previous version, but it’s also potentially harder to understand. In using this code, it’s important to keep in mind that the loop variable <code class="docutils literal notranslate"><span class="pre">resp</span></code> and the loop variable <code class="docutils literal notranslate"><span class="pre">q</span></code> refer to very different things:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resp</span></code> will hold each of the dictionaries in the list <code class="docutils literal notranslate"><span class="pre">responses</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q</span></code> will hold each of the keys, which are strings in <code class="docutils literal notranslate"><span class="pre">total_scores</span></code>: so <code class="docutils literal notranslate"><span class="pre">&quot;q1&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;q2&quot;</span></code>, etc.</p></li>
+</ul>
+<p>This code illustrates <em>using a variable as a key</em> to access a value in a dictionary. So <code class="docutils literal notranslate"><span class="pre">resp[q]</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">resp[&quot;q1&quot;]</span></code>, <code class="docutils literal notranslate"><span class="pre">resp[&quot;q2&quot;]</span></code>, and so on.</p>
+<p>Feel free to stick with the initial, more repetitive implementation. There’s nothing wrong with code that takes up a few more lines if it’s easier to reason about or understand.</p>
+</div>
+</section>
+<section id="nested-data-2-creating-a-list-of-dictionaries">
+<h2>Nested data 2: Creating a list of dictionaries<a class="headerlink" href="#nested-data-2-creating-a-list-of-dictionaries" title="Permalink to this heading">#</a></h2>
+<p>In analyzing nucleotide sequences, it’s common to count the number of bases of each type – A, G, C, T – that appear in the sequence. A list of such sequences is defined below, where each sequence is a string consisting of the same four characters but in different combinations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sequences</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ggtaagtcctctagtacaaacacccccaatattgtgatataattaaaattatattcatattctgttgccagaaaaaacacttttaggctatattagagccatcttctttgaagcgttgtc&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;ggtaagtcctctagtacaaacacccccaatattgtgatataattaaaattatattcatattctgttgccagaaaaaacacttttaggctatattagagccatcttctttgaagcgttgtc&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;ggtaagtgctctagtacaaacacccccaatattgtgatataattaaaattatattcatattctgttgccagattttacacttttaggctatattagagccatcttctttgaagcgttgtctatgcatcgatcgacgactg&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;tgcaccaaacatgtctaaagctggaaccaaaattactttctttgaagacaaaaactttcaaggccgccactatgacagcgattgcgactgtgcagatttccacatgtacctgagccgctg&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;caactccatcagagtggaaggaggcacctgggctgtgtatgaaaggcccaattttgctgggtacatgtacatcctaccccggggcgagtatcctgagtaccagcactggatgggcctcaa&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Li wants to analzye the sequences in the <code class="docutils literal notranslate"><span class="pre">sequences</span></code> list. For each sequence, he needs to record how many times each base occurs in the sequence. Since each nucleotide consists of the same four bases, one approach would be to create a list of dictionaries, where each dictionary would contain a key for each base. For example, a single sequence might be represented by the following dictionary:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+<span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span>
+<span class="s2">&quot;g&quot;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span>
+<span class="s2">&quot;t&quot;</span><span class="p">:</span> <span class="mi">28</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The values in the dictionary record the number of occurences of each base. The following is Li’s logical plan for implementation:</p>
+<ol class="arabic simple">
+<li><p>Define a new, empty list to hold the base counts for each sequence..</p></li>
+<li><p>Loop over the list of sequences.</p></li>
+<li><p>For each sequence, define a new dictionary to hold the base counts, initializing each base to 0.</p></li>
+<li><p>Within the outer loop, loop over the letters (the bases) in the sequence itself. (Looping over a string gives each character in turn.)</p></li>
+<li><p>For each base, increment the key corresponding to that base by 1.</p></li>
+<li><p>Add the dictionary of base counts to the list.</p></li>
+</ol>
+<p>Can you write some code to implement Li’s plan?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Solution</p>
+<p>The following code has been annotated with comments corresponding to the steps from the plan described above.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">base_counts</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1">#Step 1</span>
+<span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">:</span>    <span class="c1">#2</span>
+    <span class="n">base_count_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>      <span class="c1">#3</span>
+    <span class="k">for</span> <span class="n">base</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>      <span class="c1">#4</span>
+        <span class="n">base_count_dict</span><span class="p">[</span><span class="n">base</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>       <span class="c1">#5</span>
+    <span class="n">base_counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base_count_dict</span><span class="p">)</span>  <span class="c1">#6</span>
+</pre></div>
+</div>
+<p>As usual, the indetation levels are of particular importance. There are three levels in the code above. The following table makes explicit what is happening at each level.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Level</p></th>
+<th class="head"><p>Step</p></th>
+<th class="head"><p>Action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>Defines the empty list to hold all the dictionaries</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>For loop: over the list of sequences</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>Defines a new dictionary to hold the base counts for the current sequence in the loop</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>4</p></td>
+<td><p>For loop: over the characters in the current sequence string</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>5</p></td>
+<td><p>Using the loop variable from the inner loop, which holds the current character, increments the value in the dictionary associated with that key</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>6</p></td>
+<td><p>Adds the dictionary to the list of base counts (using the list <code class="docutils literal notranslate"><span class="pre">append()</span></code> method).</p></td>
+</tr>
+</tbody>
+</table>
+<p>The other thing to notice is that we use the <code class="docutils literal notranslate"><span class="pre">base</span></code> loop variable as the key in the <code class="docutils literal notranslate"><span class="pre">base_count_dict</span></code> dictionary, because this variable will hold each character from the sequence in succession, and we have defined <code class="docutils literal notranslate"><span class="pre">base_count_dict</span></code> to have a key for each character. The keys are one-character strings: <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;c&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;g&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;t&quot;</span></code>.</p>
+</div>
+</section>
+<section id="nested-data-3-loops-and-conditionals">
+<h2>Nested data 3: Loops and conditionals<a class="headerlink" href="#nested-data-3-loops-and-conditionals" title="Permalink to this heading">#</a></h2>
+<p>Using Python, Alia has transformed her dataset into a list of dictionaries, such that each dictionary contains data about a particular residential property, including its address and the year in which the dwelling was built. The dataset now looks like the following example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">address_data</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;93 North 9th Street&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Brooklyn&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NY&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;11211&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1995</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;380 Westminster St&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Providence&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;RI&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;02903&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1979</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;177 Main Street&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Littleton&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;MA&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;03561&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1992</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;202 Harlow St&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Bangor&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;ME&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;04401&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1964</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;46 Front Street&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Waterville&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;ME&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;04901&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">2007</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;22 Sussex St&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Hackensack&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NJ&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;07601&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1983</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;75 Oak Street&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Patchogue&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NY&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;11772&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1996</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;1 Clinton Ave&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Albany&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NY&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;12207&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1961</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;7242 Route 9&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Plattsburgh&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NY&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;12901&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1932</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;520 5th Ave&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Mckeesport&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NY&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;15132&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1958</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;122 W 3rd Street&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Greensburg&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NY&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;15601&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1976</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;901 University Dr&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;State College&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;PA&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;16801&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1939</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;240 W 3rd St&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Williamsport&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;PA&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;17701&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1934</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;41 N 4th St&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Allentown&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;PA&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;18102&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;year_built&quot;</span><span class="p">:</span> <span class="mi">1981</span><span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alia would like to do some statistics on the ages of the dwellings in her dataset, and she’d like to group the analysis by state. Ideally, she like to be able to select a state and see a list of the years in which dwellings were built. So using the example above, <code class="docutils literal notranslate"><span class="pre">&quot;PA&quot;</span></code> would correspond to 1939, 1934, and 1981.</p>
+<p>A reasonable structure would be a dictionary in which the keys are strings corresponding to the state abbreviations, and the values are lists of years. The entry for Pennsylvania would look as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">...</span><span class="p">,</span>
+ <span class="s2">&quot;PA&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1939</span><span class="p">,</span> <span class="mi">1934</span><span class="p">,</span> <span class="mi">1981</span><span class="p">],</span>
+ <span class="o">...</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Her logical plan is as follows:</p>
+<ol class="arabic simple">
+<li><p>Define an empty dictionary to hold the new data; call it <code class="docutils literal notranslate"><span class="pre">years_by_state</span></code>.</p></li>
+<li><p>Loop over the <code class="docutils literal notranslate"><span class="pre">address_data</span></code> list, each element of which should be a dictionary with a <code class="docutils literal notranslate"><span class="pre">&quot;state&quot;</span></code> key and <code class="docutils literal notranslate"><span class="pre">&quot;year_built&quot;</span></code> key.</p></li>
+<li><p>Get the <a class="reference internal" href="../../glossary.html#term-value"><span class="xref std std-term">value</span></a> of the <code class="docutils literal notranslate"><span class="pre">&quot;state&quot;</span></code> key from the current address (the loop variable).</p></li>
+<li><p>This value becomes the <a class="reference internal" href="../../glossary.html#term-key"><span class="xref std std-term">key</span></a> to use with the <code class="docutils literal notranslate"><span class="pre">years_by_state</span></code> dictionary.</p></li>
+<li><p>Get the value of the <code class="docutils literal notranslate"><span class="pre">&quot;year_built&quot;</span></code> key from the current address (the loop variable).</p></li>
+<li><p>This becomes the value to add to the <code class="docutils literal notranslate"><span class="pre">years_by_state</span></code> dictionary. But since we want to associate multiple years with each state abbreviation, we should append them to a list, rather than simply assigning the value to the key (which would in fact overwrite any previous value associated with that key).</p></li>
+</ol>
+<p>Alia has written the following code, but she keeps getting a <code class="docutils literal notranslate"><span class="pre">KeyError</span></code>. Can you help her fix it?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">years_by_state</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">addr</span> <span class="ow">in</span> <span class="n">address_data</span><span class="p">:</span>
+    <span class="n">state_key</span> <span class="o">=</span> <span class="n">addr</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">]</span>
+    <span class="n">year_value</span> <span class="o">=</span> <span class="n">addr</span><span class="p">[</span><span class="s2">&quot;year_built&quot;</span><span class="p">]</span>
+    <span class="n">years_by_state</span><span class="p">[</span><span class="n">state_key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">year_value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">73</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">state_key</span> <span class="o">=</span> <span class="n">addr</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">year_value</span> <span class="o">=</span> <span class="n">addr</span><span class="p">[</span><span class="s2">&quot;year_built&quot;</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">years_by_state</span><span class="p">[</span><span class="n">state_key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">year_value</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: &#39;NY&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Hint</strong>: Python will not allow you to use the <code class="docutils literal notranslate"><span class="pre">append()</span></code> method on a list that hasn’t been defined. Since each key in <code class="docutils literal notranslate"><span class="pre">years_by_state</span></code> is associated with a list, the first time you add a key to the dictionary, you need to define the list. To test whether a key is already in a dictionary, you can use an <a class="reference internal" href="../../glossary.html#term-if-statement"><span class="xref std std-term">if statement</span></a> with a <a class="reference internal" href="../../glossary.html#term-Boolean-expression"><span class="xref std std-term">Boolean expression</span></a>. The following expression evaluates as <code class="docutils literal notranslate"><span class="pre">True</span></code> if the key <code class="docutils literal notranslate"><span class="pre">&quot;NY&quot;</span></code> is already in the dictionary <code class="docutils literal notranslate"><span class="pre">years_by_state</span></code> and as <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;NY&quot;</span> <span class="ow">in</span> <span class="n">years_by_state</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Solution</p>
+<p>A straightforward solution involves modifying Alia’s code with an <code class="docutils literal notranslate"><span class="pre">if...else</span></code> block. The logic is as follows:</p>
+<ul class="simple">
+<li><p>If the dictionary value of <code class="docutils literal notranslate"><span class="pre">addr[&quot;state&quot;]</span></code> is already present in <code class="docutils literal notranslate"><span class="pre">years_by_state</span></code> as a dictionary key, then</p>
+<ul>
+<li><p>Assume that this key is associated with a list,</p></li>
+<li><p>And use the <code class="docutils literal notranslate"><span class="pre">list.append()</span></code> method to add the value of <code class="docutils literal notranslate"><span class="pre">addr[&quot;year_built&quot;]</span></code> to that list.</p></li>
+</ul>
+</li>
+<li><p>Otherwise, add the value of <code class="docutils literal notranslate"><span class="pre">addr[&quot;state&quot;]</span></code> as a key whose value is a list with a single element, the value of <code class="docutils literal notranslate"><span class="pre">addr[&quot;year_built&quot;]</span></code>.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">years_by_state</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">addr</span> <span class="ow">in</span> <span class="n">address_data</span><span class="p">:</span>
+    <span class="n">state_key</span> <span class="o">=</span> <span class="n">addr</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">]</span>
+    <span class="n">year_value</span> <span class="o">=</span> <span class="n">addr</span><span class="p">[</span><span class="s2">&quot;year_built&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">state_key</span> <span class="ow">in</span> <span class="n">years_by_state</span><span class="p">:</span>
+        <span class="n">years_by_state</span><span class="p">[</span><span class="n">state_key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">year_value</span><span class="p">)</span>  <span class="c1">#4a</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">years_by_state</span><span class="p">[</span><span class="n">state_key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">year_value</span><span class="p">]</span>  <span class="c1">#4b</span>
+</pre></div>
+</div>
+<p>Note that the expression <code class="docutils literal notranslate"><span class="pre">years_by_state[state_key].append(...)</span></code> works because of the order in which Python evaluates expressions:</p>
+<ol class="arabic simple">
+<li><p>The value of <code class="docutils literal notranslate"><span class="pre">state_key</span></code> is retrieved from memory, which should be a string (a two-letter state abbreviation), per the definition of the <code class="docutils literal notranslate"><span class="pre">address_data</span></code> variable and the operation of the loop.</p></li>
+<li><p>This string is used as a key to retrieve a dictionary value from the <code class="docutils literal notranslate"><span class="pre">years_by_state</span></code> variable. This value will be a list, per the logic of the code.</p></li>
+<li><p>The latter value, being a list, has an <code class="docutils literal notranslate"><span class="pre">append()</span></code> method by default, and this method is used to add a new element to the list.</p></li>
+</ol>
+<p>The logic might be a little clearer if we reverse the conditions in the <code class="docutils literal notranslate"><span class="pre">if...else</span></code> block. (Note the use of <code class="docutils literal notranslate"><span class="pre">not</span></code> in the fourth line.)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">years_by_state</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">addr</span> <span class="ow">in</span> <span class="n">address_data</span><span class="p">:</span>
+    <span class="n">state_key</span> <span class="o">=</span> <span class="n">addr</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">]</span>
+    <span class="n">year_value</span> <span class="o">=</span> <span class="n">addr</span><span class="p">[</span><span class="s2">&quot;year_built&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">state_key</span> <span class="ow">in</span> <span class="n">years_by_state</span><span class="p">:</span>
+        <span class="n">years_by_state</span><span class="p">[</span><span class="n">state_key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">year_value</span><span class="p">]</span>  <span class="c1">#4b</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">years_by_state</span><span class="p">[</span><span class="n">state_key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">year_value</span><span class="p">)</span>  <span class="c1">#4a</span>
+</pre></div>
+</div>
+<p>The code above produces the same result; the only difference is the order in which we, the programmers, read the conditions. But this order makes it clear that each key in the <code class="docutils literal notranslate"><span class="pre">years_by_state</span></code> dictionary is created to hold a list of one element, and that this list is subsequently appended to.</p>
+</div>
+</section>
+<section id="loops-conditionals-categorizing-data">
+<h2>Loops &amp; conditionals: Categorizing data<a class="headerlink" href="#loops-conditionals-categorizing-data" title="Permalink to this heading">#</a></h2>
+<p>Pryia is analyzing survey data wherein each respondent has indicated the programming languages they have studied. In the following extract of her datafile, each response is associated with a unique, anonymous identifier and a list of languages. If the repondent indicated no languages, the list is empty.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">responses</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c9e703e0-ad9a-11ee-ac72-acde48001122&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">]},</span>
+             <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c9e7089a-ad9a-11ee-ac72-acde48001122&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="p">[]},</span>
+             <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c9e70976-ad9a-11ee-ac72-acde48001122&quot;</span><span class="p">,</span> 
+              <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="p">[]},</span>
+             <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c9e70a16-ad9a-11ee-ac72-acde48001122&quot;</span><span class="p">,</span> 
+              <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;R&quot;</span><span class="p">]},</span>
+             <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c9e70a8e-ad9a-11ee-ac72-acde48001122&quot;</span><span class="p">,</span> 
+              <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;C/C++&quot;</span><span class="p">]},</span>
+             <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c9e70b06-ad9a-11ee-ac72-acde48001122&quot;</span><span class="p">,</span> 
+              <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Other&quot;</span><span class="p">]},</span>
+             <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c9e70b74-ad9a-11ee-ac72-acde48001122&quot;</span><span class="p">,</span> 
+              <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">]},</span>
+             <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c9e70bec-ad9a-11ee-ac72-acde48001122&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">]},</span>
+             <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c9e70c64-ad9a-11ee-ac72-acde48001122&quot;</span><span class="p">,</span> 
+              <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Python&quot;</span><span class="p">]},</span>
+             <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;c9e70cc8-ad9a-11ee-ac72-acde48001122&quot;</span><span class="p">,</span> 
+              <span class="s2">&quot;languages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;R&quot;</span><span class="p">]}]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In order to simplify her analysis, Priya has decided to code her data as follows:</p>
+<ul class="simple">
+<li><p>If the respondent indicated more than one language, the response is coded as a 3.</p></li>
+<li><p>If the respondent indicated only one language, but that language is either Python or R, the response is coded as a 2.</p></li>
+<li><p>If the respondent indicated no language, or they indicated a single language other than Python or R, the response is coded as a 1.</p></li>
+</ul>
+<p>Her logical plan is as follows:</p>
+<ol class="arabic simple">
+<li><p>Create a new list to hold the coded data.</p></li>
+<li><p>Loop over the <code class="docutils literal notranslate"><span class="pre">responses</span></code> list; for each response, create a new dictionary to hold the ID of the current response and its language code.</p></li>
+<li><p>Use an <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> statement to evaluate the data associated with the <code class="docutils literal notranslate"><span class="pre">&quot;languages&quot;</span></code> key.</p></li>
+<li><p>Based on which branch of the <a class="reference internal" href="../../glossary.html#term-if-statement"><span class="xref std std-term">if statement</span></a> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, assign a value to a <code class="docutils literal notranslate"><span class="pre">&quot;language_code&quot;</span></code> key in the current response dictionary, and append the latter to the new list.</p></li>
+</ol>
+<p>Can you write some code to implement Priya’s plan?</p>
+<p><strong>Hint</strong>: To test whether a string is present in a list, use an expression with the keyword <code class="docutils literal notranslate"><span class="pre">in</span></code>. For instance, if the variable <code class="docutils literal notranslate"><span class="pre">lang_list</span></code> holds a list of string, to check if the string <code class="docutils literal notranslate"><span class="pre">&quot;Python&quot;</span></code> appears in <code class="docutils literal notranslate"><span class="pre">lang_list</span></code>, we can write:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s2">&quot;Python&quot;</span> <span class="ow">in</span> <span class="n">lang_list</span><span class="p">:</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Solution</p>
+<p>The following is one potential solution. The commented numerals in the code refer to the annotations below</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">coded_responses</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">responses</span><span class="p">:</span>
+    <span class="n">coded_resp</span> <span class="o">=</span> <span class="p">{}</span>                    <span class="c1">#1</span>
+    <span class="n">coded_resp</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">resp</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>      <span class="c1">#2</span>
+    <span class="n">lang_list</span> <span class="o">=</span> <span class="n">resp</span><span class="p">[</span><span class="s2">&quot;languages&quot;</span><span class="p">]</span>      
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lang_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>             <span class="c1">#3</span>
+        <span class="n">lang_code</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">elif</span> <span class="s2">&quot;Python&quot;</span> <span class="ow">in</span> <span class="n">lang_list</span> <span class="ow">or</span> <span class="s2">&quot;R&quot;</span> <span class="ow">in</span> <span class="n">lang_list</span><span class="p">:</span>          <span class="c1">#4</span>
+        <span class="n">lang_code</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">lang_code</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">coded_resp</span><span class="p">[</span><span class="s2">&quot;language_code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lang_code</span>      <span class="c1">#5</span>
+    <span class="n">coded_responses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">coded_resp</span><span class="p">)</span>           <span class="c1">#6</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Since we want the data structure for the coded responses to have the same structure as the original <code class="docutils literal notranslate"><span class="pre">responses</span></code> list, we define a new, empty dictionary to hold each coded response. (We technically could reuse the dictionary from <code class="docutils literal notranslate"><span class="pre">responses</span></code> – which is held by the loop variable <code class="docutils literal notranslate"><span class="pre">resp</span></code> – but this approach keeps things cleaner, and it preserves our original data as is, should we need it later.</p></li>
+<li><p>We need to copy the value of the <code class="docutils literal notranslate"><span class="pre">&quot;id&quot;</span></code> key over to the new dictionary.</p></li>
+<li><p>Here we’re testing our conditions against the list held by the <code class="docutils literal notranslate"><span class="pre">&quot;languages&quot;</span></code> key in each dictionary from <code class="docutils literal notranslate"><span class="pre">responses</span></code>. The order of our if statements in this case does matter, because the <em>first</em> condition to evaluate to <code class="docutils literal notranslate"><span class="pre">True</span></code> will be executed. According to Priya’s specifications, if the response includes more than one language, <em>regardless of language</em>, it should be coded as a 3. In other words, a response with a value for <code class="docutils literal notranslate"><span class="pre">lang_list</span></code> of <code class="docutils literal notranslate"><span class="pre">[&quot;Python&quot;,</span> <span class="pre">&quot;R&quot;]</span></code> would receive a 3, not a 2. In order to implement this logic in Python, we need to test for this condition first.</p></li>
+<li><p>This condition is evaluated only if <code class="docutils literal notranslate"><span class="pre">lang_list</span></code> has fewer than 2 elements. Note the use of the <code class="docutils literal notranslate"><span class="pre">or</span></code> keyword to check for both conditions. Note also that we <em>cannot</em> write <code class="docutils literal notranslate"><span class="pre">elif</span> <span class="pre">&quot;Python&quot;</span> <span class="pre">or</span> <span class="pre">&quot;R&quot;</span> <span class="pre">in</span> <span class="pre">lang_list</span></code>. (Technically, we <em>can</em> write that, but it won’t have the desired effect: <code class="docutils literal notranslate"><span class="pre">elif</span> <span class="pre">&quot;Python&quot;</span> <span class="pre">...</span></code> will <em>always</em> evaluate to <code class="docutils literal notranslate"><span class="pre">True</span></code>, no matter what comes after, because a non-empty string is always coerced to <code class="docutils literal notranslate"><span class="pre">True</span></code> by an if statement. The correct, though unfortunately verbose, way to code this statement is to repeat the <code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">lang_list</span></code> expression for each string we’re testing.</p></li>
+<li><p>Because <code class="docutils literal notranslate"><span class="pre">lang_code</span></code> is assigned <em>something</em> in every branch of the <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> statement, we can assume that it will have the correct value at this point. And be careful about indentation – if this line were indented under the <code class="docutils literal notranslate"><span class="pre">else:</span></code> line, it would get executed only for cases where <code class="docutils literal notranslate"><span class="pre">lang_code</span></code> is <code class="docutils literal notranslate"><span class="pre">1</span></code> – not at all what we want!</p></li>
+<li><p>It’s easy to forget to append our dictionary to the new list. But if we omit this step, <code class="docutils literal notranslate"><span class="pre">code_resp</span></code> will get a new dictionary on every iteration of the loop, and each dictionary will overwrite the last.</p></li>
+</ol>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/homework"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="HW_Final_GR.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Camp: Final Homework</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../keep_learning.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python Resources &amp; Where to Go from Here</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda-instructions">Agenda &amp; Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integers-floats-strings">Integers, floats &amp; strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-strings-1">Working with strings (1)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-strings-and-lists">Working with strings (and lists)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-lists">Working with lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-dictionaries">Working with dictionaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops-lists-summarizing-a-list">Loops &amp; lists: Summarizing a list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops-lists-transforming-a-list">Loops &amp; lists: Transforming a list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-data-1-loops-lists-dictionaries">Nested data 1: Loops, lists, &amp; dictionaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-data-2-creating-a-list-of-dictionaries">Nested data 2: Creating a list of dictionaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-data-3-loops-and-conditionals">Nested data 3: Loops and conditionals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops-conditionals-categorizing-data">Loops &amp; conditionals: Categorizing data</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GW Libraries & Academic Innovation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
