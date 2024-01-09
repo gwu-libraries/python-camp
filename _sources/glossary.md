@@ -60,7 +60,6 @@ block
     :width: 500px
     :align: center
     ```
-
     When run, the code prints `[25.5, 100.99, 50.75]`.
 
     Ihe convention is to use four spaces (or a tab set to four spaces) as the basic unit of indentation (We say "the basic unit," because when creating nested code blocks, each level of indentation will correspond to one or more instances of the basic unit.)

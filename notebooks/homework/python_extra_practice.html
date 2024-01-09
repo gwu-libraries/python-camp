@@ -465,7 +465,7 @@ document.write(`
 <li><p>If you want to build more “muscle memory” by writing code beyond the opportunities provided by the group activities and homework.</p></li>
 </ul>
 <p>The exercises below are arranged by concept, largely following the order in which the concepts were presented in the course materials. The code in each section is self-contained, so feel free to jump around and/or pick only certain sections to do.</p>
-<p>Answers to the challenges in each section are provided in a collapsed (Hint) cell at the bottom of the section.</p>
+<p>Answers to the challenges in each section are provided in a collapsed (Solution) cell at the bottom of the section.</p>
 <div class="how-to admonition">
 <p class="admonition-title">How to Use this Notebook</p>
 <ol class="arabic simple">
@@ -539,9 +539,8 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Solutions</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solutions</p>
 <p><strong>Finding the length of strings</strong></p>
 <p>Li’s sequences are represented as Python <a class="reference internal" href="../../glossary.html#term-string"><span class="xref std std-term">string</span></a>s – we can tell because each sequence is surrounded by quotation marks (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>). In Python, a string has a length, which we can find by using the built-in <code class="docutils literal notranslate"><span class="pre">len()</span></code> <a class="reference internal" href="../../glossary.html#term-function"><span class="xref std std-term">function</span></a>. To find the length of the string represented by the variable <code class="docutils literal notranslate"><span class="pre">seq1</span></code>, we write</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">seq1</span><span class="p">)</span>
@@ -626,9 +625,8 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Solutions</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solutions</p>
 <p>There are other ways to accomplish Alia’s tasks, but all of the above can be done using slicing. How can we determine that? Looking at the example given, and assuming that the rest of the datafile is consistent, we have the following pattern:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -764,9 +762,8 @@ document.write(`
 </div>
 <p><strong>Bonus</strong> Now Alia is having trouble working with the street address and city name in the result of splitting <code class="docutils literal notranslate"><span class="pre">address1</span></code>. A colleague mentioned the <a class="reference external" href="https://docs.python.org/3.3/library/stdtypes.html#str.join">str.join()</a> method, which does the inverse operation of <code class="docutils literal notranslate"><span class="pre">str.split()</span></code>.</p>
 <p>Can you use list slicing and the <code class="docutils literal notranslate"><span class="pre">join</span></code> method to produce a single string corresponding to the street address and city name in <code class="docutils literal notranslate"><span class="pre">address1</span></code>, starting from the result of splitting the latter?</p>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Solutions</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solutions</p>
 <p>Since the three elements in the <code class="docutils literal notranslate"><span class="pre">address_info</span></code> strings are separated by commas, we can use the <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> method with its optional first argument, <code class="docutils literal notranslate"><span class="pre">sep</span></code>. Note that the Python <a class="reference external" href="https://docs.python.org/3.3/library/stdtypes.html#str.split">documentation</a> tells us the following:</p>
 <blockquote>
 <div><p>If <code class="docutils literal notranslate"><span class="pre">sep</span></code> is not specified or is <code class="docutils literal notranslate"><span class="pre">None</span></code>, a different splitting algorithm is applied: runs of consecutive whitespace are regarded as a single separator, and the result will contain no empty strings at the start or end if the string has leading or trailing whitespace.</p>
@@ -924,9 +921,8 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Solutions</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solutions</p>
 <p><strong>List indices</strong></p>
 <p>We can use the following code to access the values in the 1st, 3rd, and 5th positions in the <code class="docutils literal notranslate"><span class="pre">response1</span></code> list. Remember that in Python, indexing starts at <code class="docutils literal notranslate"><span class="pre">0</span></code>, not <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">email1</span> <span class="o">=</span> <span class="n">response1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1011,9 +1007,8 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Solutions</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solutions</p>
 <p><strong>Accessing values by key</strong></p>
 <p>With lists we access individual elements by providing the index (as an integer) between square brackets (<code class="docutils literal notranslate"><span class="pre">[]</span></code>). Access to dictionary elements follows a similar pattern, except that the element between brackets is the dictionary key (usually, but not always, a string).</p>
 <p>To access the values for the <code class="docutils literal notranslate"><span class="pre">&quot;degree&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;languages&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;q1&quot;</span></code> keys, we can write the following. Note the use of quotation marks around the keys inside brackets: that is important, because the keys are strings.</p>
@@ -1101,9 +1096,8 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Solutions</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solutions</p>
 <p><strong>Summing over a list</strong></p>
 <p>Since we have already defined <code class="docutils literal notranslate"><span class="pre">total_length</span></code> by assigning it to <code class="docutils literal notranslate"><span class="pre">0</span></code>, to add up all the lengths, we just need to increment <code class="docutils literal notranslate"><span class="pre">total_length</span></code> <em>inside</em> the body of the loop. Each time, add the length of the current list element, which we can find by applying the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function to the loop variable (<code class="docutils literal notranslate"><span class="pre">seq</span></code> in the code below):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">:</span>
@@ -1195,9 +1189,8 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Solution</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
 <p>The goal here is to transform one list of strings (those representing complete street addresses, along with unique identifiers) into a new list, which will contains strings representing only the identifiers from the original list.</p>
 <p>This is a common pattern, similar to the patterns used in <span class="xref myst">Summarizing a list</span>, except that where previously we were computing a single value (a total or maximum amount), here we’re populating a list of values derived from the original list.</p>
 <p>Code to accomplish this (assuming that <code class="docutils literal notranslate"><span class="pre">identifiers</span></code> has first been defined as an empty list, as above) might look as follows:</p>
@@ -1255,9 +1248,8 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Solutions</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solutions</p>
 <p><strong>Accessing values in a list of dictionaries</strong></p>
 <p>To compute the average score for each of the five survey questions, a logical plan might look like the following:</p>
 <ol class="arabic simple">
@@ -1368,9 +1360,8 @@ For instance, we could define a <code class="docutils literal notranslate"><span
 </div>
 </div>
 </div>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Solution</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
 <p>The following code has been annotated with comments corresponding to the steps from the plan described above.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">base_counts</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1">#Step 1</span>
 <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">:</span>    <span class="c1">#2</span>
@@ -1548,9 +1539,8 @@ For instance, we could define a <code class="docutils literal notranslate"><span
 </div>
 </div>
 </div>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Solution</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
 <p>A straightforward solution involves modifying Alia’s code with an <code class="docutils literal notranslate"><span class="pre">if...else</span></code> block. The logic is as follows:</p>
 <ul class="simple">
 <li><p>If the dictionary value of <code class="docutils literal notranslate"><span class="pre">addr[&quot;state&quot;]</span></code> is already present in <code class="docutils literal notranslate"><span class="pre">years_by_state</span></code> as a dictionary key, then</p>
@@ -1645,9 +1635,8 @@ For instance, we could define a <code class="docutils literal notranslate"><span
 </div>
 </div>
 </div>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Solution</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
 <p>The following is one potential solution. The commented numerals in the code refer to the annotations below</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">coded_responses</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">responses</span><span class="p">:</span>
