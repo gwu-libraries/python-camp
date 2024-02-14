@@ -7,11 +7,14 @@ from itertools import dropwhile
 from markdown_it.renderer import RendererHTML
 from myst_parser.config.main import MdParserConfig
 from myst_parser.parsers.mdit import create_md_parser
+import configparser
 
 logging.basicConfig()
 logger=logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
+config = configparser.ConfigParser()
+config.read('config.ini')
 
 # Pattern that contains Sphinx directives in the notebook JSON
 DIRECTIVE_PATTERN = re.compile('````{(\w+)}\s?(.*)\n') 
@@ -26,7 +29,10 @@ HEADING_SUB_LEVEL = 4
 TAGS_TO_REMOVE = {'instructor', 'remove-cell'}
 # Pattern for Sphinx glossary directive
 TERM_PATTERN = re.compile(r'{term}`([A-Za-z ]+)`')
-GLOSSARY_URL = 'https://gwu-libraries.github.io/python-camp/glossary.html#term-'
+FOOTNOTE_PATTERN = re.compile(r'\[\^\d+\]')
+FOOTNOTE_ANCHOR_PAT = re.compile(r'\[\^\d+\]:')
+GLOSSARY_URL = config['Constants']['GLOSSARY_URL']
+IMAGE_URL = config['Constants']['IMAGE_URL']
 # HTML for hint directives (dropdowns)
 HINT_HTML = '''<details>
     <summary>{title}</summary>
@@ -157,6 +163,58 @@ class Notebook:
             cell['metadata']['jupyter']['source_hidden'] = False
         return cell
 
+    def strip_footnotes(self):
+        '''
+        Removes Markdown footnotes from a given cell
+        '''
+        if self.data[self.index]['cell_type'] == 'markdown':
+            for i, line in enumerate(self.data[self.index]['source']):
+                # Remove any lines starting with a footnote anchor
+                if FOOTNOTE_ANCHOR_PAT.match(line):
+                     self.data[self.index]['source'][i] = ''
+                else:
+                    # Delete footnote references from any other lines
+                    new_line = re.sub(FOOTNOTE_PATTERN, '', line)
+                    self.data[self.index]['source'][i] = new_line
+        return self
+    
+    def inline_images(self):
+        '''
+        Converts MyST images directives to Markdown inline images, when they occur within larger blocks of Markdown.
+        '''
+        if self.data[self.index]['cell_type'] == 'markdown':
+            is_directive = False
+            image_url = ''
+            alt_text = ''
+            lines = []
+            for i, line in enumerate(self.data[self.index]['source']):
+                if not is_directive and (line.startswith('```{image}') or line.startswith('````{image}')):
+                    is_directive = True
+                    _, image_url = line.strip().split() # Assume URL separate from directive by a space
+                    image_url = re.sub(r'^\./', f'{IMAGE_URL}/', image_url) # Replace initial relative path with absolute path
+                elif is_directive:
+                    if line.startswith(':alt:'):
+                        alt_text = line.replace(':alt: ', '') # Extract alt text
+                    # End of directive
+                    elif line == '```\n' or line == '````\n': 
+                        lines.append(f'![{alt_text}]({image_url})\n')
+                        is_directive = False
+                else:
+                    lines.append(line)
+            self.data[self.index]['source'] = lines
+
+        return self  
+    
+    def remove_admonitions(self):
+        '''
+        Removes any cells with admonitions
+        '''
+        if self.data[self.index]['cell_type'] == 'markdown' and self.data[self.index]['source'] and (self.data[self.index]['source'][0].startswith('````{admonition}') or self.data[self.index]['source'][0].startswith('````{note}')):
+            self.data.pop(self.index)
+            # Backtrack for iteration
+            self.index = self.index - 1
+        return self
+
     def myst_to_md(self):
         '''
         Replaces MyST directives in notebook's markdown cells with regular Markdown/rendered HTML, to facilitate use in environments lacking the jupyterlab_myst plugin. 
@@ -243,7 +301,10 @@ class Notebook:
 @click.option('--nb-input', default='textbook/notebooks')
 @click.option('--nb-output', default='textbook/_build/html/_sources/notebooks')
 @click.option('--nb-output-md', default='textbook/_build/html/_sources/notebooks')
-def main(nb_input, nb_output, nb_output_md):
+@click.option('--inline-images', is_flag=True, default=False)
+@click.option('--remove-admonitions', is_flag=True, default=False)
+@click.option('--render-md/--no-render', is_flag=True, default=True)
+def main(nb_input, nb_output, nb_output_md, inline_images, remove_admonitions, render_md):
     '''
     :param nb_input: path for reading a notebook or directory containing notebooks (may be nested)
     :param nb_output: path where processed notebooks will be saved
@@ -270,10 +331,15 @@ def main(nb_input, nb_output, nb_output_md):
         nb = Notebook(in_)
         nb.remove_tagged_cells()
         for cell in nb:
-            cell.make_glossary_links().apply_hidden().clear_outputs()
+            cell.make_glossary_links().strip_footnotes().apply_hidden().clear_outputs()
+            if inline_images:
+                cell.inline_images()
+            if remove_admonitions:
+                cell.remove_admonitions()
         nb.hide_tags().save_nb(out)
-        logger.info(f'Creating pure Markdown notebook at {md_out}.')
-        nb.myst_to_md().add_md_style().save_nb(md_out)
+        if render_md:
+            logger.info(f'Creating pure Markdown notebook at {md_out}.')
+            nb.myst_to_md().add_md_style().save_nb(md_out)
 
 if __name__ == '__main__':
     main()
