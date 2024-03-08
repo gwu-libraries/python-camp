@@ -1,6 +1,6 @@
 # Homework for Python Camp
 
-In addition to the in-class team activities, Python Camp asks you to work through several self-guided lessons for homework, including a handful of exercises that you will submit using the GitHub Classroom autograder to receive a score. The purpose of the homework is to introduce concepts, syntax, and techniques that you will use during the team activities, so it is important that everyone on the team complete the homework lessons to the best of their ability on the days they are assigned. 
+In addition to the in-class team activities, Python Camp asks you to work through several self-guided lessons for homework, including a final exercise that you will submit using the GitHub Classroom autograder to receive a score. The purpose of the homework is to introduce concepts, syntax, and techniques that you will use during the team activities, so it is important that everyone on the team complete the homework lessons to the best of their ability on the days they are assigned. 
 
 The homeworks are designed to be completed individually, but you are also free to collaborate on them (including those you submit for a score). If you collaborate on the autograded homework, be sure to submit your own notebook for autograding if you want to receive the Python Camp certificate of completion.
 
@@ -9,9 +9,9 @@ The homeworks are designed to be completed individually, but you are also free t
 Each day's homework lesson consists of a Python motebook with documentation, examples of code, and exercises that ask you to write code yourself. Hints and/or hidden solutions are provided for the latter, but you are strongly encouraged to try each exercise on your own before looking at the solution. 
      - Just as we did for the in-class activities, you should open each homework notebook in JupyterHub (using the rocket icon at the top of the screen) and execute the code cells in order as you read through the notebook. Any changes you make to the notebook in JupyterHub will be saved to your JupyterHub account. 
      - **Please try your best to complete these notebooks on the day they are assigned**; we'll build on the concepts and practices they introduce in our team activities on the following day.
-  2. You must submit the **final homework notebook** for grading in order to receive the Python Camp Certificate of Completion. The grading is done automatically on GitHub Classroom, and you will have an opportunity to ensure that your work is correct before submitting. Please see the instructions for submitting the graded notebook below. 
+    - You must submit the [final homework notebook](https://gwu-libraries.github.io/python-camp/notebooks/homework/HW_Final_GR.html) for grading in order to receive the Python Camp Certificate of Completion. The grading is done automatically on GitHub Classroom, and you will have an opportunity to ensure that your work is correct before submitting. Please see the instructions for submitting the graded notebook below. 
 
-## Submitting Graded Notebooks
+## Submitting the Final Notebook
 
 We're using GitHub Classroom to track submission of this notebook. Please read the following instructions carefully, and let us know if you have any questions.
 
@@ -26,10 +26,10 @@ We're using GitHub Classroom to track submission of this notebook. Please read t
     :align: center
     ````
 5. Depending on your computer setup, the downloaded notebook may be located in your `Downloads` folder, on your desktop, or elsewhere. It should have the name `HW_Final_GR.ipynb`. If you have downloaded this file before, the latest version may have a different name. In this case, you should delete the old file and **rename the newly downloaded file** so that it has the same name as the original. 
-5. In the Python Camp roster, copy the link in the column associated with this homework assignment and paste it into a new tab on your web browser.
-6. If you don't have a GitHub account, you'll need to create one. (GitHub is a widely used platform for sharing and collaborating on code.) You don't need to use the same email address on your GitHub account as you are using for Python Camp, so if you already have a GitHub account under a different email address, feel free to use that one.
-7. Once you've logged into GitHub, and if this is your first time submitting an assignment, you'll be asked to select your email address from the GitHub Classroom roster. **Please make sure you select the correct email address**. This will link your GitHub account to that email address in our GitHub Classroom instance. 
-8. At this point, you should see a screen asking you to `Accept the assignment` in GitHub Classroom. Accepting the assignment will create a new GitHub repository under your GitHub account; that repository is where you'll submit your completed notebook for grading.
+6. From the list of [Python Camp links](https://docs.google.com/document/d/1KDtMCu0oG60kAgf9Q5EO7CDeXMPpwE4CB2ohbI2aGqI/edit?usp=sharing), follow the link to the Github Assignment under the section `Python Camp Final Homework.` 
+7. If you don't have a GitHub account, you'll need to create one. (GitHub is a widely used platform for sharing and collaborating on code.) You don't need to use the same email address on your GitHub account as you are using for Python Camp, so if you already have a GitHub account under a different email address, feel free to use that one.
+8. Once you've logged into GitHub, and if this is your first time submitting an assignment, you'll be asked to select your email address from the GitHub Classroom roster. **Please make sure you select the correct email address**. This will link your GitHub account to that email address in our GitHub Classroom instance. 
+9. At this point, you should see a screen asking you to `Accept the assignment` in GitHub Classroom. Accepting the assignment will create a new GitHub repository under your GitHub account; that repository is where you'll submit your completed notebook for grading.
 
     ````{image} img/homework/accept-assignment.png
     :alt: Screen showing a GitHub message with the assignment name and a green button to accept the assignment.
