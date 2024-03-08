@@ -14,8 +14,8 @@ logger=logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 config = configparser.ConfigParser()
-config.read('config.ini')
-
+config.read('course_utils/config.ini')
+print(list(config.keys()))
 # Pattern that contains Sphinx directives in the notebook JSON
 DIRECTIVE_PATTERN = re.compile('````{(\w+)}\s?(.*)\n') 
 DIRECTIVE_BACKTICKS = 4
