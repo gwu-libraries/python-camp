@@ -38,29 +38,52 @@ html:
 
 parse:
   myst_substitutions:
-    application_url: "[application form](https://forms.gle/8UWFQNqFSuy8LoBH8)"  # Insert URL for Google Form here
-    application_deadline: February 1, 2024 # Deadline for form
-    current_semester: Spring 2024
+    application_url: "[application form](https://forms.gle/eARQtjef2MxKmsV6A)"  # Insert URL for Google Form here
+    application_deadline: November 1, 2024 # Deadline for form
+    camp_name: November 2024
     schedule: |
-      :::{list-table} 
-      :header-rows: 1
+          :::{list-table} 
+          :header-rows: 1
 
-      * - Date
-        - Day
-        - Time
-      * - March 11, 2024
-        - Monday
-        - 1 pm - 5 pm
-      * - March 12, 2024
-        - Tuesday
-        - 1 pm - 5 pm
-      * - March 14, 2024
-        - Thursday
-        - 1 pm - 5 pm
-      * - March 15, 2024
-        - Friday
-        - 1 pm - 5 pm
-      :::
+          * - Date
+            - Day
+            - Time
+          * - November 21, 2024
+            - Thursday
+            - 1 pm - 5 pm
+          * - November 22, 2024
+            - Friday
+            - 1 pm - 5 pm
+          * - November 25, 2024
+            - Monday
+            - 1 pm - 5 pm
+          * - November 26, 2024
+            - Tuesday
+            - 1 pm - 5 pm
+          :::
+    application_url2: "[application form](https://forms.gle/jKYHYRKTPhsZ45cHA)"  # Insert URL for Google Form here
+    application_deadline2: December 1, 2024 # Deadline for form
+    camp_name2: December 2024
+    schedule2: |
+          :::{list-table} 
+          :header-rows: 1
+
+          * - Date
+            - Day
+            - Time
+          * - December 16, 2024
+            - Monday
+            - 1 pm - 5 pm
+          * - December 17, 2024
+            - Tuesday
+            - 1 pm - 5 pm
+          * - December 18, 2024
+            - Wednesday
+            - 1 pm - 5 pm
+          * - December 19, 2024
+            - Thursday
+            - 1 pm - 5 pm
+          :::
   myst_enable_extensions:
     # - amsmath
     - colon_fence
