@@ -57,7 +57,7 @@ If Python Camp isn't right for you, or if we can't accommodate you this time, GW
 
 ## Acknowledgments
 
-Python Camp is made possible by the contributions and support of many present and former colleagues at GW LAI, including Daphna Atias, Debbie Bezanson, Alex Boyd, Rachel Burley, Ricky Graham, Dan Kerchner, Josh McDonald, Marcus Peerman, Robin Pokorski, Megan Potterbusch, Dolsy Smith, Max Turer, and Laura Wrubel.
+Python Camp is made possible by the contributions and support of many present and former colleagues at GW LAI, including Daphna Atias, Debbie Bezanson, Emily Blumenthal, Alex Boyd, Rachel Burley, Ricky Graham, Dan Kerchner, Josh McDonald, Marcus Peerman, Robin Pokorski, Megan Potterbusch, Dolsy Smith, Max Turer, and Laura Wrubel.
 
 The Python Camp curriculum draws inspiration from Professor Lorena Barba's OpenEdX course [Get Data Off the Ground with Python](https://openedx.seas.gwu.edu/courses/course-v1:GW+EngComp1+2018/about), as well as the pedagogy and curricula of [The Carpentries](https://carpentries.org/). 
 
