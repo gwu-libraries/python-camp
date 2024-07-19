@@ -57,9 +57,9 @@ In the fall of 2024, Python Camp will be offered on two separate occasions. The 
 
 Because demand is typically high and space is limited, we give priority to those who consider themselves beginners at programming, who have not recently learned a language similar to Python (_e.g._, R), and who don't currently have other opportunities to learn Python through their coursework at GW. 
 
-To apply, please submit the application form below, indicating which Camp you wish to attend. 
+To apply, please submit the {{ application_url }}, indicating which Camp you wish to attend. 
 
-{{ camp_name }} {{ application_url }}. Applications are due by **{{ application_deadline }}**. 
+Applications are due by **{{ application_deadline }}**. 
  
 Decisions will be announced within two weeks of the application deadline. 
 
