@@ -61,8 +61,6 @@ parse:
             - Tuesday
             - 1 pm - 5 pm
           :::
-    application_url2: "[application form](https://forms.gle/jKYHYRKTPhsZ45cHA)"  # Insert URL for Google Form here
-    application_deadline2: December 1, 2024 # Deadline for form
     camp_name2: December 2024
     schedule2: |
           :::{list-table} 
