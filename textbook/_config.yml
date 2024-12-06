@@ -27,8 +27,8 @@ repository:
 
 launch_buttons:
   notebook_interface: "classic"
-  jupyterhub_url: "https://jupyter.lai.gwu.edu/"
   colab_url: "https://colab.research.google.com"
+  jupyterhub_url: "https://jupyter.lai.gwu.edu/"
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
