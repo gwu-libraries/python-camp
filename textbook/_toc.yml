@@ -16,23 +16,23 @@ parts:
     title: Modeling Code
 - caption: Day 1-2
   chapters:
-    - file: notebooks/lessons/1_2_from_data_to_code
-      title: From Data to Code
+    - file: notebooks/lessons/1_2_describing_the_team
+      title: Describing the Team
 - caption: Day 1 Homework
   chapters:
   - file: notebooks/homework/HW_1_from_code_to_data
     title: From Code to Data
 - caption: Day 2
   chapters: 
-  - file: notebooks/lessons/2_1_describing_the_team
-    title: Describing the Team
+  - file: notebooks/lessons/2_1_from_data_to_code
+    title: From Data to Code
 - caption: Day 2 Homework
   chapters: 
   - file: notebooks/homework/HW_2_programming_techniques
     title: Programming Techniques
 - caption: Day 3
   chapters:
-  - file: notebooks/lessons/2_2_programming_with_data
+  - file: notebooks/lessons/3_1_programming_with_data
     title: Programming with Data
 - caption: Day 3 Homework
   chapters:
@@ -40,7 +40,7 @@ parts:
     title: Error Stories
 - caption: Day 4
   chapters:
-  - file: notebooks/lessons/3_1_from_story_to_code
+  - file: notebooks/lessons/4_1_from_story_to_code
     title: From Story to Code
 - caption: Final Homework
   chapters:

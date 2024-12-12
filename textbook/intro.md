@@ -43,15 +43,25 @@ During Python Camp, you can expect the following:
 
 ## When and Where?
 
-For the **{{ current_semester }}** term, Python Camp will be take place according to the following schedule.
+In the fall of 2024, Python Camp will be offered on two separate occasions. The curriculum for both Camps is identical. Please apply to the one that works best for you. 
+
+### {{ camp_name }}
 
 {{ schedule }}
+
+### {{ camp_name2 }}
+
+{{ schedule2 }}
 
 ## How Do I Apply?
 
 Because demand is typically high and space is limited, we give priority to those who consider themselves beginners at programming, who have not recently learned a language similar to Python (_e.g._, R), and who don't currently have other opportunities to learn Python through their coursework at GW. 
 
-To apply, please submit the {{ application_url }} by **{{ application_deadline }}**. Decisions will be announced within two weeks of the application deadline. 
+To apply, please submit the {{ application_url }}, indicating which Camp you wish to attend. 
+
+Applications are due by **{{ application_deadline }}**. 
+ 
+Decisions will be announced within two weeks of the application deadline. 
 
 If Python Camp isn't right for you, or if we can't accommodate you this time, GW Libraries offers other opportunities to learn Python every semester. Check out our [events page](https://library.gwu.edu/events) for more info.
 
