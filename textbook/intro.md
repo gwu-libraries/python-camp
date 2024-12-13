@@ -43,15 +43,11 @@ During Python Camp, you can expect the following:
 
 ## When and Where?
 
-In the fall of 2024, Python Camp will be offered on two separate occasions. The curriculum for both Camps is identical. Please apply to the one that works best for you. 
+In the spring of 2025, Python Camp will be offered during GW's Spring Break.
 
 ### {{ camp_name }}
 
 {{ schedule }}
-
-### {{ camp_name2 }}
-
-{{ schedule2 }}
 
 ## How Do I Apply?
 
