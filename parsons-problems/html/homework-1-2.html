@@ -43,13 +43,13 @@ courses = ['CHEM 1001 10', 'CHEM 1001 11', 'BISC 1111 10', 'BISC 2207 10', 'PSC 
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-1" draggable="true">
-                                    depts = []
+                                    for course in courses:
                                 </div>
                             </div>
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-2" draggable="true">
-                                    depts.append(course_info[0])
+                                    depts = []
                                 </div>
                             </div>
                         
@@ -61,7 +61,7 @@ courses = ['CHEM 1001 10', 'CHEM 1001 11', 'BISC 1111 10', 'BISC 2207 10', 'PSC 
                         
                             <div class="parsons-ps">
                                 <div class="parsons-block" id="pb-4" draggable="true">
-                                    for course in courses:
+                                    depts.append(course_info[0])
                                 </div>
                             </div>
                         
