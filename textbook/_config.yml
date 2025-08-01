@@ -38,9 +38,9 @@ html:
 
 parse:
   myst_substitutions:
-    application_url: "[application form](https://forms.gle/BxwM5wokDd7UKtoq5)"  # Insert URL for Google Form here
-    application_deadline: February 1, 2025 # Deadline for form
-    camp_name: Spring 2025
+    application_url: "[application form](https://forms.gle/2AAeEQna99TsUQGa7)"  # Insert URL for Google Form here
+    application_deadline: September 30, 2025 # Deadline for form
+    camp_name: Fall 2025
     schedule: |
           :::{list-table} 
           :header-rows: 1
@@ -48,17 +48,17 @@ parse:
           * - Date
             - Day
             - Time
-          * - March 10, 2025
-            - Monday
-            - 1 pm - 5 pm
-          * - March 11, 2025
-            - Tuesday
-            - 1 pm - 5 pm
-          * - March 13, 2025
+          * - November 20, 2025
             - Thursday
             - 1 pm - 5 pm
-          * - March 14, 2025
+          * - November 21, 2025
             - Friday
+            - 1 pm - 5 pm
+          * - November 24, 2025
+            - Monday
+            - 1 pm - 5 pm
+          * - November 25, 2025
+            - Tuesday
             - 1 pm - 5 pm
           :::
   myst_enable_extensions:
