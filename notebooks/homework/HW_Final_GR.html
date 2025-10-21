@@ -450,22 +450,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-1">Tests for Exercise 1</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-2">Tests for Exercise 2</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-3">Tests for Exercise 3</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-4">Tests for Exercise 4</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-your-homework">Submitting your homework</a></li>
 </ul>
             </nav>
@@ -493,14 +481,8 @@ document.write(`
 <ol class="arabic simple">
 <li><p><strong>Run the first code cell under the exercise heading</strong>. This will execute some code needed to set up the problem.</p></li>
 <li><p>Reading the instructions and write code in the empty code cell (labeled with the comment <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">code</span> <span class="pre">here</span></code>). Run this code.</p></li>
-<li><p>Your code cell should include the comment line <code class="docutils literal notranslate"><span class="pre">#Your</span> <span class="pre">code</span> <span class="pre">below</span></code>. <strong>Please do not delete this comment</strong>, and if you accidentally delete the cell and have to recreate it, please insert that comment line at the top of the cell before entering your code.</p></li>
-<li><p>Assuming your code does not produce any errors, run the code in the cell below the <code class="docutils literal notranslate"><span class="pre">Tests</span></code> heading. Each line of this code consists of a Python <a class="reference internal" href="../../glossary.html#term-assert-statement"><span class="xref std std-term">assert statement</span></a>.</p>
-<ul class="simple">
-<li><p>If you see an <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>, don’t panic! The error is written so as to help you pinpoint the part of your code that’s not working as expected. After making a change in your code, re-run <strong>both</strong> the cell with your code and the cell with the tests. Repeat until you see no errors.</p></li>
-<li><p>If you run the cell with the test code and you see no output, congratulations! That means that your code has passed all the tests and works as expected. Go to step 5 to submit.</p></li>
-</ul>
-</li>
-<li><p>Submit your code by downloading this notebook from JupyterHub and uploading it to the GitHub repository for this assignment. See <a class="reference external" href="https://gwu-libraries.github.io/python-camp/homework.html">the documentation</a> for detailed instructions.</p></li>
+<li><p>You’re welcome to revise your code as many times as you like until you get a working solution to the problem.</p></li>
+<li><p>When you’re satisfied with your solution, or if you feel stuck and unable to make further progress, submit your homework for feedback from the Python Camp instructors. See the bottom of this notebook for detailed instructions.</p></li>
 </ol>
 <div class="admonition-how-to-get-help admonition">
 <p class="admonition-title">How to Get Help</p>
@@ -531,21 +513,6 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="tests-for-exercise-1">
-<h3>Tests for Exercise 1<a class="headerlink" href="#tests-for-exercise-1" title="Permalink to this heading">#</a></h3>
-<p>The cell below defines one or more tests that will be run to check your code.</p>
-<p>Once you have completed your answer, run the cell. If you see no output, then contratulations, your code has passed the tests!</p>
-<p>If, on the other hand, you see an <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>, it means that one of the tests has failed. Look at the error message for a hint as to where the problem lies.</p>
-<div class="cell tag_test-case:1 docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">my_dept_code</span> <span class="o">==</span> <span class="s1">&#39;WSTU&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Variable my_dept_code has the wrong value. Should be &quot;WSTU&quot; but is &quot;</span><span class="si">{</span><span class="n">my_dept_code</span><span class="si">}</span><span class="s1">&quot;.&#39;</span>
-<span class="k">assert</span> <span class="n">my_course_num</span> <span class="o">==</span> <span class="s1">&#39;6566&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Variable my_course_num has the wrong value. Should be &quot;6566&quot; but is &quot;</span><span class="si">{</span><span class="n">my_course_num</span><span class="si">}</span><span class="s1">&quot;.&#39;</span>
-<span class="k">assert</span> <span class="n">my_section</span> <span class="o">==</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Variable my_section has the wrong value. Should be &quot;10&quot;, but is &quot;</span><span class="si">{</span><span class="n">my_section</span><span class="si">}</span><span class="s1">&quot;.&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 <section id="exercise-2">
 <h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h2>
@@ -574,22 +541,6 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="tests-for-exercise-2">
-<h3>Tests for Exercise 2<a class="headerlink" href="#tests-for-exercise-2" title="Permalink to this heading">#</a></h3>
-<div class="cell tag_test-case:2 docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dept_code&#39;</span><span class="p">,</span> <span class="s1">&#39;course_num&#39;</span><span class="p">,</span> <span class="s1">&#39;section&#39;</span><span class="p">,</span> <span class="s1">&#39;instructor&#39;</span><span class="p">]</span>
-<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;BSCI&#39;</span><span class="p">,</span> <span class="s1">&#39;1333&#39;</span><span class="p">,</span> <span class="s1">&#39;15&#39;</span><span class="p">,</span> <span class="s1">&#39;Thomson&#39;</span><span class="p">]</span>
-<span class="k">assert</span> <span class="s1">&#39;my_course_dict&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">my_course_dict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">),</span> <span class="s1">&#39;Variable my_course_dict has not been defined as a dictionary.&#39;</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
-    <span class="k">assert</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">my_course_dict</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Key &quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">&quot; was not found in my_course_dict&#39;</span>
-<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="n">my_course_dict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">v</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Value for my_course_dict[&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">&quot;] should be &quot;</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&quot;, not &quot;</span><span class="si">{</span><span class="n">my_course_dict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="si">}</span><span class="s1">&quot;.&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 <section id="exercise-3">
 <h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this heading">#</a></h2>
@@ -637,24 +588,6 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="tests-for-exercise-3">
-<h3>Tests for Exercise 3<a class="headerlink" href="#tests-for-exercise-3" title="Permalink to this heading">#</a></h3>
-<div class="cell tag_test-case:3 docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;dept_code&#39;</span><span class="p">,</span> <span class="s1">&#39;course_num&#39;</span><span class="p">,</span> <span class="s1">&#39;section&#39;</span><span class="p">,</span> <span class="s1">&#39;instructor&#39;</span><span class="p">}</span>
-<span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;CHEM&#39;</span><span class="p">,</span> <span class="s1">&#39;1001&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Mack&#39;</span><span class="p">}</span>
-<span class="k">assert</span> <span class="s1">&#39;courses_db&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">(),</span> <span class="s1">&#39;Variable courses_db is not defined&#39;</span>
-<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">courses_db</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s1">&#39;Variable courses_db is not a list.&#39;</span>
-<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">courses_db</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">dict</span><span class="p">),</span> <span class="s1">&#39;List courses_db does not contain a dictionary as its first element.&#39;</span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">courses_db</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">courses</span><span class="p">),</span> <span class="s1">&#39;List courses_db is the wrong length.&#39;</span>
-<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">courses_db</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">==</span> <span class="n">keys</span><span class="p">,</span> <span class="s1">&#39;The first dictionary in courses_db does not have the right keys.&#39;</span>
-<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">courses_db</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">==</span> <span class="n">values</span><span class="p">,</span> <span class="s1">&#39;The first dictionary in courses_db does not have the right values.&#39;</span>
-<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">courses_db</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;WSTU&#39;</span><span class="p">,</span> <span class="s1">&#39;6999&#39;</span><span class="p">,</span> <span class="s1">&#39;11&#39;</span><span class="p">,</span> <span class="s1">&#39;Delaney&#39;</span><span class="p">},</span> <span class="s1">&#39;The last element of courses_db does not have the right values.&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 <section id="exercise-4">
 <h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this heading">#</a></h2>
@@ -672,24 +605,19 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="tests-for-exercise-4">
-<h3>Tests for Exercise 4<a class="headerlink" href="#tests-for-exercise-4" title="Permalink to this heading">#</a></h3>
-<div class="cell tag_test-case:4 docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">count_courses</span><span class="p">(</span><span class="s1">&#39;Rath&#39;</span><span class="p">,</span> <span class="n">courses_db</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Rath is teaching one course, but count_courses returns </span><span class="si">{</span><span class="n">count_courses</span><span class="p">(</span><span class="s2">&quot;Rath&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">courses_db</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span>
-<span class="k">assert</span> <span class="n">count_courses</span><span class="p">(</span><span class="s1">&#39;Mack&#39;</span><span class="p">,</span> <span class="n">courses_db</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Mack is teaching two courses, but count_courses returns </span><span class="si">{</span><span class="n">count_courses</span><span class="p">(</span><span class="s2">&quot;Mack&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">courses_db</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span>
-<span class="k">assert</span> <span class="n">count_courses</span><span class="p">(</span><span class="s1">&#39;Smith&#39;</span><span class="p">,</span> <span class="n">courses_db</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Smith is not teaching any courses, but count_courses returns </span><span class="si">{</span><span class="n">count_courses</span><span class="p">(</span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">courses_db</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 <section id="submitting-your-homework">
 <h2>Submitting your homework<a class="headerlink" href="#submitting-your-homework" title="Permalink to this heading">#</a></h2>
-<p>If you’ve run all 4 code cells under the <code class="docutils literal notranslate"><span class="pre">Tests</span></code> headings, and if you see no error, congratulations! That means you’ve successfully completed this homework and are ready to submit it.</p>
-<p>You will submit your homework via GitHub, which will simply run the same tests that you have run above, record any errors, and alert the Python Camp facilitators that you have made a submission.</p>
-<p>Submitting this homework notebook (with no errors in the code) and attendance for all four days of Python Camp satisfy the requirements to receive the certificate of completion.</p>
+<p>If you completed this homework in Google Colab, submitting it is straighforward.</p>
+<ol class="arabic simple">
+<li><p>In Google Colab, click the <strong>Share</strong> button in the upper right-hand corner of the screen.</p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>In the box at the top of the sharing panel, enter <code class="docutils literal notranslate"><span class="pre">PYTHON_CAMP&#64;groups.gwu.edu</span></code> to share your notebook with the team.</p></li>
+<li><p>Click the <strong>Copy link</strong> button at the bottom of the panel.</p></li>
+<li><p>Click the <strong>Done</strong> button to save your changes.</p></li>
+<li><p>The link to your shared notebook should now be in your computer’s clipboard. Open the Python Camp roster spreadsheet (where you recorded your attendance each day), and paste this link in the row containing your name, in the column marked <strong>Homework link</strong>.</p></li>
+</ol>
 </section>
 </section>
 
@@ -761,22 +689,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-1">Tests for Exercise 1</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-2">Tests for Exercise 2</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-3">Tests for Exercise 3</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests-for-exercise-4">Tests for Exercise 4</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-your-homework">Submitting your homework</a></li>
 </ul>
   </nav></div>
