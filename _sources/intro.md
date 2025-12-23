@@ -43,7 +43,7 @@ During Python Camp, you can expect the following:
 
 ## When and Where?
 
-In the spring of 2025, Python Camp will be offered during GW's Spring Break.
+In the spring of 2026, Python Camp will be offered during GW's Spring Break.
 
 ### {{ camp_name }}
 
