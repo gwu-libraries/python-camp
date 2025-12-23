@@ -4,11 +4,12 @@
 title: "Python Camp: Programming for Beginners"
 author: "GW Libraries & Academic Innovation"
 logo: python-camp.png
-exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", "parsons-yaml"]
+exclude_patterns:
+  [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", "parsons-yaml"]
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: 'off'
+  execute_notebooks: "off"
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -21,9 +22,9 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/gwu-libraries/python-camp  # Online location of your book
-  path_to_book: _sources  # Optional path to your book, relative to the repository root
-  branch: gh-pages  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/gwu-libraries/python-camp # Online location of your book
+  path_to_book: _sources # Optional path to your book, relative to the repository root
+  branch: gh-pages # Which branch of the repository should be used when creating links (optional)
 
 launch_buttons:
   notebook_interface: "classic"
@@ -38,29 +39,29 @@ html:
 
 parse:
   myst_substitutions:
-    application_url: "[application form](https://forms.gle/2AAeEQna99TsUQGa7)"  # Insert URL for Google Form here
-    application_deadline: September 30, 2025 # Deadline for form
-    camp_name: Fall 2025
+    application_url: "[application form](https://forms.gle/Ghhhv5VoNE331Ce56)" # Insert URL for Google Form here
+    application_deadline: January 31, 2026 # Deadline for form
+    camp_name: Spring 2026
     schedule: |
-          :::{list-table} 
-          :header-rows: 1
+      :::{list-table}
+      :header-rows: 1
 
-          * - Date
-            - Day
-            - Time
-          * - November 20, 2025
-            - Thursday
-            - 1 pm - 5 pm
-          * - November 21, 2025
-            - Friday
-            - 1 pm - 5 pm
-          * - November 24, 2025
-            - Monday
-            - 1 pm - 5 pm
-          * - November 25, 2025
-            - Tuesday
-            - 1 pm - 5 pm
-          :::
+      * - Date
+        - Day
+        - Time
+      * - March 9, 2026
+        - Monday
+        - 1 pm - 5 pm
+      * - March 10, 2026
+        - Tuesday
+        - 1 pm - 5 pm
+      * - March 12, 2026
+        - Thursday
+        - 1 pm - 5 pm
+      * - March 13, 2026
+        - Friday
+        - 1 pm - 5 pm
+      :::
   myst_enable_extensions:
     # - amsmath
     - colon_fence
