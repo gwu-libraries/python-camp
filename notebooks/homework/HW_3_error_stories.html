@@ -667,17 +667,15 @@ document.write(`
 </div>
 <div class="notes admonition">
 <p class="admonition-title">Notes</p>
-<p>Running this code produces an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>. Until you gain some familiarity with Python exceptions, the name of the <a class="reference internal" href="../../glossary.html#term-exception"><span class="xref std std-term">exception</span></a> will be less useful than the message that follows it:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;NoneType&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;split&#39;</span>
-
+<p>Running this code produces a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>. Until you gain some familiarity with Python exceptions, the name of the <a class="reference internal" href="../../glossary.html#term-exception"><span class="xref std std-term">exception</span></a> will be less useful than the message that follows it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">ValueError</span><span class="p">:</span> <span class="n">too</span> <span class="n">many</span> <span class="n">values</span> <span class="n">to</span> <span class="n">unpack</span> <span class="p">(</span><span class="n">expected</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Note also the green arrow pointing to the line of code that reads</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> tells that something went wrong with the call to the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method. The phrase <code class="docutils literal notranslate"><span class="pre">'NoneType</span> <span class="pre">object'</span></code> may seem opaque. But recall what we’ve learned about the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method: that it’s <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str.split">defined</a> to work with strings. That’s the meaning of the “str” when we write it as <code class="docutils literal notranslate"><span class="pre">str.split()</span></code>: it tells us that Python <em>strings</em> have access to this method. Other Python types do not.</p>
-<p>An <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> occurs when we try to use a method on a type that doesn’t “have” that method. But the important thing is to find out when and why the value of <code class="docutils literal notranslate"><span class="pre">course[&quot;instructor&quot;]</span></code> might <em>not</em> be a string.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> tells us that something went wrong when trying to assign two variables to the result of the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method. The phrase <code class="docutils literal notranslate"><span class="pre">too</span> <span class="pre">many</span> <span class="pre">values</span> <span class="pre">to</span> <span class="pre">unpack</span></code> may seem opaque. But recall what we’ve learned about the <code class="docutils literal notranslate"><span class="pre">split()</span></code> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str.split">method</a>. It returns a list of strings, created by separating the original string on the spaces. As written, the code assumes that every course instructor name, when split on the spaces, will yield two elements. Could there be names for which this is not the case?</p>
 </div>
 <section id="ii-1-debugging-with-print">
 <h3>II.1 Debugging with <code class="docutils literal notranslate"><span class="pre">print()</span></code><a class="headerlink" href="#ii-1-debugging-with-print" title="Permalink to this heading">#</a></h3>
@@ -686,7 +684,7 @@ document.write(`
 <p>By using <code class="docutils literal notranslate"><span class="pre">print()</span></code> to display the element we’re interested in each time through the loop, we can observe where the loop stops: if we’ve put our <code class="docutils literal notranslate"><span class="pre">print()</span></code> in the right place, the last value printed should be one that triggered the error.</p>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
-<p>Copy the buggy code from above and paste it into the cell below. Add one or more calls to the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function and see if you can identify the source of the <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>.</p>
+<p>Copy the buggy code from above and paste it into the cell below. Add one or more calls to the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function and see if you can identify the source of the <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -708,51 +706,7 @@ document.write(`
     <span class="n">course</span><span class="p">[</span><span class="s2">&quot;last_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
 </pre></div>
 </div>
-<p>Doing so reveals that the last value printed before the error is not a name but <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<p>Note that <code class="docutils literal notranslate"><span class="pre">None</span></code> is <em>not</em> a string; it’s a special Python type (written without quotation marks) that stands for a <a class="reference internal" href="../../glossary.html#term-null-value"><span class="xref std std-term">null value</span></a>.</p>
-<p>As the <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> informs us, we cannot use the <code class="docutils literal notranslate"><span class="pre">split</span></code> method on a <code class="docutils literal notranslate"><span class="pre">None</span></code> value. (There’s not much you <em>can</em> do with <code class="docutils literal notranslate"><span class="pre">None</span></code>; that’s because it’s a null: used to designate the absence of a value.)</p>
-</div>
-</section>
-<section id="ii-2-preventing-errors-with-if">
-<h3>II.2 Preventing errors with <code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#ii-2-preventing-errors-with-if" title="Permalink to this heading">#</a></h3>
-<p>There are more sophisticated ways of handling errors in Python, but one of the most straightforward is to include an <a class="reference internal" href="../../glossary.html#term-if-statement"><span class="xref std std-term">if statement</span></a> to check for the condition that causes the error.</p>
-<p>In this case, the error is caused when <code class="docutils literal notranslate"><span class="pre">course[&quot;instructor&quot;]</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>. Python provides a concise way to check whether a value is <code class="docutils literal notranslate"><span class="pre">None</span></code>. We can simply write <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">value_to_test:</span></code>, where <code class="docutils literal notranslate"><span class="pre">value_to_test</span></code> is a variable or other name that may or may not be null.</p>
-<p>In the code below, we’ve incorporated this check into our code.</p>
-<p>Note that the code <em>still</em> fails, but this time we get a different error.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop over courses in the dataset</span>
-<span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
-    <span class="c1"># Check for null values</span>
-    <span class="k">if</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]:</span>
-        <span class="c1"># Split each instructor name on white space</span>
-        <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-        <span class="c1"># Assign each part of the name to a new key in the dictionary course</span>
-        <span class="n">course</span><span class="p">[</span><span class="s2">&quot;first_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
-        <span class="n">course</span><span class="p">[</span><span class="s2">&quot;last_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="try-it-out admonition">
-<p class="admonition-title">Try it out!</p>
-<p>Can you use our <code class="docutils literal notranslate"><span class="pre">print()</span></code> debugging technique to identify the cause of this <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>?</p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>The line</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>expects a string for the value of <code class="docutils literal notranslate"><span class="pre">course[&quot;instructor&quot;]</span></code>that follows a familiar pattern:  <code class="docutils literal notranslate"><span class="pre">&quot;first_name</span> <span class="pre">last_name&quot;</span></code>, where white space separates the first and last name.</p>
-<p>In other words, this code works only if the result of the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method is a list with two elements. And <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> will produce a list with two elements <em>only if</em> the string has a <em>single</em> instance of white space.</p>
+<p>Doing so reveals that the last value printed before the error is a name that doesn’t conform to our expected pattern.</p>
 </div>
 <div class="try-it-out admonition">
 <p class="admonition-title">Try it out!</p>
@@ -765,20 +719,44 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Expand the cell below to see a possible solution.</p>
-<div class="cell tag_hide-cell docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell content</span>
-<span class="expanded">Hide code cell content</span>
-</summary>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop over courses in the dataset</span>
+<span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
+    <span class="c1"># Split each instructor name on white space</span>
+    <span class="c1"># Only split on the first occurence of white space</span>
+    <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># Assign each part of the name to a new key in the dictionary course</span>
+    <span class="n">course</span><span class="p">[</span><span class="s2">&quot;first_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
+    <span class="n">course</span><span class="p">[</span><span class="s2">&quot;last_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_name</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="ii-2-preventing-errors-with-if">
+<h3>II.2 Preventing errors with <code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#ii-2-preventing-errors-with-if" title="Permalink to this heading">#</a></h3>
+<p>Note that the code <em>still</em> fails, but this time we get a different error.</p>
+<div class="try-it-out admonition">
+<p class="admonition-title">Try it out!</p>
+<p>Can you use our <code class="docutils literal notranslate"><span class="pre">print()</span></code> debugging technique to identify the cause of this <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>?</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are more sophisticated ways of handling errors in Python, but one of the most straightforward is to include an <a class="reference internal" href="../../glossary.html#term-if-statement"><span class="xref std std-term">if statement</span></a> to check for the condition that causes the error.</p>
+<p>In this case, the error is caused when <code class="docutils literal notranslate"><span class="pre">course[&quot;instructor&quot;]</span></code> has the value of <code class="docutils literal notranslate"><span class="pre">None</span></code>, which is the null value in Python (and not a string).</p>
+<p>In the code below, we’ve incorporated this check into our code.</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop over courses in the dataset</span>
 <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">bkst_data</span><span class="p">:</span>
     <span class="c1"># Check for null values</span>
     <span class="k">if</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]:</span>
         <span class="c1"># Split each instructor name on white space</span>
-        <span class="c1"># Only split on the first occurence of white space</span>
         <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">course</span><span class="p">[</span><span class="s2">&quot;instructor&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="c1"># Assign each part of the name to a new key in the dictionary course</span>
         <span class="n">course</span><span class="p">[</span><span class="s2">&quot;first_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_name</span>
@@ -786,7 +764,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details>
 </div>
 <div class="notes admonition">
 <p class="admonition-title">Notes</p>
