@@ -1,15 +1,15 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: "Python Camp: Programming for Beginners"
-author: "GW Libraries & Academic Innovation"
+title: 'Python Camp: Programming for Beginners'
+author: 'GW Libraries & Academic Innovation'
 logo: python-camp.png
 exclude_patterns:
-  [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", "parsons-yaml"]
+  [_build, Thumbs.db, .DS_Store, '**.ipynb_checkpoints', 'parsons-yaml']
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: "off"
+  execute_notebooks: 'off'
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -27,9 +27,9 @@ repository:
   branch: gh-pages # Which branch of the repository should be used when creating links (optional)
 
 launch_buttons:
-  notebook_interface: "classic"
-  colab_url: "https://colab.research.google.com"
-  jupyterhub_url: "https://jupyter.lai.gwu.edu/"
+  notebook_interface: 'classic'
+  colab_url: 'https://colab.research.google.com'
+  jupyterhub_url: 'https://jupyter.lai.gwu.edu/'
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
@@ -39,9 +39,9 @@ html:
 
 parse:
   myst_substitutions:
-    application_url: "[application form](https://forms.gle/Ghhhv5VoNE331Ce56)" # Insert URL for Google Form here
-    application_deadline: January 31, 2026 # Deadline for form
-    camp_name: Spring 2026
+    application_url: '[application form](https://forms.gle/6uPt5fEz2Mi8cqBy9)' # Insert URL for Google Form here
+    application_deadline: September 21, 2026 # Deadline for form
+    camp_name: Fall 2026
     schedule: |
       :::{list-table}
       :header-rows: 1
@@ -49,17 +49,17 @@ parse:
       * - Date
         - Day
         - Time
-      * - March 9, 2026
-        - Monday
-        - 1 pm - 5 pm
-      * - March 10, 2026
-        - Tuesday
-        - 1 pm - 5 pm
-      * - March 12, 2026
+      * - November 19, 2026
         - Thursday
         - 1 pm - 5 pm
-      * - March 13, 2026
+      * - November 20, 2026
         - Friday
+        - 1 pm - 5 pm
+      * - November 23, 2026
+        - Monday
+        - 1 pm - 5 pm
+      * - November 24, 2026
+        - Tuesday
         - 1 pm - 5 pm
       :::
   myst_enable_extensions:
@@ -79,4 +79,4 @@ parse:
 sphinx:
   recursive_update: true
   config:
-    html_extra_path: ["parsons-assets", "static-assets"] # Parsons Problems .js, .css, and .html live here, as well as inline images for notebooks
+    html_extra_path: ['parsons-assets', 'static-assets'] # Parsons Problems .js, .css, and .html live here, as well as inline images for notebooks
